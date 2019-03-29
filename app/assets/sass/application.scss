@@ -13,3 +13,35 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+/* Class to hide elements. Remove this class if you want to toggle the visibility, e.g. postcode finder */
+.app-hidden {
+    display: none;
+}
+
+/* Class for postcode list on postcode finder pages */
+.app-list__postcode-list {
+    /* These are to override the user agent styles for list elements */
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    & li {
+        margin-bottom: 0.5em;
+    }
+}
+
+.app-flex-grid {
+    display: flex;
+    & .app-flex-grid-header {
+        margin-right: 1em;
+    }
+    & .app-flex-grid-body {
+        font-weight: bold;
+        font-size: 150%;
+    }
+}
+
+.app-font--monospace {
+    font-family: monospace;
+}
