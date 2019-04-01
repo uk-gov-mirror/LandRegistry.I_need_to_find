@@ -28,9 +28,13 @@
     <div class="govuk-grid-column-two-thirds">
         <p>There's 1 property record (title) for this address.</p>
 
-        <p> Title number:<b> ABC1234 </b>
-        <p> Tenure type: <b> Freehold </b>
-          <details class="govuk-details">
+        <div class="app-flex-grid-small app-address-display">
+            <p class="app-flex-item app-flex-grid-header">Title number:</p>
+            <p class="app-flex-item app-flex-grid-body">ABC1234
+        </div>
+
+        <p class ="inline-details-text"> Tenure type: <b> Freehold </b>
+          <details class="govuk-details inline-details-summary">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                  What's freehold?
@@ -43,16 +47,25 @@
                     </div>
          </details>
 
-        <p> Lender: <b> Natwest </b> </p>
+         <div class="app-flex-grid-small app-address-display">
+             <p class="app-flex-item app-flex-grid-header">Lender:</p>
+             <p class="app-flex-item app-flex-grid-body"> Natwest
+         </div>
+
         <p> This property last sold for <b> £300,000 </b> on <b> 15th May 2014</b>. </p>
 
         <h2 class="govuk-heading-m">
             Owner's contact details
         </h2>
-            <p> Name:    <b> Bob Smith </b> </p>
-            <p> Address: <b> 6 Fake Street,<br>
-                             Plymouth,<br>
-                             PL1 123 </b> </p>
+              <div class="app-flex-grid-small app-address-display">
+                  <p class="app-flex-item app-flex-grid-header">Name:</p>
+                  <p class="app-flex-item app-flex-grid-body"> Bob Smith
+              </div>
+              <div class="app-flex-grid-small app-address-display">
+                  <p class="app-flex-item app-flex-grid-header">Address:</p>
+                  <p class="app-flex-item app-flex-grid-body">6 Fake Street,<br>Plymouth,<br>PL1 123</p>
+              </div>
+
     <div>
         <h2 class="govuk-heading-m">
             Things you can and can't do with the property

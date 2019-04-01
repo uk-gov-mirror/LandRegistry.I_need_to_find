@@ -41,7 +41,28 @@ $govuk-global-styles: true;
         font-size: 150%;
     }
 }
-
+.app-flex-grid-small {
+    display: flex;
+    & .app-flex-grid-header {
+        margin-right: 1em;
+    }
+    & .app-flex-grid-body {
+        font-weight: bold;
+    }
+}
 .app-font--monospace {
     font-family: monospace;
+}
+
+.inline-details-summary{
+  display:inline;
+  padding:1em;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.inline-details-text{
+  width: 33%;
+  margin: 0;
+  display: inline;
 }
