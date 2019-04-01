@@ -28,11 +28,13 @@ $(document).ready(function () {
 
   let $addressToDisplay = sessionStorage.getItem('address');
   if ($addressToDisplay.indexOf("Fake") !== -1) {
-    $('#app-address-to-display').html($addressToDisplay + '<br>Plymouth<br>PL1 123');
+    $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Plymouth<br>PL1 123');
   } else if ($addressToDisplay.indexOf("Pretend") !== -1) {
-    $('#app-address-to-display').html($addressToDisplay + '<br>Exeter<br>EX4 68D');
+    $('#app-address-to-display .app-address-to-display').html($addressToDisplay + '<br>Exeter<br>EX4 68D');
   } else if ($addressToDisplay.indexOf("False") !== -1) {
-    $('#app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS4 7SB');
+    $('#app-address-to-display .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS4 7SB');
+    $('#app-property-price').text('£450,000');
+    $('#app-property-sold-date').text('23rd November 2005');
     $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
   }
 });
