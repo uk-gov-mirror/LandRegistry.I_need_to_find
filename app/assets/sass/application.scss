@@ -54,15 +54,12 @@ $govuk-global-styles: true;
     font-family: monospace;
 }
 
-.inline-details-summary{
-  display:inline;
-  padding:1em;
-  margin-bottom: 0;
-  padding-top: 0;
+.app-details {
+    margin-top: -1em;
 }
 
-.inline-details-text{
-  width: 33%;
-  margin: 0;
-  display: inline;
+.app-information-icon {
+    background-color: #005ea5;
+    border: 3px solid #005ea5;
+
 }
