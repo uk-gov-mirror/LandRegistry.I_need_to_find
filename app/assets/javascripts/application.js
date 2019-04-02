@@ -34,7 +34,7 @@ $(document).ready(function () {
   } else if ($addressToDisplay.indexOf("False") !== -1) {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS4 7SB');
     $('#app-property-price').text('£450,000');
-    $('#app-property-sold-date').text('23rd November 2005');
+    $('#app-property-sold-date').text('23 November 2005');
     $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
   }
 });
