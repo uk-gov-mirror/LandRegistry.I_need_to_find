@@ -11,11 +11,11 @@ $(document).ready(function () {
   // custom scripts
   $('#app-button__postcode-search').on('click', function() {
     let $postcode = $('#app-input-postcodeSearch').val();
-    if ($postcode === 'PL1 123' || $postcode === 'pl1 123' || $postcode === 'Pl1 123' || $postcode === 'pL1 123' || $postcode === 'pl1123' || $postcode === 'PL1123') {
+    if ($postcode.indexOf('PL1') !== -1 || $postcode.indexOf('pl1') !== -1) {
       $('.app-postcode-list__1').removeClass('app-hidden');
-    } else if ($postcode === 'EX4 68D' || $postcode === 'ex4 68d' || $postcode === 'Ex4 68d' || $postcode === 'Ex4 68D' || $postcode === 'ex468d' || $postcode === 'EX468D' || $postcode === 'ex4 68D') {
+    } else if ($postcode.indexOf('EX4') !== -1 || $postcode.indexOf('ex4') !== -1) {
       $('.app-postcode-list__2').removeClass('app-hidden');
-    } else {
+    } else if ($postcode.indexOf('BS4') !== -1 || $postcode.indexOf('bs4') !== -1) {
       $('.app-postcode-list__3').removeClass('app-hidden');
     }
     return false;
