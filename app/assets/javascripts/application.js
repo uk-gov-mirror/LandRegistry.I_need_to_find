@@ -31,8 +31,15 @@ $(document).ready(function () {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Plymouth<br>PL1 3SB');
     $('#app-easements-indicator').text('There are no easements recorded in the register');
     $('#app-covenants-indicator').text('There are no restrictive covenants recorded in the register');
+    $('.app-map').attr('src', '/public//images/peel-street-extent.png');
+    $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
   } else if ($addressToDisplay.indexOf("Clinton") !== -1) {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Exeter<br>EX4 1AX');
+    $('.app-map').attr('src', '/public//images/clinton-street-extent.png');
+    $('.app-map_large').attr('src', '/public//images/clinton-street-extent_large.png');
+    $('#app-property-price').text('£450,000');
+    $('#app-property-sold-date').text('23 November 2005');
+    $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
   } else if ($addressToDisplay.indexOf("False") !== -1) {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS4 7SB');
     $('#app-property-price').text('£450,000');
@@ -40,3 +47,16 @@ $(document).ready(function () {
     $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
   }
 });
+
+$('#app-link-from-03').on('click', function() {
+  sessionStorage.setItem('linkBackHref', '03-free-property-information');
+});
+$('#app-link-from-08').on('click', function() {
+  sessionStorage.setItem('linkBackHref', '08-paid-property-information');
+});
+$('#app-link-from-08b').on('click', function() {
+  sessionStorage.setItem('linkBackHref', '08b-paid-property-information');
+});
+
+let $linkBackHref = sessionStorage.getItem('linkBackHref');
+$('.app-back-link').attr('href', $linkBackHref);
