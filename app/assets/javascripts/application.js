@@ -15,7 +15,7 @@ $(document).ready(function () {
       $('.app-postcode-list__1').removeClass('app-hidden');
     } else if ($postcode.indexOf('EX4') !== -1 || $postcode.indexOf('ex4') !== -1 || $postcode.indexOf('Ex4') !== -1 || $postcode.indexOf('eX4') !== -1) {
       $('.app-postcode-list__2').removeClass('app-hidden');
-    } else if ($postcode.indexOf('BS4') !== -1 || $postcode.indexOf('bs4') !== -1 || $postcode.indexOf('Bs4') !== -1 || $postcode.indexOf('bS4') !== -1) {
+    } else if ($postcode.indexOf('BS6') !== -1 || $postcode.indexOf('bs6') !== -1 || $postcode.indexOf('Bs6') !== -1 || $postcode.indexOf('bS6') !== -1) {
       $('.app-postcode-list__3').removeClass('app-hidden');
     }
     return false;
@@ -40,8 +40,10 @@ $(document).ready(function () {
     $('#app-property-price').text('£450,000');
     $('#app-property-sold-date').text('23 November 2005');
     $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
-  } else if ($addressToDisplay.indexOf("False") !== -1) {
-    $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS4 7SB');
+  } else if ($addressToDisplay.indexOf("Elgin") !== -1) {
+    $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS6 6RU');
+    $('.app-map').attr('src', '/public//images/elgin-park-extent.png');
+    $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
     $('#app-property-price').text('£450,000');
     $('#app-property-sold-date').text('23 November 2005');
     $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
