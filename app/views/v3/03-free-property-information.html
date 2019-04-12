@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Property information
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Property information
+    </h1>
+        <div class="app-flex-grid app-address-display">
+            <p class="app-flex-item app-flex-grid-header">Address:</p>
+            <p id="app-address-to-display" class="app-flex-item app-flex-grid-body">
+            </p>
+        </div>
+            <img src="" class="app-map">
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p>There's <b>1</b> property record (title) for this address.</p>
+
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Tenure type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Freehold<br>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What's freehold?
+                        </span>
+                    </summary>
+                        <div class="govuk-details__text">
+                            <p> You own a freehold building and land outright. It's yours until you sell it or give it away. </p>
+                            <p> Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                            <p> <b> If you want to know who owns a particular flat, you probably need the leasehold instead. </b> </p>
+                            <p> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                        </div>
+                    </details>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Property type
+                </dt>
+                <dd class="govuk-summary-list__value  app-property-type">
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Price paid history
+                </dt>
+                <dd class="govuk-summary-list__value">
+                <span class="app-price-paid-list">
+                </span>
+                <a class="app-price-paid-link" href="">View details on HMLR Price Paid Data</a>
+                <!-- <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                View more
+                            </span>
+                        </summary>
+                            <div class="govuk-details__text">
+                                <b>&pound;105,000</b> on 30 January 2004<br>
+                                <b>&pound;98,000</b> on 2 April 2001 (New build)
+                            </div>
+                        </details> -->
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Title plan
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-title-plan-information">
+                    A <a href="00-view-title-plan" id="app-link-from-03">title plan</a> is available for this property
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key app-house-price-index-authority">
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-house-price-index-information">
+                    <b><span class="app-percentage-index-change"></span></b> since 3 years ago<br><a class="app-house-price-index-information" href="#">View details on UK House Price Index</a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Planning application
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-llc-information">
+                Expires on <b>20 June 2021</b><br><a href="#">View details on Search for local land charges</a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Legal constraints
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-constraints-indicator">
+                
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-!-font-weight-bold">Keep a copy of the information on this page for free:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li> <a href="print"> print </a>
+            <li> <a href="download"> download </a>
+            <li> <a href="forward to an email address"> forward to an email address </a>
+        </ul>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon app-information-icon" aria-hidden="true">i</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Information</span>
+                We may have more information about this property if it's been recorded in the register.
+            </strong>
+        </div>
+
+        <p>You'll need an email address and a debit or credit card to view:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a summary of the property ownership</li>
+            <li>if there's a mortgage and who the lender is</li>
+            <li>details of any restrictive covenants- these limit what the owner can legally do with their property </li>
+            <li>details of any easements- rights to cross or otherwise use someone else's land for a specified purpose </li>
+            <li>the title extent for leasehold properties</li>
+            <li>a copy of the register</li>
+        </ul>
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption">Fees</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Thing</th>
+                    <th class="govuk-table__header" scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">A</th>
+                    <td class="govuk-table__cell">&pound;tbc</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">B</th>
+                    <td class="govuk-table__cell">&pound;tbc</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">C</th>
+                    <td class="govuk-table__cell">&pound;tbc</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><a href="04-email" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a></p>
+    
+    <!-- <div class="govuk-grid-column-one-third">
+        <img src="" class="app-map">
+        <p><a href="00-view-title-plan" id="app-link-from-03">View title plan</a></p>
+    </div> -->
+</div>
+{% endblock %}
