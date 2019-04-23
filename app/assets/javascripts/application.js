@@ -35,7 +35,7 @@ $(document).ready(function () {
     $('.app-price-paid-link').attr('href', 'http://landregistry.data.gov.uk/app/ppd/search?et%5B%5D=lrcommon%3Afreehold&et%5B%5D=lrcommon%3Aleasehold&limit=100&nb%5B%5D=true&nb%5B%5D=false&paon=8&ptype%5B%5D=lrcommon%3Adetached&ptype%5B%5D=lrcommon%3Asemi-detached&ptype%5B%5D=lrcommon%3Aterraced&ptype%5B%5D=lrcommon%3Aflat-maisonette&ptype%5B%5D=lrcommon%3AotherPropertyType&street=Peel+Street&tc%5B%5D=ppd%3AstandardPricePaidTransaction&tc%5B%5D=ppd%3AadditionalPricePaidTransaction&town=Plymouth');
     $('.app-percentage-index-change').text('+3.2%');
     $('.app-house-price-index-information').attr('href', 'http://landregistry.data.gov.uk/app/ukhpi/browse?from=2018-03-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Fcity-of-plymouth&to=2019-03-01');
-    $('#app-constraints-indicator, #app-constraints-information').text('There are no legal constraints recorded in the register');
+    $('#app-constraints-indicator, #app-constraints-information').text('There are no other entries in the register that affect the use of this property. There may be some that have not been recorded.');
     $('.app-map').attr('src', '/public//images/peel-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
   } else if ($addressToDisplay.indexOf("Clinton") !== -1) {
@@ -46,7 +46,7 @@ $(document).ready(function () {
     $('.app-price-paid-link').attr('href', 'http://landregistry.data.gov.uk/app/ppd/search?et%5B%5D=lrcommon%3Afreehold&et%5B%5D=lrcommon%3Aleasehold&limit=100&nb%5B%5D=true&nb%5B%5D=false&paon=3&ptype%5B%5D=lrcommon%3Adetached&ptype%5B%5D=lrcommon%3Asemi-detached&ptype%5B%5D=lrcommon%3Aterraced&ptype%5B%5D=lrcommon%3Aflat-maisonette&ptype%5B%5D=lrcommon%3AotherPropertyType&street=Clinton+Street&tc%5B%5D=ppd%3AstandardPricePaidTransaction&tc%5B%5D=ppd%3AadditionalPricePaidTransaction&town=Exeter');
     $('.app-percentage-index-change').text('+1%');
     $('.app-house-price-index-information').attr('href', 'http://landregistry.data.gov.uk/app/ukhpi/browse?from=2018-03-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Fexeter&to=2019-03-01');
-    $('#app-constraints-indicator').text('There are legal constraints recorded in the register - to view details you\'ll need to pay a fee');
+    $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/clinton-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/clinton-street-extent_large.png');
     $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
@@ -58,7 +58,7 @@ $(document).ready(function () {
     $('.app-price-paid-link').attr('href', 'http://landregistry.data.gov.uk/app/ppd/search?et%5B%5D=lrcommon%3Afreehold&et%5B%5D=lrcommon%3Aleasehold&limit=100&nb%5B%5D=true&nb%5B%5D=false&paon=10&ptype%5B%5D=lrcommon%3Adetached&ptype%5B%5D=lrcommon%3Asemi-detached&ptype%5B%5D=lrcommon%3Aterraced&ptype%5B%5D=lrcommon%3Aflat-maisonette&ptype%5B%5D=lrcommon%3AotherPropertyType&street=Elgin+Park&tc%5B%5D=ppd%3AstandardPricePaidTransaction&tc%5B%5D=ppd%3AadditionalPricePaidTransaction&town=Bristol');
     $('.app-percentage-index-change').text('+1.3%');
     $('.app-house-price-index-information').attr('href', 'http://landregistry.data.gov.uk/app/ukhpi/browse?from=2018-03-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Fcity-of-bristol&to=2019-03-01');
-    $('#app-constraints-indicator').text('There are legal constraints recorded in the register - to view details you\'ll need to pay a fee');
+    $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/elgin-park-extent.png');
     $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
     $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
