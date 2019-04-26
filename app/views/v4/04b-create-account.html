@@ -21,11 +21,14 @@
     <p> It may retain and share it to help detect and prevent fraud, in line with its <a href="personal information charter"> personal information charter</a>.</p>
 
     <div class="govuk-form-group">
-      <label class="govuk-label" for="two-thirds">
-        Email address
+      <label class="govuk-label" for="email-account">
+       Email address
       </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-    </div>
+    <span id="email-hint" class="govuk-hint">
+      We must tell them why we're collecting it...
+    </span>
+    <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+  </div>
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="two-thirds">
