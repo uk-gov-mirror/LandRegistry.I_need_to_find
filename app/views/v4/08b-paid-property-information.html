@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Property information
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Property information
+    </h1>
+        <div class="app-flex-grid app-address-display">
+            <p class="app-flex-item app-flex-grid-header">Address:</p>
+            <p id="app-address-to-display" class="app-flex-item app-flex-grid-body">
+            </p>
+        </div>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p>There's <b>1</b> property record (title) for this address.</p>
+
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Title number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  ABC1234
+                </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Tenure type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Freehold<br>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What's freehold?
+                        </span>
+                    </summary>
+                        <div class="govuk-details__text">
+                            <p> You own a freehold property until you sell it, give it away or it otherwise passes to someone else. </p>
+                            <p> Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                            <p> <b> If you want to know who owns a particular flat, you probably need the leasehold instead. </b> </p>
+                            <p> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                        </div>
+                    </details>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Property type
+                </dt>
+                <dd class="govuk-summary-list__value app-property-type">
+                    Semi-detached
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Poperty sold for
+                </dt>
+                <dd class="govuk-summary-list__value">
+                <b>&pound;250,000</b> on 15 May 2014<br>
+                <b>&pound;150,000</b> on 20 November 2011<br>
+                <b>&pound;115,000</b> on 11 April 2005<br>
+                <a class="app-price-paid-link" href="">View details on HMLR Price Paid Data</a>
+                <!-- <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                View more
+                            </span>
+                        </summary>
+                            <div class="govuk-details__text">
+                                <b>&pound;105,000</b> on 30 January 2004<br>
+                                <b>&pound;98,000</b> on 2 April 2001 (New build)
+                            </div>
+                        </details> -->
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                General boundaries
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-title-information">
+                    View <a href="00-view-title-plan" id="app-link-from-08b"> title extent</a> on a map
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key app-house-price-index-authority">
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-house-price-index-information">
+                    <b><span class="app-percentage-index-change"></span></b> since <b> 2016 </b> <br><a class="app-house-price-index-information" href="#">View details on UK House Price Index</a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Planning application
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-llc-information">
+                Registered on <b>20 June 2021</b><br><a href="#">View details on Search for local land charges</a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Lender
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  NatWest
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Owner's contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Bob Smith<br>
+                  <span class="app-address-to-display"></span>
+                </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Other entries
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-constraints-information">
+                  The land has the benefit of any legal easements granted by a Conveyance dated 12 May 1990 made between (1) Harris Brothers (Builders) Limited and (2) Frank Phillips but is subject to any rights that are reserved by the said deed and affect the registered land.
+                  
+                  Copy Filed.<br>
+                    <a href ="download-copy"> Download copy of deed </a>
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-!-font-weight-bold">Keep a copy of the information on this page for free:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li> <a href="print"> print </a>
+            <li> <a href="download"> download </a>
+            <li> <a href="forward to an email address"> forward to an email address </a>
+        </ul>
+</div>
+{% endblock %}
