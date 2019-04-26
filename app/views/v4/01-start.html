@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  I need to find property information
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>Use this service to get information about a property in England and Wales, even if you don't own it.</p>
+
+      <h2 class="govuk-heading-m">Free information</h2>
+      <p> HM Land Registry holds records about most property or land sold in England or Wales since 1993. We can give you some of this information for free.
+      This includes general boundaries (title extent) for freehold properties, price paid history and planning application details. </p>
+      <p> We can also tell you if the are any more entries in the register that may affect the use of the property - for details you'll need to pay a fee.</p>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            What information can I get for free?
+            </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p> You can view: </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>the full address</li>
+                <li>price paid history- you won't get this if it was bought before April 2000, if less than £100 was paid or stated, or if HM Land Registry have agreed not to record the price </li>
+                <li>general boundaries (title extent)</li>
+                <li>property price trends for the local area</li>
+                <li>details of any planning applications</li>
+                <li>if there are any other entries in the register that affect the use of the property</li>
+            </ul>
+        </div>
+      </details>
+
+      <p>We may have more information about properties you're searching for if it's been recorded in the register.</p>
+
+      <h2 class="govuk-heading-m">Premium information</h2>
+      <p>You'll need an email address and debit or credit card for premium information.</p>
+      
+       For example, title number, contact details for the owner and details of any other entries in the register that may affect the use of the property.</p>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            What information do I need to pay for?
+            </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p> You can view: </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>if there's a mortgage and who the lender is</li>
+                <li>contact details for the legal owner</li>
+                <li>details of any other entries in the register that affect the use of the property</li>
+                <li>the general boundaries (title extent) for leasehold properties</li>
+                <li>a copy of the register</li>
+            </ul>
+        </div>
+      </details>
+
+      <p>You can:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>print a copy</li>
+        <li>download a copy</li>
+        <li>forward a copy to an email address </li> </p>
+
+      <a href="02-postcode-search" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
