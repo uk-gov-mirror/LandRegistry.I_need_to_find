@@ -29,7 +29,7 @@ $(document).ready(function () {
   let $addressToDisplay = sessionStorage.getItem('address');
   if ($addressToDisplay.indexOf("Peel") !== -1) {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Plymouth<br>PL1 3SB');
-    $('.app-house-price-index-authority').text('Property price trend for City of Plymouth');
+    $('.app-house-price-index-authority').text('Property price trends for Plymouth');
     $('.app-property-type').text('Terraced');
     $('.app-price-paid-list').html('<b>&pound;107,000</b> on 26 September 2008<br>');
     $('.app-price-paid-link').attr('href', 'http://landregistry.data.gov.uk/app/ppd/search?et%5B%5D=lrcommon%3Afreehold&et%5B%5D=lrcommon%3Aleasehold&limit=100&nb%5B%5D=true&nb%5B%5D=false&paon=8&ptype%5B%5D=lrcommon%3Adetached&ptype%5B%5D=lrcommon%3Asemi-detached&ptype%5B%5D=lrcommon%3Aterraced&ptype%5B%5D=lrcommon%3Aflat-maisonette&ptype%5B%5D=lrcommon%3AotherPropertyType&street=Peel+Street&tc%5B%5D=ppd%3AstandardPricePaidTransaction&tc%5B%5D=ppd%3AadditionalPricePaidTransaction&town=Plymouth');
