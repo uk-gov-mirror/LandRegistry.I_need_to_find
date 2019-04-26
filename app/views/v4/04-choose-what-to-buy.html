@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GovPay
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            What do you want to buy?
+          </h1>
+        </legend>
+
+        <div class="govuk-checkboxes" data-module="checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+            <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+              Copy of title register (£3)
+            </label> </div>
+          <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+            <span id="citizenship-conditional-hint" class="govuk-hint">
+              <p> The title register has details about the property or land. It includes: </p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>  the title number </li>
+                <li>  who owns it </li>
+                <li>  what they paid for it (properties only, if available) </li>
+                <li>  any rights of way </li>
+                <li>  whether a mortgage on it has been ‘discharged’, for example paid off </li>
+            </span>
+            </div>
+          </div>
+          <div class="govuk-checkboxes" data-module="checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                Copy of title plan (£3)
+              </label> </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+              <span id="citizenship-conditional-hint" class="govuk-hint">
+                <p> The title plan is a map showing:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>the property's location</li>
+                    <li>the general boundaries - there’s usually no record of exact boundaries </li>
+              </span>
+              </div>
+            </div>
+            <div class="govuk-checkboxes" data-module="checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                  Copy of deeds (£3)
+                </label> </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
+                <span id="citizenship-conditional-hint" class="govuk-hint">
+                  <p> You'll get a copy of the deeds referred to in the title register. Copies of deeds can’t be used to prove ownership, for example in a court case.</p>
+                </span>
+                </div>
+              </div>
+      </div>
+      </fieldset>
+      <p><a href="05a-login" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a></p>
+    </div>
+
+
+  </div>
+
+</div>
+
+{% endblock %}
