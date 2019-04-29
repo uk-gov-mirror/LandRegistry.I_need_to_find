@@ -61,7 +61,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/elgin-park-extent.png');
     $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
-    $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
+    $('#app-button__pay-successful').attr('href', '09b-paid-property-information');
   }
 });
 
