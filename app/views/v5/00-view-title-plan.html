@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Title plan
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+        Title extent for
+        </h1>
+        <p id="app-address-to-display" class="govuk-!-font-size-24"></p>
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon app-information-icon" aria-hidden="true">i</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Information</span>
+                The map shows the general boundaries - there's usually no record of the exact boundaries.
+            </strong>
+        </div>
+        <div>
+      <p><a href="#" class="app-back-link">Back to property information</a></p>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <img src="" class="app-map_large">
+    </div>
+</div>
+
+{% endblock %}

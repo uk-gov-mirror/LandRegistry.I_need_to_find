@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GovPay
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Sign in
+    </h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sign-in-email">
+        Email
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="sign-in-email" name="sign-in-email" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sign-in-password">
+        Password
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="sign-in-password" name="sign-in-password" type="text">
+    </div>
+    <div>
+    <p><a href="05-gov-pay" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue to payment</a></p>
+    <p> Forgotten your password? <a href="reset-password-dummylink"> Reset password </a> </p>
+    <p> Don't have an account? <a href="04b-create-account"> Create an account </a> </p>
+   </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

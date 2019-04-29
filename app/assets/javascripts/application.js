@@ -69,10 +69,10 @@ $('#app-link-from-03').on('click', function() {
   sessionStorage.setItem('linkBackHref', '03-free-property-information');
 });
 $('#app-link-from-08').on('click', function() {
-  sessionStorage.setItem('linkBackHref', '08-paid-property-information');
+  sessionStorage.setItem('linkBackHref', '09-paid-property-information');
 });
 $('#app-link-from-08b').on('click', function() {
-  sessionStorage.setItem('linkBackHref', '08b-paid-property-information');
+  sessionStorage.setItem('linkBackHref', '09b-paid-property-information');
 });
 
 let $linkBackHref = sessionStorage.getItem('linkBackHref');
