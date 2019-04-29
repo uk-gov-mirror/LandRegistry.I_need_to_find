@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GovPay
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Create an account
+    </h1>
+
+    <p> HM Land Registry will keep and use your personal information to: </p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li> manage your account</li>
+          <li> process requests </li>
+          <li> contact you </li>
+      </ul>
+    <p> It may retain and share it to help detect and prevent fraud, in line with its <a href="personal information charter"> personal information charter</a>.</p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-account">
+       Email address
+      </label>
+    <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+  </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="two-thirds">
+       Create a password
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="two-thirds">
+       Re-type your password
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+    </div>
+
+    <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h1 class="govuk-fieldset__heading">
+      Your details
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="details-first-name">
+      First name
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="details-first-name" name="details-first-name" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Last name
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="details-phone-number">
+      Phone number (optional)
+    </label>
+    <input class="govuk-input govuk-!-width-one-third" id="details-phone-number" name="details-phone-number" type="text">
+  </div>
+  </fieldset>
+
+    <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h1 class="govuk-fieldset__heading">
+      Address
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      First line of your address
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="address-line-1" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town or city
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-county">
+      County
+    </label>
+    <input class="govuk-input govuk-!-width-one-third" id="address-county" name="address-county" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+  </div>
+</fieldset>
+
+<div class="govuk-form-group">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="terms-of-use" name="terms-of-use" type="checkbox" value="agree">
+        <label class="govuk-label govuk-checkboxes__label" for="terms-of-use">
+          I have read and agree to the <a href = "dummy-terms-link"> terms of use </a>
+        </label> </div>
+    </div>
+</div>
+
+    <p><a href="06-gov-pay" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Create account</a></p>
+  </div>
+</div>
+
+{% endblock %}
