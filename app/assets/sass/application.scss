@@ -76,3 +76,8 @@ $govuk-global-styles: true;
     height: auto;
     margin-bottom: 1em;
 }
+
+.app-related-content {
+    border-top: 2px solid $govuk-link-colour;
+    padding-top: 15px;
+}
