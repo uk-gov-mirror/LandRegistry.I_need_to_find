@@ -49,7 +49,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/clinton-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/clinton-street-extent_large.png');
-    $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
+    $('#app-button__pay-successful, .app-pay-variable').attr('href', '09b-paid-property-information');
   } else if ($addressToDisplay.indexOf("Elgin") !== -1) {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS6 6RU');
     $('.app-house-price-index-authority').text('Property price trend for City Bristol');
@@ -61,7 +61,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/elgin-park-extent.png');
     $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
-    $('#app-button__pay-successful').attr('href', '08b-paid-property-information');
+    $('#app-button__pay-successful, .app-pay-variable').attr('href', '09b-paid-property-information');
   }
 });
 
@@ -77,3 +77,96 @@ $('#app-link-from-08b').on('click', function() {
 
 let $linkBackHref = sessionStorage.getItem('linkBackHref');
 $('.app-back-link').attr('href', $linkBackHref);
+
+$('.app-glossary-link').on('click', function() {
+  if($(this).hasClass('app-glossary-link__start')) {
+    sessionStorage.setItem('linkBackFromGlossary', '01-start');
+  } else if ($(this).hasClass('app-glossary-link__choice')) {
+    sessionStorage.setItem('linkBackFromGlossary', '04-choose-what-to-buy');
+  }
+});
+
+let linkBackFromGlossary = sessionStorage.getItem('linkBackFromGlossary');
+console.log(linkBackFromGlossary);
+$('.app-back-link-from-glossary').on('click', function() {
+  $(this).attr('href', linkBackFromGlossary);
+});
+
+/* ugly hack for checkbox data */
+
+$('.app-register-checkbox').on('click', function() {
+  if ($(this).hasClass('checked')) {
+    console.log('This is now unchecked');
+    $(this).removeClass('checked');
+    sessionStorage.setItem('registerToPayFor', 'no');
+  } else {
+    console.log('This is now checked');
+    $(this).addClass('checked');
+    sessionStorage.setItem('registerToPayFor', 'yes');
+  }
+});
+
+$('.app-title-checkbox').on('click', function() {
+  if ($(this).hasClass('checked')) {
+    console.log('This is now unchecked');
+    $(this).removeClass('checked');
+    sessionStorage.setItem('titleToPayFor', 'no');
+  } else {
+    console.log('This is now checked');
+    $(this).addClass('checked');
+    sessionStorage.setItem('titleToPayFor', 'yes');
+  }
+});
+
+$('.app-deed-checkbox').on('click', function() {
+  if ($(this).hasClass('checked')) {
+    console.log('This is now unchecked');
+    $(this).removeClass('checked');
+    sessionStorage.setItem('deedToPayFor', 'no');
+  } else {
+    console.log('This is now checked');
+    $(this).addClass('checked');
+    sessionStorage.setItem('deedToPayFor', 'yes');
+  }
+});
+
+let registerToPayFor = sessionStorage.getItem('registerToPayFor');
+let titleToPayFor = sessionStorage.getItem('titleToPayFor');
+let deedToPayFor = sessionStorage.getItem('deedToPayFor');
+let allItemsToPay = [registerToPayFor, titleToPayFor, deedToPayFor];
+allItemsToPay = allItemsToPay.filter(Boolean);
+let numberOfItemsToPay = allItemsToPay.length;
+if (numberOfItemsToPay === 1) {
+  $('.app-total-amount').text('3');
+} else if (numberOfItemsToPay === 2) {
+  $('.app-total-amount').text('6')
+} else if (numberOfItemsToPay === 3) {
+  $('.app-total-amount').text('9')
+}
+
+let itemsPurchasedList = [];
+if (registerToPayFor === 'yes') {
+  itemsPurchasedList.push('Copy of the register');
+}
+if (titleToPayFor === 'yes') {
+  itemsPurchasedList.push('Copy of title extent');
+}
+if (deedToPayFor === 'yes') {
+  itemsPurchasedList.push('Copy of deeds');
+}
+console.log(itemsPurchasedList);
+let itemsPurchasedListToDisplay = [];
+$.each(itemsPurchasedList, function(index, value) {
+  itemsPurchasedListToDisplay.push('<span>' + value + '</span><br>');
+});
+$('.app-items-purchased-list').html(itemsPurchasedListToDisplay.join(""));
+
+if (registerToPayFor === 'yes') {
+  $('.app-copy-of-register-ok').removeClass('app-hidden')
+} 
+if (titleToPayFor === 'yes') {
+  $('.app-copy-of-title-ok').removeClass('app-hidden');
+} 
+if (deedToPayFor === 'yes') {
+  $('.app-copy-of-deeds-ok').removeClass('app-hidden');
+}

@@ -50,6 +50,17 @@ $govuk-global-styles: true;
         font-weight: bold;
     }
 }
+
+.app-doc-grid {
+    margin-bottom: 2rem;
+    & img {
+        margin-right: 1rem;
+    }
+}
+
+.app-download-doc {
+    font-size: 27px;
+}
 .app-font--monospace {
     font-family: monospace;
 }
@@ -80,4 +91,10 @@ $govuk-global-styles: true;
 .app-related-content {
     border-top: 2px solid $govuk-link-colour;
     padding-top: 15px;
+}
+
+.app-doc-image {
+    background: #fff;
+    outline: 5px solid rgba(11,12,12,0.1);
+    box-shadow: 0 2px 2px rgba(11,12,12,0.4);
 }
