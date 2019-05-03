@@ -152,7 +152,7 @@ if (titleToPayFor === 'yes') {
   itemsPurchasedList.push('Title plan (official copy)');
 }
 if (deedToPayFor === 'yes') {
-  itemsPurchasedList.push('Copy of deeds');
+  itemsPurchasedList.push('Copy of title deeds');
 }
 console.log(itemsPurchasedList);
 let itemsPurchasedListToDisplay = [];
