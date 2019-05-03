@@ -146,10 +146,10 @@ if (numberOfItemsToPay === 1) {
 
 let itemsPurchasedList = [];
 if (registerToPayFor === 'yes') {
-  itemsPurchasedList.push('Copy of the register');
+  itemsPurchasedList.push('Title register (official copy)');
 }
 if (titleToPayFor === 'yes') {
-  itemsPurchasedList.push('Copy of title extent');
+  itemsPurchasedList.push('Title plan (official copy)');
 }
 if (deedToPayFor === 'yes') {
   itemsPurchasedList.push('Copy of deeds');
@@ -163,10 +163,10 @@ $('.app-items-purchased-list').html(itemsPurchasedListToDisplay.join(""));
 
 if (registerToPayFor === 'yes') {
   $('.app-copy-of-register-ok').removeClass('app-hidden')
-} 
+}
 if (titleToPayFor === 'yes') {
   $('.app-copy-of-title-ok').removeClass('app-hidden');
-} 
+}
 if (deedToPayFor === 'yes') {
   $('.app-copy-of-deeds-ok').removeClass('app-hidden');
 }
