@@ -49,7 +49,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/clinton-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/clinton-street-extent_large.png');
-    $('#app-button__pay-successful, .app-pay-variable').attr('href', '09b-paid-property-information');
+    $('.app-link-variable').attr('href', '09b-paid-property-information');
   } else if ($addressToDisplay.indexOf("Elgin") !== -1) {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS6 6RU');
     $('.app-house-price-index-authority').text('Property price trend for City Bristol');
@@ -61,7 +61,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/elgin-park-extent.png');
     $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
-    $('#app-button__pay-successful, .app-pay-variable').attr('href', '09b-paid-property-information');
+    $('.app-link-variable').attr('href', '09b-paid-property-information');
   }
 });
 
