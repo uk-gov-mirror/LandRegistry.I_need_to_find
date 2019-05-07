@@ -87,55 +87,86 @@ $('.app-glossary-link').on('click', function() {
 });
 
 let linkBackFromGlossary = sessionStorage.getItem('linkBackFromGlossary');
-console.log(linkBackFromGlossary);
 $('.app-back-link-from-glossary').on('click', function() {
   $(this).attr('href', linkBackFromGlossary);
 });
 
 /* ugly hack for checkbox data */
 
-$('.app-register-checkbox').on('click', function() {
+$('.app-register-checkbox, .app-register-checkbox-label').on('click', function() {
   if ($(this).hasClass('checked')) {
     console.log('This is now unchecked');
     $(this).removeClass('checked');
-    sessionStorage.setItem('registerToPayFor', 'no');
   } else {
     console.log('This is now checked');
     $(this).addClass('checked');
+  }
+});
+
+$('.app-title-checkbox, .app-title-checkbox-label').on('click', function() {
+  if ($(this).hasClass('checked')) {
+    console.log('This is now unchecked');
+    $(this).removeClass('checked');
+  } else {
+    console.log('This is now checked');
+    $(this).addClass('checked');
+  }
+});
+
+$('.app-deed-checkbox, .app-deed-checkbox-label').on('click', function() {
+  if ($(this).hasClass('checked')) {
+    console.log('This is now unchecked');
+    $(this).removeClass('checked');
+  } else {
+    console.log('This is now checked');
+    $(this).addClass('checked');
+  }
+});
+
+$('.app-select-product-button').on('click', function() {
+  if($('.app-register-checkbox').hasClass('checked')) {
     sessionStorage.setItem('registerToPayFor', 'yes');
-  }
-});
-
-$('.app-title-checkbox').on('click', function() {
-  if ($(this).hasClass('checked')) {
-    console.log('This is now unchecked');
-    $(this).removeClass('checked');
-    sessionStorage.setItem('titleToPayFor', 'no');
   } else {
-    console.log('This is now checked');
-    $(this).addClass('checked');
+    sessionStorage.setItem('registerToPayFor', 'no');
+  }
+  if($('.app-title-checkbox').hasClass('checked')) {
     sessionStorage.setItem('titleToPayFor', 'yes');
-  }
-});
-
-$('.app-deed-checkbox').on('click', function() {
-  if ($(this).hasClass('checked')) {
-    console.log('This is now unchecked');
-    $(this).removeClass('checked');
-    sessionStorage.setItem('deedToPayFor', 'no');
   } else {
-    console.log('This is now checked');
-    $(this).addClass('checked');
-    sessionStorage.setItem('deedToPayFor', 'yes');
+    sessionStorage.setItem('titleToPayFor', 'no');
   }
-});
+  if($('.app-deed-checkbox').hasClass('checked')) {
+    sessionStorage.setItem('deedToPayFor', 'yes');
+  } else {
+    sessionStorage.setItem('deedToPayFor', 'no');
+  }
+})
 
 let registerToPayFor = sessionStorage.getItem('registerToPayFor');
+console.log(registerToPayFor);
+if (registerToPayFor === 'yes') {
+  $('.app-register-checkbox').addClass('checked');
+}
 let titleToPayFor = sessionStorage.getItem('titleToPayFor');
+console.log(titleToPayFor);
+if (titleToPayFor === 'yes') {
+  $('.app-title-checkbox').addClass('checked');
+}
 let deedToPayFor = sessionStorage.getItem('deedToPayFor');
+console.log(deedToPayFor);
+if (deedToPayFor === 'yes') {
+  $('.app-deed-checkbox').addClass('checked');
+}
 let allItemsToPay = [registerToPayFor, titleToPayFor, deedToPayFor];
+console.log(allItemsToPay);
 allItemsToPay = allItemsToPay.filter(Boolean);
+for (var i = 0; i < allItemsToPay.length; i++) {
+  if (allItemsToPay[i] === 'no') {
+    allItemsToPay.splice(i, 1);
+    i--;
+  }
+}
 let numberOfItemsToPay = allItemsToPay.length;
+// console.log(numberOfItemsToPay);
 if (numberOfItemsToPay === 1) {
   $('.app-total-amount').text('3');
 } else if (numberOfItemsToPay === 2) {
@@ -154,7 +185,7 @@ if (titleToPayFor === 'yes') {
 if (deedToPayFor === 'yes') {
   itemsPurchasedList.push('Copy of title deeds');
 }
-console.log(itemsPurchasedList);
+// console.log(itemsPurchasedList);
 let itemsPurchasedListToDisplay = [];
 $.each(itemsPurchasedList, function(index, value) {
   itemsPurchasedListToDisplay.push('<span>' + value + '</span><br>');
