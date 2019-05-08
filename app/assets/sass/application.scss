@@ -99,3 +99,10 @@ $govuk-global-styles: true;
     outline: 5px solid rgba(11,12,12,0.1);
     box-shadow: 0 2px 2px rgba(11,12,12,0.4);
 }
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: #005ea5;
+}
