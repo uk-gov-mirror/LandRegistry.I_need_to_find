@@ -63,141 +63,143 @@ $(document).ready(function () {
     $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
     $('.app-link-variable').attr('href', '09b-paid-property-information');
   }
-});
 
-$('#app-link-from-03').on('click', function() {
-  sessionStorage.setItem('linkBackHref', '03-free-property-information');
-});
-$('#app-link-from-08').on('click', function() {
-  sessionStorage.setItem('linkBackHref', '09-paid-property-information');
-});
-$('#app-link-from-08b').on('click', function() {
-  sessionStorage.setItem('linkBackHref', '09b-paid-property-information');
-});
-
-let $linkBackHref = sessionStorage.getItem('linkBackHref');
-$('.app-back-link').attr('href', $linkBackHref);
-
-$('.app-glossary-link').on('click', function() {
-  if($(this).hasClass('app-glossary-link__start')) {
-    sessionStorage.setItem('linkBackFromGlossary', '01-start');
-  } else if ($(this).hasClass('app-glossary-link__choice')) {
-    sessionStorage.setItem('linkBackFromGlossary', '04-choose-what-to-buy');
+  $('#app-link-from-03').on('click', function() {
+    sessionStorage.setItem('linkBackHref', '03-free-property-information');
+  });
+  $('#app-link-from-08').on('click', function() {
+    sessionStorage.setItem('linkBackHref', '09-paid-property-information');
+  });
+  $('#app-link-from-08b').on('click', function() {
+    sessionStorage.setItem('linkBackHref', '09b-paid-property-information');
+  });
+  
+  let $linkBackHref = sessionStorage.getItem('linkBackHref');
+  $('.app-back-link').attr('href', $linkBackHref);
+  
+  $('.app-glossary-link').on('click', function() {
+    if($(this).hasClass('app-glossary-link__start')) {
+      sessionStorage.setItem('linkBackFromGlossary', '01-start');
+    } else if ($(this).hasClass('app-glossary-link__choice')) {
+      sessionStorage.setItem('linkBackFromGlossary', '04-choose-what-to-buy');
+    }
+  });
+  
+  let linkBackFromGlossary = sessionStorage.getItem('linkBackFromGlossary');
+  $('.app-back-link-from-glossary').on('click', function() {
+    $(this).attr('href', linkBackFromGlossary);
+  });
+  
+  /* ugly hack for checkbox data */
+  
+  $('.app-register-checkbox, .app-register-checkbox-label').on('click', function() {
+    if ($(this).hasClass('checked')) {
+      console.log('This is now unchecked');
+      $(this).removeClass('checked');
+    } else {
+      console.log('This is now checked');
+      $(this).addClass('checked');
+    }
+  });
+  
+  $('.app-title-checkbox, .app-title-checkbox-label').on('click', function() {
+    if ($(this).hasClass('checked')) {
+      console.log('This is now unchecked');
+      $(this).removeClass('checked');
+    } else {
+      console.log('This is now checked');
+      $(this).addClass('checked');
+    }
+  });
+  
+  $('.app-deed-checkbox, .app-deed-checkbox-label').on('click', function() {
+    if ($(this).hasClass('checked')) {
+      console.log('This is now unchecked');
+      $(this).removeClass('checked');
+    } else {
+      console.log('This is now checked');
+      $(this).addClass('checked');
+    }
+  });
+  
+  $('.app-select-product-button').on('click', function() {
+    if($('.app-register-checkbox').hasClass('checked')) {
+      sessionStorage.setItem('registerToPayFor', 'yes');
+    } else {
+      sessionStorage.setItem('registerToPayFor', 'no');
+    }
+    if($('.app-title-checkbox').hasClass('checked')) {
+      sessionStorage.setItem('titleToPayFor', 'yes');
+    } else {
+      sessionStorage.setItem('titleToPayFor', 'no');
+    }
+    if($('.app-deed-checkbox').hasClass('checked')) {
+      sessionStorage.setItem('deedToPayFor', 'yes');
+    } else {
+      sessionStorage.setItem('deedToPayFor', 'no');
+    }
+  })
+  
+  let registerToPayFor = sessionStorage.getItem('registerToPayFor');
+  console.log(registerToPayFor);
+  if (registerToPayFor === 'yes') {
+    $('.app-register-checkbox').addClass('checked');
+  }
+  let titleToPayFor = sessionStorage.getItem('titleToPayFor');
+  console.log(titleToPayFor);
+  if (titleToPayFor === 'yes') {
+    $('.app-title-checkbox').addClass('checked');
+  }
+  let deedToPayFor = sessionStorage.getItem('deedToPayFor');
+  console.log(deedToPayFor);
+  if (deedToPayFor === 'yes') {
+    $('.app-deed-checkbox').addClass('checked');
+  }
+  let allItemsToPay = [registerToPayFor, titleToPayFor, deedToPayFor];
+  console.log(allItemsToPay);
+  allItemsToPay = allItemsToPay.filter(Boolean);
+  for (var i = 0; i < allItemsToPay.length; i++) {
+    if (allItemsToPay[i] === 'no') {
+      allItemsToPay.splice(i, 1);
+      i--;
+    }
+  }
+  let numberOfItemsToPay = allItemsToPay.length;
+  // console.log(numberOfItemsToPay);
+  if (numberOfItemsToPay === 1) {
+    $('.app-total-amount').text('3');
+  } else if (numberOfItemsToPay === 2) {
+    $('.app-total-amount').text('6')
+  } else if (numberOfItemsToPay === 3) {
+    $('.app-total-amount').text('9')
+  }
+  
+  let itemsPurchasedList = [];
+  if (registerToPayFor === 'yes') {
+    itemsPurchasedList.push('Title register (official copy)');
+  }
+  if (titleToPayFor === 'yes') {
+    itemsPurchasedList.push('Title plan (official copy)');
+  }
+  if (deedToPayFor === 'yes') {
+    itemsPurchasedList.push('Copy of title deeds');
+  }
+  // console.log(itemsPurchasedList);
+  let itemsPurchasedListToDisplay = [];
+  $.each(itemsPurchasedList, function(index, value) {
+    itemsPurchasedListToDisplay.push('<span>' + value + '</span><br>');
+  });
+  $('.app-items-purchased-list').html(itemsPurchasedListToDisplay.join(""));
+  
+  if (registerToPayFor === 'yes') {
+    $('.app-copy-of-register-ok').removeClass('app-hidden')
+  }
+  if (titleToPayFor === 'yes') {
+    $('.app-copy-of-title-ok').removeClass('app-hidden');
+  }
+  if (deedToPayFor === 'yes') {
+    $('.app-copy-of-deeds-ok').removeClass('app-hidden');
   }
 });
 
-let linkBackFromGlossary = sessionStorage.getItem('linkBackFromGlossary');
-$('.app-back-link-from-glossary').on('click', function() {
-  $(this).attr('href', linkBackFromGlossary);
-});
 
-/* ugly hack for checkbox data */
-
-$('.app-register-checkbox, .app-register-checkbox-label').on('click', function() {
-  if ($(this).hasClass('checked')) {
-    console.log('This is now unchecked');
-    $(this).removeClass('checked');
-  } else {
-    console.log('This is now checked');
-    $(this).addClass('checked');
-  }
-});
-
-$('.app-title-checkbox, .app-title-checkbox-label').on('click', function() {
-  if ($(this).hasClass('checked')) {
-    console.log('This is now unchecked');
-    $(this).removeClass('checked');
-  } else {
-    console.log('This is now checked');
-    $(this).addClass('checked');
-  }
-});
-
-$('.app-deed-checkbox, .app-deed-checkbox-label').on('click', function() {
-  if ($(this).hasClass('checked')) {
-    console.log('This is now unchecked');
-    $(this).removeClass('checked');
-  } else {
-    console.log('This is now checked');
-    $(this).addClass('checked');
-  }
-});
-
-$('.app-select-product-button').on('click', function() {
-  if($('.app-register-checkbox').hasClass('checked')) {
-    sessionStorage.setItem('registerToPayFor', 'yes');
-  } else {
-    sessionStorage.setItem('registerToPayFor', 'no');
-  }
-  if($('.app-title-checkbox').hasClass('checked')) {
-    sessionStorage.setItem('titleToPayFor', 'yes');
-  } else {
-    sessionStorage.setItem('titleToPayFor', 'no');
-  }
-  if($('.app-deed-checkbox').hasClass('checked')) {
-    sessionStorage.setItem('deedToPayFor', 'yes');
-  } else {
-    sessionStorage.setItem('deedToPayFor', 'no');
-  }
-})
-
-let registerToPayFor = sessionStorage.getItem('registerToPayFor');
-console.log(registerToPayFor);
-if (registerToPayFor === 'yes') {
-  $('.app-register-checkbox').addClass('checked');
-}
-let titleToPayFor = sessionStorage.getItem('titleToPayFor');
-console.log(titleToPayFor);
-if (titleToPayFor === 'yes') {
-  $('.app-title-checkbox').addClass('checked');
-}
-let deedToPayFor = sessionStorage.getItem('deedToPayFor');
-console.log(deedToPayFor);
-if (deedToPayFor === 'yes') {
-  $('.app-deed-checkbox').addClass('checked');
-}
-let allItemsToPay = [registerToPayFor, titleToPayFor, deedToPayFor];
-console.log(allItemsToPay);
-allItemsToPay = allItemsToPay.filter(Boolean);
-for (var i = 0; i < allItemsToPay.length; i++) {
-  if (allItemsToPay[i] === 'no') {
-    allItemsToPay.splice(i, 1);
-    i--;
-  }
-}
-let numberOfItemsToPay = allItemsToPay.length;
-// console.log(numberOfItemsToPay);
-if (numberOfItemsToPay === 1) {
-  $('.app-total-amount').text('3');
-} else if (numberOfItemsToPay === 2) {
-  $('.app-total-amount').text('6')
-} else if (numberOfItemsToPay === 3) {
-  $('.app-total-amount').text('9')
-}
-
-let itemsPurchasedList = [];
-if (registerToPayFor === 'yes') {
-  itemsPurchasedList.push('Title register (official copy)');
-}
-if (titleToPayFor === 'yes') {
-  itemsPurchasedList.push('Title plan (official copy)');
-}
-if (deedToPayFor === 'yes') {
-  itemsPurchasedList.push('Copy of title deeds');
-}
-// console.log(itemsPurchasedList);
-let itemsPurchasedListToDisplay = [];
-$.each(itemsPurchasedList, function(index, value) {
-  itemsPurchasedListToDisplay.push('<span>' + value + '</span><br>');
-});
-$('.app-items-purchased-list').html(itemsPurchasedListToDisplay.join(""));
-
-if (registerToPayFor === 'yes') {
-  $('.app-copy-of-register-ok').removeClass('app-hidden')
-}
-if (titleToPayFor === 'yes') {
-  $('.app-copy-of-title-ok').removeClass('app-hidden');
-}
-if (deedToPayFor === 'yes') {
-  $('.app-copy-of-deeds-ok').removeClass('app-hidden');
-}
