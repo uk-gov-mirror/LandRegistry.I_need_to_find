@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What do you want to buy?
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">Which documents do you need?</h1>
+        </legend>
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input app-register-checkbox" id="app-copy-of-register-input" name="cart" type="checkbox" value="register">
+            <label class="govuk-label govuk-checkboxes__label app-register-checkbox-label" for="app-copy-of-register-input">Title register (official copy)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input app-title-checkbox" id="app-copy-of-title-extent-input" name="cart" type="checkbox" value="title">
+            <label class="govuk-label govuk-checkboxes__label app-title-checkbox-label" for="app-copy-of-title-extent-input">Title plan (official copy)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input app-deed-checkbox" id="app-copy-of-deed-input" name="cart" type="checkbox" value="deed">
+            <label class="govuk-label govuk-checkboxes__label app-deed-checkbox-label" for="app-copy-of-deed-input">Copy of title deeds</label>
+          </div>
+
+        </div>
+      </fieldset>
+
+
+    </div>
+    <p><a href="05b-create-account" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 app-select-product-button">Continue</a></p>
+    <h2 class="govuk-heading-m">Not sure which documents you need?</h2>
+    <p>If you do not know which document you need, you can  <a href="000-guidance" class="app-glossary-link app-glossary-link__choice">find out more about them.</a></p>
+
+
+  </div>
+
+</div>
+
+{% endblock %}
