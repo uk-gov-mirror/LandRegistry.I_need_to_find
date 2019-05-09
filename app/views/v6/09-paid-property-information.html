@@ -18,12 +18,19 @@
         </div>
     </div>
 </div>
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <p>There's <b>1</b> property record (title) for this address.</p>
 
         <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Title number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  ABC1234
+                </dd>
+              </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                 Tenure type
@@ -49,7 +56,8 @@
                 <dt class="govuk-summary-list__key">
                     Property type
                 </dt>
-                <dd class="govuk-summary-list__value  app-property-type">
+                <dd class="govuk-summary-list__value app-property-type">
+                    Semi-detached
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -57,8 +65,7 @@
                     Property sold for
                 </dt>
                 <dd class="govuk-summary-list__value">
-                <span class="app-price-paid-list">
-                </span>
+                    <div class="app-price-paid-list"></div>
                 <a class="app-price-paid-link" href="">View details on HMLR Price Paid Data</a>
                 <!-- <details class="govuk-details">
                         <summary class="govuk-details__summary">
@@ -78,7 +85,7 @@
                 General boundaries
                 </dt>
                 <dd class="govuk-summary-list__value" id="app-title-plan-information">
-                  View <a href="00-view-title-extent" id="app-link-from-03">property extent</a> on a map
+                    View <a href="00-view-title-plan" id="app-link-from-08">title extent</a> on a map
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -96,85 +103,52 @@
                 Registered on <b>20 June 2017</b><br><a href="#">View details on Search for local land charges</a>
                 </dd>
             </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Lender
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  NatWest
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Owner's contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Bob Smith<br>
+                  <span class="app-address-to-display"></span>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Restrictive covenants
+                  </dt>
+                  <dd class="govuk-summary-list__value" id="app-covenants-indicator">
+                  There are no restrictive covenants recorded in the register. There may be some that have not been recorded.
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Easements
+                  </dt>
+                  <dd class="govuk-summary-list__value" id="app-easements-indicator">
+                    The land has the benefit of any legal easements granted by a Conveyance dated 12 May 1990 made between (1) Harris Brothers (Builders) Limited and (2) Frank Phillips but is subject to any rights that are reserved by the said deed and affect the registered land.
+
+                    Copy Filed.<br>
+                  </dd>
+              </div>
         </dl>
     </div>
 </div>
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-m">
-        Things you can and cannot do with the property
-      </h2>
-        <h3 class="govuk-heading-s"> Easements </h3>
-          <p> Easements are rights that the owner of one piece of land has over another piece of land. For example, rights of way. </p>
-
-          <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon app-information-icon" aria-hidden="true">i</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Information</span>
-                   There are easements recorded in the register - to view details you'll need to buy the title register.
-               </strong>
-            </div>
-
-        <h3 class="govuk-heading-s"> Restrictive covenants </h3>
-           <p> Restrictive covenants are contracts between two landowners. One landowner promises the other landowner not to carry out particular acts on their land. </p>
-
-              <div class="govuk-warning-text">
-                <span class="govuk-warning-text__icon app-information-icon" aria-hidden="true">i</span>
-                  <strong class="govuk-warning-text__text">
-                    <span class="govuk-warning-text__assistive">Information</span>
-                       There are no restrictive covenants recorded in the register.
-                       There may be some that have not been recorded.
-                   </strong>
-                </div>
-
         <p class="govuk-!-font-weight-bold">Keep a copy of the information on this page for free:</p>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li> <a href="print"> print </a>
-            <li> <a href="download"> download </a>
+            <li> <a href="print"> print this page </a>
+            <li> <a href="09a-paid-property-information"> download an official copy </a>
             <li> <a href="forward to an email address"> forward to an email address </a>
         </ul>
-
-        <h2 class="govuk-heading-m">
-            Need more information?
-        </h2>
-
-             <p> You can get more information about this property if it's been recorded in the register. </p>
-
-              <p>You'll need to create an account and a debit or credit card.</p>
-
-              <table class="govuk-table">
-                  <caption class="govuk-table__caption">Fees</caption>
-                  <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="col">Document</th>
-                          <th class="govuk-table__header" scope="col">Fee</th>
-                      </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="row">Title register (official copy)</th>
-                          <td class="govuk-table__cell">&pound;3</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="row">Title plan (official copy)</th>
-                          <td class="govuk-table__cell">&pound;3</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="row">Copy of title deeds</th>
-                          <td class="govuk-table__cell">&pound;3</td>
-                      </tr>
-                  </tbody>
-              </table>
-
-              <p> <a href="000-guidance" class="app-glossary-link app-glossary-link__free"> What will these documents give me? </a> </p>
-
-              <p><a href="04-choose-what-to-buy" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a></p>
-
-    <!-- <div class="govuk-grid-column-one-third">
-        <img src="" class="app-map">
-        <p><a href="00-view-title-plan" id="app-link-from-03">View title plan</a></p>
-    </div> -->
 </div>
 {% endblock %}

@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  I need to find property information
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+
+    <p>Use this service to get information about a property in England and Wales, even if you don't own it.</p>
+
+    <h2 class="govuk-heading-m">Free information</h2>
+
+        <p> You can view: </p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>the full address</li>
+              <li>price paid history- you'll only get this if it was bought after April 2000, if more than £100 was paid or stated, or if HM Land Registry have recorded the price </li>
+              <li>general boundaries</li>
+              <li>property price trends for the local area</li>
+              <li>details of any planning applications</li>
+              <li>whether there are things you can or cannot do with the property (restrictive covenants and easements)</li>
+          </ul>
+
+        <h2 class="govuk-heading-m">Need more information?</h2>
+          <p>You can get more information about a property if it's been recorded in the register.</p>
+
+          <p> You can buy:
+            <ul class="govuk-list govuk-list--bullet">
+                <li>the title register (official copy)</li>
+                <li>the title plan (official copy) </li>
+                <li>copy of title deeds </li>
+            </ul>
+
+          <p> These documents are <b>£3</b> each.
+
+          <p> <a href="000-guidance" class="app-glossary-link app-glossary-link__start"> What will these documents give me? </a> </p>
+
+        <a href="02-postcode-search" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+             <p>To buy documents, you'll need: </p>
+               <ul class="govuk-list govuk-list--bullet">
+               <li>to create an account</li>
+               <li>a debit or credit card</li>
+    </div>
+  </div>
+{% endblock %}

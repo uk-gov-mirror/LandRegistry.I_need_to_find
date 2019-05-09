@@ -73,25 +73,27 @@ $(document).ready(function () {
   $('#app-link-from-08b').on('click', function() {
     sessionStorage.setItem('linkBackHref', '09b-paid-property-information');
   });
-  
+
   let $linkBackHref = sessionStorage.getItem('linkBackHref');
   $('.app-back-link').attr('href', $linkBackHref);
-  
+
   $('.app-glossary-link').on('click', function() {
     if($(this).hasClass('app-glossary-link__start')) {
       sessionStorage.setItem('linkBackFromGlossary', '01-start');
     } else if ($(this).hasClass('app-glossary-link__choice')) {
       sessionStorage.setItem('linkBackFromGlossary', '04-choose-what-to-buy');
+    } else if ($(this).hasClass('app-glossary-link__free')) {
+      sessionStorage.setItem('linkBackFromGlossary', '03-free-property-information');
     }
   });
-  
+
   let linkBackFromGlossary = sessionStorage.getItem('linkBackFromGlossary');
   $('.app-back-link-from-glossary').on('click', function() {
     $(this).attr('href', linkBackFromGlossary);
   });
-  
+
   /* ugly hack for checkbox data */
-  
+
   $('.app-register-checkbox, .app-register-checkbox-label').on('click', function() {
     if ($(this).hasClass('checked')) {
       console.log('This is now unchecked');
@@ -101,7 +103,7 @@ $(document).ready(function () {
       $(this).addClass('checked');
     }
   });
-  
+
   $('.app-title-checkbox, .app-title-checkbox-label').on('click', function() {
     if ($(this).hasClass('checked')) {
       console.log('This is now unchecked');
@@ -111,7 +113,7 @@ $(document).ready(function () {
       $(this).addClass('checked');
     }
   });
-  
+
   $('.app-deed-checkbox, .app-deed-checkbox-label').on('click', function() {
     if ($(this).hasClass('checked')) {
       console.log('This is now unchecked');
@@ -121,7 +123,7 @@ $(document).ready(function () {
       $(this).addClass('checked');
     }
   });
-  
+
   $('.app-select-product-button').on('click', function() {
     if($('.app-register-checkbox').hasClass('checked')) {
       sessionStorage.setItem('registerToPayFor', 'yes');
@@ -139,7 +141,7 @@ $(document).ready(function () {
       sessionStorage.setItem('deedToPayFor', 'no');
     }
   })
-  
+
   let registerToPayFor = sessionStorage.getItem('registerToPayFor');
   console.log(registerToPayFor);
   if (registerToPayFor === 'yes') {
@@ -173,7 +175,7 @@ $(document).ready(function () {
   } else if (numberOfItemsToPay === 3) {
     $('.app-total-amount').text('9')
   }
-  
+
   let itemsPurchasedList = [];
   if (registerToPayFor === 'yes') {
     itemsPurchasedList.push('Title register (official copy)');
@@ -190,7 +192,7 @@ $(document).ready(function () {
     itemsPurchasedListToDisplay.push('<span>' + value + '</span><br>');
   });
   $('.app-items-purchased-list').html(itemsPurchasedListToDisplay.join(""));
-  
+
   if (registerToPayFor === 'yes') {
     $('.app-copy-of-register-ok').removeClass('app-hidden')
   }
@@ -201,5 +203,3 @@ $(document).ready(function () {
     $('.app-copy-of-deeds-ok').removeClass('app-hidden');
   }
 });
-
-
