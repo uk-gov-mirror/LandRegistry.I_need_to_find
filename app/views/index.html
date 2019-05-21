@@ -2,119 +2,175 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  I need to find out about land or property
+  I need to find out about land or property index
 {% endblock %}
 
 {% block content %}
+<!--
+      NEW INDEX PAGE CODE-->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">I need to find out about land or property </h1>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        I need to find out about land or property
-      </h1>
-      <p>
-        This is the prototype homepage for "I need to find out about land or property" project at HM Land Registry.
-      </p>
+                <p> Our vision is:
+                    "Providing the right data, at the time right time, in the right way". </p>
+                <p> By improving or replacing our current land or property information services- we're testing the assumption that we'll help:
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>improve customer experience </li>
+                        <li>reduce number of calls to our citzen support centre </li>
+                        <li>reduce technical debt</li>
+                      </ul>
+                <p> The code for this prototype is in <a href="https://github.com/LandRegistry/I_need_to_find">this repository</a>. (https://github.com/LandRegistry/I_need_to_find)</p>
 
-      <p>The code for this prototype is in <a href="https://github.com/LandRegistry/I_need_to_find">this repo</a>. (https://github.com/LandRegistry/I_need_to_find)</p>
-
-      <!-- <h2 class="govuk-heading-m">Version history</h2>
-      <h3 class="govuk-heading-m">Version 6</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="v6/01-start">-05-2019</a>
-      </ul>
-      <ul class="govuk-list govuk-list--bullet">
-        Based on <a href="https://docs.google.com/presentation/d/1O8IsbRxTso9_I6FDHZMHuW291IQKFbN93sekEIh5Gw4/edit#slide=id.g576b2524c0_0_0"> round 6 user research </a> we've:
-          <li> </li>
-      </ul>
-      -->
-
-      <h3 class="govuk-heading-m">Version 5</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="v5/01-start">07-05-2019</a>
-            <p> Use postcode: PL1 3SB (8 Peel Street) or EX4 1AX (3 Clinton street) </p>
-          <ul class="govuk-list govuk-list--bullet">
-            We've added:
-            <li> journey to buy copies of the register, title plan and the deeds </li>
-            <li> options to download these documents and view online versions </li>
-            <li> a guidance page to give further information on the documents available to buy </li>
-            </ul>
-          <ul class="govuk-list govuk-list--bullet">
-            Based on <a href="https://docs.google.com/document/d/1QyWlANg6Sr-odLOgCi9HNmqjuLEFl9eNmcLqNp17QcY"> round 5 user research </a> we've:
-              <li>iterated on the initial start page design </li>
-              <li>provided Plain English guidance </li>
-          </ul>
-      </ul>
-
-      <h3 class="govuk-heading-m">Version 4</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="v4/01-start">26-04-2019</a>
-            <p> Use postcodes: PL1 3SB (8 Peel Street), EX4 1AX (3 Clinton street) or BS6 6RU (10 Elgin Park)</p>
-          <ul class="govuk-list govuk-list--bullet">
-            We've added:
-            <li>account creation and log in</li>
-          </ul>
-          <ul class="govuk-list govuk-list--bullet">
-            Based on <a href="https://docs.google.com/presentation/d/173CPlclG54hitzTO-XYFRQGR7etPLjSazsuWcoIQ3ek/edit#slide=id.g50fa09b39e_0_63"> round 4 user research </a> we've:
-              <li>separated easements and restrictive covenants back out into separate entries and provided legal definitions of these</li>
-          </ul>
-      </ul>
-
-      <h3 class="govuk-heading-m">Version 3</h3>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="v3/01-start">12-04-2019</a>
-            <p> Use postcodes: PL1 3SB (8 Peel Street), EX4 1AX (3 Clinton street) or BS6 6RU (10 Elgin Park)</p>
-          <ul class="govuk-list govuk-list--bullet">
-            We've added:
-            <li>Price paid data with links to the <a href = "http://landregistry.data.gov.uk/">HMLR service </a></li>
-            <li>House Price Index data with links to the <a href = "http://landregistry.data.gov.uk/app/ukhpi"> current service </a></li>
-            <li>planning permission information with the intention to link to Search for local land charges</li>
-            <li>option to download relevant deed when mentioned as 'copy filed' in 'other entries' </li>
-          </ul>
-          <ul class="govuk-list govuk-list--bullet">
-          Based on <a href="dummylink"> round 3 user research </a> we've changed the:
-            <li>layout to a single column for the property page</li>
-            <li>language used throughout to simplify it</li>
-            <li>easements and restrictive covenants section combined to read 'other entries'</li>
-          </ul>
-        </li>
-        <li>
-          <a href="v3/01-start_TEST">12-04-2019</a> (alternate version)
-        <p>  Same as Version 3 but with different Start page content to show summaries of the pay tiers instead of bulleted lists. <p>
-      </ul>
-
-      <h3 class="govuk-heading-m">Version 2</h3>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>
-              <a href="/v2/01-start">08-04-2019</a>
-                <p>Use any property number for postcodes: PL1 3SB, EX4 1AX or BS6 6RU. </p>
+                <div class="govuk-section-break--xl"></div>
+                  <!----------   grid-row-two-thirds   --------->
+                <h2 class="govuk-heading-l">Version history</h2>
+                <!-- <h3 class="govuk-heading-m">Version 6</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <a href="v6/01-start">-05-2019</a>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  Based on <a href="https://docs.google.com/presentation/d/1O8IsbRxTso9_I6FDHZMHuW291IQKFbN93sekEIh5Gw4/edit#slide=id.g576b2524c0_0_0"> round 6 user research </a> we've:
+                    <li> </li>
+                </ul>
+                -->
+                  <h3 class="govuk-heading-m">Version 5
+                  <span class="govuk-caption-m"> 07 May 2019</span> </h3>
                   <ul class="govuk-list govuk-list--bullet">
-                    <li>Content updated based on <a href="https://drive.google.com/open?id=1s0a3Yd0WS0Bq-Kn5beJA82SLr-iidvG4z-YmAYwRR-A">week 2 user testing feedback </a></li>
-                    <li> <a href ="https://docs.google.com/document/d/1cRuCC6EwW8OhhA7pcihMlPvkzmDWDsNGB8HpSPAa8j0/edit#heading=h.sygx389kzlsu">Outline of changes made to each page- </a> why we've changed them, what we've kept the same and what we're testing
-                    <li> <a href="https://drive.google.com/drive/folders/1gzt_b39GL-0iBETAw93cO-FSaIxQNIZf">Options for introducing easement and restrictive covenant indicators </a>
+                    <h4 class="govuk-heading-s"><a href="v5/01-start">Latest version</a></h4>
+                        <p> Use postcode: PL1 3SB (8 Peel Street) or EX4 1AX (3 Clinton street).</p>
+                        <p> <a href="https://docs.google.com/document/d/1uK-8bmkPNNZv9-Fe4zBSIThEpASxnDD4F7vssZGYzXw">Scenarios we tested</a></p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          We've added:
+                          <li> journey to buy copies of the register, title plan and the deeds </li>
+                          <li> options to download documents and view online versions </li>
+                          <li> a guidance page to give more information about the documents available to buy </li>
+                          </ul>
+                       <ul class="govuk-list govuk-list--bullet">
+                          Based on <a href="https://docs.google.com/document/d/1QyWlANg6Sr-odLOgCi9HNmqjuLEFl9eNmcLqNp17QcY"> round 5 user research </a> we've:
+                          <li>iterated on the initial start page design </li>
+                          <li>provided Plain English guidance </li>
+                        </ul>
                   </ul>
-                </li>
-            </ul>
 
-        <h3 class="govuk-heading-m">Version 1</h3>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a href="/v1/01-start">29-03-2019</a>
-              <p>Use any property number for postcodes: PL1 3SB, EX4 1AX or BS6 6RU. </p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Skeleton pages for the initial journey</li>
-              <li>Content updated based on <a href="https://drive.google.com/open?id=1tqAuOt5TQgUPU0i2-paAIQnDBloxYUFb0e1kKn8KEFM">initial wireframes</a> and week 1 user testing feedback</li>
-            </ul>
-          </li>
-        </ul>
-        <h3 class="govuk-heading-m">Version 0</h3>
-        <p>Prototype set up</p>
+                  <h3 class="govuk-heading-m">Version 4
+                  <span class="govuk-caption-m"> 26 April 2019</span> </h3>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <h4 class="govuk-heading-s"><a href="v4/01-start">Account creation and sign in</a></h4>
+                        <p> Use postcodes: PL1 3SB (8 Peel Street), EX4 1AX (3 Clinton street) or BS6 6RU (10 Elgin Park).</p>
+                        <p> <a href="">Scenarios we tested </a></p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          We've added:
+                          <li>account creation and sign in pages</li>
+                        </ul>
+                        <ul class="govuk-list govuk-list--bullet">
+                          Based on <a href="https://docs.google.com/presentation/d/173CPlclG54hitzTO-XYFRQGR7etPLjSazsuWcoIQ3ek/edit#slide=id.g50fa09b39e_0_63"> round 4 user research </a> we've:
+                          <li>separated easements and restrictive covenants back out into separate entries and provided legal definitions of these</li>
+                        </ul>
+                  </ul>
 
-    </div>
-</div>
+                  <h3 class="govuk-heading-m">Version 3
+                    <span class="govuk-caption-m"> 12 April 2019</span></h3>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <h4 class="govuk-heading-s"><a href="v3/01-start">Introducing more property information</a></h4>
+                        <p> Use postcodes: PL1 3SB (8 Peel Street), EX4 1AX (3 Clinton street) or BS6 6RU (10 Elgin Park).</p>
+                          <p> <a href="https://docs.google.com/document/d/1naewmqLeJMOtDYAn3IIKMRkL1y58LuqJKl7PVstFnP4">Scenarios we tested</a></p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          We've added:
+                          <li>real addresses </li>
+                          <li>Price paid data with links to the <a href = "http://landregistry.data.gov.uk/">HMLR service </a></li>
+                          <li>House Price Index data with links to the <a href = "http://landregistry.data.gov.uk/app/ukhpi"> current service </a></li>
+                          <li>planning permission information with the intention to link to Search for local land charges</li>
+                          <li>option to download relevant deed when mentioned as 'copy filed' in 'other entries' </li>
+                        </ul>
+                       <ul class="govuk-list govuk-list--bullet">
+                         Based on <a href="dummylink"> round 3 user research </a> we've iterated the:
+                          <li>layout to a single column for the property page</li>
+                          <li>language used throughout to simplify it</li>
+                          <li>easements and restrictive covenants section to read 'other entries'</li>
+                      </ul>
+                      <a href="v3/01-start_TEST">Alternate version</a> (12 April 2019)
+                    <p>  Same as Version 3 but with different Start page content to show summaries of the pay tiers instead of bulleted lists. <p>
+                  </ul>
+
+                  <h3 class="govuk-heading-m">Version 2
+                    <span class="govuk-caption-m"> 08 April 2019</span> </h3>
+                      <ul class="govuk-list govuk-list--bullet">
+                          <h4 class="govuk-heading-s"><a href="/v2/01-start">Introducing restricitve covenant and easements indicators</a></h4>
+                              <p>Use any property number for postcodes- PL1 3SB, EX4 1AX or BS6 6RU. </p>
+                              <p> <a href="https://docs.google.com/document/d/1Br2PnlyKgMikMAb88Z-SZDXbhb91kCqxbLMnA2b8gRA">Scenarios we tested </a></p>
+                                <ul class="govuk-list govuk-list--bullet">
+                                  <li>Content updated based on <a href="https://drive.google.com/open?id=1s0a3Yd0WS0Bq-Kn5beJA82SLr-iidvG4z-YmAYwRR-A">week 2 user testing feedback </a></li>
+                                  <li> <a href ="https://docs.google.com/document/d/1cRuCC6EwW8OhhA7pcihMlPvkzmDWDsNGB8HpSPAa8j0/edit#heading=h.sygx389kzlsu">Outline of changes made to each page- </a> why we've changed them, what we've kept the same and what we're testing
+                                  <li> <a href="https://drive.google.com/drive/folders/1gzt_b39GL-0iBETAw93cO-FSaIxQNIZf">Options for introducing easement and restrictive covenant indicators </a>
+                                </ul>
+                        </ul>
+
+                    <h3 class="govuk-heading-m">Version 1
+                      <span class="govuk-caption-m"> 29 March 2019</span> </h3>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <h4 class="govuk-heading-s"><a href="/v1/01-start">Initial user journey</a></h4>
+                            <p>Use any property number for postcode PL1 123. </p>
+                            <p> <a href="https://docs.google.com/document/d/1Z7H1QRfX8Vch_AifThlXUM9gUn_yrVRrZ9c9MiAMjQE">Scenarios we tested </a></p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>Skeleton pages for the initial journey</li>
+                                <li>Content updated based on <a href="https://drive.google.com/open?id=1tqAuOt5TQgUPU0i2-paAIQnDBloxYUFb0e1kKn8KEFM">version 0 initial wireframes</a> and round 1 user insight</li>
+                              </ul>
+                      </ul>
+                    <h3 class="govuk-heading-m">Version 0</h3>
+                    <p>Prototype set up</p>
+                </div>
+
+          <!----------   grid-row-one-third   --------->
+
+          <div class="govuk-grid-column-one-third">
+              <!--<img src="../../public/images/filing-2.svg" alt="filing icon" height="56">
+              <h3 class="govuk-heading-m">Documents</h3>
+              <ul class="govuk-list govuk-body-s">
+                  <li><a href="">Likely to be a list of links</a></li>
+                  <li><a href="">Links to other information</a></li>
+                  <li> a href ="">User research </li>
+              </ul>
+              -->
+
+              <div class="govuk-section-break--xl"></div>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-section-break--xl">
+                <div class="govuk-grid-column-one-third govuk-section-break--xl" align="center">
+                    <img src="../../public/images/service-history.png" alt="Service History icon" height="56">
+                    <div class="govuk-section-break--m"></div>
+                    <h2 class="govuk-heading-m">Service History</h2>
+                    <p>
+                       You can view how UR insights relate to design choices starting from Version 5. This is held in <a href="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_">gallery.io.</a>
+                    </p>
+                </div>
+
+                <div class="govuk-grid-column-one-third govuk-section-break--xl" align="center">
+                    <img src="../../public/images/timeline.png" alt="Timeline icon" height="56">
+                    <div class="govuk-section-break--m"></div>
+                    <h2 class="govuk-heading-m">Timeline</h2>
+                      <p> We're currently in Alpha until 7th June 2019.</p>
+                      <p> Discovery phase took place from November 2018 and lasted 6 weeks. </p>
+                      <p> View our <a href = "https://drive.google.com/drive/folders/1ifJGyuV6aAsISvmNrVbw4ofOGuJyJVap">end of discovery showcase</a>. </p>
+                </div>
+
+                <div class="govuk-grid-column-one-third govuk-section-break--xl" align="center">
+                    <img src="../../public/images/assessments-2.png" alt="Assessments icon" height="56">
+                    <div class="govuk-section-break--m"></div>
+                    <h2 class="govuk-heading-m">Assessment</h2>
+                    <p>We're part of the new <a href="https://www.gov.uk/service-manual/service-standard"> GDS Digital Service Standards</a> Private Beta.</p>
+                    <p>We'll be looking to have our GDS Alpha assesment by the end of June 2019. </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 
 {% endblock %}
