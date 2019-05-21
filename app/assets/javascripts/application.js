@@ -121,6 +121,8 @@ $(document).ready(function () {
     } else if ($(this).hasClass('app-glossary-link__free')) {
       // save the value 03-free-property-informationin the browser's memory and call it linkBackFromGlossary
       sessionStorage.setItem('linkBackFromGlossary', '03-free-property-information');
+    } else if ($(this).hasClass('app-glossary-link__start-welsh')) {
+      sessionStorage.setItem('linkBackFromGlossary', '01-start_welsh');
     }
   });
 
