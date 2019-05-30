@@ -88,10 +88,23 @@
   <div class="govuk-grid-column-one-third">
     <div class="app-payment-summary-box">
       <h2 class="govuk-heading-m">Payment summary</h2>
-      <p class="govuk-!-font-weight-bold app-items-purchased-list"></p>
+      <p class="govuk-!-font-weight-bold">
+        {% for item in data['cart'] %}
+        {{ item }}<br>
+        {% endfor %}
+      </p>
+      <!-- <p class="govuk-!-font-weight-bold app-items-purchased-list"></p> -->
       <p style=>Total amount: <br>
-      <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">&pound;<span class="app-total-amount"></span>
-      </span></p>
+      <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">&pound;
+        {% if data['cart'].length === 1 %}
+        3
+        {% elif data['cart'].length === 2 %}
+        6
+        {% elif data['cart'].length === 3 %}
+        9
+        {% endif %}
+      </span>
+      </p>
     </div>
   </div>
 </div>

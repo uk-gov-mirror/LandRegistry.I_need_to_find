@@ -21,44 +21,27 @@
           Documents you've bought:
         </h2>
 
-    <div class="app-copy-of-register-ok app-hidden">
-        <h3 class="govuk-heading-s">Title register (official copy)</h3>
-        <div class="app-flex-grid app-doc-grid">
-            <img src="/public/images/doc.png" class="app-doc-image">
-            <div>
-                <p class="app-download-doc"><a href="#">Download an official copy of the title register</a></p>
-                <p class="govuk-body-s">PDF document</p>
-                <p class="govuk-body-s">This file may not be suitable for users of assistive technology. <a href="#">Request an accessible format</a></p>
+        {% for item in data['cart'] %}
+            <h3 class="govuk-heading-s">{{ item }}</h3>
+            <div class="app-flex-grid app-doc-grid">
+                <img src="/public/images/doc.png" class="app-doc-image">
+                <div>
+                    <p class="app-download-doc"><a href="">Download {{ item | lower }}</a></p>
+                    <p class="govuk-body-s">PDF document</p>
+                    <p class="govuk-body-s">This file may not be suitable for users of assistive technology. <a href="">Request an accessible format</a></p>
+                </div>
             </div>
-        </div>
+            {% if item === 'Title register (official copy)' %}
+            <p><a href="09-paid-property-information" class="app-link-variable">View an online copy of the register</a></p>
+            {% endif %}
+        {% endfor %}
 
-        <p> <a href="09-paid-property-information" class="app-link-variable">View an online copy of the register</a></p>
-
-    </div>
-    <div class="app-copy-of-title-ok app-hidden">
-        <h3 class="govuk-heading-s">Title plan (official copy)</h3>
-        <div class="app-flex-grid app-doc-grid">
-            <img src="/public/images/doc.png" class="app-doc-image">
-            <div>
-                <p class="app-download-doc"><a href="#">Download an official copy of the title plan</a></p>
-                <p class="govuk-body-s">PDF document</p>
-                <p class="govuk-body-s">This file may not be suitable for users of assistive technology. <a href="#">Request an accessible format</a></p>
-            </div>
-
-        </div>
-    </div>
-    <div class="app-copy-of-deeds-ok app-hidden">
-        <h3 class="govuk-heading-s">Copy of title deeds</h3>
-        <div class="app-flex-grid app-doc-grid">
-            <img src="/public/images/doc.png" class="app-doc-image">
-            <div>
-                <p class="app-download-doc"><a href="#">Download a copy of the title deeds</a></p>
-                <p class="govuk-body-s">ZIP folder</p>
-                <p class="govuk-body-s">This file may not be suitable for users of assistive technology. <a href="#">Request an accessible format</a></p>
-            </div>
-
-          </div>
-      </div>
+    
+    
+    
+    
+    
+        
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
