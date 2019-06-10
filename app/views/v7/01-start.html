@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find property information
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+
+    <p>Use this service to get information about a property in England and Wales, even if you don't own it.</p>
+
+    <div class="govuk-inset-text">
+      This page is also available in Welsh <a href="01-start_welsh" hreflang="cy">(Cymraeg)</a>
+    </div>
+
+    <h2 class="govuk-heading-m">Free information</h2>
+
+        <p> You can view: </p>
+          <ul class="govuk-list govuk-list--bullet">
+              <li>the tenure type (freehold or leasehold) </li>
+              <li>the full address</li>
+              <li>the most recent price paid - you'll only get this if it was bought after April 2000, if more than £100 was paid or stated, or if HM Land Registry have recorded the price </li>
+          </ul>
+        <a href="02-postcode-search" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+
+    </div>
+  </div>
+{% endblock %}

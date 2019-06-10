@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Property information
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Property information
+    </h1>
+        <div class="app-flex-grid app-address-display">
+            <p class="app-flex-item app-flex-grid-header">Address:</p>
+            <p id="app-address-to-display" class="app-flex-item app-flex-grid-body">
+            </p>
+        </div>
+    </div>
+    <!--
+    <div class="govuk-grid-column-one-third">
+        <p><a href="dummy-link">icon + Save this page</a></p>
+          <p><a href="dummy-link">icon + Print this page</a></p>
+            <p><a href="dummy-link"> icon + Send this page</a></p>
+              </div>
+    -->
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p>There's <b>1</b> property record (title) for this address.</p>
+
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Tenure type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Freehold<br>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What's freehold?
+                        </span>
+                    </summary>
+                        <div class="govuk-details__text">
+                            <p> You own a freehold property until you sell it, give it away or it otherwise passes to someone else.</p>
+                            <p> Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                            <p> <b> If you want to know who owns a particular flat, you probably need the leasehold instead. </b> </p>
+                            <p> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                        </div>
+                    </details>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Property type
+                </dt>
+                <dd class="govuk-summary-list__value  app-property-type">
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Property sold for
+                </dt>
+                <dd class="govuk-summary-list__value">
+                <span class="app-price-paid-list">
+                </span>
+                <a class="app-price-paid-link" href="">View details on HMLR Price Paid Data</a>
+                <!-- <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                View more
+                            </span>
+                        </summary>
+                            <div class="govuk-details__text">
+                                <b>&pound;105,000</b> on 30 January 2004<br>
+                                <b>&pound;98,000</b> on 2 April 2001 (New build)
+                            </div>
+                        </details> -->
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                General boundaries
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-title-plan-information">
+                  View <a href="00-view-title-extent" id="app-link-from-03">property extent</a> on a map
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Planning application for property
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-llc-information">
+                Registered on <b>20 June 2017</b><br><a href="#">View details on Search for local land charges</a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key app-house-price-index-authority">
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-house-price-index-information">
+                    <b><span class="app-percentage-index-change"></span></b> since <b> 2016 </b> <br><a class="app-house-price-index-information" href="#">View details on UK House Price Index</a>
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>
+
+<div class="govuk-section-break--l"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">
+        Legal information
+      </h2>
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            HM Land Registry cannot give legal advice. If you need legal advice you'll need to contact a solicitor or conveyancer.
+          </strong>
+        </div>
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Restrictive covenants
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    There are no restrictive covenants recorded in the register. There may be some that have not been recorded. <br>
+                    <details class="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          What's a restrictive covenant?
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                       Restrictive covenants are contracts between two landowners. One landowner promises not to carry out particular acts on the other's land.
+                      </div>
+                    </details>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Easements
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      There are easements recorded in the register - to views details you'll need to buy a copy of the title deeds.
+                    <details class="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          What's an easement?
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                       Easements are rights that the owner of one piece of land has over another piece of land. For example, rights of way.
+                      </div>
+                    </details>
+                   </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+<div class="govuk-section-break--l"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">
+            Need more information?
+        </h2>
+             <p> You can get more information about a property if it’s in HM Land Registry’s records. </p>
+              <p> You can buy:
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>the title register (official copy)</li>
+                    <li>the title plan (official copy) </li>
+                    <li>copy of title deeds </li>
+                </ul>
+
+              <p> <a href="000-guidance" class="app-glossary-link app-glossary-link__free"> What will these documents give me? </a> </p>
+              <p> These documents are <b>£3</b> each.
+
+              <p><a href="04-choose-what-to-buy" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a></p>
+          </div>
+
+{% endblock %}
