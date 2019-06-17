@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Property information
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Property information
+    </h1>
+        <div class="app-flex-grid app-address-display">
+            <p class="app-flex-item app-flex-grid-header">Address:</p>
+            <p id="app-address-to-display" class="app-flex-item app-flex-grid-body">
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <p>There's <b>1</b> property record (title) for this address.</p>
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Title number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    ABC1234
+                    </dd>
+                </div>
+    <!--
+    <div class="govuk-grid-column-one-third">
+        <p><a href="dummy-link">icon + Save this page</a></p>
+          <p><a href="dummy-link">icon + Print this page</a></p>
+            <p><a href="dummy-link"> icon + Send this page</a></p>
+              </div>
+    -->
+</div>
+</div>
+</div>
+
+{% endblock %}
