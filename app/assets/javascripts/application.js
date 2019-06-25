@@ -55,7 +55,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator, #app-constraints-information').text('There are no other entries in the register that affect the use of this property. There may be some that have not been recorded.');
     $('.app-map').attr('src', '/public//images/peel-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
-    // if $addressToDisplay contains the word Clinton, run this 
+    // if $addressToDisplay contains the word Clinton, run this
   } else if ($addressToDisplay.indexOf("Clinton") !== -1) {
     // for all the following, find the element and replace the text or html within it accordingly
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Exeter<br>EX4 1AX');
@@ -97,7 +97,7 @@ $(document).ready(function () {
     sessionStorage.setItem('linkBackHref', '09-paid-property-information');
   });
   // when this link is clicked
-  $('#app-link-from-08b').on('click', function() { 
+  $('#app-link-from-08b').on('click', function() {
     // save the value 09b-paid-property-information in the browser's memory and call it linkBackHref
     sessionStorage.setItem('linkBackHref', '09b-paid-property-information');
   });
@@ -197,7 +197,7 @@ $(document).ready(function () {
     }
   })
 
-  // find the value of registerToPayFor from the browser's memory and assign it to registerToPayFor 
+  // find the value of registerToPayFor from the browser's memory and assign it to registerToPayFor
   let registerToPayFor = sessionStorage.getItem('registerToPayFor');
   // write in the browser what registerToPayFor is
   console.log(registerToPayFor);

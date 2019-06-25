@@ -106,3 +106,24 @@ a:hover,
 a:active {
     color: #005ea5;
 }
+
+//aligntment of icons and links for print and Save
+.demo-problem, .icon-solution {
+}
+
+.icon-solution--flexbox {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin: 10px;
+    padding: 10px;
+    transition: margin 300ms;
+  }
+
+  &:hover {
+    img {
+      margin-left: 15px;
+    }
+  }
+}

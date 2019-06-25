@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Property information
+{% endblock %}
+
+    {% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          Property information
+        </h1>
+          <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Address:
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  <h2 class="govuk-heading-m"id="app-address-to-display" class="app-flex-item app-flex-grid-body"> </h2>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Title number:
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    <p> ABC1234 </p>
+                    </dd>
+                  </div>
+              </dl>
+          </div>
+
+              <div class="govuk-grid-column-one-third">
+                <ul>
+                  <p><a href="dummy-link">Save this page</a></p>
+                   <p><a href="dummy-link">Print this page</a></p>
+                </ul>
+                </div>
+
+          </div>
+        </div>
+
+
+    {% endblock %}
