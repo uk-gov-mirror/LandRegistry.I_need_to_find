@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GovPay Confirm
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Confirm your payment
+    </h1>
+
+    <p><a href="08-payment-successful" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Pay <b>£3</b> now</a></p>
+
+    <table class="govuk-table">
+        <h2 class="govuk-heading-m">Payment summary</h2>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row" style="vertical-align:top">Description</th>
+                <td class="govuk-table__cell">
+                    Title number
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Total amount</th>
+                <td class="govuk-table__cell">£3
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="govuk-table">
+        <h2 class="govuk-heading-m">Card details</h2>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row" style="vertical-align:top">Card number</th>
+                <td class="govuk-table__cell">
+                    •••••••••1234
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Expiry date</th>
+                <td class="govuk-table__cell">12/34
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Name on card</th>
+                <td class="govuk-table__cell">Bob Smith
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Billing address</th>
+                <td class="govuk-table__cell">1 Fake Street, Plymouth, PL1 123
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Confirmation email</th>
+                <td class="govuk-table__cell">bobsmith123@email.com
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="dummycancelpaymentlink"> Cancel payment </a>
+
+  </div>
+</div>
+
+{% endblock %}
