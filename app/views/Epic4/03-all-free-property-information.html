@@ -3,6 +3,17 @@
 {% block pageTitle %}
   Property information
 {% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
@@ -16,18 +27,16 @@
             <p id="app-address-to-display" class="app-flex-item app-flex-grid-body">
             </p>
         </div>
-
-        <p> Register address somewhere on here</p>
-
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <p><a href="dummy-link">icon + Save this page</a></p>
+          <p><a href="dummy-link">icon + Print this page</a></p>
+            </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p>There's <b>1</b> property record (title) for this address.</p>
         <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                  Title number
-              </dt>
-              <dd class="govuk-summary-list__value">
-              ABC1234
-              </dd>
-          </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                 Tenure type
@@ -57,50 +66,24 @@
                 <span class="app-price-paid-list">
                 </span>
                 <a class="app-price-paid-link" href="">View details on HMLR Price Paid Data</a>
+                <!-- <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                View more
+                            </span>
+                        </summary>
+                            <div class="govuk-details__text">
+                                <b>&pound;105,000</b> on 30 January 2004<br>
+                                <b>&pound;98,000</b> on 2 April 2001 (New build)
+                            </div>
+                        </details> -->
                 </dd>
-            </div>
-        </dl>
-
-        <div class="govuk-grid-row">
-            <div class="govuk-inset-text">
-              This information can change if we receive an application. This service can not tell you if there's a pending application with HM Land Registry.
-            </div>
           </div>
         </div>
-
-      <!--commented out for MVP
-        {% for item in data['cart'] %}
-            <h3 class="govuk-heading-s">{{ item }}</h3>
-            <div class="app-flex-grid app-doc-grid">
-                <img src="/public/images/doc.png" class="app-doc-image">
-                <div>
-                    <p class="app-download-doc"><a href="">Download {{ item | lower }}</a></p>
-                    <p class="govuk-body-s">PDF document</p>
-                    <p class="govuk-body-s">This file may not be suitable for users of assistive technology. <a href="">Request an accessible format</a></p>
-                </div>
-            </div>
-            {% if item === 'Title register (official copy)' %}
-            <p><a href="09-paid-property-information" class="app-link-variable">View an online copy of the register</a></p>
-            {% endif %}
-        {% endfor %}
-        -->
-        <div class="govuk-grid-column-one-third">
-            <p><a href="dummy-link">Save this page</a></p>
-            <p><a href="dummy-link">Print this page</a></p>
-        </div>
-
-<!--
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h2 class="govuk-heading-m">Need something else?</h2>
-          <p> <a href="04-choose-what-to-buy"> Buy another document </a> </p>
-          <p> <a href="02-postcode-search"> Search for another property </a> </p>
-
-          -->
-
-       </div>
-     </div>
-
-</div>
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-inset-text">
+                This information can change if we receive an application. This service can not tell you if there's an application pending with HM Land Registry. </p>
+              </div>
+          </div>
 
 {% endblock %}
