@@ -1,8 +1,10 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-  I need to find property information
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
 {% endblock %}
+
 
 {% block content %}
 <div class="govuk-grid-row">

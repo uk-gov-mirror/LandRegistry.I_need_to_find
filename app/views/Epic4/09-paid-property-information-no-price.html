@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Property information
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+    {% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          Property information
+        </h1>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                <p class="app-address--unbold">Address</p>
+              </dt>
+              <dd class="govuk-summary-list__value">
+              <p id="app-address-to-display" class="app-address--bold">
+              </dd>
+            </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Title number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    <p> ABC1234 </p>
+                    </dd>
+                  </div>
+                  <dt class="govuk-summary-list__key">
+                  Tenure type
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  Freehold<br>
+                  <details class="govuk-details">
+                      <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                              What's freehold?
+                          </span>
+                      </summary>
+                          <div class="govuk-details__text">
+                              <p> You own a freehold property until you sell it, give it away or it otherwise passes to someone else.</p>
+                              <p> Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                              <p> <b> If you want to know who owns a particular flat, you probably need the leasehold instead. </b> </p>
+                              <p> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                          </div>
+                      </details>
+                  </dd>
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                          Property last sold for
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                      No price recorded <br>
+                      <details class="govuk-details">
+                          <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                  Why is there no price?
+                              </span>
+                          </summary>
+                              <div class="govuk-details__text">
+                              You'll only get a price if:
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>the land or property was bought after April 2000 </li>
+                                <li>more than £100 was paid or stated </li>
+                                <li>HM Land Registry have recorded the price </li>
+                              </ul>
+                              </div>
+                          </details>
+                      </dd>
+                  </dl>
+              <div>
+                  <p><a href="dummy-link">Save this page</a></p>
+                  <p><a href="dummy-link">Print this page</a></p>
+              </div>
+          </div>
+      </div>
+
+    {% endblock %}

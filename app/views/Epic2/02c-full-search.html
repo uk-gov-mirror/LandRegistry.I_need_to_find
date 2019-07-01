@@ -3,7 +3,17 @@
 {% block pageTitle %}
   Search for property
 {% endblock %}
-
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -16,7 +26,7 @@
 
         <div class="govuk-form-group">
           <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-24" for="postcode">Enter a postcode or street name</label>
-          <span class="govuk-hint">For example, 'E16 1NB' or 'High Street'</span>
+          <span class="govuk-hint">For example, 'E16 1NB' or 'High Street' </span>
 
           <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch" name="postcode" type="text">
         </div>
