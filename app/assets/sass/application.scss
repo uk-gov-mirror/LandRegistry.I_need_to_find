@@ -37,7 +37,7 @@ $govuk-global-styles: true;
         margin-right: 1em;
     }
     & .app-flex-grid-body {
-        font-weight: bold;
+        font-weight: bold!important;
         font-size: 150%;
     }
 }
@@ -69,6 +69,9 @@ $govuk-global-styles: true;
 .app-details {
     margin-top: -1em;
 }
+.app-address--unbold{
+  font-weight: 0;
+}
 
 .app-information-icon {
     background-color: #005ea5;
@@ -80,6 +83,11 @@ $govuk-global-styles: true;
     border: 10px solid #bfc1c3;
     background-color: #f8f8f8;
     padding: 1em;
+}
+
+.app-address--bold{
+  font-weight: bold;
+  font-size: 150%;
 }
 
 .app-map,
@@ -105,25 +113,4 @@ a:visited,
 a:hover,
 a:active {
     color: #005ea5;
-}
-
-//aligntment of icons and links for print and Save
-.demo-problem, .icon-solution {
-}
-
-.icon-solution--flexbox {
-  display: flex;
-  align-items: center;
-
-  img {
-    margin: 10px;
-    padding: 10px;
-    transition: margin 300ms;
-  }
-
-  &:hover {
-    img {
-      margin-left: 15px;
-    }
-  }
 }
