@@ -39,6 +39,7 @@ $govuk-global-styles: true;
     & .app-flex-grid-body {
         font-weight: bold!important;
         font-size: 150%;
+        vertical-align: top;
     }
 }
 .app-flex-grid-small {
@@ -116,5 +117,6 @@ a:active {
 }
 
 .icon-image {
-  vertical-align: bottom;
+  vertical-align: middle;
+  margin: 10px;
 }
