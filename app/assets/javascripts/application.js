@@ -61,7 +61,7 @@ $(document).ready(function () {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Exeter<br>EX4 1AX');
     $('.app-house-price-index-authority').text('Property price trend for Exeter');
     $('.app-property-type').text('Terraced');
-    $('.app-price-paid-list').html('<b>&pound;161,000</b> on 26 August 2011<br><b>&pound;125,000</b> on 14 May 2010<br>');
+    $('.app-price-paid-list').html('<b>&pound;161,000</b> on 26 August 2011<br>');
     $('.app-price-paid-link').attr('href', 'http://landregistry.data.gov.uk/app/ppd/search?et%5B%5D=lrcommon%3Afreehold&et%5B%5D=lrcommon%3Aleasehold&limit=100&nb%5B%5D=true&nb%5B%5D=false&paon=3&ptype%5B%5D=lrcommon%3Adetached&ptype%5B%5D=lrcommon%3Asemi-detached&ptype%5B%5D=lrcommon%3Aterraced&ptype%5B%5D=lrcommon%3Aflat-maisonette&ptype%5B%5D=lrcommon%3AotherPropertyType&street=Clinton+Street&tc%5B%5D=ppd%3AstandardPricePaidTransaction&tc%5B%5D=ppd%3AadditionalPricePaidTransaction&town=Exeter');
     $('.app-percentage-index-change').text('+1%');
     $('.app-house-price-index-information').attr('href', 'http://landregistry.data.gov.uk/app/ukhpi/browse?from=2018-03-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Fexeter&to=2019-03-01');
@@ -75,7 +75,7 @@ $(document).ready(function () {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Bristol<br>BS6 6RU');
     $('.app-house-price-index-authority').text('Property price trend for City Bristol');
     $('.app-property-type').text('Semi detached');
-    $('.app-price-paid-list').html('<b>&pound;582,500</b> on 10 September 2009<br><b>&pound;462,000</b> on 23 September 2005<br><b>&pound;385,000</b> on 10 December 2004<br>');
+    $('.app-price-paid-list').html('<b>&pound;582,500</b> on 10 September 2009<br>');
     $('.app-price-paid-link').attr('href', 'http://landregistry.data.gov.uk/app/ppd/search?et%5B%5D=lrcommon%3Afreehold&et%5B%5D=lrcommon%3Aleasehold&limit=100&nb%5B%5D=true&nb%5B%5D=false&paon=10&ptype%5B%5D=lrcommon%3Adetached&ptype%5B%5D=lrcommon%3Asemi-detached&ptype%5B%5D=lrcommon%3Aterraced&ptype%5B%5D=lrcommon%3Aflat-maisonette&ptype%5B%5D=lrcommon%3AotherPropertyType&street=Elgin+Park&tc%5B%5D=ppd%3AstandardPricePaidTransaction&tc%5B%5D=ppd%3AadditionalPricePaidTransaction&town=Bristol');
     $('.app-percentage-index-change').text('+1.3%');
     $('.app-house-price-index-information').attr('href', 'http://landregistry.data.gov.uk/app/ukhpi/browse?from=2018-03-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Fcity-of-bristol&to=2019-03-01');
