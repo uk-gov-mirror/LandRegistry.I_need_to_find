@@ -14,22 +14,22 @@ $(document).ready(function () {
   $('#app-button__postcode-search').on('click', function() {
     // assign the value of the postcode to the $postcode variable
     let $postcode = $('#app-input-postcodeSearch').val();
-    // if $postcode contains any combination of pl1, run this
-    if ($postcode.indexOf('PL1') !== -1 || $postcode.indexOf('pl1') !== -1 || $postcode.indexOf('Pl1') !== -1 || $postcode.indexOf('pL1') !== -1) {
+    // if $postcode contains any combination of pl1 or Peel, run this
+    if ($postcode.indexOf('PL1') !== -1 || $postcode.indexOf('pl1') !== -1 || $postcode.indexOf('Pl1') !== -1 || $postcode.indexOf('pL1') !== -1 || $postcode.indexOf('Peel')!== -1 || $postcode.indexOf('peel')!== -1 || $postcode.indexOf('PEEL')!== -1|| $postcode.indexOf('Peal')!== -1) {
       // reveal the pl1 postcode list by removing the app-hidden class from the list
       $('.app-postcode-list__1').removeClass('app-hidden');
-      // if $postcode contains any combination of ex4, run this
-    } else if ($postcode.indexOf('EX4') !== -1 || $postcode.indexOf('ex4') !== -1 || $postcode.indexOf('Ex4') !== -1 || $postcode.indexOf('eX4') !== -1) {
+      // if $postcode contains any combination of ex4 or Clinton, run this
+    } else if ($postcode.indexOf('EX4') !== -1 || $postcode.indexOf('ex4') !== -1 || $postcode.indexOf('Ex4') !== -1 || $postcode.indexOf('eX4') !== -1 || $postcode.indexOf('Clinton') !== -1 || $postcode.indexOf('CLINTON') !== -1 || $postcode.indexOf('clinton') || $postcode.indexOf('Clntn') !== -1 | $postcode.indexOf('cLINTON') !== -1) {
       // reveal the ex4 postcode list by removing the app-hidden class from the list
       $('.app-postcode-list__2').removeClass('app-hidden');
       // if $postcode contains any combination of bs6, run this
-    } else if ($postcode.indexOf('BS6') !== -1 || $postcode.indexOf('bs6') !== -1 || $postcode.indexOf('Bs6') !== -1 || $postcode.indexOf('bS6') !== -1) {
+    } else if ($postcode.indexOf('BS6') !== -1 || $postcode.indexOf('bs6') !== -1 || $postcode.indexOf('Bs6') !== -1 || $postcode.indexOf('bS6') !== -1 || $postcode.indexOf('Elgin') !== -1 || $postcode.indexOf('elgin') !== -1 || $postcode.indexOf('ELGIN') !== -1 || $postcode.indexOf('Elgn') !== -1 || $postcode.indexOf('eLGIN') !== -1) {
       // reveal the bs6 postcode list by removing the app-hidden class from the list
       $('.app-postcode-list__3').removeClass('app-hidden');
-    }
-    // don't do anything else
-    return false;
-  });
+      }
+        // don't do anything else
+        return false;
+      });
 
   // storing the address so we can recall it whenever we want.
   // when an address is clicked from the list
