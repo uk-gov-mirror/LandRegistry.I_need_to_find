@@ -3,33 +3,70 @@
 // Warn about using the kit in production
 if (window.console && window.console.info) {
   window.console.info('GOV.UK Prototype Kit - do not use for production')
+};
+
+function addErrorMessage(message, input_field, inline_error, summary_error){
+
+  $('.govuk-form-group').addClass('govuk-form-group--error')
+  $(input_field).addClass('govuk-input--error')
+  $(inline_error).removeClass('app-hidden')
+  $(summary_error).removeClass('app-hidden')
+  $('#summary-text').text(message)
+  $('#inline-text').text(message)
+}
+
+function removeErrorMessage(input_field, inline_error, summary_error){
+  $('.govuk-form-group').removeClass('govuk-form-group--error')
+  $(input_field).removeClass('govuk-input--error')
+  $(inline_error).addClass('app-hidden')
+  $(summary_error).addClass('app-hidden')
+  $('#summary-text').text('')
+  $('#inline-text').text('')
+}
+
+function postcodeSearch(){
+
+  let postcode = $('#app-input-postcodeSearch').val().toUpperCase();
+
+  $('.app-postcode-list__1').addClass('app-hidden');
+  $('.app-postcode-list__2').addClass('app-hidden');
+  $('.app-postcode-list__3').addClass('app-hidden');
+  $('.app-postcode-list__4').addClass('app-hidden')
+
+  removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#postcode-error-summary')
+
+  if (postcode === ''){
+
+    addErrorMessage('Enter a postcode or street name',
+                                    '#app-input-postcodeSearch',
+                                    '#enter-a-postcode-error',
+                                    '#postcode-error-summary');
+
+  }else if (postcode.indexOf('PL1') !== -1 || postcode.indexOf('PEEL') !== -1 || postcode.indexOf('PEAL') !== -1) {
+
+    $('.app-postcode-list__1').removeClass('app-hidden');
+
+  } else if (postcode.indexOf('EX4')!== -1 ||  postcode.indexOf('CLINTON')!== -1  || postcode.indexOf('CLNTN')!== -1 ) {
+
+    $('.app-postcode-list__2').removeClass('app-hidden');
+
+  } else if (postcode.indexOf('BS6')!== -1   || postcode.indexOf('ELGIN')!== -1) {
+
+    $('.app-postcode-list__3').removeClass('app-hidden');
+
+  }else{r
+    $('.app-postcode-list__4').removeClass('app-hidden')
+  }
 }
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 
-  // custom scripts
-  // postcode finder script
-  // when the find postcode button is clicked, run this function
-  $('#app-button__postcode-search').on('click', function() {
-    // assign the value of the postcode to the $postcode variable
-    let $postcode = $('#app-input-postcodeSearch').val();
-    // if $postcode contains any combination of pl1 or Peel, run this
-    if ($postcode.indexOf('PL1') !== -1 || $postcode.indexOf('pl1') !== -1 || $postcode.indexOf('Pl1') !== -1 || $postcode.indexOf('pL1') !== -1 || $postcode.indexOf('Peel')!== -1 || $postcode.indexOf('peel')!== -1 || $postcode.indexOf('PEEL')!== -1|| $postcode.indexOf('Peal')!== -1) {
-      // reveal the pl1 postcode list by removing the app-hidden class from the list
-      $('.app-postcode-list__1').removeClass('app-hidden');
-      // if $postcode contains any combination of ex4 or Clinton, run this
-    } else if ($postcode.indexOf('EX4') !== -1 || $postcode.indexOf('ex4') !== -1 || $postcode.indexOf('Ex4') !== -1 || $postcode.indexOf('eX4') !== -1 || $postcode.indexOf('Clinton') !== -1 || $postcode.indexOf('CLINTON') !== -1 || $postcode.indexOf('clinton') || $postcode.indexOf('Clntn') !== -1 | $postcode.indexOf('cLINTON') !== -1) {
-      // reveal the ex4 postcode list by removing the app-hidden class from the list
-      $('.app-postcode-list__2').removeClass('app-hidden');
-      // if $postcode contains any combination of bs6, run this
-    } else if ($postcode.indexOf('BS6') !== -1 || $postcode.indexOf('bs6') !== -1 || $postcode.indexOf('Bs6') !== -1 || $postcode.indexOf('bS6') !== -1 || $postcode.indexOf('Elgin') !== -1 || $postcode.indexOf('elgin') !== -1 || $postcode.indexOf('ELGIN') !== -1 || $postcode.indexOf('Elgn') !== -1 || $postcode.indexOf('eLGIN') !== -1) {
-      // reveal the bs6 postcode list by removing the app-hidden class from the list
-      $('.app-postcode-list__3').removeClass('app-hidden');
-      }
-        // don't do anything else
-        return false;
-      });
+  $("#app-input-postcodeSearch").on('keyup', function (e) {
+    if (e.keyCode == 13) {
+        postcodeSearch()
+    }
+  })
 
   // storing the address so we can recall it whenever we want.
   // when an address is clicked from the list
