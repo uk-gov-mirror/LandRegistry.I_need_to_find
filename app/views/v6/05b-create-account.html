@@ -25,7 +25,14 @@
        Email address
       </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+    </div>
+
+    <!---
+    <div class="panel panel-border-narrow email-hint spacing-top-single">
+    <p>Check your email address is shown correctly below. We'll need this if you ever need to reset your password.</p>
+    <p class="bold email-hint-value"></p>
   </div>
+    --> 
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="create-password">
@@ -57,26 +64,20 @@
   </legend>
 
   <div class="govuk-form-group">
-    <!-- static options to choose (requirements)
-    <label class="govuk-label" for="sort">
-      Title
-    </label>
-    <select class="govuk-select" id="sort" name="sort">
-      <option value="published selected">Mr</option>
-      <option value="updated">Mrs</option>
-      <option value="views">Ms</option>
-      <option value="comments">Miss</option>
-      <option value="comments">Other</option>
-    </select>
-  </div>
-   Option 2 below shows free text field with option to use backend to sort information for requirements -->
 
   <div class="govuk-form-group">
-    <label class="govuk-label" for="details-title">
-      Title
-    </label>
-    <input class="govuk-input govuk-input--width-4" id="details-title" name="details-title" type="text">
-  </div>
+  <label class="govuk-label" for="sort">
+    Title
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="select-a-title" selected>Select a title</option>
+    <option value="Mr">Mr</option>
+    <option value="Mrs">Mrs</option>
+    <option value="Miss">Miss</option>
+    <option value="Ms">Ms</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="details-first-name">
