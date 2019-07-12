@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Log in
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Email sent
+    </h1>
+
+    <p> We've sent an email to <b> name@email.com </b>.</p>
+    <p> Click the link in the email to reset your password </p>
+    <h2 class="govuk-heading-m">
+        Did not get an email?
+    </h2>
+    <ol class="govuk-list">
+      <li> 1. Check your junk folder. </li>
+      <li> 2. <a href="05c-reset-password">Get a new reset link. </a></li>
+    </ol>
+    <div>
+</div>
+
+{% endblock %}

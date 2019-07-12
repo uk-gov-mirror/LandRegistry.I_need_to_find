@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Property information
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Summary of address
+    </h1>
+        <div class="app-flex-grid app-address-display">
+            <p class="app-flex-item app-flex-grid-header">Address:</p>
+            <p id="app-address-to-display" class="app-flex-item app-flex-grid-body">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Tenure type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Freehold<br>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What's freehold?
+                        </span>
+                    </summary>
+                        <div class="govuk-details__text">
+                            <p> You own a freehold property until you sell it, give it away or it otherwise passes to someone else.</p>
+                            <p> Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
+                            <p> <b> If you want to know who owns a particular flat, you probably need the leasehold instead. </b> </p>
+                            <p> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                        </div>
+                    </details>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Property sold for
+                </dt>
+                <dd class="govuk-summary-list__value">
+                No price available <br>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            Why is there no price?
+                        </span>
+                    </summary>
+                        <div class="govuk-details__text">
+                        You'll only get a price if:
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>the land or property was bought after April 2000 </li>
+                          <li>more than £100 was paid or stated </li>
+                          <li>HM Land Registry have recorded the price </li>
+                        </ul>
+                        </div>
+                    </details>
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <p><a href="dummy-link"><img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image">Print this page</a></p>
+    <p><a href="dummy-link"><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>        </div>
+</div>
+
+<div class="govuk-section-break--m"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">
+         Need more information?
+        </h2>
+        <p>You can view the title number for <b>£3</b>.
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <a href="05b-create-account" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+            </div>
+          </div>
+
+{% endblock %}
