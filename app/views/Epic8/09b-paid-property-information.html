@@ -14,6 +14,7 @@
   </p>
 </div>
 {% endblock %}
+
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -54,10 +55,9 @@
                         </span>
                     </summary>
                         <div class="govuk-details__text">
-                            <p> You own a freehold property until you sell it, give it away or it otherwise passes to someone else.</p>
-                            <p> Most houses are freehold. Most flats are leasehold. That means someone else owns the freehold for the building the flat is in.</p>
-                            <p> <b> If you want to know who owns a particular flat, you probably need the leasehold instead. </b> </p>
-                            <p> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                          <p> Leasehold is one of two ways of owning land (the other is freehold). A leasehold is granted by a landlord to a tentant.</p>
+                          <p> a leasehold lasts for a fixed time which will be set out in the lease. The tenant often has to pay rent to the landlord, and this is also set out in the lease</p>.
+                          <p> Most flats are leasehold. </p>
                         </div>
                     </details>
                 </dd>
@@ -72,7 +72,7 @@
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Property sold for
+                    Poperty sold for
                 </dt>
                 <dd class="govuk-summary-list__value">
                     <div class="app-price-paid-list"></div>
@@ -94,13 +94,20 @@
                 <dt class="govuk-summary-list__key">
                 General boundaries
                 </dt>
-                <dd class="govuk-summary-list__value" id="app-title-plan-information">
-                    View <a href="00-view-title-plan" id="app-link-from-08">title extent</a> on a map
+                <dd class="govuk-summary-list__value" id="app-title-information">
+                    View <a href="00-view-title-extent" id="app-link-from-08b"> property extent</a> on a map
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key app-house-price-index-authority">
+                </dt>
+                <dd class="govuk-summary-list__value" id="app-house-price-index-information">
+                    <b><span class="app-percentage-index-change"></span></b> since <b> 2016 </b> <br><a class="app-house-price-index-information" href="#">View details on UK House Price Index</a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                Planning application for property
+                Planning application
                 </dt>
                 <dd class="govuk-summary-list__value" id="app-llc-information">
                 Registered on <b>20 June 2017</b><br><a href="#">View details on Search for local land charges</a>
@@ -123,61 +130,47 @@
                   <span class="app-address-to-display"></span>
                 </dd>
               </div>
-              <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key app-house-price-index-authority">
-                  </dt>
-                  <dd class="govuk-summary-list__value" id="app-house-price-index-information">
-                      <b><span class="app-percentage-index-change"></span></b> since <b> 2016 </b> <br><a class="app-house-price-index-information" href="#">View details on UK House Price Index</a>
-                  </dd>
-              </div>
+        </dl>
     </div>
 </div>
-
-<div class="govuk-section-break--l"></div>
-
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-m">
-        Legal information
-      </h2>
-        <div class="govuk-warning-text">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-warning-text__assistive">Warning</span>
-            HM Land Registry cannot give legal advice. If you need legal advice you'll need to contact a solicitor or conveyancer.
-          </strong>
-        </div>
-          <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                  Restrictive covenants
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                  There are no restrictive covenants recorded in the register. There may be some that have not been recorded. <br>
-                  </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                  Easements
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    The land has the benefit of any legal easements granted by a Conveyance dated 12 May 1990 made between (1) Harris Brothers (Builders) Limited and (2) Frank Phillips but is subject to any rights that are reserved by the said deed and affect the registered land.
+  <div class="govuk-grid-column-two-thirds">
+<h2 class="govuk-heading-m">
+    Things you can and can not do with the property
+</h2>
 
-                    Copy Filed.<br>
-                    <a href="04-choose-what-to-buy">Download copy of deeds</a>
-                 </dd>
-              </div>
-          </dl>
+  <h3 class="govuk-heading-s"> Restrictive covenants </h3>
+      <p> Restrictive covenants are contracts between two landowners. One landowner promises the other landowner not to carry out particular acts on their land. </p>
+      <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon app-information-icon" aria-hidden="true">i</span>
+          <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Information</span>
+              There are no restrictive covenants recorded in the register.
+              There may be some that have not been recorded.
+          </strong>
       </div>
-  </div>
+
+  <h3 class="govuk-heading-s"> Easements </h3>
+      <p> Easements are rights that the owner of one piece of land has over another piece of land. </p>
+      <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon app-information-icon" aria-hidden="true">i</span>
+          <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Information</span>
+              There are no easements recorded in the register.
+              There may be some that have not been recorded.
+          </strong>
+      </div>
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <p class="govuk-!-font-weight-bold">Keep a copy of the information on this page for free:</p>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li> <a href="print"> print this page </a>
-            <li> <a href="09a-paid-property-information"> download an official copy </a>
-            <li> <a href="forward to an email address"> forward to an email address </a>
-        </ul>
+                <li> <a href="print"> print this page </a>
+                <li> <a href="09a-paid-property-information"> download an official copy </a>
+                <li> <a href="forward to an email address"> forward to an email address </a>
+            </ul>
+</div>
+</div>
 </div>
 {% endblock %}
