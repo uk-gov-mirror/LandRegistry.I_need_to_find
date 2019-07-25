@@ -91,6 +91,13 @@ $govuk-global-styles: true;
   font-size: 150%;
 }
 
+.app-more-info-panel {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #005ea5;
+}
+
 .app-map,
 .app-map_large {
     width: 100%;
