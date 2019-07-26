@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+     Contact us
+    </h1>
+    <p> Use this form to contact us about the Search for land and property information service only. </p>
+    <p> For all other HM Land Registry matters, try our <a href="https://support.landregistry.gov.uk/landregistry"> support forum </a> or use our <a href="https://help.landregistry.gov.uk/app/contactus_general/">general enquiries form</a>.
+    <p> HM Land Registry do not give legal advice. <a href ="https://www.gov.uk/government/publications/hm-land-registry-service-standards/our-service-standards#advice">Read more about the advice we give</a>.
+
+    <fieldset class="govuk-fieldset">
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="details-first-name">
+      First name
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="details-first-name" name="details-first-name" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Last name
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="email-account">
+        Email address
+    </label>
+    <span id="event-name-hint" class="govuk-hint">
+      We'll use this address to contact you
+    </span>
+  <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="email-account">
+        Retype email address
+    </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="email-account">
+      Phone number (optional)
+    </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+  </div>
+
+<div class="govuk-character-count" data-module="character-count" data-maxlength="200">
+<div class="govuk-form-group">
+ <label class="govuk-label" for="label-as-page-heading">
+      What are you contacting us about?
+    </label>
+    <span id="event-name-hint" class="govuk-hint">
+      Provide as much detail as you can
+    </span>
+  <textarea class="govuk-textarea"rows="5"></textarea>
+</div>
+</div>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="file-upload-1">
+    Upload a file (optional)
+  </label>
+  <span id="event-name-hint" class="govuk-hint">
+    For example, a screenshot of something you need help with
+  </span>
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+</div>
+
+    <p><a href="11-contact-sent" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Submit</a></p>
+  </div>
+</div>
+
+{% endblock %}
