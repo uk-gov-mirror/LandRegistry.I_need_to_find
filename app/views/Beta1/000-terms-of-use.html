@@ -1,18 +1,41 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Log in
+  Terms of use
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
+    <a href="05b-create-account" class="govuk-back-link">Back</a>
     <h1 class="govuk-heading-l">
       Search for land and property information: Terms of use
     </h1>
 
     <h2 class ="govuk-heading-m"> Terms of use content to go here </h2>
+
+    <a href="05b-create-account" class="govuk-back-link">Back</a>
+</div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-more-info-panel">
+            <h2 class="govuk-heading-m">Related content</h2>
+            <a href="https://www.gov.uk/government/organisations/land-registry/about/personal-information-charter">Personal information charter</a>
+          </div>
+      </div>
+    </div>
 
 
 {% endblock %}
