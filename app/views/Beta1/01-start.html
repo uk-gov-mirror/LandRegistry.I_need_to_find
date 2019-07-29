@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find property information
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+
+    <p>Use this service to get information about a property in England and Wales, even if you don't own it.</p>
+
+    <h2 class="govuk-heading-l"> Free information </h2>
+    <p> You can view the: </p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>full address</li>
+          <li>property description - how the property is described by HM Land Registry </li>
+          <LI>tenure type (freehold, leasehold or commonhold)</li>
+          <li>most recent price paid - you'll only get this if it was bought after April 2000, if more than £100 was paid or stated, or if HM Land Registry have recorded the price </li>
+      </ul>
+
+      <h2 class="govuk-heading-l"> Need more information?
+      </h2>
+      <p> For more information, you'll need to:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>  create an account  </li>
+        <li>  use a debit or credit card </li>
+      </ul>
+
+      <p> You can view the title number for <b>£3</b>.</p>
+
+    <a href="02c-full-search" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+  </div>
+    </div>
+  </div>
+{% endblock %}

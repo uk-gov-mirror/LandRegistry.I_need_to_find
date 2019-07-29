@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GovPay
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Enter card details
+    </h1>
+    <form id="app-govpay__fake" method="GET" action="06-govpay-confirm">
+      <div class="govuk-form-group">
+        <label id="app-card-number-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Card number
+        </label>
+        <input id="app-card-number" type="tel" name="cardNumber" maxlength="26" class="govuk-input govuk-!-width-two-thirds">
+      </div>
+      <div class="govuk-form-group">
+        <label id="app-expiry-date-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Expiry date
+        </label>
+        <div class="govuk-date-input__item govuk-date-input__item--month govuk-date-input__item-with-separator">
+          <label class="govuk-label govuk-date-input__label" for="app-expiry-month">
+            Month
+          </label>
+          <input id="app-expiry-month" type="number" name="expiryMonth" class="govuk-input govuk-date-input__input govuk-input--width-2">
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--year govuk-date-input__item-with-separator">
+          <label class="govuk-label govuk-date-input__label" for="app-expiry-year">
+            Year
+          </label>
+          <input id="app-expiry-year" type="number" name="expiryYear" class="govuk-input govuk-date-input__input govuk-input--width-2">
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <label id="app-name-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Name on the card
+        </label>
+        <input id="app-name" type="text" name="name" class="govuk-input govuk-!-width-two-thirds">
+      </div>
+      <div class="govuk-form-group">
+        <label id="app-cvc" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Card security code
+        </label>
+        <input id="app-name" type="text" name="name" class="govuk-input govuk-!-width-one-quarter">
+      </div>
+      <div class="govuk-form-group">
+        <h2 class="govuk-heading-m">Billing address</h2>
+        <span class="govuk-hint govuk-!-margin-bottom-2">This is the address associated with the card</span>
+        <label id="app-country-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Country or territory
+        </label>
+        <input id="app-country" type="text" name="name" class="govuk-input govuk-!-width-two-thirds">
+      </div>
+      <div class="govuk-form-group address">
+        <label id="app-address-first-line-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Building number or name and street
+        </label>
+        <input id="app-address-first-line" type="text" name="firstLine" class="govuk-input govuk-!-width-two-thirds"><br><br>
+        <input id="app-address-second-line" type="text" name="secondLine" class="govuk-input govuk-!-width-two-thirds">
+      </div>
+      <div class="govuk-form-group address">
+        <label id="app-town-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Town or city
+        </label>
+        <input id="app-town" type="text" name="town" class="govuk-input govuk-!-width-one-third">
+      </div>
+      <div class="govuk-form-group address">
+        <label id="app-postcode-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Postcode
+        </label>
+        <input id="app-postcode" type="text" name="postcode" class="govuk-input govuk-!-width-one-quarter">
+      </div>
+      <div class="govuk-form-group address">
+        <label id="app-email-label" class="govuk-label govuk-label--s govuk-!-width-two-thirds">
+          Email
+        </label>
+        <span class="govuk-hint govuk-!-margin-bottom-2">We'll send your payment confirmation here</span>
+        <input id="app-email" type="email" name="email" class="govuk-input govuk-!-width-two-thirds">
+      </div>
+    </form>
+
+    <p><a href="07-govpay-confirm" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a></p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="app-payment-summary-box">
+      <h2 class="govuk-heading-m">Payment summary</h2>
+      <p class="govuk-!-font-weight-bold">
+        Title number
+      </p>
+      <!-- <p class="govuk-!-font-weight-bold app-items-purchased-list"></p> -->
+      <p style=>Total amount: <br>
+      <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£3
+      </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
