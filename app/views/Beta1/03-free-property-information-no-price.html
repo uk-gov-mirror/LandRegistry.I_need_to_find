@@ -21,11 +21,6 @@
     <h1 class="govuk-heading-l">
       Summary of address
     </h1>
-        <div class="app-flex-grid app-address-display">
-            <p class="app-flex-item app-flex-grid-header">Address:</p>
-            <p id="app-address-to-display" class="app-flex-item app-flex-grid-body">
-            </p>
-        </div>
     </div>
 </div>
 
@@ -33,6 +28,14 @@
     <div class="govuk-grid-column-two-thirds">
 
         <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                <p class="app-address--unbold">Address</p>
+              </dt>
+              <dd class="govuk-summary-list__value">
+              <p id="app-address-to-display" class="app-address--bold">
+              </dd>
+            </div>
           <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Property description
