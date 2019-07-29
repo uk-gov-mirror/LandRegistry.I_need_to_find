@@ -39,12 +39,17 @@
     <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
     </div>
 
-    <!---
-    <div class="panel panel-border-narrow email-hint spacing-top-single">
-    <p>Check your email address is shown correctly below. We'll need this if you ever need to reset your password.</p>
-    <p class="bold email-hint-value"></p>
-  </div>
-    -->
+    <span id="event-name-hint" class="govuk-hint">
+      Use a password that has at least:
+      <ul class="govuk-list govuk-list--bullet govuk-hint">
+        <li> 8 characters </li>
+        <li> 1 number </li>
+        <li> 1 capital letter </li>
+        <li> 1 letter that isn't a capital</li>
+        <li> 1 symbol, for example a question mark </li>
+      </ul>
+      Do not include that's easy to guess, for example your first or last name.
+    </span>
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="create-password">
@@ -59,16 +64,6 @@
       </label>
       <input class="govuk-input govuk-!-width-two-thirds" id="retype" name="two-thirds" type="text">
     </div>
-      <span id="event-name-hint" class="govuk-hint">
-        Use a password that has at least:
-        <ul class="govuk-list govuk-list--bullet govuk-hint">
-          <li> 8 characters </li>
-          <li> 1 number </li>
-          <li> 1 capital letter </li>
-          <li> 1 letter that isn't a capital</li>
-          <li> 1 symbol, for example a question mark </li>
-        </ul>
-      </span>
 
     <fieldset class="govuk-fieldset">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
