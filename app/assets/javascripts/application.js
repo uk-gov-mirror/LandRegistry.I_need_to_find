@@ -92,6 +92,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator, #app-constraints-information').text('There are no other entries in the register that affect the use of this property. There may be some that have not been recorded.');
     $('.app-map').attr('src', '/public//images/peel-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
+    $('#app-link-variable').attr('href', '09-paid-property-information-leasehold');
     $('#app-property-description').html('land on the South side of High Street <br>Stonehouse<br>Plymouth');
 
     // if $addressToDisplay contains the word Clinton, run this
@@ -124,7 +125,7 @@ $(document).ready(function () {
     $('#app-constraints-indicator').text('There are more entries in the register that affect the use of this property. To view details you\'ll need to pay a fee');
     $('.app-map').attr('src', '/public//images/elgin-park-extent.png');
     $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
-    $('.app-link-variable').attr('href', '09b-paid-property-information');
+    $('.app-link-variable').attr('href', '09-paid-property-information-no-price');
     $('#app-property-description').html($addressToDisplay + '<br>Redland');
   }
 
