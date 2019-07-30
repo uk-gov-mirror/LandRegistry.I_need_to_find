@@ -92,6 +92,8 @@ $(document).ready(function () {
     $('#app-constraints-indicator, #app-constraints-information').text('There are no other entries in the register that affect the use of this property. There may be some that have not been recorded.');
     $('.app-map').attr('src', '/public//images/peel-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
+    $('#app-property-description').html('land on the South side of High Street <br>Stonehouse<br>Plymouth');
+
     // if $addressToDisplay contains the word Clinton, run this
   } else if ($addressToDisplay.indexOf("Clinton") !== -1) {
     // for all the following, find the element and replace the text or html within it accordingly
@@ -106,6 +108,9 @@ $(document).ready(function () {
     $('.app-map').attr('src', '/public//images/clinton-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/clinton-street-extent_large.png');
     $('.app-link-variable').attr('href', '09-paid-property-information');
+    $('#app-property-description').html($addressToDisplay + '<br>Exeter<br>EX4 1AX');
+
+
     // if $addressToDisplay contains the word Elgin, run this
   } else if ($addressToDisplay.indexOf("Elgin") !== -1) {
     // for all the following, find the element and replace the text or html within it accordingly
@@ -120,6 +125,7 @@ $(document).ready(function () {
     $('.app-map').attr('src', '/public//images/elgin-park-extent.png');
     $('.app-map_large').attr('src', '/public//images/elgin-park-extent_large.png');
     $('.app-link-variable').attr('href', '09b-paid-property-information');
+    $('#app-property-description').html($addressToDisplay + '<br>Redland');
   }
 
   // glossary page link

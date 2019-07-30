@@ -80,6 +80,11 @@ $govuk-global-styles: true;
 
 }
 
+.app-extra-information {
+    font-size: 60%;
+
+}
+
 .app-payment-summary-box {
     border: 10px solid #bfc1c3;
     background-color: #f8f8f8;
@@ -89,6 +94,13 @@ $govuk-global-styles: true;
 .app-address--bold{
   font-weight: bold;
   font-size: 150%;
+}
+
+.app-more-info-panel {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #005ea5;
 }
 
 .app-map,
@@ -119,4 +131,12 @@ a:active {
 .icon-image {
   vertical-align: middle;
   margin: 10px;
+}
+
+.links-right {
+  float: right;
+  color: white !important;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
 }

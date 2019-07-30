@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Create an account
+    </h1>
+    <p>Already have an account? <a href="05a-sign-in"> Sign in</a></p>
+    <p> HM Land Registry will keep and use your personal information to: </p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li> manage your account</li>
+          <li> process requests </li>
+          <li> contact you </li>
+      </ul>
+    <p> We may retain and share it to help detect and prevent fraud, in line with our <a href="https://www.gov.uk/government/organisations/land-registry/about/personal-information-charter"> personal information charter</a>.</p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-account">
+       Email address
+      </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+    </div>
+
+    <span id="event-name-hint" class="govuk-hint">
+      Use a password that has at least:
+      <ul class="govuk-list govuk-list--bullet govuk-hint">
+        <li> 8 characters </li>
+        <li> 1 number </li>
+        <li> 1 capital letter </li>
+        <li> 1 letter that isn't a capital</li>
+        <li> 1 symbol, for example a question mark </li>
+      </ul>
+      Do not include that's easy to guess, for example your first or last name.
+    </span>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="create-password">
+       Create a password
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="create-password" name="create-password" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="retype">
+       Retype your password
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="retype" name="two-thirds" type="text">
+    </div>
+
+    <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h1 class="govuk-fieldset__heading">
+      Your details
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group">
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Title
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="select-a-title" selected>Select a title</option>
+    <option value="Mr">Mr</option>
+    <option value="Mrs">Mrs</option>
+    <option value="Miss">Miss</option>
+    <option value="Ms">Ms</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="details-first-name">
+      First name
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="details-first-name" name="details-first-name" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Last name
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+  </div>
+
+    <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h1 class="govuk-fieldset__heading">
+      Address
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      First line of your address
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="address-line-1" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town or city
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Country
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="select-a-title" selected>United Kingdom</option>
+      <option value="Mr">Country 1</option>
+      <option value="Mrs">Country 2</option>
+      <option value="Miss">Country 3</option>
+      <option value="Ms">Country 4</option>
+      <option value="Other">Country 5</option>
+    </select>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+  </div>
+</fieldset>
+
+<br>
+<br>
+
+<div class="govuk-form-group">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="terms-of-use" name="terms-of-use" type="checkbox" value="agree">
+        <label class="govuk-label govuk-checkboxes__label" for="terms-of-use">
+          I have read and agree to the <a href = "000-terms-of-use"> terms of use </a>
+        </label> </div>
+    </div>
+</div>
+  <br>
+    <p><a href="05c2-account-successful" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Create account</a></p>
+  </div>
+</div>
+
+{% endblock %}
