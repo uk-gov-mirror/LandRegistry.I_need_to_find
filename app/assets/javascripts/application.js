@@ -83,6 +83,7 @@ $(document).ready(function () {
   if ($addressToDisplay.indexOf("Peel") !== -1) {
     // for all the following, find the element and replace the text or html within it accordingly
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay + '<br>Plymouth<br>PL1 3SB');
+    $('#app-address-to-display1, .app-address-to-display1').html($addressToDisplay + ', Plymouth, PL1 3SB');
     $('.app-house-price-index-authority').text('Property price trends for Plymouth');
     $('.app-property-type').text('Terraced');
     $('.app-price-paid-list').html('<b>&pound;107,000</b> on 26 September 2008<br>');
