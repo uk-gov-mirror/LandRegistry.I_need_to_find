@@ -84,7 +84,7 @@ $(document).ready(function () {
     // for all the following, find the element and replace the text or html within it accordingly
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay);
     $('#app-address-to-display1, .app-address-to-display1').html($addressToDisplay);
-    $('#app-address-to-display2, .app-address-to-display2').html('2 Peel Street <br> Runcorn <br> WA7 1JP');
+    $('#app-address-to-display2, .app-address-to-display2').html('2 Peel Street, <br> Runcorn <br> WA7 1JP');
     $('.app-house-price-index-authority').text('Property price trends for Plymouth');
     $('.app-property-type').text('Terraced');
     $('.app-price-paid-list').html('<b>&pound;107,000</b> on 26 September 2008<br>');
@@ -103,7 +103,7 @@ $(document).ready(function () {
     // for all the following, find the element and replace the text or html within it accordingly
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay);
     $('#app-address-to-display1, .app-address-to-display1').html($addressToDisplay);
-    $('#app-address-to-display2, .app-address-to-display2').html('35 Clinton Street <br> Exeter <br> EX4 1AX');
+    $('#app-address-to-display2, .app-address-to-display2').html('35 Clinton Street, <br> Exeter <br> EX4 1AX');
     $('.app-house-price-index-authority').text('Property price trend for Exeter');
     $('.app-property-type').text('Terraced');
     $('.app-price-paid-list').html('<b>&pound;161,000</b> on 26 August 2011<br>');
