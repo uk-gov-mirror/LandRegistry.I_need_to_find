@@ -156,6 +156,8 @@ $(document).ready(function () {
     sessionStorage.setItem('linkBackHref', '09b-paid-property-information');
   });
 
+
+
   // find the value of linkBackHref from the browser's memory and assign it to $linkBackHref variable
   let $linkBackHref = sessionStorage.getItem('linkBackHref');
   // set the target of this link to the value of $linkBackHref
