@@ -2452,7 +2452,7 @@ p + .govuk-heading-s,
 .govuk-input {
   font-family: Avenir Next, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  <!-- -moz-osx-font-smoothing: grayscale; -->
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
