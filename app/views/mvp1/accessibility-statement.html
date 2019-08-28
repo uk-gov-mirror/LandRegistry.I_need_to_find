@@ -1,8 +1,9 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Search for land and property information
+  Terms of use
 {% endblock %}
+
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
@@ -22,7 +23,7 @@
     <div class="govuk-header__content">
 
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
-
+        Search for land and property information
       </a>
 
 
@@ -32,7 +33,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   beta
@@ -45,31 +45,20 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-xl">
-      {% if serviceName %} {{ serviceName }} {% endif %}
+    <a href="05b-create-account" class="govuk-back-link">Back</a>
+    <h1 class="govuk-heading-l">
+      Accessibility statement
     </h1>
 
-    <p>Use this service to get information about a property in England and Wales, even if you don't own it.</p>
+    <p>content to go here </p>
 
-    <p> You can view the: </p>
-      <ul class="govuk-list govuk-list--bullet">
-          <li>full address</li>
-          <li>tenure type (freehold, leasehold or commonhold) </li>
-          <lI>property description - how the property is described by HM Land Registry</li>
-          <li>most recent price paid - you'll only get this if it was bought after April 2000, if more than £100 was paid or stated, or if HM Land Registry have recorded the price </li>
-      </ul>
 
-      <p> This service is also available in <a href="#">Cymraeg<a/> </p>
-
-    <a href="search-by-postcode-or-street-name" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-1">Start now</a>
-    <div class="govuk-inset-text">
-      This service needs a postcode or street name. If you want to search by title number or map
-       <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do"> use the Find a Property service</a>
-     </div>
-   </div>
-</div>
+    <a href="05b-create-account" class="govuk-back-link">Back</a>
   </div>
+</div>
+
+
 {% endblock %}
