@@ -96,7 +96,7 @@ $(document).ready(function () {
     $('.app-map').attr('src', '/public//images/peel-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
     $('#app-link-variable').attr('href', '09-paid-property-information-leasehold');
-    $('#app-property-description').html('land on the South side of High Street <br>Stonehouse<br>Plymouth');
+    $('#app-property-description').html('land on the South side of High Street <br>Southside<br>Runcorn');
 
     // if $addressToDisplay contains the word Clinton, run this
   } else if ($addressToDisplay.indexOf("Clinton") !== -1) {
