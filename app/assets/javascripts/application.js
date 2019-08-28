@@ -98,6 +98,7 @@ $(document).ready(function () {
     $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
     $('#app-link-variable').attr('href', '09-paid-property-information-leasehold');
     $('#app-property-description').html('land on the South side of High Street <br>Southside<br>Runcorn');
+    $('#app-property-description2').html('2a Peel Street, Runcorn WA7 1JP');
 
     // if $addressToDisplay contains the word Clinton, run this
   } else if ($addressToDisplay.indexOf("Clinton") !== -1) {
