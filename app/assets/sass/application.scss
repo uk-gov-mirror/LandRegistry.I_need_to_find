@@ -144,3 +144,9 @@ a:active {
 .address-spacing{
   width: 30%;
 }
+
+.scrollable {
+  height: 350px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
