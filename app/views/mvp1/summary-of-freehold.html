@@ -47,19 +47,94 @@
 
 <a href="search-results-for" class="govuk-back-link">Back</a>
 
-z
+
 {% endblock %}
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Summary of freehold
+      </h1>
+      </div>
+  </div>
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  <p class="app-address--unbold">Address</p>
+                </dt>
+                <dd class="govuk-summary-list__value">
+                <p id="app-address-to-display" class="app-address--bold">
+                  <br>
+                  <p> This is the address held by Royal Mail </p>
+                </dd>
+              </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Property description
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p id="app-property-description">
+                </p>
+                <p> This is how HM Land Registry have described the property in the register</p>
+            </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Tenure type
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  Freehold<br>
+                  <details class="govuk-details">
+                      <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                              What's freehold?
+                          </span>
+                      </summary>
+                          <div class="govuk-details__text">
+                            <p> Freehold is one of two ways of owning land (the other is leasehold).</p>
+                            <p> Freehold continues for an indefinite time without payment of rent. It can be sold or given away and is the type of ownership that is nearest to owning land absolutely.</p>
+                            <p> Most houses are freehold and most flats are leasehold.</p>
+                            <p> <b> If you want to know who owns a particular flat, you probably need the leasehold instead. </b> </p>
+                            <p> Houses can also be leasehold and usually are if they’re bought through a shared ownership scheme.</p>
+                          </div>
+                      </details>
+                  </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Property sold for
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  <span class="app-price-paid-list">
+                  </span>
+                  </dd>
+              </div>
+          </dl>
 
-<h1 class="govuk-heading-l"> Summary of freehold </h1>
 
-
-
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p><a href=""><img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image">Print this page</a></p>
+      <p><a href=""><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>
+    </div>
   </div>
 
-</div>
+<div class="app-more-info-panel">
+<div class ="govuk-grid-row">
+  </div>
+  </div>
+  <div class="govuk-inset-text">
+    To find the owner, how far it's general boundaries extend and whether it's at risk of flooding
+     <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do"> use the Find a Property service</a>
+   </div>
+
+   <p> <a href="search-by-postcode-or-street-name"> Search again </a> </p>
+
+
+
+
+
 
 {% endblock %}
