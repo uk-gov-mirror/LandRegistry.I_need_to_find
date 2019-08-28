@@ -85,10 +85,11 @@ $(document).ready(function () {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay);
     $('#app-address-to-display1, .app-address-to-display1').html($addressToDisplay);
     $('#app-address-to-display2, .app-address-to-display2').html('2 Peel Street, <br> Runcorn <br> WA7 1JP');
+    $('#app-address-to-display3, .app-address-to-display3').html('1 Peel Street, <br> Runcorn <br> WA7 1JP');
     $('.app-house-price-index-authority').text('Property price trends for Plymouth');
     $('.app-property-type').text('Terraced');
     $('.app-price-paid-list').html('<b>&pound;107,000</b> on 26 September 2008<br>');
-    $('.app-price-paid-list2').html('<b>&pound;80,000</b> on 15 July 2010<br>');
+    $('.app-price-paid-list2').html('<b>&pound;280,000</b> on 15 July 2010<br>');
     $('.app-price-paid-link').attr('href', 'http://landregistry.data.gov.uk/app/ppd/search?et%5B%5D=lrcommon%3Afreehold&et%5B%5D=lrcommon%3Aleasehold&limit=100&nb%5B%5D=true&nb%5B%5D=false&paon=8&ptype%5B%5D=lrcommon%3Adetached&ptype%5B%5D=lrcommon%3Asemi-detached&ptype%5B%5D=lrcommon%3Aterraced&ptype%5B%5D=lrcommon%3Aflat-maisonette&ptype%5B%5D=lrcommon%3AotherPropertyType&street=Peel+Street&tc%5B%5D=ppd%3AstandardPricePaidTransaction&tc%5B%5D=ppd%3AadditionalPricePaidTransaction&town=Plymouth');
     $('.app-percentage-index-change').text('+3.2%');
     $('.app-house-price-index-information').attr('href', 'http://landregistry.data.gov.uk/app/ukhpi/browse?from=2018-03-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Fcity-of-plymouth&to=2019-03-01');
