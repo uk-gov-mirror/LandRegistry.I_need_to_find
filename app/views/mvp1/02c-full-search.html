@@ -26,6 +26,12 @@
         Search for land and property information
       </a>
 
+      <a href="05b-create-account" class="links-right govuk-!-margin-right-2 govuk-!-margin-top-1">
+        Register
+      </a>
+      <a href="05a-sign-in" class="links-right govuk-!-margin-right-2 govuk-!-margin-top-1">
+        Sign in
+      </a>
 
     </div>
   </div>
@@ -68,48 +74,70 @@
         </div>
     </div>
 
+    <h1 class="govuk-heading-l">
+      Search for property
+    </h1>
   <div id="govuk-form-group" class="govuk-form-group">
-
-
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-
-
-
-    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48" for="postcode">Search results for</label>
+    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-24" for="postcode">Enter a postcode or street name</label>
+    <span class="govuk-hint">For example, 'E16 1NB' or 'High Street' </span>
     <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
       <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
     </span>
-    <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch"  name="postcode" type="text" placeholder="Peel Street, Runcorn WA7" >
+    <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch" name="postcode" type="text">
   </div>
   <input id="app-button__postcode-search" class="govuk-button"  value="Search" onclick="postcodeSearch()" type="button">
 
-
+    <div class="app-element-to-toggle app-hidden app-postcode-list__1">
       <p> 14 addresses found </p>
-      <div class="scrollable">
       <ul class="app-list__postcode-list">
-        <li><a href="search-results-for">1 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="search-results-for">2 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="search-results-for">3 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="search-results-for">4 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">5 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">6 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">7 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">8 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">9 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">10 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">11 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">12 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">13 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="03-free-property-information-leasehold">14 Peel Street, Runcorn WA7 1JP</a></li>
+        <li><a href="03-free-property-information-leasehold">2 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">4 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">6 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">8 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">10 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">12 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">14 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">16 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">18 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">20 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">22 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">24 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">26 Peel Street</a></li>
+        <li><a href="03-free-property-information-leasehold">28 Peel Street</a></li>
       </ul>
-</div>
-
+    </div>
+    <div class="app-element-to-toggle app-hidden app-postcode-list__2">
+      <p> 7 addresses found </p>
+      <ul class="app-list__postcode-list">
+        <li><a href="03-free-property-information">1 Clinton Street</a></li>
+        <li><a href="03-free-property-information">3 Clinton Street</a></li>
+        <li><a href="03-free-property-information">5 Clinton Street</a></li>
+        <li><a href="03-free-property-information">7 Clinton Street</a></li>
+        <li><a href="03-free-property-information">9 Clinton Street</a></li>
+        <li><a href="03-free-property-information">11 Clinton Street</a></li>
+        <li><a href="03-free-property-information">13 Clinton Street</a></li>
+      </ul>
+    </div>
+    <div class="app-element-to-toggle app-hidden app-postcode-list__3">
+      <p> 10 addresses found </p>
+      <ul class="app-list__postcode-list">
+        <li><a href="03-free-property-information-no-price">10 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">12 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">14 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">16 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">18 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">20 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">22 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">24 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">26 Elgin Park</a></li>
+        <li><a href="03-free-property-information-no-price">28 Elgin Park</a></li>
+      </ul>
+    </div>
+    <div class="app-element-to-toggle app-hidden app-postcode-list__4">
+        <p> No address found </p>
     </div>
   </div>
 
 </div>
-
-
 
 {% endblock %}
