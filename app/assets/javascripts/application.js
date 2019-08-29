@@ -31,7 +31,8 @@ function postcodeSearch(){
   $('.app-postcode-list__1').addClass('app-hidden');
   $('.app-postcode-list__2').addClass('app-hidden');
   $('.app-postcode-list__3').addClass('app-hidden');
-  $('.app-postcode-list__4').addClass('app-hidden')
+  $('.app-postcode-list__4').addClass('app-hidden');
+  $('.app-title-change').addClass('app-hidden')
 
   removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#postcode-error-summary')
 
