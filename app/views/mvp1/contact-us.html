@@ -41,7 +41,6 @@
         Search for land and property information
       </a>
 
-
     </div>
   </div>
 </header>
@@ -57,8 +56,8 @@
     </h1>
 
     <p>Use this form to contact us about the Search for land and property and information service only.</p>
-    <p> For all other HM Land Registry matters, try our <a href=""> support forum </a> or use our <a href=""> general enquiries form </a>.</p>
-    <p> HM Land Registry do not give legal advice. <a href="">Read more about the advice we give</a>.</p>
+    <p>For all other HM Land Registry matters, try our <a href="https://support.landregistry.gov.uk/landregistry"> support forum </a> or use our <a href="https://help.landregistry.gov.uk/app/contactus_general/"> general enquiries form </a>.</p>
+    <p>HM Land Registry do not give legal advice. <a href="https://www.gov.uk/government/publications/hm-land-registry-service-standards/our-service-standards#advice">Read more about the advice we give</a>.</p>
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="details-first-name">
@@ -75,7 +74,7 @@
     </div>
 
     <div class="govuk-form-group">
-      <label class="govuk-label" for="email-account">
+      <label class="govuk-label" for="email-address">
        Email address
        <span id="event-name-hint" class="govuk-hint">
          We'll use this address to contact you
@@ -113,13 +112,35 @@
         </select>
     </div>
 
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-address">
+       Tell us about your query in as much details as you can
+       <span id="event-name-hint" class="govuk-hint">
+         Do not include any personal or financial information. For example, credit or debit card numbers.
+       </span>
+      </label>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+    </div>
 
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file (optional)
+        <span id="event-name-hint" class="govuk-hint">
+        For example, a screenshot of something you need help with
+         </span>
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+    <a href="#" role="button" class="govuk-button"> Submit</a>
+    </div>
+    <div class ="govuk-grid-column-one-third">
+      <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+    </div>
+    </div>
 
   </div>
-  <div class ="govuk-grid-column-one-third">
-    <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
-  </div>
-</div>
+
 
 
 {% endblock %}
