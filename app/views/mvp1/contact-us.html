@@ -41,7 +41,6 @@
         Search for land and property information
       </a>
 
-
     </div>
   </div>
 </header>
@@ -56,13 +55,92 @@
       Contact us
     </h1>
 
-    <p>Form to go here </p>
+    <p>Use this form to contact us about the Search for land and property and information service only.</p>
+    <p>For all other HM Land Registry matters, try our <a href="https://support.landregistry.gov.uk/landregistry"> support forum </a> or use our <a href="https://help.landregistry.gov.uk/app/contactus_general/"> general enquiries form </a>.</p>
+    <p>HM Land Registry do not give legal advice. <a href="https://www.gov.uk/government/publications/hm-land-registry-service-standards/our-service-standards#advice">Read more about the advice we give</a>.</p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="details-first-name">
+        First name
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="details-first-name" name="details-first-name" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Last name
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-address">
+       Email address
+       <span id="event-name-hint" class="govuk-hint">
+         We'll use this address to contact you
+        </span>
+      </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-account">
+       Retype email address
+      </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+    </div>
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-account">
+       Phone number
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        What are you contacting us about?
+      </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="select-a-title" selected>Select a category</option>
+          <option value="Mr">Access issues</option>
+          <option value="Mrs">Download issue</option>
+          <option value="Miss">How to use service</option>
+          <option value="Ms">Register information</option>
+          <option value="Other">Let us know about any incorrect register information</option>
+        </select>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email-address">
+       Tell us about your query in as much details as you can
+       <span id="event-name-hint" class="govuk-hint">
+         Do not include any personal or financial information. For example, credit or debit card numbers.
+       </span>
+      </label>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file (optional)
+        <span id="event-name-hint" class="govuk-hint">
+        For example, a screenshot of something you need help with
+         </span>
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+    <a href="#" role="button" class="govuk-button"> Submit</a>
+    </div>
+    <div class ="govuk-grid-column-one-third">
+      <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+    </div>
+    </div>
 
   </div>
-  <div class ="govuk-grid-column-one-third">
-    <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
-  </div>
-</div>
+
 
 
 {% endblock %}
