@@ -110,6 +110,7 @@ $(document).ready(function () {
     $('#app-address-to-display, .app-address-to-display').html($addressToDisplay);
     $('#app-address-to-display1, .app-address-to-display1').html($addressToDisplay);
     $('#app-address-to-display2, .app-address-to-display2').html('35 Clinton Street, <br> Exeter <br> EX4 1AX');
+    $('#app-address-to-display3, .app-address-to-display3').html('33 Clinton Street, <br> Exeter <br> EX4 1AX');
     $('.app-house-price-index-authority').text('Property price trend for Exeter');
     $('.app-property-type').text('Terraced');
     $('.app-price-paid-list').html('<b>&pound;161,000</b> on 26 August 2011<br>');
