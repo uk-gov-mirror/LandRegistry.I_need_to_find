@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Search for land and property information - GOV.UK
+  Chwilio am wybodaeth am dir ac eiddo - GOV.UK
 {% endblock %}
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
@@ -38,7 +38,7 @@
   beta
 </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.
+      Gwasanaeth newydd yw hwn – bydd eich <a class="govuk-link" href="feedback"> adborth </a> yn ein helpu i’w wella.
     </span>
   </p>
 </div>
@@ -49,25 +49,24 @@
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      {% if serviceName %} {{ serviceName }} {% endif %}
+      Chwilio am wybodaeth am dir ac eiddo
     </h1>
 
-    <p>Use this service to get information about a property in England and Wales, even if you don't own it.</p>
+    <p>Defnyddiwch y gwasanaeth hwn i gael gwybodaeth am eiddo yng Nghymru a Lloegr, hyd yn oed os nad chi yw’r perchennog. </p>
 
-    <p> You can view the: </p>
+    <p> Gallwch weld: </p>
       <ul class="govuk-list govuk-list--bullet">
-          <li>full address</li>
-          <li>tenure type (freehold, leasehold or commonhold) </li>
-          <lI>property description - how the property is described by HM Land Registry</li>
-          <li>most recent price paid - you'll only get this if it was bought after April 2000, if more than £100 was paid or stated, or if HM Land Registry have recorded the price </li>
+          <li>y cyfeiriad llawn</li>
+          <li>y math o ddaliadaeth (rhydd-ddaliad, lesddaliad neu gyfunddaliad) </li>
+          <lI>disgrifiad eiddo – sut y mae’r eiddo wedi ei ddisgrifio gan Gofrestrfa Tir EM </li>
+          <li>•	y pris diweddaraf a dalwyd am yr eiddo – cewch hwn dim ond os cafodd ei brynu ar ôl Ebrill 2000, os talwyd neu os datganwyd mwy na £100, neu os cofnodwyd y wybodaeth gan Gofrestrfa Tir EM </li>
       </ul>
 
-      <p> This service is also available in<a href="#"> Welsh (Cymraeg)</a>.</p>
+    <p> Mae’r gwasanaeth hwn ar gael yn <a href="#"> Saesneg (English) </a> hefyd. </p>
 
-    <a href="search-by-postcode-or-street-name" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-1">Start now</a>
+    <a href="search-by-postcode-or-street-name" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-1">Dechreuwch nawr</a>
     <div class="govuk-inset-text">
-      This service needs a postcode or street name. If you want to search by title number or map
-       <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do"> use the Find a Property service</a>.
+       Mae angen cod post neu enw stryd ar y gwasanaeth hwn. Os ydych am chwilio trwy rif teitl neu fap, <a href="https://www.gov.uk/search-property-information-land-registry">defnyddiwch y gwasanaeth Find a Property</a>.
      </div>
    </div>
 </div>
