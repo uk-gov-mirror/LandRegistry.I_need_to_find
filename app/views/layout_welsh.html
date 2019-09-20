@@ -34,29 +34,23 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-  {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Mae angen ifi ddod o hyd i wybodaeth am eiddo",
-    serviceUrl: "/v5/01-start",
-    containerClasses: "govuk-width-container"
-  }) }}
-{% endblock %}
-
 {% if useAutoStoreData %}
   {% block footer %}
     {{ govukFooter({
       meta: {
         items: [
+        {
+          href: "/welsh/contact-us",
+          text: "Cysylltu â Chofrestrfa Tir EM"
+        },
+
           {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
+            href: "/welsh/terms-of-use",
+            text: "Telerau defnyddio"
           },
           {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
+            href: "/welsh/accessibility-statement",
+            text: "Datganiad mynediad"
           }
         ]
       }
