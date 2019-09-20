@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Summary of leasehold - Search for land and property information
+  Crynodeb o’r lesddaliad - Chwilio am wybodaeth am dir ac eiddo
 {% endblock %}
 
 {% block header %}
@@ -51,10 +51,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<h1 class="govuk-heading-l"> Summary of leasehold </h1>
+<h1 class="govuk-heading-l"> Crynodeb o’r lesddaliad </h1>
 </div>
 <div class ="govuk-grid-column-one-third">
-  <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+  <p class="toggle_underline"> <a> English </a> | Cymraeg </p>
 </div>
 </div>
 
@@ -63,73 +63,70 @@
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                <p class="app-address--unbold">Address</p>
+                <p class="app-address--unbold">Cyfeiriad</p>
               </dt>
               <dd class="govuk-summary-list__value">
               <p id="app-address-to-display2" class="app-address--bold">
                 <br>
-                <p class="govuk-body-s"> This is the address held by Royal Mail </p>
+                <p class="govuk-body-s"> Dyma’r cyfeiriad a gedwir gan y Post Brenhinol </p>
                 <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
-                      What’s the difference between address and property description?
+                      Beth yw’r gwahaniaeth rhwng cyfeiriad a disgrifiad eiddo?
                     </span>
                   </summary>
                   <div class="govuk-details__text">
-                    <p>The property description might be different to the address you recognise as your postal address. </p>
-                  <p>This could be for a few reasons. For example, HM Land Registry may have registered the land before a postal address was assigned by Royal Mail or a house may have recently been changed into flats which now have separate addresses.
-
-                </p>
+                    <p>Mae’n bosibl y bydd y disgrifiad eiddo yn wahanol i’r cyfeiriad rydych chi’n ei adnabod fel eich cyfeiriad post.</p>
+                    <p>Gallai hyn fod am nifer o resymau. Er enghraifft, efallai i Gofrestrfa Tir EM gofrestru’r tir cyn i gyfeiriad post gael ei bennu gan y Post Brenhinol neu efallai cafodd tŷ ei newid yn fflatiau sydd â chyfeiriadau ar wahân erbyn hyn. </p>
                   </div>
                 </details>
               </dd>
             </div>
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Property description
+              Disgrifiad eiddo
             </dt>
             <dd class="govuk-summary-list__value">
               <p id="app-property-description">
               </p>
-              <p class="govuk-body-s"> This is how HM Land Registry have described the property in the register</p>
+              <p class="govuk-body-s"> Dyma sut mae Cofrestrfa Tir EM wedi disgrifio’r eiddo yn y gofrestr</p>
               <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                   <span class="govuk-details__summary-text">
-                    How to update the property description
+                    Sut i ddiweddaru’r disgrifiad eiddo
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  <p>Write to us or complete <a href="https://www.gov.uk/government/publications/change-the-register-ap1" target="_blank">form AP1</a > (link opens in new tab) to update the property description. For example, to change the property’s name.</p>
-                <p>You’ll need to send evidence from the local authority or Royal Mail Address Maintenance. </p>
-                <p>There is no fee for this application.</p>
-                <p> <b> Where to send your application </b> <br> HM Land Registry Citizen Centre <br> PO Box 74, Gloucester, GL14 9BB </p>
+                  <p>Ysgrifennwch atom neu llenwch <a href="https://www.gov.uk/government/publications/change-the-register-ap1.cy">ffurflen AP1 </a>(mae’r cyswllt yn agor mewn tab i newydd) i ddiweddaru’r disgrifiad eiddo, er enghraifft, newid enw’r eiddo. </p>
+                  <p>Bydd angen ichi anfon tystiolaeth gan yr awdurdod lleol neu Gynnal a Chadw Cyfeiriadau’r Post Brenhinol </p>
+                  <p>Nid oes ffi am y cais hwn.</p>
+                  <p> <b> Ble i anfon eich cais:  </b> <br> HM Land Registry Citizen Centre <br> PO Box 74, Gloucester, GL14 9BB </p>
                 </div>
               </details>
           </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                Tenure type
+                Math o ddaliadaeth
                 </dt>
                 <dd class="govuk-summary-list__value">
-                Leasehold<br>
+                Lesddaliad<br>
                 <details class="govuk-details">
                     <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                            What's leasehold?
-                        </span>
+                      <span class="govuk-details__summary-text">
+                        Beth yw lesddaliad?
+                      </span>
                     </summary>
-                        <div class="govuk-details__text">
-                          <p>Leasehold is one of two ways of owning land (the other is a freehold). A leasehold is granted by a
-                        landlord to a tenant.</p>
-                        <p>A leasehold lasts for a fixed time which will be set out in the lease. The tenant often has to pay rent to the landlord and this is also set out in the lease.</p>
-                        <p>Most flats are leasehold.</p>
-                        </div>
+                    <div class="govuk-details__text">
+                      <p>Un o ddwy ffordd o berchen ar dir yw lesddaliad (rhydd-ddaliad yw’r ffordd arall). Rhoddir lesddaliad gan landlord i denant. </p>
+                    <p>Mae lesddaliad yn parhau am gyfnod penodol a nodir yn y brydles. Yn aml, rhaid i’r tenant dalu rhent i’r landlord ac mae hyn hefyd wedi ei nodi yn y brydles. </p>
+                    <p>Mae’r rhan fwyaf o fflatiau’n lesddaliad.  </p>
+                    </div>
                     </details>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Property sold for
+                    Gwerthwyd yr eiddo am
                 </dt>
                 <dd class="govuk-summary-list__value">
                 <span class="app-price-paid-list">
@@ -159,8 +156,8 @@
              pwa.document.close();
          }
   </script>
-    <p><a href="../../public/images/summary-of-leasehold-2ps1.png" onclick="PrintImage('../../public/images/summary-of-leasehold-2ps1.png'); return false;"> <img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" onclick="PrintImage('../../public/images/summary-of-leasehold-2ps1.png'); return false;">Print this page</a></p>
-    <p><a href="../../public/images/summary-of-leasehold-2ps1.png"download><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>
+    <p><a href="../../public/images/summary-of-leasehold-2ps1.png" onclick="PrintImage('../../public/images/summary-of-leasehold-2ps1.png'); return false;"> <img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" onclick="PrintImage('../../public/images/summary-of-leasehold-2ps1.png'); return false;">Argraffu’r dudalen hone</a></p>
+    <p><a href="../../public/images/summary-of-leasehold-2ps1.png"download><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Lawrlwytho’r dudalen hon</a></p>
   </div>
 </div>
 
@@ -169,11 +166,10 @@
 </div>
 </div>
 <div class="govuk-inset-text">
-  To find the property owner, how far it's general boundaries extend and whether it's at risk of flooding
-   <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do"> use the Find a Property service</a>.
+  I gael gwybod pwy yw’r perchennog, pa mor bell y mae’r terfynau cyffredinol yn ymestyn ac a yw’r eiddo mewn perygl o lifogydd, <a href="https://www.gov.uk/search-property-information-land-registry">defnyddiwch y gwasanaeth Find a Property</a>.
  </div>
 
- <p> <a href="search-by-postcode-or-street-name"> Search again </a> </p>
+ <p> <a href="search-by-postcode-or-street-name"> Chwilio eto </a> </p>
 
   </div>
 
