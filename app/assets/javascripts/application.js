@@ -103,7 +103,7 @@ $(document).ready(function () {
     $('.app-map').attr('src', '/public//images/peel-street-extent.png');
     $('.app-map_large').attr('src', '/public//images/peel-street-extent_large.png');
     $('#app-link-variable').attr('href', '09-paid-property-information-leasehold');
-    $('#app-property-description').html('Plot 4, Peel Street, Runcorn');
+    $('#app-property-description').html('Plot 1, Peel Street, Runcorn');
     $('#app-property-description2').html('2a Peel Street, Runcorn WA7 1JP');
     $('#app-property-description3').html('2b Peel Street, Runcorn WA7 1JP');
 
