@@ -1,0 +1,156 @@
+{% extends "layout_welsh.html" %}
+
+{% block pageTitle %}
+  Telerau defnyddio - Chwilio am wybodaeth am dir ac eiddo
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      Gwasanaeth newydd yw hwn – bydd eich <a class="govuk-link" href="feedback"> adborth </a> yn ein helpu i’w wella.
+    </span>
+  </p>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Yn ôl</a>
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <svg role="presentation" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 132 97" height="30" width="36">
+            <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+            <image src="/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+
+      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
+        Chwilio am wybodaeth am dir ac eiddo
+      </a>
+
+
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Chwilio am wybodaeth am dir ac eiddo: telerau defnyddio
+    </h1>
+
+    <h2 class="govuk-heading-m"> Am y gwasanaeth hwn </h2>
+
+      <p> Mae’r gwasanaeth hwn yn cynnig modd ichi chwilio am wybodaeth am dir neu eiddo a gedwir gan Gofrestrfa Tir EM. Gallwch gael y wybodaeth ganlynol trwy wneud chwiliad am ddim: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li> disgrifiad eiddo fel y’i dangosir yn y gofrestr </li>
+          <li> a yw’r eiddo’n rhydd-ddaliad, yn lesddaliad neu’n gyfunddaliad (daliadaeth)</li>
+          <li> y swm a dalwyd am yr eiddo (ar yr amod y cafodd ei brynu ar ôl Ebrill 2000, bod y swm yn fwy na £100, a bod Cofrestrfa Tir EM wedi cofrestru’r wybodaeth hon) </li>
+        </ul>
+
+    <h2 class="govuk-heading-m"> Yr hyn sydd ei angen </h2>
+
+      <p> I gael mynediad i’r wybodaeth chwilio am ddim, bydd yn rhaid ichi ddarparu cod post, neu gyfeiriad eiddo neu enw stryd. Gallwch weld y wybodaeth dim ond wrth wneud eich chwiliad. Os ydych am gadw’r wybodaeth, rhaid ichi ei llwytho i lawr neu argraffu copi pan ddangosir eich canlyniadau chwilio.</p>
+
+    <h2 class="govuk-heading-m">Gwybodaeth ychwanegol sydd ar gael</h2>
+
+      <p> Defnyddiwch ein <a href="https://www.gov.uk/search-property-information-land-registry"> gwasanaeth Find a Property </a> (mae’r cyswllt yn agor mewn tab newydd) i gael y rhif teitl a roddwyd gennym ni ar gyfer yr eiddo, y gofrestr ar gyfer y rhif teitl hwnnw yn dangos manylion unrhyw hawliau tramwy neu gyfyngiadau ar y tir a nodir ar y gofrestr, a chynllun teitl yn diffinio’r eiddo. Codir ffi am y gwasanaeth hwn. </p>
+
+      <p> <b> Trwy ddefnyddio’r gwasanaeth hwn, rydych yn derbyn ein telerau defnyddio. Mae pob un o’r telerau defnyddio yn delerau ar wahân. Os yw unrhyw lys yn penderfynu bod unrhyw delerau yn anghyfreithlon, bydd y gweddill yn parhau i fod yn hollol effeithiol. Gallwch roi’r gorau i ddefnyddio’r gwasanaeth hwn ar unrhyw bryd. Gall Cofrestrfa Tir EM eich atal rhag defnyddio’r gwasanaeth hwn os nad ydych yn cydymffurfio â’i thelerau defnyddio. <b> </p>
+
+    <h2 class="govuk-heading-m"> Telerau defnyddio </h2>
+
+      <p> Rydych yn cytuno i ddefnyddio’r gwasanaeth hwn: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li> at ddibenion cyfreithlon </li>
+          <li> mewn ffordd nad yw’n tresmasu ar hawliau neu’n cyfyngu neu’n rhwystro’r defnydd a’r mwynhad o’r safle hwn gan unrhyw un arall</li>
+        </ul>
+
+     <p> Rydych yn cytuno i beidio â: </p>
+       <ol class="govuk-list">
+         <li> 1. ceisio difrodi, niweidio neu ymyrryd ar y gwasanaeth neu fynediad iddo </li>
+         <li> 2. defnyddio unrhyw asiantau meddalwedd awtomataidd i chwilio, copïo, monitro, arddangos, cael cysylltau neu fynediad fel arall i hyn neu i unrhyw system arall gan Gofrestrfa Tir EM </li>
+         <li> 3. copïo neu arddangos y wybodaeth a ddarperir i’w harddangos ar wefan arall </li>
+         <li> 4. ceisio ychwanegu, newid neu ddileu unrhyw wybodaeth a ddarperir ac a gedwir gan Gofrestrfa Tir EM </li>
+         <li> 5. defnyddio’r wybodaeth a ddarperir gan y gwasanaeth i hawlio unrhyw drefniant neu bartneriaeth swyddogol â Chofrestrfa Tir EM i gyflenwi neu ailddefnyddio’r data a/neu’r wybodaeth </li>
+         <li> 6. defnyddio’r data ar gyfer unrhyw weithgarwch twyllodrus neu anghyfreithlon gan gynnwys torri’r gyfraith diogelu data </li>
+        </ol>
+
+      <p> Mae hawl gan Gofrestrfa Tir EM i flocio eich mynediad unrhyw bryd heb roi unrhyw rybudd os yw’n amau neu os oes tystiolaeth ganddi nad ydych yn cydymffurfio â’r telerau defnyddio hyn. </p>
+
+    <h2 class="govuk-heading-m"> Mynediad i’r gwasanaeth </h2>
+
+      <p> Gallwch gael mynediad i’r gwasanaeth o unrhyw ddyfais a phorwr addas a gysylltir â’r rhyngrwyd. Pan ddangosir canlyniadau’r wybodaeth chwilio am ddim dylech lwytho i lawr neu argraffu copïau oherwydd pan fyddwch yn gadael y tudalennau gwybodaeth nid oes modd dychwelyd atynt. </p>
+
+      <p> Mae’r gwasanaeth ar gael bob dydd ond gellir ei gymryd i lawr er mwyn ei ddiweddaru a’i gynnal a chadw. Os ydych wedi mewngofnodi pan fydd hyn yn digwydd, cewch hysbysiad ar-sgrin.
+
+    <h2 class="govuk-heading-m"> Oedi ac ymyriadau i’r gwasanaeth </h2>
+
+      <p> Nid yw Cofrestrfa Tir EM yn atebol ichi neu i unrhyw drydydd parti am unrhyw golledion a achosir gan oedi i’r gwasanaeth hwn neu wrth gael eich canlyniadau chwilio, er enghraifft oherwydd: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li> ymyriadau i’r rhyngrwyd </li>
+          <li> gwasanaethau a ddarperir gan drydydd partïon (unrhyw un heblaw Cofrestrfa Tir EM)</li>
+          <li> gwybodaeth ffug o wefannau cysylltiedig </li>
+        </ul>
+
+    <h2 class="govuk-heading-m"> Gwybodaeth y mae Cofrestrfa Tir EM yn ei chadw amdanoch </h2>
+      <p> Byddwn yn cadw eich cyfeiriad IP yn unig. Os oes angen i Gofrestrfa Tir EM gysylltu â chwsmeriaid am y gwasanaeth, bydd yn anfon neges at gwsmeriaid ar-lein a gall ddefnyddio cyfryngau eraill megis Twitter i roi diweddariadau.</p>
+
+    <h2 class="govuk-heading-m"> Sut rydym yn diogelu eich gwybodaeth bersonol </h2>
+
+      <p> Mae Cofrestrfa Tir EM yn rheoli’r wybodaeth bersonol a roddir gennych yn unol â’i <a href="https://www.gov.uk/government/organisations/land-registry/about/personal-information-charter.cy"> Siarter Gwybodaeth Bersonol </a> (mae’r cyswllt yn agor mewn tab newydd) ac er mwyn:
+        <ul class="govuk-list govuk-list--bullet">
+          <li> rhoi’r data rydych yn gofyn amdano ichi</li>
+          <li> cofnodi unrhyw wybodaeth a lwythir i lawr neu a gedwir </li>
+          <li> atal a chanfod troseddau </li>
+        </ul>
+
+      <p> Byddwn yn: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>adrannau eraill o’r llywodraeth</li>
+          <li>cyrff gorfodi’r gyfraith a chyrff rheoleiddio gan gynnwys sefydliadau gwrth-dwyll penodedig o dan adran 68 o Ddeddf Troseddau Difrifol 2007 </li>
+          <li>yr holl weithgarwch sy’n digwydd ar neu drwy eich cyfrif</li>
+        </ul>
+
+      <p> Caiff gwybodaeth bersonol ei chadw am gyfnod o bum mlynedd. Ni fyddwn yn dileu data personol os oes ei angen er mwyn sefydlu, amddiffyn, neu gyflawni ceisiadau cyfreithiol, er enghraifft mewn perthynas â thwyll eiddo. </p>
+
+      <h2 class="govuk-heading-m"> Sut i wneud cwyn </h2>
+
+      <p> Os ydych yn anhapus â’r gwasanaeth, cysylltwch â Chofrestrfa Tir EM. Gallwch: </p>
+       <ul class="govuk-list govuk-list--bullet">
+         <li> lenwi’r <a href="https://help.landregistry.gov.uk/app/contactus_general_enq_w/">ffurflen cysylltu ar-lein </a></li>
+         <li> ffonio 0300 003 0422 (am wasanaeth Cymraeg) 0300 006 0411 (am wasanaeth Saesneg) </li>
+       </ul>
+
+      <p> Os nad ydych yn hapus â’r ateb a gewch, dilynwch <a href="https://www.gov.uk/government/organisations/land-registry/about/complaints-procedure.cy">drefn gwyno fewnol Cofrestrfa Tir EM </a>(mae’r cyswllt yn agor mewn tab newydd). </p>
+
+      <p>Os nad ydych yn hapus â’r ateb o hyd, cysylltwch â swyddfa’r Adolygydd Cwynion Annibynnol (mae’r cyswllt yn agor mewn tab newydd). <a href="https://www.icrev.org.uk">Gall yr Adolygodd Cwynion Annibynnol </a> ymchwilio i’ch cwyn yn annibynnol ar Gofrestrfa Tir EM. </p>
+
+      <p> <a href="javascript:history.back()" class="govuk-back-link">Yn ôl</a> </p>
+
+      </div>
+        <div class ="govuk-grid-column-one-third">
+          <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+        </div>
+      </div>
+
+
+{% endblock %}
