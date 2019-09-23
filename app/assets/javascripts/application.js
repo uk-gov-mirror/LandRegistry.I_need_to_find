@@ -88,6 +88,7 @@ $(document).ready(function () {
     $('#app-address-to-display2, .app-address-to-display2').html('2 Peel Street, <br> Runcorn <br> WA7 1JP');
     $('#app-address-to-display3, .app-address-to-display3').html('1 Peel Street, <br> Runcorn <br> WA7 1JP');
     $('#app-address-to-display4, .app-address-to-display4').html('3 Peel Street, <br> Runcorn <br> WA7 1JP');
+    $('#app-address-to-display5, .app-address-to-display5').html('4 Peel Street, <br> Runcorn <br> WA7 1JP');
     $('.app-house-price-index-authority').text('Property price trends for Plymouth');
     $('.app-property-type').text('Terraced');
     $('.app-price-paid-list').html('<b>&pound;107,000</b> on 26 September 2008<br>');
