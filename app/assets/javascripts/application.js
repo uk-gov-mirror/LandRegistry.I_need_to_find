@@ -107,6 +107,8 @@ $(document).ready(function () {
     $('#app-property-description').html('Plot 1, Peel Street, Runcorn');
     $('#app-property-description2').html('2a Peel Street, Runcorn WA7 1JP');
     $('#app-property-description3').html('2b Peel Street, Runcorn WA7 1JP');
+    $('#app-property-description4').html('Plot 4 Peel Street, Runcorn WA7 1JP');
+
 
     // if $addressToDisplay contains the word Clinton, run this
   } else if ($addressToDisplay.indexOf("Clinton") !== -1) {
