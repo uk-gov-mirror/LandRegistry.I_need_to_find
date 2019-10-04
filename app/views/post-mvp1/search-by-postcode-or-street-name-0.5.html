@@ -1,7 +1,7 @@
-{% extends "layout_welsh.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-Chwilio trwy god post neu enw stryd - Search for land and property information
+  Search by postcode or streetname - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -23,7 +23,7 @@ Chwilio trwy god post neu enw stryd - Search for land and property information
     <div class="govuk-header__content">
 
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
-        Chwilio am wybodaeth am dir ac eiddo
+        Search for land and property information
       </a>
 
 
@@ -40,7 +40,7 @@ Chwilio trwy god post neu enw stryd - Search for land and property information
 
 
     <span class="govuk-phase-banner__text">
-      Gwasanaeth newydd yw hwn – bydd eich <a class="govuk-link" href="feedback"> adborth </a> yn ein helpu i’w wella.
+      This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -56,7 +56,7 @@ Chwilio trwy god post neu enw stryd - Search for land and property information
       <div class="app-element-to-toggle app-hidden app-postcode-error-summary" id="postcode-error-summary">
         <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
           <h2 class="govuk-error-summary__title" id="error-summary-title">
-            Mae yna broblem
+            There is a problem
           </h2>
           <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
@@ -69,25 +69,24 @@ Chwilio trwy god post neu enw stryd - Search for land and property information
     </div>
 
   <div id="govuk-form-group" class="govuk-form-group">
-    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48 app-hidden app-postcode-list__1 app-postcode-list__2 app-postcode-list__3 app-postcode-list__4" for="postcode">Canlyniadau chwilio ar gyfer</label>
-      <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48 app-title-change" for="postcode">Chwilio trwy god post <br>neu enw stry</label>
-        <span class="govuk-hint app-title-change1">Er enghraifft, ‘SA10 7RB’ neu ‘Rhiwlas' </span>
+    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48" for="postcode">Search results for</label>
+    <span class="govuk-hint">For example, 'E16 1NB' or 'High Street' </span>
     <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
       <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
     </span>
     <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch" name="postcode" type="text">
   </div>
-  <input id="app-button__postcode-search" class="govuk-button"  value="Chwilio" onclick="postcodeSearch()" type="button">
+  <input id="app-button__postcode-search" class="govuk-button"  value="Search" onclick="postcodeSearch()" type="button">
 
 
     <div class="app-element-to-toggle app-hidden app-postcode-list__1">
-      <p> Cafwyd hyd i 20 o gyfeiriadau</p>
+      <p> 20 addresses found </p>
       <div class="scrollable">
       <ul class="app-list__postcode-list">
         <li><a href="search-results-for-1">Peel Street, Runcorn WA7</a></li>
-        <li><a href="#">Peel Street, Ashton-under-lyne OL6</a></li>
-        <li><a href="#">Peel Street, Coventry CV6</a></li>
-        <li><a href="#">Peel Street, Coventry CV1</a></li>
+        <li><a href="search-results-for">Peel Street, Ashton-under-lyne OL6</a></li>
+        <li><a href="search-results-for">Peel Street, Coventry CV6</a></li>
+        <li><a href="search-results-for">Peel Street, Coventry CV1</a></li>
         <li><a href="#">Peel Street, Adlington PR6</a></li>
         <li><a href="#">Peel Street, Westhoughton, Bolton BL5</a></li>
         <li><a href="#">Peel Street, Glasgow G11</a></li>
@@ -106,15 +105,12 @@ Chwilio trwy god post neu enw stryd - Search for land and property information
         <li><a href="#">Peel Street, Southampton SO17</a></li>
 
       </ul>
-      </div>
-      <br>
-      <br>
-      <p class="govuk-body-s"> Mae defnyddio’r data cyfeiriad hwn yn amodol ar delerau ac amodau trwydded yr<a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Arolwg Ordnans</a>.
-
+    </div>
+    <p class="govuk-body-s"> Use of this address data is subject to <a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Ordnance Survey licence terms and conditions</a>.
     </div>
 
     <div class="app-element-to-toggle app-hidden app-postcode-list__2">
-      <p> Cafwyd hyd i 40 o gyfeiriadau</p>
+      <p> 40 addresses found </p>
         <div class="scrollable">
       <ul class="app-list__postcode-list">
         <li><a href="#">1 Clinton Street, Exeter EX4 1AX</a></li>
@@ -160,34 +156,25 @@ Chwilio trwy god post neu enw stryd - Search for land and property information
         <li><a href="#">81 Clinton Street, Exeter EX4 1AX</a></li>
       </ul>
     </div>
-    <br>
-    <br>
-    <p class="govuk-body-s"> Mae defnyddio’r data cyfeiriad hwn yn amodol ar delerau ac amodau trwydded yr<a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Arolwg Ordnans</a>.
     </div>
 
 
     <div class="app-element-to-toggle app-hidden app-postcode-list__3">
-      <p> Cafwyd hyd i 1 cyfeiriad </p>
+      <p> 1 address found </p>
       <ul class="app-list__postcode-list">
-        <li><a href="#">10 Elgin Park, Bristol, BS6 6RU </a></li>
+        <li><a href="#">10 Elgin Park</a></li>
       </ul>
-      <br>
-      <br>
-<p class="govuk-body-s"> Mae defnyddio’r data cyfeiriad hwn yn amodol ar delerau ac amodau trwydded yr<a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Arolwg Ordnans</a>.
-   </div>
+    </div>
 
     <div class="app-element-to-toggle app-hidden app-postcode-list__4">
-        <p> Cafwyd hyd i 0 o gyfeiriadau </p>
+        <p> No address found </p>
     </div>
   </div>
 
-<div class ="govuk-grid-row">
-    <div class ="govuk-grid-column-one-third">
-      <p class="toggle_underline"> <a> English </a>  | Cymraeg  </p>
-    </div>
-  </div>
+ <div class ="govuk-grid-column-one-third">
+   <p> English | <a> Cymraeg </a> </p>
+ </div>
 
-</div>
-
+ </div>
 
 {% endblock %}

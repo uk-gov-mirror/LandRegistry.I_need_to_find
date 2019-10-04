@@ -13,6 +13,11 @@ function addErrorMessage(message, input_field, inline_error, summary_error){
   $(summary_error).removeClass('app-hidden')
   $('#summary-text').text(message)
   $('#inline-text').text(message)
+  $('#summary-text').text(message)
+  $('#inline-text').text(message)
+  $('.app-title-change').removeClass('app-hidden');
+  $('.app-title-change1').removeClass('app-hidden');
+
 }
 
 function removeErrorMessage(input_field, inline_error, summary_error){
@@ -32,16 +37,25 @@ function postcodeSearch(){
   $('.app-postcode-list__2').addClass('app-hidden');
   $('.app-postcode-list__3').addClass('app-hidden');
   $('.app-postcode-list__4').addClass('app-hidden');
-  $('.app-title-change').addClass('app-hidden')
+  $('.app-title-change').addClass('app-hidden');
+  $('.app-title-change1').addClass('app-hidden');
+
 
   removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#postcode-error-summary')
 
   if (postcode === ''){
 
-    addErrorMessage('Enter a postcode or street name',
-                                    '#app-input-postcodeSearch',
-                                    '#enter-a-postcode-error',
-                                    '#postcode-error-summary');
+    if (window.location.href.indexOf("welsh") > -1){
+      addErrorMessage('Nodwch god post neu enw stryd',
+                            '#app-input-postcodeSearch',
+                            '#enter-a-postcode-error',
+                            '#postcode-error-summary');
+    }else{
+      addErrorMessage('Enter a postcode or street name',
+                                      '#app-input-postcodeSearch',
+                                      '#enter-a-postcode-error',
+                                      '#postcode-error-summary');
+    }
 
   }else if (postcode.indexOf('PL1') !== -1 || postcode.indexOf('PEEL') !== -1 || postcode.indexOf('PEAL') !== -1) {
 
