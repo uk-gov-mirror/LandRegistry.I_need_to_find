@@ -45,10 +45,17 @@ function postcodeSearch(){
 
   if (postcode === ''){
 
-    addErrorMessage('Enter a postcode or street name',
-                                    '#app-input-postcodeSearch',
-                                    '#enter-a-postcode-error',
-                                    '#postcode-error-summary');
+    if (window.location.href.indexOf("welsh") > -1){
+      addErrorMessage('Nodwch god post neu enw stryd',
+                            '#app-input-postcodeSearch',
+                            '#enter-a-postcode-error',
+                            '#postcode-error-summary');
+    }else{
+      addErrorMessage('Enter a postcode or street name',
+                                      '#app-input-postcodeSearch',
+                                      '#enter-a-postcode-error',
+                                      '#postcode-error-summary');
+    }
 
   }else if (postcode.indexOf('PL1') !== -1 || postcode.indexOf('PEEL') !== -1 || postcode.indexOf('PEAL') !== -1) {
 
