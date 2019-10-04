@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Accessibility statement - Search for land and property information
+  Search results - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -43,26 +43,65 @@
   </p>
 </div>
 
-  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-{% endblock %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
+
+{% endblock %}
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">
-      Accessibility statement
-    </h1>
-
-    <p>content to go here </p>
-
-
+<h1 class="govuk-heading-l"> Search results for</h1>
+<div class="address-spacing">
+  <p id="app-address-to-display5" class="app-address--bold">
   </div>
-  <div class ="govuk-grid-column-one-third">
-    <p class="toggle_underline"> English | <a href="/welsh/accessibility-statement"> Cymraeg </a> </p>
+
+  <p> There are <b>2</b> results for this address. </p>
+
+  <p> Choose a result to view a summary of information held by HM Land Registry.</p>
+
+  <h2 class="govuk-heading-m"> Results by tenure type </h2>
+
+  <h2 class="govuk-heading-m"> Leasehold
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        What's leasehold?
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <p>Leasehold is one of two ways of owning land (the other is a freehold). A leasehold is granted by a
+    landlord to a tenant.</p>
+    <p>A leasehold lasts for a fixed time which will be set out in the lease. The tenant often has to pay rent to the landlord and this is also set out in the lease.</p>
+    <p>Most flats are leasehold.</p>
+    </div>
+  </details>
+<h3 class="govuk-heading-s"><a href="#"<p id="app-address-to-display1"></a> </h3>
+</h2>
+
+  <h2 class="govuk-heading-m"> Commonhold
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        What's commonhold?
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <p>Commonhold is a way of owning an individual property that is a part of a bigger property (for example, a flat in a block). </p>
+      <p>It is an alternative to leasehold. </p>
+      <p>Each individual unit (or flat) is exclusively owned by a unit-holder and the common areas (for example, stairways and corridors) are owned by a commonhold association. A commonhold association is a company. Each unit-holder is a member of the commonhold association. </p>
+    </div>
+  </details>
+  <h3 class="govuk-heading-s"><a href="summary-of-commonhold"<p id="app-address-to-display1"></a> </h3>
+  </h2>
+    </div>
+
+    <div class ="govuk-grid-column-one-third">
+      <p class="toggle_underline"> <a> English </a>  | Cymraeg  </p>
+    </div>
   </div>
+
 </div>
-
 
 {% endblock %}

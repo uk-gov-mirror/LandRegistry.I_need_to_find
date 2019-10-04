@@ -1,9 +1,8 @@
-{% extends "layout_welsh.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-  Search results - Search for land and property information
+  Search for land and property information - GOV.UK
 {% endblock %}
-
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
@@ -23,7 +22,7 @@
     <div class="govuk-header__content">
 
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
-        Search for land and property information
+
       </a>
 
 
@@ -33,6 +32,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   beta
@@ -42,66 +42,34 @@
     </span>
   </p>
 </div>
-
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
-
 {% endblock %}
-{% block content %}
 
+{% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<h1 class="govuk-heading-l"> Search results for</h1>
-<div class="address-spacing">
-  <p id="app-address-to-display5" class="app-address--bold">
-  </div>
+    <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
 
-  <p> There are <b>2</b> results for this address. </p>
+    <p> Use this service to get information about a property in England and Wales, even if you don't own it.</p>
 
-  <p> Choose a result to view a summary of information held by HM Land Registry.</p>
+    <p> You can view the: </p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>full address</li>
+          <li>tenure type (freehold, leasehold or commonhold) </li>
+          <lI>property description - how the property is described by HM Land Registry</li>
+          <li>most recent price paid - you'll only get this if it was bought after April 2000, if more than £100 was paid or stated, or if HM Land Registry have recorded the price </li>
+      </ul>
 
-  <h2 class="govuk-heading-m"> Results by tenure type </h2>
+      <p> This service is also available in<a href="/welsh/01-start"> Welsh (Cymraeg)</a>.</p>
 
-  <h2 class="govuk-heading-m"> Leasehold
-  <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        What's leasehold?
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      <p>Leasehold is one of two ways of owning land (the other is a freehold). A leasehold is granted by a
-    landlord to a tenant.</p>
-    <p>A leasehold lasts for a fixed time which will be set out in the lease. The tenant often has to pay rent to the landlord and this is also set out in the lease.</p>
-    <p>Most flats are leasehold.</p>
-    </div>
-  </details>
-<h3 class="govuk-heading-s"><a href="#"<p id="app-address-to-display1"></a> </h3>
-</h2>
-
-  <h2 class="govuk-heading-m"> Commonhold
-  <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        What's commonhold?
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      <p>Commonhold is a way of owning an individual property that is a part of a bigger property (for example, a flat in a block). </p>
-      <p>It is an alternative to leasehold. </p>
-      <p>Each individual unit (or flat) is exclusively owned by a unit-holder and the common areas (for example, stairways and corridors) are owned by a commonhold association. A commonhold association is a company. Each unit-holder is a member of the commonhold association. </p>
-    </div>
-  </details>
-  <h3 class="govuk-heading-s"><a href="summary-of-commonhold"<p id="app-address-to-display1"></a> </h3>
-  </h2>
-    </div>
-
-    <div class ="govuk-grid-column-one-third">
-      <p class="toggle_underline"> <a> English </a>  | Cymraeg  </p>
-    </div>
-  </div>
-
+    <a href="search-by-postcode-or-street-name" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-1">Start now</a>
+      <div class="govuk-inset-text">
+        This service needs a postcode or street name. If you want to search by title number or map
+         <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do"> use the Find a Property service</a>.
+       </div>
+   </div>
 </div>
-
+  </div>
 {% endblock %}
