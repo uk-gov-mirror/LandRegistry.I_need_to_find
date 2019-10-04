@@ -15,6 +15,8 @@ function addErrorMessage(message, input_field, inline_error, summary_error){
   $('#inline-text').text(message)
   $('#summary-text').text(message)
   $('#inline-text').text(message)
+  $('.app-title-change').removeClass('app-hidden');
+  $('.app-title-change1').removeClass('app-hidden');
 
 }
 
@@ -27,7 +29,6 @@ function removeErrorMessage(input_field, inline_error, summary_error){
   $('#inline-text').text('')
 }
 
-
 function postcodeSearch(){
 
   let postcode = $('#app-input-postcodeSearch').val().toUpperCase();
@@ -36,8 +37,8 @@ function postcodeSearch(){
   $('.app-postcode-list__2').addClass('app-hidden');
   $('.app-postcode-list__3').addClass('app-hidden');
   $('.app-postcode-list__4').addClass('app-hidden');
-  $('.app-title-change').addClass('app-hidden')
-  $('.app-title-change1').removeClass('app-hidden')
+  $('.app-title-change').addClass('app-hidden');
+  $('.app-title-change1').addClass('app-hidden');
 
 
   removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#postcode-error-summary')
