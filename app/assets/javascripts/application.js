@@ -88,7 +88,7 @@ function titleSearch(){
                             '#enter-a-title-error',
                             '#title-error-summary');
     }else{
-      addErrorMessage('Enter a title number',
+      addErrorMessage('Enter a title number in the correct format',
                                       '#app-input-titleSearch',
                                       '#enter-a-title-error',
                                       '#title-error-summary');
@@ -101,7 +101,7 @@ function titleSearch(){
                             '#enter-a-title-error',
                             '#title-error-summary');
     }else{
-      addErrorMessage('That title number is not recognised. Please enter a valid title number',
+      addErrorMessage('We do not recognise that title number. Check the number and try again',
                                       '#app-input-titleSearch',
                                       '#enter-a-title-error',
                                       '#title-error-summary');
