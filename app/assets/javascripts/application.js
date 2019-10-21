@@ -41,7 +41,8 @@ function postcodeSearch(){
   $('.app-title-change1').addClass('app-hidden');
 
 
-  removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#postcode-error-summary')
+  removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#title-error-summary')
+
 
   if (postcode === ''){
 
@@ -71,6 +72,42 @@ function postcodeSearch(){
 
   }else{
     $('.app-postcode-list__4').removeClass('app-hidden')
+  }
+}
+
+function titleSearch(){
+
+  let title = $('#app-input-titleSearch').val().toUpperCase();
+
+  removeErrorMessage('#app-input-titleSearch', '#enter-a-title-error', '#title-error-summary')
+
+  if (title === ''){
+    if (window.location.href.indexOf("welsh") > -1){
+      addErrorMessage('Nodwch god post neu enw stryd',
+                            '#app-input-titleSearch',
+                            '#enter-a-title-error',
+                            '#title-error-summary');
+    }else{
+      addErrorMessage('Enter a title number',
+                                      '#app-input-titleSearch',
+                                      '#enter-a-title-error',
+                                      '#title-error-summary');
+    }
+
+  }else if (title =='DT123'){
+    if (window.location.href.indexOf("welsh") > -1){
+      addErrorMessage('Nodwch god post neu enw stryd',
+                            '#app-input-titleSearch',
+                            '#enter-a-title-error',
+                            '#title-error-summary');
+    }else{
+      addErrorMessage('That title number is not recognised. Please enter a valid title number',
+                                      '#app-input-titleSearch',
+                                      '#enter-a-title-error',
+                                      '#title-error-summary');
+    }
+  }else if (title =='DT1234'){
+    window.location = 'summary-of-freehold'
   }
 }
 
