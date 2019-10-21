@@ -62,13 +62,13 @@ function postcodeSearch(){
 
     $('.app-postcode-list__1').removeClass('app-hidden');
 
-  } else if (postcode.indexOf('EX4')!== -1 ||  postcode.indexOf('CLINTON')!== -1  || postcode.indexOf('CLNTN')!== -1 ) {
-
-    $('.app-postcode-list__2').removeClass('app-hidden');
-
-  } else if (postcode.indexOf('BS6')!== -1   || postcode.indexOf('ELGIN')!== -1) {
+  }else if (postcode.indexOf('EX4 1AX') !== -1) {
 
     $('.app-postcode-list__3').removeClass('app-hidden');
+
+  }else if (postcode.indexOf('CLINTON') !== -1) {
+
+    $('.app-postcode-list__2').removeClass('app-hidden');
 
   }else{
     $('.app-postcode-list__4').removeClass('app-hidden')
@@ -88,7 +88,7 @@ function titleSearch(){
                             '#enter-a-title-error',
                             '#title-error-summary');
     }else{
-      addErrorMessage('Enter a title number',
+      addErrorMessage('Enter a title number in the correct format',
                                       '#app-input-titleSearch',
                                       '#enter-a-title-error',
                                       '#title-error-summary');
@@ -101,7 +101,7 @@ function titleSearch(){
                             '#enter-a-title-error',
                             '#title-error-summary');
     }else{
-      addErrorMessage('That title number is not recognised. Please enter a valid title number',
+      addErrorMessage('Check the number and try again',
                                       '#app-input-titleSearch',
                                       '#enter-a-title-error',
                                       '#title-error-summary');

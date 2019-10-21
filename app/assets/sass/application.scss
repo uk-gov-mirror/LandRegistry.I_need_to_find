@@ -141,6 +141,9 @@ a:active {
   text-decoration: none;
 }
 
+.property-location-title {
+  vertical-align: top;
+}
 
 .scrollable {
   height: 350px;
@@ -219,3 +222,12 @@ a:active {
 .govuk-file-upload--error {
   border: 4px solid #b10e1e;
 }
+
+.small-map-with-pinpoint {
+ max-width: 100%;
+ height: auto;
+}
+
+.govuk-summary-list__key {
+    vertical-align: top;
+  }
