@@ -101,7 +101,7 @@ function titleSearch(){
                             '#enter-a-title-error',
                             '#title-error-summary');
     }else{
-      addErrorMessage('We do not recognise that title number. Check the number and try again',
+      addErrorMessage('Check the number and try again',
                                       '#app-input-titleSearch',
                                       '#enter-a-title-error',
                                       '#title-error-summary');
