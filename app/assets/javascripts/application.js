@@ -5,7 +5,7 @@ if (window.console && window.console.info) {
   window.console.info('GOV.UK Prototype Kit - do not use for production')
 };
 
-function addErrorMessage(message, input_field, inline_error, summary_error){
+function addErrorMessage(message, input_field, inline_error, summary_error, additional_info){
 
   $('.govuk-form-group').addClass('govuk-form-group--error')
   $(input_field).addClass('govuk-input--error')
@@ -13,10 +13,8 @@ function addErrorMessage(message, input_field, inline_error, summary_error){
   $(summary_error).removeClass('app-hidden')
   $('#summary-text').text(message)
   $('#inline-text').text(message)
-  $('#summary-text').text(message)
-  $('#inline-text').text(message)
+  $('#additional').text(additional_info)
   $('.app-title-change').removeClass('app-hidden');
-  $('.app-title-change1').removeClass('app-hidden');
 
 }
 
@@ -27,6 +25,7 @@ function removeErrorMessage(input_field, inline_error, summary_error){
   $(summary_error).addClass('app-hidden')
   $('#summary-text').text('')
   $('#inline-text').text('')
+  $('#additional').text('')
 }
 
 function postcodeSearch(){
@@ -38,7 +37,6 @@ function postcodeSearch(){
   $('.app-postcode-list__3').addClass('app-hidden');
   $('.app-postcode-list__4').addClass('app-hidden');
   $('.app-title-change').addClass('app-hidden');
-  $('.app-title-change1').addClass('app-hidden');
 
 
   removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#postcode-error-summary')
@@ -62,7 +60,7 @@ function postcodeSearch(){
 
     $('.app-postcode-list__1').removeClass('app-hidden');
 
-  }else if (postcode.indexOf('EX4 1AX') !== -1) {
+  }else if (postcode.indexOf('EX4 1AX') !== -1 || postcode.indexOf('EXETER') !== -1) {
 
     $('.app-postcode-list__3').removeClass('app-hidden');
 
@@ -104,7 +102,8 @@ function titleSearch(){
       addErrorMessage('Check the number and try again',
                                       '#app-input-titleSearch',
                                       '#enter-a-title-error',
-                                      '#title-error-summary');
+                                      '#title-error-summary',
+                                      'We do not recognise that title number.');
     }
   }else if (title =='DT1234'){
     window.location = 'summary-of-freehold'
