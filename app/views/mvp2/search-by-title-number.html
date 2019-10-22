@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Search by postcode or streetname - Search for land and property information
+Search by title number - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -25,8 +25,6 @@ Search by postcode or streetname - Search for land and property information
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
-
-
     </div>
   </div>
 </header>
@@ -37,24 +35,18 @@ Search by postcode or streetname - Search for land and property information
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   beta
 </strong>
-
-
     <span class="govuk-phase-banner__text">
       This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
-
-
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
-{% block content %}
 
+{% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-
     <div class="app-element-to-toggle app-hidden app-title-error-summary" id="title-error-summary">
       <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
         <h2 class="govuk-error-summary__title" id="error-summary-title">
