@@ -41,7 +41,7 @@ function postcodeSearch(){
   $('.app-title-change1').addClass('app-hidden');
 
 
-  removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#title-error-summary')
+  removeErrorMessage('#app-input-postcodeSearch', '#enter-a-postcode-error', '#postcode-error-summary')
 
 
   if (postcode === ''){
