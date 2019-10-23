@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Terms of use - Search for land and property information
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <svg role="presentation" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 132 97" height="30" width="36">
+            <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+            <image src="/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+
+      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
+        Search for land and property information
+      </a>
+
+
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Search for land and property information: terms of use
+    </h1>
+
+    <h2 class="govuk-heading-m"> About this service </h2>
+
+      <p>This service lets you search for information about land or property held by HM Land Registry. You can find out the following information by doing a free search:
+        <ul class="govuk-list govuk-list--bullet">
+          <li> the property description as it is shown in the register </li>
+          <li> whether the property is freehold, leasehold or commonhold (tenure)</li>
+          <li> what was paid for the property (provided it was bought after April 2000, cost more than £100 and HM Land Registry recorded this information </li>
+        </ul>
+      </p>
+
+    <h2 class="govuk-heading-m"> What's required to use the service </h2>
+
+      <p> To access the search information, you’ll need to provide a postcode or street name. You can only view the information at the time you make your search. If you want to keep it, you must download it or print a copy when your search results are shown.
+
+    <h2 class="govuk-heading-m">Additional information available </h2>
+
+      <p> <a href="https://www.gov.uk/search-property-information-land-registry">Use our Find a Property service </a> (link opens in new tab) to get the title number allocated by us for the property, the register for that title number showing details of any rights of way or restrictions on the land noted on the register and a title plan defining the property.  A fee is payable for this service.  </p>
+
+      <p> <b> By using this service, you accept our terms of use. Each term of use is separate. If any court decides any is unlawful the rest will continue to be fully effective. You can stop using this service at any time. HM Land Registry can stop you from using this service if you don’t comply with its terms of use. </b>
+    <h2 class="govuk-heading-m"> Terms of use</h2>
+
+      <p> You agree to use this service:
+        <ul class="govuk-list govuk-list--bullet">
+          <li> for lawful purposes </li>
+          <li> in a way that does not infringe the rights of or restrict or inhibit the use and enjoyment of this site by anyone else</li>
+        </ul>
+      </p>
+
+     <p> You agree not to: </p>
+      <ol class="govuk-list gobuk-list--numbers">
+         <li>1.  attempt to damage, impair or interrupt the service or access to it. </li>
+         <li>2.  use any automated software agents to search, copy, monitor, display, obtain links to or otherwise access this or any other HM Land Registry system. </li>
+         <li>3.  copy or display the information provided for display on another website </li>
+         <li>4.  attempt to add, change or delete any information provided and held by HM Land Registry. </li>
+         <li>5.  use the information provided by the service to claim any arrangement or official partnership with HM Land Registry to supply or reuse data and/or information. </li>
+         <li>6.  use the data for any fraudulent or unlawful activity including breaches of data protection law.</li>
+    </ol>
+
+    <p> HM Land Registry has the right to block your access at any time without notice if it suspects or has evidence you are not complying with these terms of use. </p>
+
+    <h2 class="govuk-heading-m">Service access </h2>
+
+      <p> You can access the service from any suitable internet-connected device and browser. When the free search information results are displayed you should download or print copies because once you leave the information pages it is not possible to return.</p>
+
+      <p> The service is available every day but may be taken down for updates and maintenance. If you are logged in when this happens, you’ll receive notification on-screen.</p>
+
+    <h2 class="govuk-heading-m"> Service delays and interruptions </h2>
+
+      <p>HM Land Registry is not liable to you or any third party for any losses caused by delays to this service or getting your search results, for example from:  </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li> interruptions to the internet</li>
+          <li> services provided by third parties (anyone who is not HM Land Registry)</li>
+          <li>false information from linked websites </li>
+        </ul>
+
+    <h2 class="govuk-heading-m"> Information HM Land Registry holds about you </h2>
+      <p>We will hold just your IP address. If HM Land Registry needs to contact customers about the service, it will message customers online and may use other media such as twitter to give updates.</p>
+
+    <h2 class="govuk-heading-m"> How we protect your personal information  </h2>
+
+      <p> HM Land Registry manages personal information you provide in accordance with its <a href ="https://www.gov.uk/government/organisations/land-registry/about/personal-information-charter"> Personal Information Charter </a>(link opens in new tab) and to:
+        <ul class="govuk-list govuk-list--bullet">
+          <li> give you the data you request </li>
+          <li> record any downloads or saving of information </li>
+          <li> prevent and detect crime  </li>
+        </ul>
+
+      <p> We will: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>keep your personal information secure</li>
+          <li>only keep the information for as long as it’s needed </li>
+          <li>not make it available for commercial use, such as marketing, without your permission</li>
+        </ul>
+
+        <p> HM Land Registry complies with the requirements of Data Protection Law. To help to prevent and detect crime such as property fraud it may retain and share information with: </p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li> other government departments </li>
+              <li> law enforcement and regulatory bodies including specified anti-fraud organisations under section 68 Serious Crime Act 2007 </li>
+              <li> all activity that occurs on or through your account </li>
+            </ul>
+
+      <p> Personal information will be retained for a period of five years. We will not delete personal data where it is required to establish, defend, or exercise legal claims, for example in relation to property fraud. </p>
+
+      <h2 class="govuk-heading-m"> How to make a complaint </h2>
+
+      <p> If you’re unhappy with the service, contact HM Land Registry. You can: </p>
+       <ul class="govuk-list govuk-list--bullet">
+         <li> <a href ="#"> complete the online contact form </a></li>
+         <li> phone 0300 006 0411 </li>
+         <li> speak to a Welsh speaker: 0300 003 0422</li>
+       </ul>
+
+      <p>If you’re unhappy with the answer you receive, <a href ="https://www.gov.uk/government/organisations/land-registry/about/complaints-procedure">follow HM Land Registry’s internal complaints procedure </a>(link opens in new tab). </p>
+
+      <p>If you’re still unhappy with the answer,<a href ="https://ico.org.uk/make-a-complaint/"> contact the Independent Complaints Reviewer’s Office (ICR) </a> (link opens in new tab). The ICR can investigate your complaint independently from HM Land Registry. </p>
+
+      <p> <a href="javascript:history.back()" class="govuk-back-link">Back</a> </p>
+
+      </div>
+        <div class ="govuk-grid-column-one-third">
+          <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
+        </div>
+      </div>
+
+
+{% endblock %}
