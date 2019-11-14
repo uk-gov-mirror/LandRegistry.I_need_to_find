@@ -158,6 +158,7 @@ $(document).ready(function () {
     $('#app-property-description2').html('2a Peel Street, Runcorn WA7 1JP');
     $('#app-property-description3').html('2b Peel Street, Runcorn WA7 1JP');
     $('#app-property-description4').html('Plot 4 Peel Street, Runcorn WA7 1JP');
+    $('#app-property-description5').html('Plot 2, Peel Street, Runcorn');
 
 
     // if $addressToDisplay contains the word Clinton, run this
