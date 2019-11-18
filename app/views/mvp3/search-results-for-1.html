@@ -54,54 +54,48 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-      <div class="app-element-to-toggle app-hidden app-postcode-error-summary" id="postcode-error-summary">
-        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
-          <h2 class="govuk-error-summary__title" id="error-summary-title">
-            There is a problem
-          </h2>
-          <div class="govuk-error-summary__body">
-              <ul class="govuk-list govuk-error-summary__list">
-                <li>
-                  <a href="#"app-input-postcodeSearch" id='summary-text'></a>
-                </li>
-              </ul>
-          </div>
+    <div class="app-element-to-toggle app-hidden app-postcode-error-summary" id="postcode-error-summary">
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li><a href="#"app-input-postcodeSearch" id='summary-text'></a></li>
+          </ul>
         </div>
+      </div>
     </div>
 
-  <div id="govuk-form-group" class="govuk-form-group">
-    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48" for="postcode">Search results for</label>
-    <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
-      <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
-    </span>
-    <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch"  name="postcode" type="text" placeholder="Peel Street, Runcorn WA7" >
+    <div id="govuk-form-group" class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48" for="postcode">Search results for</label>
+      <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
+        <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
+      </span>
+      <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch"  name="postcode" type="text" placeholder="Peel Street, Runcorn WA7" >
+    </div>
+    <input id="app-button__postcode-search" class="govuk-button"  value="Search" onclick="postcodeSearch()" type="button">
+    <p> 14 addresses found </p>
+    <ul class="app-list__postcode-list">
+      <li><a href="summary-of-freehold-1ps">1 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="search-results-for-2aps">2 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="no-information">3 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="search-results-for-4aps">4 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">5 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">6 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">7 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">8 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">9 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">10 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">11 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">12 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">13 Peel Street, Runcorn WA7 1JP</a></li>
+      <li><a href="#">14 Peel Street, Runcorn WA7 1JP</a></li>
+    </ul>
+    <br>
+    <br>
+    <p class="govuk-body-s"> Use of this address data is subject to <a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Ordnance Survey licence terms and conditions</a>.
   </div>
-  <input id="app-button__postcode-search" class="govuk-button"  value="Search" onclick="postcodeSearch()" type="button">
-
-
-      <p> 14 addresses found </p>
-      <ul class="app-list__postcode-list">
-        <li><a href="summary-of-freehold-1ps">1 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="search-results-for-2aps">2 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="no-information">3 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="search-results-for-4aps">4 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">5 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">6 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">7 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">8 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">9 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">10 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">11 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">12 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">13 Peel Street, Runcorn WA7 1JP</a></li>
-        <li><a href="#">14 Peel Street, Runcorn WA7 1JP</a></li>
-      </ul>
-<br>
-<br>
-  <p class="govuk-body-s"> Use of this address data is subject to <a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Ordnance Survey licence terms and conditions</a>.
-
-    </div>
   <div class ="govuk-grid-column-one-third">
     <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
   </div>
