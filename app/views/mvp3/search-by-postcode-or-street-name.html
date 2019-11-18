@@ -49,39 +49,38 @@ Search by postcode or streetname - Search for land and property information
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-      <div class="app-element-to-toggle app-hidden app-postcode-error-summary" id="postcode-error-summary">
-        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
-          <h2 class="govuk-error-summary__title" id="error-summary-title">
-            There is a problem
-          </h2>
-          <div class="govuk-error-summary__body">
-              <ul class="govuk-list govuk-error-summary__list">
-                <li>
-                  <a href="#app-input-postcodeSearch" id='summary-text'></a>
-                </li>
-              </ul>
-          </div>
+    <div class="app-element-to-toggle app-hidden app-postcode-error-summary" id="postcode-error-summary">
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#app-input-postcodeSearch" id='summary-text'></a>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
 
-  <div id="govuk-form-group" class="govuk-form-group">
-    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48 app-hidden app-postcode-list__1 app-postcode-list__2 app-postcode-list__3 app-postcode-list__4" for="postcode">Search results for</label>
-    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48 app-title-change" for="postcode">Search by postcode or <br> street name</label>
-    <span class="govuk-hint app-title-change">For example, 'SW1A 2AA' or 'High Street'. </span>
-    <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
-      <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
-    </span>
-    <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch" name="postcode" type="text">
-  </div>
+    <div id="govuk-form-group" class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48 app-hidden app-postcode-list__1 app-postcode-list__2 app-postcode-list__3 app-postcode-list__4" for="postcode">Search results for</label>
+      <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48 app-title-change" for="postcode">Search by postcode or <br> street name</label>
+      <span class="govuk-hint app-title-change">For example, 'SW1A 2AA' or 'High Street'. </span>
+      <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
+        <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
+      </span>
+      <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch" name="postcode" type="text">
+    </div>
 
     <input id="app-button__postcode-search" class="govuk-button"  value="Search" onclick="postcodeSearch()" type="button">
-      <br>
-      <br>
-      <div>
-        <h2 class="govuk-heading-m app-title-change"> Other ways to search </h2>
-        <p> <a href="search-by-title-number" class="app-title-change"> Search by title number </a> </p>
-      </div>
+    <br>
+    <br>
+    <div>
+      <h2 class="govuk-heading-m app-title-change"> Other ways to search </h2>
+      <p> <a href="search-by-title-number" class="app-title-change"> Search by title number </a> </p>
+    </div>
 
     <div class="app-element-to-toggle app-hidden app-postcode-list__1">
       <p> 89 results found </p>
@@ -295,8 +294,8 @@ Search by postcode or streetname - Search for land and property information
         <li><a href="#">Clinton Street, Porthleven TR19</a></li>
         <li><a href="#">Clinton Street, Romford RO2 </a></li>
       </ul>
-    <br>
-    <br>
+      <br>
+      <br>
       <p class="govuk-body-s"> Use of this address data is subject to <a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Ordnance Survey licence terms and conditions</a> (link opens in new tab).
     </div>
 
@@ -309,15 +308,15 @@ Search by postcode or streetname - Search for land and property information
       <br>
       <br>
       <p class="govuk-body-s"> Use of this address data is subject to <a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Ordnance Survey licence terms and conditions</a>(link opens in new tab).
-   </div>
-
-    <div class="app-element-to-toggle app-hidden app-postcode-list__4">
-        <p> 0 addresses found </p>
     </div>
+
+   <div class="app-element-to-toggle app-hidden app-postcode-list__4">
+     <p> 0 addresses found </p>
+   </div>
 </div>
-<div class ="govuk-grid-row">
-  <div class ="govuk-grid-column-one-third">
-    <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+  <div class ="govuk-grid-row">
+    <div class ="govuk-grid-column-one-third">
+      <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
   </div>
 
 </div>
