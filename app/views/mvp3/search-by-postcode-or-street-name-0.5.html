@@ -1,7 +1,7 @@
-{% extends "layout_welsh.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-  Chwilio trwy god post neu enw stryd - Chwilio am wybodaeth am dir ac eiddo
+  Search by postcode or streetname - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -23,9 +23,8 @@
     <div class="govuk-header__content">
 
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
-        Chwilio am wybodaeth am dir ac eiddo
+        Search for land and property information
       </a>
-
 
     </div>
   </div>
@@ -37,15 +36,11 @@
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   beta
 </strong>
-
-
     <span class="govuk-phase-banner__text">
-      Gwasanaeth newydd yw hwn – bydd eich <a class="govuk-link" href="https://forms.office.com/Pages/ResponsePage.aspx?id=qAljI0soV06ns_x2dzb2nWSqrv6aYbZMm59Ht9w6bx1UQTNONjQyNkxZTkRCUVBDWlNYUlc2VTIxSS4u"> adborth </a> yn ein helpu i’w wella.
+      This is a new service – your <a class="govuk-link" href=" https://forms.office.com/Pages/ResponsePage.aspx?id=qAljI0soV06ns_x2dzb2nWSqrv6aYbZMm59Ht9w6bx1UQTNONjQyNkxZTkRCUVBDWlNYUlc2VTIxSS4u">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
-
-
 {% endblock %}
 {% block content %}
 
@@ -56,7 +51,7 @@
       <div class="app-element-to-toggle app-hidden app-postcode-error-summary" id="postcode-error-summary">
         <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
           <h2 class="govuk-error-summary__title" id="error-summary-title">
-            Mae yna broblem
+            There is a problem
           </h2>
           <div class="govuk-error-summary__body">
               <ul class="govuk-list govuk-error-summary__list">
@@ -69,8 +64,8 @@
     </div>
 
   <div id="govuk-form-group" class="govuk-form-group">
-    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48" for="postcode">Canlyniadau chwilio ar gyfer </label>
-    <span class="govuk-hint">For example, 'E16 1NB' or 'High Street' </span>
+    <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-size-48" for="postcode">Search results for</label>
+    <span class="govuk-hint">For example, 'SW1A 2AA' or 'High Street' </span>
     <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
       <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
     </span>
@@ -167,13 +162,12 @@
     </div>
 
     <div class="app-element-to-toggle app-hidden app-postcode-list__4">
-        <p> No address found </p>
+        <p> 0 results found </p>
     </div>
   </div>
 
  <div class ="govuk-grid-column-one-third">
-     <p class="toggle_underline"> <a> English </a>  | Cymraeg  </p>
-   </div>
+   <p> English | <a> Cymraeg </a> </p>
  </div>
 
  </div>
