@@ -36,6 +36,8 @@ function postcodeSearch(){
   $('.app-postcode-list__2').addClass('app-hidden');
   $('.app-postcode-list__3').addClass('app-hidden');
   $('.app-postcode-list__4').addClass('app-hidden');
+  $('.app-postcode-list__5').addClass('app-hidden');
+  $('.app-postcode-list__6').addClass('app-hidden');
   $('.app-title-change').addClass('app-hidden');
 
 
@@ -60,6 +62,10 @@ function postcodeSearch(){
 
     $('.app-postcode-list__5').removeClass('app-hidden');
 
+  }else if (postcode.indexOf('FAKE') !== -1) {
+
+    $('.app-postcode-list__6').removeClass('app-hidden');
+
   }else if (postcode.indexOf('WA7') !== -1 || postcode.indexOf('PEEL') !== -1 || postcode.indexOf('PEAL') !== -1 || postcode.indexOf('PL1') !== -1) {
 
     $('.app-postcode-list__1').removeClass('app-hidden');
@@ -72,7 +78,7 @@ function postcodeSearch(){
 
     $('.app-postcode-list__2').removeClass('app-hidden');
 
-  }else{
+  }else {
     $('.app-postcode-list__4').removeClass('app-hidden')
   }
 }
