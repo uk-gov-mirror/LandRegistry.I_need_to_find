@@ -1,7 +1,7 @@
-{% extends "layout_welsh.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-  Chwilio am wybodaeth am dir ac eiddo - GOV.UK
+  Search for land and property information - GOV.UK
 {% endblock %}
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
@@ -20,12 +20,7 @@
       </a>
     </div>
     <div class="govuk-header__content">
-
-      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
-
-      </a>
-
-
+      <a href="01-start" class="govuk-header__link govuk-header__link--service-name"></a>
     </div>
   </div>
 </header>
@@ -38,7 +33,7 @@
   beta
 </strong>
     <span class="govuk-phase-banner__text">
-      Gwasanaeth newydd yw hwn – bydd eich <a class="govuk-link" href="feedback"> adborth</a> yn ein helpu i’w wella.
+      This is a new service – your <a class="govuk-link" href=" https://forms.office.com/Pages/ResponsePage.aspx?id=qAljI0soV06ns_x2dzb2nWSqrv6aYbZMm59Ht9w6bx1UQTNONjQyNkxZTkRCUVBDWlNYUlc2VTIxSS4u">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -47,28 +42,96 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <h1 class="govuk-heading-xl">
-      Chwilio am wybodaeth am dir ac eiddo
+      Search for land and property information from HM Land Registry
     </h1>
 
-    <p>Defnyddiwch y gwasanaeth hwn i gael gwybodaeth am eiddo yng Nghymru a Lloegr, hyd yn oed os nad chi yw’r perchennog. </p>
+      <p> Find information about land and property in England or Wales, even if you don’t own it. Search by address to find the owner, how far its general boundaries extend and whether it’s at risk of flooding.</p>
 
-    <p> Gallwch weld: </p>
-      <ul class="govuk-list govuk-list--bullet">
-          <li>y cyfeiriad llawn</li>
-          <li>y math o ddaliadaeth (rhydd-ddaliad, lesddaliad neu gyfunddaliad) </li>
-          <li>y disgrifiad eiddo – sut y mae’r eiddo wedi ei ddisgrifio gan Gofrestrfa Tir EM </li>
-          <li>y pris diweddaraf a dalwyd am yr eiddo – cewch hwn dim ond os cafodd ei brynu ar ôl Ebrill 2000, os talwyd neu os datganwyd mwy na £100, neu os cofnodwyd y wybodaeth gan Gofrestrfa Tir EM </li>
-      </ul>
+        <div class="govuk-inset-text">
+          You’ll need to <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do?_ga=2.156526840.2147415413.1571663321-673443007.1559904045"> order an official copy of the register</a> (link opens in new tab) if you need to prove property ownership, for example for a court case.
+        </div>
 
-    <p> Mae’r gwasanaeth hwn ar gael yn <a href="/mvp1/01-start"> Saesneg (English) </a> hefyd. </p>
+          <a href="01-start" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
 
-    <a href="search-by-postcode-or-street-name" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-1">Dechrau nawr</a>
-    <div class="govuk-inset-text">
-       Mae angen cod post neu enw stryd ar y gwasanaeth hwn. Os ydych am chwilio trwy rif teitl neu fap, <a href="https://www.gov.uk/search-property-information-land-registry">defnyddiwch y gwasanaeth Find a Property</a>.
-     </div>
-   </div>
-</div>
+        <h2 class="govuk-heading-m">Before you start
+          </h2>
+            <p> You’ll need an email address and a debit or credit card to use this service. </p>
+            <p> <a href="https://www.gov.uk/get-information-about-property-and-land"> Read guidance on getting information about property and land </a>, including alternative sources of information. </p>
+
+          <div class="govuk-inset-text">
+            You’ll need to search different registers if the property is in Scotland or Northern Ireland.
+          </div>
+
+      <h2 class="govuk-heading-m">New service for basic services
+       </h2>
+        <p> <a href ="/welsh/search-by-postcode-or-street-name">Try the new service</a> if you just want to know the property's:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>full address</li>
+            <li>location </li>
+            <li>tenure type (freehold, leasehold or commonhold)</li>
+            <li>property description - how the property is described by HM Land Registry</li>
+            <li>property type and price trends for the local area</li>
+            <li>most recent price paid - you'll only get this if it was bought after April 2000, if more than £100 was paid or stated, or if HM Land Registry have recorded the price</li>
+            <li>price history</li>
+          </ul>
+
+          <p>You can also find out if there are restrictive covenants or easements recorded in the register. </p>
+
+          <br>
+
+          <h2 class="govuk-heading-m">Fees
+            </h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document (each copy)</th>
+                  <th scope="col" class="govuk-table__header">Fee</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Title register</td>
+                  <td class="govuk-table__cell">£3</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Title plan</td>
+                  <td class="govuk-table__cell">£3</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Flood risk indicator (including VAT)</td>
+                  <td class="govuk-table__cell">£10.80</td>
+                </tr>
+              </tbody>
+          </table>
+
+        <h2 class="govuk-heading-m">Help
+         </h2>
+         <p> <a href="https://help.landregistry.gov.uk/app/contactus_findprop/?_ga=2.54035691.2147415413.1571663321-673443007.1559904045">Contact HM Land Registry </a>if you need help using the service. </p>
+        </div>
+
+       <div class="govuk-grid-column-one-third">
+             <aside class="app-related-items" role="complementary">
+               <h2 class="govuk-heading-m" id="subsection-title">
+                 Related content
+               </h2>
+               <nav role="navigation" aria-labelledby="subsection-title">
+                 <ul class="govuk-list govuk-!-font-size-16">
+                   <li>
+                     <a class="govuk-link" href="#">
+                       Registering land or property with HM Land Registry
+                     </a>
+                    </li>
+                  <li>
+                  <li>
+                     <a class="govuk-link" href="#">
+                       Your property boundaries
+                     </a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="#">
+                      Protect your land and property from fraud
+                    </a>
+                  </li>
 
 {% endblock %}
