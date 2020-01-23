@@ -28,6 +28,40 @@ function removeErrorMessage(input_field, inline_error, summary_error){
   $('#additional').text('')
 }
 
+function clintonStreetSearch(){
+
+  let postcode = $('#app-input-clintonStreetSearch').val().toUpperCase();
+
+  $('.app-postcode-list__1').addClass('app-hidden');
+  $('.app-postcode-list__2').addClass('app-hidden');
+  $('.app-postcode-list__3').addClass('app-hidden');
+  $('.app-postcode-list__4').addClass('app-hidden');
+  $('.app-postcode-list__5').addClass('app-hidden');
+  $('.app-postcode-list__6').addClass('app-hidden');
+  $('.app-title-change').addClass('app-hidden');
+
+
+  removeErrorMessage('#app-input-clintonStreetSearch', '#enter-a-postcode-error', '#postcode-error-summary')
+
+  if (postcode === ''){
+
+    if (window.location.href.indexOf("welsh") > -1){
+      addErrorMessage('Nodwch god post neu enw stryd',
+                            '#app-input-clintonStreetSearch',
+                            '#enter-a-postcode-error',
+                            '#postcode-error-summary');
+    }else{
+      addErrorMessage('Enter a postcode or street name',
+                                      '#app-input-clintonStreetSearch',
+                                      '#enter-a-postcode-error',
+                                      '#postcode-error-summary');
+    }
+  }else if (postcode.indexOf('EX4 1AX') !== -1) {
+
+    $('.app-postcode-list__1').removeClass('app-hidden');
+  }
+}
+
 function postcodeSearch(){
 
   let postcode = $('#app-input-postcodeSearch').val().toUpperCase();
@@ -126,6 +160,12 @@ $(document).ready(function () {
   $("#app-input-postcodeSearch").on('keyup', function (e) {
     if (e.keyCode == 13) {
         postcodeSearch()
+    }
+  })
+
+  $("#app-input-clintonStreetSearch").on('keyup', function (e) {
+    if (e.keyCode == 13) {
+        clintonStreetSearch()
     }
   })
 
