@@ -92,7 +92,7 @@ function postcodeSearch(){
                                       '#postcode-error-summary');
     }
 
-  }else if (postcode.indexOf('RUNCORN') !== -1) {
+  }else if (postcode.indexOf('PL5 6WD') !== -1) {
 
     $('.app-postcode-list__5').removeClass('app-hidden');
 

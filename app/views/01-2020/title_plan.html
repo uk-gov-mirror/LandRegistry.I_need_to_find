@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Cookies settings - Search for land and property information
+  title plan - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -21,6 +21,7 @@
       </a>
     </div>
     <div class="govuk-header__content">
+
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
@@ -32,86 +33,85 @@
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
-    beta
-    </strong>
+  beta
+</strong>
+
     <span class="govuk-phase-banner__text">
       This is a new service – <a class="govuk-link" href=" https://forms.office.com/Pages/ResponsePage.aspx?id=qAljI0soV06ns_x2dzb2nWSqrv6aYbZMm59Ht9w6bx1UQTNONjQyNkxZTkRCUVBDWlNYUlc2VTIxSS4u">give your feedback</a> to help us to improve it (link opens in new tab).
     </span>
   </p>
 </div>
 
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
-
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l"> Your cookies settings
-    <span class="govuk-caption-m">on Search for land and property information</span></h1>
+    <h1 class="govuk-heading-l">Title plan for:</h1>
+    {% if data['search-location'] == '5cs' %}
+      <h1 class="govuk-heading-m">5 Clinton street, Exeter, EX4 1AX</h1>
+      <h1 class="govuk-heading-m">Title number: DX1234</h1>
+    {% elif data['search-location'] == '3ls' %}
+      <h1 class="govuk-heading-m">3 Long street, Plymouth, PL5 6WD</h1>
+      <h1 class="govuk-heading-m">Title number: CL8854</h1>
+    {% endif %}
+    <br>
+  </div>
 
-    <p> Cookies are files saved on your phone, tablet or computer when you visit a
-      website.</p>
-
-    <p> We use cookies to store information about how you use Search for land and
-      property information, such as the pages you visit.</p>
-
-    <h2 class="govuk-heading-m">Cookie settings </h2>
-    <p> We use 4 types of cookie. You can choose which cookies you're happy for us
-      to use.</p>
-
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <h3 class="govuk-fieldset__heading">Cookies that measure website use</h3>
-        </legend>
-        <span id="changed-name-hint" class="govuk-hint">
-          We use Google Analytics to measure how you use the website so we can improve
-          it based on user needs. Google Analytics sets cookies that store anonymised
-          information about:
-          <ul>
-            <li> how you got to the site </li>
-            <li> the pages you visit on the site, and how long you spend on each page </li>
-            <li> what you click on while you're visiting the site </li>
-            <li> details of any error messages you receive </li>
-            <li> We do not allow Google to use or share the data about how you use this site.</li>
-          </ul>
-          We do not allow Google to use or share the data about how you use this site.
-        </span>
-        <div class="govuk-radios govuk-radios--inline">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              On
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              Off
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-
-    <h3 class="govuk-heading-s">Strictly necessary cookies </h3>
-    <p> These essential cookies do things like: </p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li> remember the notifications you've seen so we do not show them to you again </li>
-      <li> remember your progress through a form </li>
-    </ul>
-    <p> They always need to be on. </p>
-
-    <p> <a href="/mvp2-5/cookies-details"> Find out more about cookies on Search
-      for land and property information</a>.</p>
-
-    <button class="govuk-button" data-module="govuk-button">
-      Save changes
-    </button>
-
+  <div class ="govuk-grid-column-one-third">
+    <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
   </div>
 </div>
+
+<div style="border-width: 2px; border-color: #D8D8D8; border-style:solid;">
+  <div class="govuk-grid-row" >
+    <div class="govuk-grid-column-two-thirds">
+      {% if data['search-location'] == '5cs' %}
+        <img src="/../../public/images/title_plan1.png" style="padding: 10px;" id='titlePlan_img'>
+      {% elif data['search-location'] == '3ls' %}
+        <img src="/../../public/images/title_plan2.png" style="padding: 10px;" id='titlePlan_img'>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div>
+  <br>
+  {% if data['search-location'] == '5cs' %}
+    <p> <a href="summary-of-freehold-5cs"> Return to summary of freehold </a> </p>
+  {% elif data['search-location'] == '3ls' %}
+    <p> <a href="summary-of-freehold-3ls"> Return to summary of freehold </a> </p>
+  {% endif %}
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <script>
+         function ImagetoPrint(source)
+         {
+             return "<html><head><scri"+"pt>function step1(){\n" +
+                     "setTimeout('step2()', 10);}\n" +
+                     "function step2(){window.print();window.close()}\n" +
+                     "</scri" + "pt></head><body onload='step1()'>\n" +
+                     "<img src='" + source + "' /></body></html>";
+         }
+         function PrintImage(source)
+         {
+             var Pagelink = "about:blank";
+             var pwa = window.open(Pagelink, "_new");
+             pwa.document.open();
+             pwa.document.write(ImagetoPrint(source));
+             pwa.document.close();
+         }
+    </script>
+    <p><a href="../../public/images/summary-of-leasehold-35cs.png" onclick="PrintImage('../../public/images/summary-of-leasehold-35cs.png'); return false;"> <img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" onclick="PrintImage('../../public/images/summary-of-leasehold-35cs.png'); return false;">Print this page</a></p>
+    <p><a href="../../public/images/summary-of-leasehold-35cs.png"download><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>
+  </div>
+</div>
+
 
 
 

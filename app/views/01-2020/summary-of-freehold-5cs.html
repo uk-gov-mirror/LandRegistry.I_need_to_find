@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Summary of leasehold - Search for land and property information
+  Summary of freehold - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -35,22 +35,19 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   beta
-</strong>
-
-    <span class="govuk-phase-banner__text">
-      This is a new service – <a class="govuk-link" href=" https://forms.office.com/Pages/ResponsePage.aspx?id=qAljI0soV06ns_x2dzb2nWSqrv6aYbZMm59Ht9w6bx1UQTNONjQyNkxZTkRCUVBDWlNYUlc2VTIxSS4u">give your feedback</a> to help us to improve it (link opens in new tab).
-    </span>
+  </strong>
+  <span class="govuk-phase-banner__text">
+    This is a new service – <a class="govuk-link" href=" https://forms.office.com/Pages/ResponsePage.aspx?id=qAljI0soV06ns_x2dzb2nWSqrv6aYbZMm59Ht9w6bx1UQTNONjQyNkxZTkRCUVBDWlNYUlc2VTIxSS4u">give your feedback</a> to help us to improve it (link opens in new tab).
+  </span>
   </p>
 </div>
-
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 
 {% endblock %}
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l"> Summary of leasehold </h1>
+    <h1 class="govuk-heading-l"> Summary of Freehold </h1>
   </div>
   <div class ="govuk-grid-column-one-third">
     <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
@@ -108,16 +105,18 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Tenure type</dt>
         <dd class="govuk-summary-list__value">
-          Leasehold<br>
+          Freehold<br>
           <details class="govuk-details">
             <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What's leasehold?</span>
+              <span class="govuk-details__summary-text">What's Freehold?</span>
             </summary>
             <div class="govuk-details__text">
-              <p>Leasehold is one of two ways of owning land (the other is a freehold). A leasehold is granted by a
-              landlord to a tenant.</p>
-              <p>A leasehold lasts for a fixed time which will be set out in the lease. The tenant often has to pay rent to the landlord and this is also set out in the lease.</p>
-              <p>Most flats are leasehold.</p>
+              <p>Freehold continues for an indefinite time without payment of rent.
+                It can be sold or given awayand is the type of ownership that is
+                nearest to owning land absolutely. </p>
+              <p>Most house are freehold, and most flats are leasehold</p>
+              <p>If you want to know who owns a flat, you probably need to the leasehold
+                title instead.</p>
             </div>
           </details>
         </dd>
@@ -130,20 +129,6 @@
         <dt class="govuk-summary-list__key">Last sold for</dt>
         <dd class="govuk-summary-list__value">
           <span class="app-price-paid-list"></span>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">Has sold for</dt>
-        <dd class="govuk-summary-list__value">
-          <p><b>£120,000</b> on 20 December 2007</p>
-          <p><b>£85,000</b> on 10 July 2002</p>
-          <p><b>£45,000</b> on 23 September 1995</p>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">Terraced house prices in East Devon</dt>
-        <dd class="govuk-summary-list__value">
-          <p><b>+2.2%</b> since November 2018</p>
         </dd>
       </div>
     </dl>

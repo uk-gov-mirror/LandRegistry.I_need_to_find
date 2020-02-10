@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   beta
@@ -15,7 +16,6 @@
   </p>
 </div>
 
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block header %}
@@ -49,84 +49,136 @@
 
 {% block content %}
 
+<script>
+  function resetCheckboxes() {
+    document.getElementById("checkbox-1").checked = false;
+    document.getElementById("checkbox-2").checked = false;
+  }
+</script>
+
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">Documents relating to:</h1>
-    <h1 class="govuk-heading-m">5 Clinton street, Exeter, EX4 1AX</h1>
 
-    <p>To purchase a document select the checkbox and click 'Purchase'. Purchased documents are available to view and download.</p>
-    <form class="govuk-!-margin-top-6" action="gov-pay1.html">
+    {% if data['search-location'] == '5cs' %}
+      <h1 class="govuk-heading-m">5 Clinton street, Exeter, EX4 1AX</h1>
+    {% elif data['search-location'] == '3ls' %}
+      <h1 class="govuk-heading-m">3 Long street, Plymouth, PL5 6WD</h1>
+    {% endif %}
+
+    {% if data['checkbox1'] or data['checkbox2'] %}
+      <br>
+      <br>
+      <h1 class="govuk-heading-m">Purchased documents</h1>
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Document</th>
             <th scope="col" class="govuk-table__header">Description</th>
-            <th scope="col" class="govuk-table__header">Cost</th>
             <th scope="col" class="govuk-table__header"></th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Register</th>
-            <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
-            <td class="govuk-table__cell">£3</td>
-            <td class="govuk-table__cell"><div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
-                  </div>
-                </div>
-              </fieldset>
-            </div></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Title plan</th>
-            <td class="govuk-table__cell">A description of a title plan xxxxxxxxxx xxxxxx xxxxxxxx </td>
-            <td class="govuk-table__cell">£3</td>
-            <td class="govuk-table__cell"><div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
-                  </div>
-                </div>
-              </fieldset>
-            </div></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">A deed</th>
-            <td class="govuk-table__cell">A description of a deed xxxxxxxxxx xxxxxx xxxxxxxx </td>
-            <td class="govuk-table__cell">£3</td>
-            <td class="govuk-table__cell"><div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
-                  </div>
-                </div>
-              </fieldset>
-            </div></td>
-          </tr>
+          {% if data['checkbox1'] %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Register</th>
+              <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
+              {% if data['search-location'] == '5cs' %}
+                <td class="govuk-table__cell"><a href="register-view-5cs.html">View</a><br><a href="#">Download</a></td>
+              {% elif data['search-location'] == '3ls' %}
+                <td class="govuk-table__cell"><a href="register-view-3ls.html">View</a><br><a href="#">Download</a></td>
+              {% endif %}
+            </tr>
+          {% endif %}
+          {% if data['checkbox2'] %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Title plan</th>
+              <td class="govuk-table__cell">A description of the title plan xxxxxxxxxx</td>
+              <td class="govuk-table__cell"><a href="title_plan">View</a><br><a href="#">Download</a></td>
+            </tr>
+          {% endif %}
         </tbody>
       </table>
+    {% endif %}
 
-      <button type="submit" class="govuk-button">
-          Purchase
-      </button>
-    </form>
+    {% if not (data['checkbox1'] and data['checkbox2']) %}
+      <br>
+      <br>
+      <h1 class="govuk-heading-m">Available documents</h1>
+      <form class="govuk-!-margin-top-6" action="gov-pay1" method="post">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Document</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header">Cost</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+             {% if not data['checkbox1'] %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Register</th>
+                <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
+                <td class="govuk-table__cell">£3</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
+                      <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox"
+                          name="checkbox1" value="register" {{checked("checkbox1", "register")}}>
+                          <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </td>
+              </tr>
+             {% endif %}
+             {% if not data['checkbox2'] %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Title plan</th>
+                <td class="govuk-table__cell">A description of the title plan xxxxxxxxxx</td>
+                <td class="govuk-table__cell">£3</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
+                      <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="checkbox-2" type="checkbox"
+                          name="checkbox2" value="title" {{checked("checkbox2", "title")}}>
+                          <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </td>
+              </tr>
+             {% endif %}
 
+          </tbody>
+        </table>
 
-    </div>
-      <div class ="govuk-grid-column-one-third">
-        <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
-      </div>
-    </div>
+        <button type="submit" class="govuk-button">
+            Purchase
+        </button>
+      </form>
+    {% endif %}
+
+    {% if data['search-location'] == '5cs' %}
+      <p> <a href="summary-of-freehold-5cs"> Return to summary of freehold </a> </p>
+    {% elif data['search-location'] == '3ls' %}
+      <p> <a href="summary-of-freehold-3ls"> Return to summary of freehold </a> </p>
+    {% endif %}
+
+  </div>
+  <div class ="govuk-grid-column-one-third">
+    <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
+  </div>
+</div>
 
 
 {% endblock %}
