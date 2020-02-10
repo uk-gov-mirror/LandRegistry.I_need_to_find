@@ -42,6 +42,8 @@
   </p>
 </div>
 
+<a href="related-docs-purchased" class="govuk-back-link">Back</a>
+
 {% endblock %}
 {% block content %}
 
@@ -63,11 +65,6 @@
     <div class="search-history-tabs" data-module="tabs">
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#summary">
-            Register summary
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#property">
             A: Property register
           </a>
@@ -84,133 +81,76 @@
         </li>
       </ul>
 
-      <section class="search-history-tabs__panel" id="summary">
+      <section class="search-history-tabs__panel" id="property">
         <br>
-        <h2 class="govuk-heading-m">Register summary</h2>
+        <h2 class="govuk-heading-m">Property register</h2>
+        <p>This register describes the land and estate comprised in the title.</p>
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Title number</dt>
+            <dt class="govuk-summary-list__key">Property description</dt>
             <dd class="govuk-summary-list__value">
-              <p>DX1234</p>
+              <p>The Freehold land shown edged with red on the plan of the above
+                Title filed at the Registry and being 5 Clinton Street, Exeter, EX4 1AX</p>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Name of proprietor</dt>
+            <dt class="govuk-summary-list__key">Provisions</dt>
             <dd class="govuk-summary-list__value">
-              <p>Bob Smith</p>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Address of proprietorship</dt>
-            <dd class="govuk-summary-list__value">
-              <p>5 Clinton Street, Exeter, EX4 1AX</p>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Lender</dt>
-            <dd class="govuk-summary-list__value">
-              <p>Natwest plc</p>
+              <ul class="govuk-list">
+                <li>
+                  <p>The Conveyance dated 25 November 1913 referred to in the Charges
+                    Register contains the following provision:-</p>
+                </li>
+                <li>
+                  <p>"Together with one divided moiety of the east and west boundary
+                  walls which are party walls and the entirely of the other boundary
+                  walls."</p>
+                </li>
+              </ul>
             </dd>
           </div>
         </dl>
       </section>
 
-      <section class="search-history-tabs__panel" id="property">
-        <br>
-        <h2 class="govuk-heading-m">A: Property register</h2>
-        <p>This register describes the land and estate comprised in the title.</p>
-        <hr>
-
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Entry number</th>
-              <th scope="col" class="govuk-table__header">Edition date</th>
-              <th scope="col" class="govuk-table__header">Register entry</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">1</th>
-              <td class="govuk-table__cell">(01.01.1965)</td>
-              <td class="govuk-table__cell">The Freehold land shown edged with red on the plan of the above
-                Title filed at the Registry and being 5 Clinton Street, Exeter, EX4 1AX</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">2</th>
-              <td class="govuk-table__cell"></td>
-              <td class="govuk-table__cell">The land has the benefit of the rights
-                granted by but is subject to the rights reserved by the Lease dated 1
-                October 1996 referred to in the Charges Register. </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
       <section class="search-history__panel" id="proprietorship">
         <br>
-        <h1 class="govuk-heading-m">B: Proprietorship register</h1>
+        <h1 class="govuk-heading-m">Proprietorship register</h1>
         <p>This register specifies the class of title and identifies the owner.
           It contains any entries that affect the right of disposal. </p>
-        <hr>
-
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Entry number</th>
-              <th scope="col" class="govuk-table__header">Edition date</th>
-              <th scope="col" class="govuk-table__header">Register entry</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">1</th>
-              <td class="govuk-table__cell">(01.02.2000)</td>
-              <td class="govuk-table__cell"><b>PROPRIETOR:</b> Bob Smith and Sarah
-                Smnith of 5 Clinton Street, Exeter, EX4 1AX.</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">2</th>
-              <td class="govuk-table__cell">(01.02.2000)</td>
-              <td class="govuk-table__cell">The price stated to have been paid
-                on 8 January 2000 was £130,950.</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">3</th>
-              <td class="govuk-table__cell">(18.08.2019)</td>
-              <td class="govuk-table__cell"><b>CAUTION</b> in favour of Bob Smith
-                of 5 Clinton Street, Exeter, EX4 1AX. in respect of an order of
-                the Bristol Court dated 1 August 2009 made under section 33(5)
-                of the Family Law Act 1996 affecting the matrimonial home rights
-                referred to above.</td>
-            </tr>
-          </tbody>
-        </table>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Proprietor</dt>
+            <dd class="govuk-summary-list__value">
+              <p>Joe Bloggs and Sarah Bloggs of 5 Clinton Street, Exeter, EX4 1AX.</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Price paid</dt>
+            <dd class="govuk-summary-list__value">
+              <p>The price stated to have been paid on 8 January 2000 was £130,950.</p>
+            </dd>
+          </div>
+        </dl>
       </section>
 
       <section class="search-history__panel" id="charges">
         <br>
-        <h1 class="govuk-heading-m">C: Charges register</h1>
+        <h1 class="govuk-heading-m">Charges register</h1>
         <p>This register contains any charges and other matters that affect the land. </p>
-        <hr>
-
-        <div class="govuk-summary-list__row">
-          <dd class="govuk-summary-list__value">
-            <p>This register contains no entries</p>
-          </dd>
-        </div>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              <p>The Charges register for this property contains no entries </p>
+            </dd>
+          </div>
+        </dl>
       </section>
     </div>
   </div>
 </div>
 
 <div>
-  <br>
-  {% if data['search-location'] == '5cs' %}
-    <p> <a href="summary-of-freehold-5cs"> Return to summary of freehold </a> </p>
-  {% elif data['search-location'] == '3ls' %}
-    <p> <a href="summary-of-freehold-3ls"> Return to summary of freehold </a> </p>
-  {% endif %}
+  <p> <a href="summary-of-freehold-5cs">Return to property summary</a> </p>
   <br>
   <br>
   <br>

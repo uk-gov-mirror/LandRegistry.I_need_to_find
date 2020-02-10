@@ -49,26 +49,35 @@
 
 {% block content %}
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <h1 class="govuk-heading-l">Confirm your payment</h1>
-
     <h1 class="govuk-heading-m">Purchase details</h1>
     <table class="govuk-table">
       <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Register</th>
-          <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Title plan</th>
-          <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third"><b>Total cost</b></th>
+        {% if data['checkbox1'] %}
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+            govuk-!-padding-top-3 govuk-!-width-one-third">Register</th>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+          </tr>
+        {% endif %}
+        {% if data['checkbox2'] %}
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+             govuk-!-padding-top-3 govuk-!-width-one-third">Title plan</th>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+          </tr>
+        {% endif %}
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+             govuk-!-padding-top-3 govuk-!-width-one-third"><b>Total cost</b></th>
+
+        {% if data['checkbox1'] and data['checkbox2']  %}
           <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£6</b></td>
+        {% else %}
+          <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£3</b></td>
+        {% endif %}
         </tr>
       </tbody>
     </table>
@@ -108,10 +117,10 @@
     </form>
 
     </div>
-      <div class ="govuk-grid-column-one-third">
-        <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
-      </div>
+    <div class ="govuk-grid-column-one-third">
+      <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
     </div>
+  </div>
 
 
 {% endblock %}

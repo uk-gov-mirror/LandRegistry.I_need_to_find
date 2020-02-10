@@ -32,10 +32,8 @@ Search by postcode or streetname - Search for land and property information
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
-  beta
-</strong>
-
-
+    beta
+    </strong>
     <span class="govuk-phase-banner__text">
       This is a new service – <a class="govuk-link" href=" https://forms.office.com/Pages/ResponsePage.aspx?id=qAljI0soV06ns_x2dzb2nWSqrv6aYbZMm59Ht9w6bx1UQTNONjQyNkxZTkRCUVBDWlNYUlc2VTIxSS4u">give your feedback</a> to help us to improve it (link opens in new tab).
     </span>
@@ -45,7 +43,6 @@ Search by postcode or streetname - Search for land and property information
 
 {% endblock %}
 {% block content %}
-
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -57,7 +54,7 @@ Search by postcode or streetname - Search for land and property information
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#app-input-clintonStreetSearch" id='summary-text'></a>
+              <a href="#app-input-postcodeSearch" id='summary-text'></a>
             </li>
           </ul>
         </div>
@@ -71,19 +68,61 @@ Search by postcode or streetname - Search for land and property information
       <span id="enter-a-postcode-error" class="govuk-error-message app-hidden">
         <span class="govuk-visually-hidden">Error:</span> <span id="inline-text"></span>
       </span>
-      <input class="govuk-input govuk-input--width-10" id="app-input-clintonStreetSearch" name="postcode" type="text">
+      <input class="govuk-input govuk-input--width-10" id="app-input-postcodeSearch" name="postcode" type="text">
     </div>
 
-    <input id="app-button__postcode-search" class="govuk-button"  value="Search" onclick="clintonStreetSearch()" type="button">
+    <input id="app-button__postcode-search" class="govuk-button"  value="Search" onclick="postcodeSearch()" type="button">
 
-    <div class="app-element-to-toggle app-hidden app-postcode-list__1">
+
+   <div class="app-element-to-toggle app-hidden app-postcode-list__1">
+     <p> 0 addresses found </p>
+   </div>
+
+    <div class="app-element-to-toggle app-hidden app-postcode-list__2">
+      <p> 0 addresses found </p>
+    </div>
+
+    <div class="app-element-to-toggle app-hidden app-postcode-list__6">
+      <p> 0 addresses found </p>
+    </div>
+
+    <div class="app-element-to-toggle app-hidden app-postcode-list__4">
+      <p> 0 addresses found </p>
+    </div>
+
+    <div class="app-element-to-toggle app-hidden app-postcode-list__5">
+      <p> 6 addresses found </p>
+      <ul class="app-list__postcode-list">
+        <li><a href="#">1 Long Street, Plymouth, PL5 6WD</a></li>
+        <li><a href="#">2 Long Street, Plymouth, PL5 6WD</a></li>
+        <li>
+          <form id="form-3ls" action="summary-of-freehold-3ls.html">
+            <input type="hidden" name="search-location" id="search-location" value="3ls" />
+            <a class="govuk-link govuk-!-font-size-16" href="#" onclick="document.getElementById('form-3ls').submit();">3 Long Street, Plymouth, PL5 6WD</a>
+          </form>
+        </li>
+        <li><a href="#">4 Long Street, Plymouth, PL5 6WD</a></li>
+        <li><a href="#">5 Long Street, Plymouth, PL5 6WD</a></li>
+        <li><a href="#">6 Long Street, Plymouth, PL5 6WD</a></li>
+      </ul>
+      <br>
+      <br>
+      <p class="govuk-body-s"> Use of this address data is subject to <a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Ordnance Survey licence terms and conditions</a>(link opens in new tab).
+    </div>
+
+    <div class="app-element-to-toggle app-hidden app-postcode-list__3">
       <p> 9 addresses found </p>
       <ul class="app-list__postcode-list">
         <li><a href="#">1 Clinton Street, Exeter, EX4 1AX</a></li>
         <li><a href="#">2 Clinton Street, Exeter, EX4 1AX</a></li>
         <li><a href="#">3 Clinton Street, Exeter, EX4 1AX</a></li>
         <li><a href="#">4 Clinton Street, Exeter, EX4 1AX</a></li>
-        <li><a href="summary-of-leasehold-5cs">5 Clinton Street, Exeter, EX4 1AX</a></li>
+        <li>
+          <form id="form-5cs" action="summary-of-freehold-5cs.html">
+            <input type="hidden" name="search-location" id="search-location" value="5cs" />
+            <a class="govuk-link govuk-!-font-size-16" href="#" onclick="document.getElementById('form-5cs').submit();">5 Clinton Street, Exeter, EX4 1AX</a>
+          </form>
+        </li>
         <li><a href="#">6 Clinton Street, Exeter, EX4 1AX</a></li>
         <li><a href="#">7 Clinton Street, Exeter, EX4 1AX</a></li>
         <li><a href="#">8 Clinton Street, Exeter, EX4 1AX</a></li>
@@ -94,15 +133,13 @@ Search by postcode or streetname - Search for land and property information
       <p class="govuk-body-s"> Use of this address data is subject to <a href= "https://www.ordnancesurvey.co.uk/about/governance/policies/hm-land-registry-find-property-information-service.html"> Ordnance Survey licence terms and conditions</a>(link opens in new tab).
     </div>
 
-   <div class="app-element-to-toggle app-hidden app-postcode-list__4">
-     <p> 0 addresses found </p>
-   </div>
-</div>
+  </div>
   <div class ="govuk-grid-row">
-    <div class ="govuk-grid-column-one-third">
+  <div class ="govuk-grid-column-one-third">
       <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
   </div>
 
+  </div>
 </div>
 
 
