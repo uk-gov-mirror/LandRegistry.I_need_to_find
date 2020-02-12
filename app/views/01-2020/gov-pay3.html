@@ -15,7 +15,6 @@
   </p>
 </div>
 
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block header %}
@@ -50,13 +49,57 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">Your payment was successful</h1>
-    <h2 class="govuk-heading-m">Your reference number is<br>1B7183</h2>
+    <h2 class="govuk-heading-m">Your reference number is 1B7183</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Payment for:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <!-- Both checkboxes checked first time -->
+          {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
+            Register<br>Title plan
+          <!-- Checked title number checkbox 1st time and register checkbox 2nd time -->
+          {% elif data['checkbox-title-A'] and data['checkbox-register-B'] %}
+            Register
+          <!-- Checked register checkbox 1st time and title checkbox 2nd time -->
+          {% elif data['checkbox-register-A'] and data['checkbox-title-B']%}
+            Title plan
+          <!-- Checked register checkbox -->
+          {% elif data['checkbox-register-A'] %}
+            Register
+          <!-- Checked title checkbox -->
+          {% elif data['checkbox-title-A']%}
+            Title plan
+          {% endif %}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total amount:
+        </dt>
+        <dd class="govuk-summary-list__value">
+        {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
+          £6
+        {% else %}
+          £3
+        {% endif %}
+        </dd>
+      </div>
+    </dl>
+
     <p class="govuk-body">We have sent you a receipt by email.
-    <p class="govuk-body">You can download your purchased documents on the document list page</p>
+    <p class="govuk-body">You can view and download your documents.</p>
+
+    <div class="govuk-inset-text">
+      You cannot view documents again after you have left the service.
+      <br>Download them to keep a copy.
+    </div>
 
     <form action="related-docs-B.html">
       <button class="govuk-button" type="submit">
-        Continue
+        Return to documents
       </button>
     </form>
 

@@ -15,7 +15,6 @@
   </p>
 </div>
 
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block header %}
@@ -56,7 +55,7 @@
     <table class="govuk-table">
       <tbody class="govuk-table__body">
 
-        <!-- Both checked first time -->
+        <!-- Both checkboxes checked first time -->
         {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
           <tr class="govuk-table__row">
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
@@ -68,28 +67,28 @@
              govuk-!-padding-top-3 govuk-!-width-one-third">Title plan</th>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
           </tr>
-          <!-- Checked title 1st time and register 2nd time -->
+          <!-- Checked title number checkbox 1st time and register checkbox 2nd time -->
           {% elif data['checkbox-title-A'] and data['checkbox-register-B'] %}
          <tr class="govuk-table__row">
            <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
            govuk-!-padding-top-3 govuk-!-width-one-third">Register</th>
            <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
          </tr>
-         <!-- Checked register 1st time and title 2nd time -->
+         <!-- Checked register checkbox 1st time and title checkbox 2nd time -->
          {% elif data['checkbox-register-A'] and data['checkbox-title-B']%}
            <tr class="govuk-table__row">
              <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
               govuk-!-padding-top-3 govuk-!-width-one-third">Title plan</th>
              <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
            </tr>
-           <!-- Checked register -->
+           <!-- Checked register checkbox -->
            {% elif data['checkbox-register-A'] %}
            <tr class="govuk-table__row">
              <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
              govuk-!-padding-top-3 govuk-!-width-one-third">Register</th>
              <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
            </tr>
-           <!-- Checked title -->
+           <!-- Checked title checkbox -->
            {% elif data['checkbox-title-A']%}
            <tr class="govuk-table__row">
              <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
@@ -102,7 +101,7 @@
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
              govuk-!-padding-top-3 govuk-!-width-one-third"><b>Total cost</b></th>
 
-        <!-- Both checked first time -->
+        <!-- Both checkboxes checked first time -->
         {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
           <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£6</b></td>
         <!-- Otherwise has to be just one checked -->
@@ -118,23 +117,23 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Card number:</th>
-          <td class="govuk-table__cell govuk-!-font-weight-bold">{{ data['card-number'] }}</td>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">1234 5678 9101</td>
         </tr>
         <tr class="govuk-table__row">
           <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Expiry date:</th>
-          <td class="govuk-table__cell govuk-!-font-weight-bold">{{ data['expiry-month'] }}/{{ data['expiry-year'] }}</td>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">10/21</td>
         </tr>
         <tr class="govuk-table__row">
           <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Name on card:</th>
-          <td class="govuk-table__cell govuk-!-font-weight-bold">{{ data['card-name']}}</td>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">A. Name</td>
         </tr>
         <tr class="govuk-table__row">
           <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Billing address:</th>
-          <td class="govuk-table__cell govuk-!-font-weight-bold">{{ data['address-1'] }} {{ data['address-2'] }}, {{ data['address-town-city'] }}, {{ data['address-postcode'] }}, {{ data['address-country'] }}</td>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">1 High street, Plymouth, PL5 6BB</td>
         </tr>
         <tr class="govuk-table__row">
           <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">confirmation email:</th>
-          <td class="govuk-table__cell govuk-!-font-weight-bold">{{ data['card-email'] }}</td>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">email@emailserver.com</td>
         </tr>
       </tbody>
     </table>
@@ -144,7 +143,7 @@
         Confirm payment
       </button>
 
-      <p class="govuk-body"><a href="gov-pay-cancelled.html" class="govuk-link">Cancel payment</a></p>
+      <p class="govuk-body"><a href="#" class="govuk-link">Cancel payment</a></p>
     </form>
 
   </div>

@@ -54,11 +54,8 @@
 
     <h1 class="govuk-heading-l">Documents relating to:</h1>
 
-    {% if data['search-location'] == '5cs' %}
-      <h1 class="govuk-heading-m">5 Clinton street, Exeter, EX4 1AX</h1>
-    {% elif data['search-location'] == '3ls' %}
-      <h1 class="govuk-heading-m">3 Long street, Plymouth, PL5 6WD</h1>
-    {% endif %}
+    <!-- Change heading depending on what search was performed  -->
+    <h1 class="govuk-heading-m">{{data['search-location']}}</h1>
 
     <br>
     <br>
@@ -72,17 +69,22 @@
         </tr>
       </thead>
       <tbody class="govuk-table__body">
+        <!-- If register checkbox was clicked 1st or 2nd time around show it
+        under purchased  -->
         {% if data['checkbox-register-A'] or data['checkbox-register-B'] %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Register</th>
             <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
-            {% if data['search-location'] == '5cs' %}
+            <!-- Change register view depending on what search was performed  -->
+            {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
               <td class="govuk-table__cell"><a href="register-view-5cs.html">View</a><br><a href="#">Download</a></td>
-            {% elif data['search-location'] == '3ls' %}
+            {% else %}
               <td class="govuk-table__cell"><a href="register-view-3ls.html">View</a><br><a href="#">Download</a></td>
             {% endif %}
           </tr>
         {% endif %}
+        <!-- If title checkbox was clicked 1st or 2nd time around show it
+        under purchased  -->
         {% if data['checkbox-title-A'] or data['checkbox-title-B'] %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Title plan</th>
@@ -93,7 +95,8 @@
       </tbody>
     </table>
 
-    <!-- If any combination of both checked then don't show available docs -->
+    <!-- If any combination of both checkboxes checked then don't show
+    available docs section at all as both will appear under purchased-->
     {% if not (data['checkbox-register-A'] and data['checkbox-title-A'])
       and not (data['checkbox-register-A'] and data['checkbox-title-B'])
       and not (data['checkbox-title-A'] and data['checkbox-register-B']) %}
@@ -111,6 +114,8 @@
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+            <!-- if register checkbox not checked on first page then show under
+            available-->
              {% if not data['checkbox-register-A'] %}
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Register</th>
@@ -131,6 +136,8 @@
                 </td>
               </tr>
              {% endif %}
+             <!-- if title checkbox not checked on first page then show under
+             available-->
              {% if not data['checkbox-title-A'] %}
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Title plan</th>
@@ -160,9 +167,10 @@
       </form>
     {% endif %}
 
-    {% if data['search-location'] == '5cs' %}
+    <!-- Return to correct page depending on what search was performed  -->
+    {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
       <p> <a href="summary-of-freehold-5cs"> Return to summary of freehold </a> </p>
-    {% elif data['search-location'] == '3ls' %}
+    {% else %}
       <p> <a href="summary-of-freehold-3ls"> Return to summary of freehold </a> </p>
     {% endif %}
 
