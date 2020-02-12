@@ -55,26 +55,57 @@
     <h1 class="govuk-heading-m">Purchase details</h1>
     <table class="govuk-table">
       <tbody class="govuk-table__body">
-        {% if data['checkbox1'] %}
+
+        <!-- Both checked first time -->
+        {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
           <tr class="govuk-table__row">
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
             govuk-!-padding-top-3 govuk-!-width-one-third">Register</th>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
           </tr>
-        {% endif %}
-        {% if data['checkbox2'] %}
           <tr class="govuk-table__row">
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
              govuk-!-padding-top-3 govuk-!-width-one-third">Title plan</th>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
           </tr>
-        {% endif %}
+          <!-- Checked title 1st time and register 2nd time -->
+          {% elif data['checkbox-title-A'] and data['checkbox-register-B'] %}
+         <tr class="govuk-table__row">
+           <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+           govuk-!-padding-top-3 govuk-!-width-one-third">Register</th>
+           <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+         </tr>
+         <!-- Checked register 1st time and title 2nd time -->
+         {% elif data['checkbox-register-A'] and data['checkbox-title-B']%}
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+              govuk-!-padding-top-3 govuk-!-width-one-third">Title plan</th>
+             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+           </tr>
+           <!-- Checked register -->
+           {% elif data['checkbox-register-A'] %}
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+             govuk-!-padding-top-3 govuk-!-width-one-third">Register</th>
+             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+           </tr>
+           <!-- Checked title -->
+           {% elif data['checkbox-title-A']%}
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+              govuk-!-padding-top-3 govuk-!-width-one-third">Title plan</th>
+             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+           </tr>
+         {% endif %}
+
           <tr class="govuk-table__row">
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
              govuk-!-padding-top-3 govuk-!-width-one-third"><b>Total cost</b></th>
 
-        {% if data['checkbox1'] and data['checkbox2']  %}
+        <!-- Both checked first time -->
+        {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
           <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£6</b></td>
+        <!-- Otherwise has to be just one checked -->
         {% else %}
           <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£3</b></td>
         {% endif %}
@@ -116,11 +147,11 @@
       <p class="govuk-body"><a href="gov-pay-cancelled.html" class="govuk-link">Cancel payment</a></p>
     </form>
 
-    </div>
+  </div>
     <div class ="govuk-grid-column-one-third">
       <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
     </div>
-  </div>
+</div>
 
 
 {% endblock %}

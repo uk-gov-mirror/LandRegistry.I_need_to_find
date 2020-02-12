@@ -49,14 +49,6 @@
 
 {% block content %}
 
-<script>
-  function resetCheckboxes() {
-    document.getElementById("checkbox-1").checked = false;
-    document.getElementById("checkbox-2").checked = false;
-  }
-</script>
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
@@ -68,42 +60,43 @@
       <h1 class="govuk-heading-m">3 Long street, Plymouth, PL5 6WD</h1>
     {% endif %}
 
-    {% if data['checkbox1'] or data['checkbox2'] %}
-      <br>
-      <br>
-      <h1 class="govuk-heading-m">Purchased documents</h1>
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
+    <br>
+    <br>
+    <h1 class="govuk-heading-m">Purchased documents</h1>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Document</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        {% if data['checkbox-register-A'] or data['checkbox-register-B'] %}
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Document</th>
-            <th scope="col" class="govuk-table__header">Description</th>
-            <th scope="col" class="govuk-table__header"></th>
+            <th scope="row" class="govuk-table__header">Register</th>
+            <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
+            {% if data['search-location'] == '5cs' %}
+              <td class="govuk-table__cell"><a href="register-view-5cs.html">View</a><br><a href="#">Download</a></td>
+            {% elif data['search-location'] == '3ls' %}
+              <td class="govuk-table__cell"><a href="register-view-3ls.html">View</a><br><a href="#">Download</a></td>
+            {% endif %}
           </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          {% if data['checkbox1'] %}
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Register</th>
-              <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
-              {% if data['search-location'] == '5cs' %}
-                <td class="govuk-table__cell"><a href="register-view-5cs.html">View</a><br><a href="#">Download</a></td>
-              {% elif data['search-location'] == '3ls' %}
-                <td class="govuk-table__cell"><a href="register-view-3ls.html">View</a><br><a href="#">Download</a></td>
-              {% endif %}
-            </tr>
-          {% endif %}
-          {% if data['checkbox2'] %}
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Title plan</th>
-              <td class="govuk-table__cell">A description of the title plan xxxxxxxxxx</td>
-              <td class="govuk-table__cell"><a href="title_plan">View</a><br><a href="#">Download</a></td>
-            </tr>
-          {% endif %}
-        </tbody>
-      </table>
-    {% endif %}
+        {% endif %}
+        {% if data['checkbox-title-A'] or data['checkbox-title-B'] %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Title plan</th>
+            <td class="govuk-table__cell">A description of the title plan xxxxxxxxxx</td>
+            <td class="govuk-table__cell"><a href="title_plan">View</a><br><a href="#">Download</a></td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
 
-    {% if not (data['checkbox1'] and data['checkbox2']) %}
+    <!-- If any combination of both checked then don't show available docs -->
+    {% if not (data['checkbox-register-A'] and data['checkbox-title-A'])
+      and not (data['checkbox-register-A'] and data['checkbox-title-B'])
+      and not (data['checkbox-title-A'] and data['checkbox-register-B']) %}
       <br>
       <br>
       <h1 class="govuk-heading-m">Available documents</h1>
@@ -118,7 +111,7 @@
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-             {% if not data['checkbox1'] %}
+             {% if not data['checkbox-register-A'] %}
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Register</th>
                 <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
@@ -128,8 +121,8 @@
                     <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
                       <div class="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox"
-                          name="checkbox1" value="register" {{checked("checkbox1", "register")}}>
+                          <input class="govuk-checkboxes__input" id="checkbox-1B" type="checkbox"
+                          name="checkbox-register-B" value="ticked" {{checked("checkbox-register-B", "ticked")}}>
                           <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
                         </div>
                       </div>
@@ -138,7 +131,7 @@
                 </td>
               </tr>
              {% endif %}
-             {% if not data['checkbox2'] %}
+             {% if not data['checkbox-title-A'] %}
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Title plan</th>
                 <td class="govuk-table__cell">A description of the title plan xxxxxxxxxx</td>
@@ -148,8 +141,8 @@
                     <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
                       <div class="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="checkbox-2" type="checkbox"
-                          name="checkbox2" value="title" {{checked("checkbox2", "title")}}>
+                          <input class="govuk-checkboxes__input" id="checkbox-2B" type="checkbox"
+                          name="checkbox-title-B" value="ticked" {{checked("checkbox-title-B", "ticked")}}>
                           <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
                         </div>
                       </div>
@@ -158,7 +151,6 @@
                 </td>
               </tr>
              {% endif %}
-
           </tbody>
         </table>
 
