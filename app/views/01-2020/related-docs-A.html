@@ -49,14 +49,6 @@
 
 {% block content %}
 
-<script>
-  function resetCheckboxes() {
-    document.getElementById("checkbox-1").checked = false;
-    document.getElementById("checkbox-2").checked = false;
-  }
-</script>
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="app-element-to-toggle app-hidden app-postcode-error-summary" id="postcode-error-summary">
@@ -76,11 +68,8 @@
 
     <h1 class="govuk-heading-l">Documents relating to:</h1>
 
-    {% if data['search-location'] == '5cs' %}
-      <h1 class="govuk-heading-m">5 Clinton street, Exeter, EX4 1AX</h1>
-    {% elif data['search-location'] == '3ls' %}
-      <h1 class="govuk-heading-m">3 Long street, Plymouth, PL5 6WD</h1>
-    {% endif %}
+    <!-- Change heading depending on what search was performed  -->
+    <h1 class="govuk-heading-m">{{data['search-location']}}</h1>
 
     <br>
     <br>
@@ -136,13 +125,14 @@
       </table>
 
       <button type="submit" class="govuk-button">
-          Purchase
+          Continue to payment
       </button>
     </form>
 
-    {% if data['search-location'] == '5cs' %}
+    <!-- Return to correct page depending on what search was performed  -->
+    {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
       <p> <a href="summary-of-freehold-5cs"> Return to summary of freehold </a> </p>
-    {% elif data['search-location'] == '3ls' %}
+    {% else %}
       <p> <a href="summary-of-freehold-3ls"> Return to summary of freehold </a> </p>
     {% endif %}
 

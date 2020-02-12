@@ -146,7 +146,13 @@
       </div>
     </dl>
 
-    <p> <a href="related-docs-A"> View documents related to 3 Long Street </a> </p>
+    <!-- If either checkbox has been checked on 'related-docs-A' then go 
+    straight to 'related-docs-B'  -->
+    {% if data['checkbox-register-A'] or data['checkbox-title-A'] %}
+      <p> <a href="related-docs-B"> View documents related to 3 Long Street </a> </p>
+    {% else%}
+      <p> <a href="related-docs-A"> View documents related to 3 Long Street </a> </p>
+    {% endif %}
     <br>
     <br>
     <br>
