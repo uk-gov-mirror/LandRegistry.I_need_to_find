@@ -160,17 +160,17 @@
 
       <!-- Both checked first time -->
      {% if data['checkbox-register-A'] and data['checkbox-title-A']%}
-       <p class="govuk-!-font-weight-bold">Register</p>
+       <p class="govuk-!-font-weight-bold">Register view</p>
        <p class="govuk-!-font-weight-bold">Title plan</p>
     <!-- Checked title 1st time and register 2nd time -->
     {% elif data['checkbox-title-A'] and data['checkbox-register-B'] %}
-        <p class="govuk-!-font-weight-bold">Register</p>
+        <p class="govuk-!-font-weight-bold">Register view</p>
     <!-- Checked register 1st time and title 2nd time -->
     {% elif data['checkbox-register-A'] and data['checkbox-title-B']%}
         <p class="govuk-!-font-weight-bold">Title plan</p>
     <!-- Checked register -->
     {% elif data['checkbox-register-A'] %}
-        <p class="govuk-!-font-weight-bold">Register</p>
+        <p class="govuk-!-font-weight-bold">Register view</p>
     <!-- Checked title -->
     {% elif data['checkbox-title-A']%}
         <p class="govuk-!-font-weight-bold">Title plan</p>

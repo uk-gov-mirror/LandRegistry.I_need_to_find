@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Document list - Search for land and property information
+  Document relating to - Search for land and property information
 {% endblock %}
 
 {% block beforeContent %}
@@ -55,16 +55,15 @@
     <h1 class="govuk-heading-l">Documents relating to:</h1>
 
     <!-- Change heading depending on what search was performed  -->
-    <h1 class="govuk-heading-m">{{data['search-location']}}</h1>
+    <h1 class="govuk-heading-m">{{data['search-location']}} (Freehold)</h1>
 
     <br>
     <br>
-    <h1 class="govuk-heading-m">Purchased documents</h1>
+    <h1 class="govuk-heading-m">Your documents</h1>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Document</th>
-          <th scope="col" class="govuk-table__header">Description</th>
           <th scope="col" class="govuk-table__header"></th>
         </tr>
       </thead>
@@ -73,8 +72,25 @@
         under purchased  -->
         {% if data['checkbox-register-A'] or data['checkbox-register-B'] %}
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Register</th>
-            <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
+            <th scope="row" class="govuk-table__header">Register view
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What's a register view?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    The register view includes details about the property or land. For example:
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>the title number</li>
+                        <li>who owns it</li>
+                        <li>what they paid for it (properties only, if available)</li>
+                        <li>any rights of way</li>
+                        <li>mortgage details</li>
+                      </ul>
+                  </div>
+                </details>
+            </th>
             <!-- Change register view depending on what search was performed  -->
             {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
               <td class="govuk-table__cell"><a href="register-view-5cs.html">View</a><br><a href="#">Download</a></td>
@@ -87,8 +103,21 @@
         under purchased  -->
         {% if data['checkbox-title-A'] or data['checkbox-title-B'] %}
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Title plan</th>
-            <td class="govuk-table__cell">A description of the title plan xxxxxxxxxx</td>
+            <th scope="row" class="govuk-table__header">Title plan
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What's a title plan?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    The title plan is a map showing the property's:
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>location </li>
+                        <li>general boundaries - there’s usually no record of exact boundaries</li>
+                      </ul>
+                  </div>
+                </details>
             <td class="govuk-table__cell"><a href="title_plan">View</a><br><a href="#">Download</a></td>
           </tr>
         {% endif %}
@@ -102,13 +131,12 @@
       and not (data['checkbox-title-A'] and data['checkbox-register-B']) %}
       <br>
       <br>
-      <h1 class="govuk-heading-m">Available documents</h1>
+      <h1 class="govuk-heading-m">Available to buy</h1>
       <form class="govuk-!-margin-top-6" action="gov-pay1" method="post">
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Document</th>
-              <th scope="col" class="govuk-table__header">Description</th>
               <th scope="col" class="govuk-table__header">Cost</th>
               <th scope="col" class="govuk-table__header"></th>
             </tr>
@@ -118,8 +146,25 @@
             available-->
              {% if not data['checkbox-register-A'] %}
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Register</th>
-                <td class="govuk-table__cell">A description of the register xxxxxxxxxx</td>
+                <th scope="row" class="govuk-table__header">Register view
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          What's a register view?
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        The register view includes details about the property or land. For example:
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>the title number</li>
+                            <li>who owns it</li>
+                            <li>what they paid for it (properties only, if available)</li>
+                            <li>any rights of way</li>
+                            <li>mortgage details</li>
+                          </ul>
+                      </div>
+                    </details>
+                </th>
                 <td class="govuk-table__cell">£3</td>
                 <td class="govuk-table__cell">
                   <div class="govuk-form-group">
@@ -140,8 +185,21 @@
              available-->
              {% if not data['checkbox-title-A'] %}
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Title plan</th>
-                <td class="govuk-table__cell">A description of the title plan xxxxxxxxxx</td>
+                <th scope="row" class="govuk-table__header">Title plan
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          What's a title plan?
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        The title plan is a map showing the property's:
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>location </li>
+                            <li>general boundaries - there’s usually no record of exact boundaries</li>
+                          </ul>
+                      </div>
+                    </details>
                 <td class="govuk-table__cell">£3</td>
                 <td class="govuk-table__cell">
                   <div class="govuk-form-group">
@@ -162,7 +220,7 @@
         </table>
 
         <button type="submit" class="govuk-button">
-            Purchase
+            Continue to payment
         </button>
       </form>
     {% endif %}
