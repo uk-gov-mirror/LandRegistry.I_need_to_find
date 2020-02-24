@@ -47,7 +47,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l"> Summary of Freehold </h1>
+    <h1 class="govuk-heading-l"> Summary of freehold </h1>
   </div>
   <div class ="govuk-grid-column-one-third">
     <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
@@ -65,21 +65,6 @@
           <p  class="app-address--bold">5 Clinton Street, <br>Exeter, <br>EX4 1AX
           <br>
           <p class="govuk-body-s"> This is the address held by Royal Mail </p>
-          <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                What’s the difference between address and property description?
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>The property description might be different to the address you
-                recognise as your postal address. </p>
-              <p>This could be for a few reasons. For example, HM Land Registry
-                may have registered the land before a postal address was assigned
-                by Royal Mail or a house may have recently been changed into
-                flats which now have separate addresses.</p>
-            </div>
-          </details>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -87,23 +72,30 @@
         <dd class="govuk-summary-list__value">
           <p>5 Clinton Street, Exeter, EX4 1AX</p>
           <p class="govuk-body-s"> This is how HM Land Registry have described the property in the register</p>
-          <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                How to update the property description
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>Write to us or complete <a href="https://www.gov.uk/government/publications/change-the-register-ap1" target="_blank">form AP1</a > (link opens in new tab) to update the property description. For example, to change the property’s name.</p>
-              <p>You’ll need to send evidence from the local authority or Royal Mail Address Maintenance. </p>
-              <p>There is no fee for this application.</p>
-              <p> <b> Where to send your application </b>  <br> HM Land Registry Citizen Centre <br> PO Box 74, Gloucester, GL14 9BB </p>
-            </div>
-          </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What's the difference between address and property description?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>The property description might be different to the address you recognise as your postal address. </p>
+                <p>This could be for a few reasons. For example:
+                  <ul class="govuk-list govuk-list--bullet">
+                     <li> HM Land Registry may have registered the land before a postal address was assigned by Royal Mail </li>
+                     <li> a house may have recently been changed into flats which now have separate addresses </li>
+                  </ul>
+                 </p>
+                  <h4 class="govuk-heading-s">How to update the property description </h4>
+                    <p><a href="https://www.gov.uk/government/publications/change-the-register-ap1" target="_blank">Complete
+                      form AP1</a > to update the property description (link opens in new tab).
+                      For example, to change the property’s name.</p>
+              </div>
+            </details>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">Tenure type</dt>
+        <dt class="govuk-summary-list__key">Tenure</dt>
         <dd class="govuk-summary-list__value">
           Freehold<br>
           <details class="govuk-details">
@@ -112,7 +104,7 @@
             </summary>
             <div class="govuk-details__text">
               <p>Freehold continues for an indefinite time without payment of rent.
-                It can be sold or given awayand is the type of ownership that is
+                It can be sold or given away and is the type of ownership that is
                 nearest to owning land absolutely. </p>
               <p>Most house are freehold, and most flats are leasehold</p>
               <p>If you want to know who owns a flat, you probably need to the leasehold
@@ -128,7 +120,13 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Last sold for</dt>
         <dd class="govuk-summary-list__value">
-          £210,000
+          <p>£130,950 on 8 January 2000</p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Long term flood risk</dt>
+        <dd class="govuk-summary-list__value">
+          <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do">Use the Find a Property service</a> to find out if this property is at risk of flooding from rivers and seas
         </dd>
       </div>
     </dl>
@@ -138,7 +136,7 @@
     {% if data['checkbox-register-A'] or data['checkbox-title-A'] %}
       <p> <a href="related-docs-B"> View documents related to 5 Clinton Street </a> </p>
     {% else%}
-      <p> <a href="related-docs-A"> View documents related to 5 Clinton Street </a> </p>
+      <p> <a href="related-docs-A"> Buy documents related to 5 Clinton Street </a> </p>
     {% endif %}
     <br>
     <br>
@@ -169,15 +167,6 @@
       </div>
     </div>
 
-    <h2 class="govuk-heading-l"> Need more information? </h2>
-    <p> <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do"> Use the Find a Property service</a> to find:
-    <ul class="govuk-list govuk-list--bullet">
-      <li>the owner of this property </li>
-      <li>how far it's general boundaries extend </li>
-      <li>whether it's at risk of flooding </li>
-    </ul>
-    </p>
-    <br>
     <p> <a href="/01-2020/dataClean"> Search again </a> </p>
   </div>
 </div>

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Register info - Search for land and property information
+  Register view - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -47,16 +47,26 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Register for:</h1>
+    <h1 class="govuk-heading-l">Register view for:</h1>
     <h1 class="govuk-heading-m">5 Clinton street, Exeter, EX4 1AX (Freehold)</h1>
-    <h1 class="govuk-heading-m">Title number: DX1234</h1>
-    <br>
+    <h2 class="govuk-heading-m">Title number: DX1234</h2>
   </div>
 
   <div class ="govuk-grid-column-one-third">
     <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
   </div>
 </div>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+      This is not an official copy. It does not take into account if there’s a pending application with HM Land Registry.
+      You’ll need to <a href="">order an official copy of the register</a> if you need to prove property ownership, for example for a court case.
+  </strong>
+</div>
+
+  <br>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -77,11 +87,11 @@
             B: Proprietorship register
           </a>
         </li>
-        <li class="govuk-tabs__list-item">
+        <!---<li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#charges">
             C: Charges register
           </a>
-        </li>
+        </li> --->
       </ul>
 
       <section class="search-history-tabs__panel" id="summary">
@@ -95,15 +105,16 @@
             </dd>
           </div>
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Proprietor name</dt>
+            <dt class="govuk-summary-list__key">Registered owners</dt>
             <dd class="govuk-summary-list__value">
-              <p>Bob Smith</p>
+              <p>Bob Smith and Sarah Smith</p>
+              <p>5 Clinton Street, Exeter, EX4 1AX</p>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Proprietorship address</dt>
+            <dt class="govuk-summary-list__key">Last sold for</dt>
             <dd class="govuk-summary-list__value">
-              <p>5 Clinton Street, Exeter, EX4 1AX</p>
+              <p>£130,950 on 8 January 2000</p>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -119,6 +130,7 @@
         <br>
         <h2 class="govuk-heading-m">A: Property register</h2>
         <p>This register describes the land and estate comprised in the title.</p>
+        <p><b>Local council:</b> Exeter</p>
         <hr>
 
         <table class="govuk-table">
@@ -126,13 +138,13 @@
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Entry number</th>
               <th scope="col" class="govuk-table__header">Entry date</th>
-              <th scope="col" class="govuk-table__header">Entry</th>
+              <th scope="col" class="govuk-table__header"></th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">1</th>
-              <td class="govuk-table__cell">(01.01.1965)</td>
+              <th scope="row" class="govuk-table__header"><div style='width: 130px;'>1</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1965</td>
               <td class="govuk-table__cell">The Freehold land shown edged with red on the plan of the above
                 Title filed at the Registry and being 5 Clinton Street, Exeter, EX4 1AX</td>
             </tr>
@@ -152,34 +164,35 @@
         <h1 class="govuk-heading-m">B: Proprietorship register</h1>
         <p>This register specifies the class of title and identifies the owner.
           It contains any entries that affect the right of disposal. </p>
+        <p><b>Class of title:</b> Title absolute </p>
         <hr>
 
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Entry number</th>
-              <th scope="col" class="govuk-table__header">Edition date</th>
-              <th scope="col" class="govuk-table__header">Register entry</th>
+              <th scope="col" class="govuk-table__header">Entry date</th>
+              <th scope="col" class="govuk-table__header"></th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">1</th>
-              <td class="govuk-table__cell">(01.02.2000)</td>
+              <th scope="row" class="govuk-table__header"><div style='width: 130px;'>1</th>
+              <td class="govuk-table__cell"><div style='width: 160px;'>1 February 2000</td>
               <td class="govuk-table__cell"><b>PROPRIETOR:</b> Bob Smith and Sarah
-                Smnith of 5 Clinton Street, Exeter, EX4 1AX.</td>
+                Smith of 5 Clinton Street, Exeter, EX4 1AX.</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">2</th>
-              <td class="govuk-table__cell">(01.02.2000)</td>
+              <th scope="row" class="govuk-table__header"><div style='width: 130px;'>2</th>
+              <td class="govuk-table__cell"><div style='width: 160px;'>1 February 2000</td>
               <td class="govuk-table__cell">The price stated to have been paid
                 on 8 January 2000 was £130,950.</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">3</th>
-              <td class="govuk-table__cell">(18.08.2019)</td>
+              <td class="govuk-table__cell"><div style='width: 160px;'>18 August 2019</td>
               <td class="govuk-table__cell"><b>CAUTION</b> in favour of Bob Smith
-                of 5 Clinton Street, Exeter, EX4 1AX. in respect of an order of
+                of 5 Clinton Street, Exeter, EX4 1AX in respect of an order of
                 the Bristol Court dated 1 August 2009 made under section 33(5)
                 of the Family Law Act 1996 affecting the matrimonial home rights
                 referred to above.</td>
@@ -187,22 +200,24 @@
           </tbody>
         </table>
       </section>
-
+<!---
       <section class="search-history__panel" id="charges">
         <br>
         <h1 class="govuk-heading-m">C: Charges register</h1>
-        <p>This register contains any charges and other matters that affect the land. </p>
+        <p>This register contains any charges and other matters that affect the land.</p>
         <hr>
 
         <div class="govuk-summary-list__row">
           <dd class="govuk-summary-list__value">
-            <p>This register contains no entries</p>
+            <p>There are 0 entries in this register.</p>
           </dd>
         </div>
-      </section>
+      </section>--->
     </div>
   </div>
 </div>
+
+<br>
 
 <div>
   <br>

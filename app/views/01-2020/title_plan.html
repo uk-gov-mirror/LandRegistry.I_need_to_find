@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  title plan - Search for land and property information
+  Title plan - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -49,7 +49,7 @@
   <div class="govuk-grid-column-two-thirds">
     <!-- Change heading depending on what search was performed  -->
     <h1 class="govuk-heading-l">Title plan for:</h1>
-    <h1 class="govuk-heading-m">{{data['search-location']}}</h1>
+    <h1 class="govuk-heading-m">{{data['search-location']}} (Freehold)</h1>
     {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
       <h1 class="govuk-heading-m">Title number: DX1234</h1>
     {% else %}
