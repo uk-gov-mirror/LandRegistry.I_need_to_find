@@ -44,6 +44,35 @@
 
 {% endblock %}
 {% block content %}
+<script>
+
+  function change_vector_page()
+    {var image =  document.getElementById("vector-title1");
+      if (image.getAttribute('src') == "/../../public/images/vectorTitle1.png")
+      {
+          image.src = "/../../public/images/vectorTitle2.png";
+      }
+      else if (image.getAttribute('src') == "/../../public/images/vectorTitle2.png")
+      {
+          image.src = "/../../public/images/vectorTitle1.png";
+      }
+    }
+
+    function change_raster_page()
+      {var image =  document.getElementById("raster-title1");
+        if (image.getAttribute('src') == "/../../public/images/rasterTitle1.png")
+        {
+            image.src = "/../../public/images/rasterTitle2.png";
+        }
+        else if (image.getAttribute('src') == "/../../public/images/rasterTitle2.png")
+        {
+            image.src = "/../../public/images/rasterTitle1.png";
+        }
+      }
+
+
+
+</script>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -51,9 +80,9 @@
     <h1 class="govuk-heading-l">Title plan for:</h1>
     <h1 class="govuk-heading-m">{{data['search-location']}} (Freehold)</h1>
     {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
-      <h1 class="govuk-heading-m">Title number: DX1234</h1>
-    {% else %}
       <h1 class="govuk-heading-m">Title number: CL8854</h1>
+    {% else %}
+      <h1 class="govuk-heading-m">Title number: DN1234</h1>
     {% endif %}
     <br>
   </div>
@@ -63,17 +92,24 @@
   </div>
 </div>
 
-<div style="border-width: 2px; border-color: #D8D8D8; border-style:solid;">
-  <div class="govuk-grid-row" >
-    <div class="govuk-grid-column-two-thirds">
-      <!-- Change title plan image depending on what search was performed  -->
-      {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
-        <img src="/../../public/images/title_plan1.png" style="padding: 10px;" id='titlePlan_img'>
-      {% else %}
-        <img src="/../../public/images/title_plan2.png" style="padding: 10px;" id='titlePlan_img'>
-      {% endif %}
-    </div>
-  </div>
+<div id="titlePlan" style="border-width: 2px; border-color: #D8D8D8; border-style:solid;">
+  <!-- Change title plan image depending on what search was performed  -->
+  {% if data['search-location'] == '5 Clinton Street, Exeter, EX4 1AX' %}
+    <img src="/../../public/images/vectorTitle1.png" style="padding: 10px;" id='vector-title1' usemap="#pagination-vector-map">
+
+    <map name="pagination-vector-map">
+      <area shape="rect" coords="217,0,720,33" alt="plus" onclick="change_vector_page()">
+      <area shape="rect" coords="217,1360,720,1393" alt="plus" onclick="change_vector_page()">
+    </map>
+
+  {% else %}
+    <img src="/../../public/images/rasterTitle1.png" style="padding: 10px;" id='raster-title1' usemap="#pagination-raster-map">
+
+    <map name="pagination-raster-map">
+      <area shape="rect" coords="217,0,720,33" alt="plus" onclick="change_raster_page()">
+      <area shape="rect" coords="217,1360,720,1393" alt="plus" onclick="change_raster_page()">
+    </map>
+  {% endif %}
 </div>
 
 <div>
