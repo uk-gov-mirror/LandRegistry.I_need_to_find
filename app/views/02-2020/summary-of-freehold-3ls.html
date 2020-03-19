@@ -137,19 +137,49 @@
         <dd class="govuk-summary-list__value">
           <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do">Use the Find a Property service</a> to find out if this property is at risk of flooding from rivers and seas
         </dd>
-      </div>
-    </dl>
+      </div>    <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Related documents</dt>
+            <dd class="govuk-summary-list__value">
+              Register view
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">What's a register view?</span>
+                </summary>
+                <div class="govuk-details__text">
+                  The register view includes details about the property or land. For example:
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>the title number</li>
+                    <li>who owns it</li>
+                    <li>what they paid for it (properties only, if available)</li>
+                    <li>any rights of way</li>
+                    <li>mortgage details</li>
+                  </ul>
+                </div>
+              </details>
+              Title plan
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">What's a title plan?</span>
+                </summary>
+                <div class="govuk-details__text">
+                  The title plan is a map showing the property's:
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>location </li>
+                    <li>general boundaries - there’s usually no record of exact boundaries</li>
+                  </ul>
+                </div>
+              </details>
+                <!-- If either checkbox has been checked on 'related-docs-A' then go
+                straight to 'related-docs-B'  -->
+                {% if data['checkbox-register-A'] or data['checkbox-title-A'] %}
+                  You can <a href="related-docs-B"> purchase these documents for £3 </a>
+                {% else%}
+                  You can <a href="related-docs-A"> purchase these documents for £3 </a>
+                {% endif %}
 
-    <!-- If either checkbox has been checked on 'related-docs-A' then go
-    straight to 'related-docs-B'  -->
-    {% if data['checkbox-register-A'] or data['checkbox-title-A'] %}
-      <p> <a href="related-docs-B"> View documents related to 3 Long Street </a> </p>
-    {% else%}
-      <p> <a href="related-docs-A"> Buy documents related to 3 Long Street </a> </p>
-    {% endif %}
-    <br>
-    <br>
-    <br>
+            </dd>
+          </div>
+    </dl>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
