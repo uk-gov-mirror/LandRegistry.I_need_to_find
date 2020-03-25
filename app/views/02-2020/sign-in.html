@@ -55,7 +55,10 @@
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l govuk-!-margin-top-2 govuk-!-margin-bottom-4">Sign in</h1>
 
-    <form action="related-docs.html">
+    <!-- If either checkbox has been checked on 'related-docs-A' then go
+    straight to 'related-docs-B'  -->
+    {% if data['checkbox-register-A'] or data['checkbox-title-A'] %}
+    <form action="related-docs-B">
       <div class="govuk-form-group">
         <label class="govuk-label govuk-!-width-one-half" for="one-half">
           Email
@@ -74,6 +77,38 @@
         Sign in
       </button>
     </form>
+    {% else%}
+    <form action="related-docs-A">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-width-one-half" for="one-half">
+          Email
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+      </div>
+
+      <div class="govuk-form-group govuk-!-margin-bottom-7">
+        <label class="govuk-label govuk-!-width-one-half" for="one-half">
+          Password
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+      </div>
+
+      <button type="submit" class="govuk-button">
+        Sign in
+      </button>
+    </form>
+    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
 
     <div>
       <h2  class="govuk-heading-m">Problems signing in?</h2>
