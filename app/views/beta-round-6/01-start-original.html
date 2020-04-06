@@ -28,7 +28,7 @@
 
 {% block beforeContent %}
 
-<div class="govuk-phase-banner">
+<<div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   Prototype
   </strong>
@@ -36,6 +36,7 @@
     We're testing a new service - your feedback will help us improve it. </span>
   </p>
 </div>
+
 {% endblock %}
 
 {% block content %}
@@ -45,46 +46,87 @@
       Search for land and property information from HM Land Registry
     </h1>
 
-    <p>Use this service to find information about land and property in England or Wales, even if you don’t own it. </p>
+    <p> Find information about land and property in England or Wales, even if you don’t own it. </p>
 
-    <h2 class="govuk-heading-m">Free information </h2>
-      <p> You can view the:
+    <p>You can:
       <ul class="govuk-list govuk-list--bullet">
-        <li>full address</li>
-        <li>property description (how HM Land Registry have decribed the property in the register)</li>
-        <li>tenure type (freehold or leasehold)</li>
-        <li>price paid or stated for it (properties only, if available)</li>
+        <li> view a free summary of information about the property you're interested in </li>
+        <li> buy a view of its title register </li>
+        <li> buy a copy of its title plan </li>
       </ul>
-      </p>
+    </p>
+    <p>
+     <details class="govuk-details" data-module="govuk-details">
+       <summary class="govuk-details__summary">
+         <span class="govuk-details__summary-text">
+           Which documents do I need?
+         </span>
+       </summary>
+       <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">Register view</h3>
+         <p>The register view includes details about the property or land. For example:
+           <ul class="govuk-list govuk-list--bullet">
+             <li>the title number</li>
+             <li>who owns it</li>
+             <li>what they paid for it (properties only, if available)</li>
+             <li>any rights of way</li>
+             <li>mortgage details</li>
+           </ul>
+           </p>
+          <h3 class="govuk-heading-s">Title plan</h3>
+            <p>The title plan is a map showing the property's:
+              <ul class="govuk-list govuk-list--bullet">
+                <li>location </li>
+                <li>general boundaries - there’s usually no record of exact boundaries</li>
+              </ul>
+            </p>
+        </details>
 
-    <h2 class="govuk-heading-m">Need more information? </h2>
-        <p> You can get more information about a property if it's been recorded in the register.</p>
-
-        <p> You can buy a:
-          <ul class="govuk-list govuk-list--bullet">
-          <li>title register view </li>
-          <li>title plan </li>
-          </ul>
-        <p> These documents are £3 each. </p>
-
-        <a href="search-by-postcode-or-street-name" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
-
-        <h2 class="govuk-heading-m">Before you start</h2>
-        <p> To buy documents, you'll need to:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li> create an account </li>
-          <li> use a debit or credit card </li>
-          </ul>
 
     <div class="govuk-inset-text">
-      To prove you own a property, for example for a court case, you’ll need to <a href="https://www.gov.uk/government/publications/official-copies-of-register-or-plan-registration-oc1" target="_blank">
-      order an official copy of the register</a> instead (link opens in new tab).
+      You’ll need to <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do?_ga=2.156526840.2147415413.1571663321-673443007.1559904045" target="_blank">
+      order an official copy of the register</a> if you
+      need to prove property ownership, for example for a court case (link opens in new tab).
     </div>
+
+    <a href="search-by-postcode-or-street-name" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+
+    <h2 class="govuk-heading-m">Before you start</h2>
+      <p> You’ll need an email address and a debit or credit card to use this service. </p>
+
 
 
       <h3 class="govuk-heading-s">Flood risk indicator</h3>
       <p><a href="#">Use the Find a property service</a> if want to know if the property you're interested in is at risk of flooding.</p>
+      <br>
 
+    <h3 class="govuk-heading-s">Fees</h3>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Document (each copy)</th>
+            <th scope="col" class="govuk-table__header">Fee</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Register view</td>
+            <td class="govuk-table__cell">£3</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Title plan</td>
+            <td class="govuk-table__cell">£3</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Flood risk indicator (including VAT)</td>
+            <td class="govuk-table__cell">£10.80</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-inset-text">
+        You’ll need to search different registers if the property is in Scotland or Northern Ireland.
+      </div>
 
     <h2 class="govuk-heading-m">Help</h2>
     <p> <a href="https://help.landregistry.gov.uk/app/contactus_findprop/?_ga=2.54035691.2147415413.1571663321-673443007.1559904045">
