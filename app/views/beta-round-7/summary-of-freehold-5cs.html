@@ -46,7 +46,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l"> Summary of {{data['property-type']}} </h1>
+    <h1 class="govuk-heading-l"> Summary of freehold </h1>
   </div>
   <div class ="govuk-grid-column-one-third">
     <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
@@ -61,8 +61,7 @@
           <p class="app-address--unbold">Address</p>
         </dt>
         <dd class="govuk-summary-list__value">
-          <p  class="app-address--bold">{{data['property-address']}},
-            <br>{{data['property-city']}}, <br>{{data['property-postcode']}}
+          <p  class="app-address--bold">5 Clinton Street, <br>Exeter, <br>EX4 1AX
           <br>
           <p class="govuk-body-s"> This is the address held by Royal Mail </p>
         </dd>
@@ -70,135 +69,59 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Property description</dt>
         <dd class="govuk-summary-list__value">
-          <p>{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</p>
+          <p>5 Clinton Street, Exeter, EX4 1AX</p>
           <p class="govuk-body-s"> This is how HM Land Registry have described the property in the register</p>
-          <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                What's the difference between address and property description?
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>The property description might be different to the address you recognise as your postal address. </p>
-              <p>This could be for a few reasons. For example:
-                <ul class="govuk-list govuk-list--bullet">
-                   <li> HM Land Registry may have registered the land before a postal address was assigned by Royal Mail </li>
-                   <li> a house may have recently been changed into flats which now have separate addresses </li>
-                </ul>
-               </p>
-                <h4 class="govuk-heading-s">How to update the property description </h4>
-                  <p><a href="https://www.gov.uk/government/publications/change-the-register-ap1" target="_blank">Complete
-                    form AP1</a > to update the property description (link opens in new tab).
-                    For example, to change the property’s name.</p>
-            </div>
-          </details>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What's the difference between address and property description?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>The property description might be different to the address you recognise as your postal address. </p>
+                <p>This could be for a few reasons. For example:
+                  <ul class="govuk-list govuk-list--bullet">
+                     <li> HM Land Registry may have registered the land before a postal address was assigned by Royal Mail </li>
+                     <li> a house may have recently been changed into flats which now have separate addresses </li>
+                  </ul>
+                 </p>
+                  <h4 class="govuk-heading-s">How to update the property description </h4>
+                    <p><a href="https://www.gov.uk/government/publications/change-the-register-ap1" target="_blank">Complete
+                      form AP1</a > to update the property description (link opens in new tab).
+                      For example, to change the property’s name.</p>
+              </div>
+            </details>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Type</dt>
         <dd class="govuk-summary-list__value">
-          {{data['property-type']}}<br>
-
-          <!-- Freehold  -->
-          {% if data['property-type'] == 'Freehold' %}
+          Freehold<br>
           <details class="govuk-details">
             <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What's freehold?</span>
+              <span class="govuk-details__summary-text">What's Freehold?</span>
             </summary>
             <div class="govuk-details__text">
-              <p>Freehold is one of two ways of owning land (the other is a leasehold).</p>
-              <p>Freehold continues for an indefinite time without payment of rent. It
-                can be sold or given away and is the type of ownership that is nearest
-                to owning land absolutely.</p>
-              <p>Most houses are freehold, and most flats are leasehold.</p>
-              <p> <b>If you want to know who owns a particular flat, you probably need
-                the leasehold instead.</b></p>
+              <p>Freehold continues for an indefinite time without payment of rent.
+                It can be sold or given away and is the type of ownership that is
+                nearest to owning land absolutely. </p>
+              <p>Most house are freehold, and most flats are leasehold</p>
+              <p>If you want to know who owns a flat, you probably need the leasehold
+                title instead.</p>
             </div>
           </details>
-          <!-- Leasehold  -->
-          {% elif data['property-type'] == 'Leasehold' %}
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What's Leasehold?</span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>Leasehold is one of two ways of owning land (the other is a freehold).
-                 A leasehold is granted by a landlord to a tenant.</p>
-
-              <p>A leasehold lasts for a fixed time which will be set out in the lease.
-                 The tenant often has to pay rent to the landlord and this is also set
-                 out in the lease.</p>
-
-              <p>Most flats are leasehold.</p>
-            </div>
-          </details>
-          <!-- Closed leasehold  -->
-          {% elif data['property-type'] == 'Closed leasehold' %}
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What is a closed Leasehold?</span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>Closed leaseholds are registers that are no longer in use.</p>
-              <p>A leasehold register could close because:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li> the lease has come to an end</li>
-                <li>the freehold and leaseholds in a property are owned by the same
-                  person and the owner has applied to merge the lease</li>
-              </ul>
-            </div>
-          </details>
-          <!-- Closed freehold  -->
-          {% else %}
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What it a closed freehold?</span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>Closed freeholds are registers that are no longer in use.</p>
-              <p>A freehold register could close because:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>the land has been combined with another piece of freehold land
-                   - for example, if you buy part of next door’s garden and request
-                   that they're on the same register (this is known as an
-                   ‘amalgamation’)</li>
-                <li>it was originally registered with a type of title number that we no longer
-                  use</li>
-                <li>historical, paper records, have been misplaced or damaged before
-                  electronic registration</li>
-              </ul>
-            </div>
-          </details>
-          {% endif %}
-
-          <!-- Closed and continued  -->
-          {% if data['property-address'] == '3 Long Street' %}
-            <!-- Set search location  -->
-            <form id="form-4-long-street" action="summary">
-              <p>Property now known as
-              <input type="hidden" name="property-type" id="property-type" value="Freehold" />
-              <input type="hidden" name="property-address" id="property-address" value="4 Long Street" />
-              <input type="hidden" name="property-postcode" id="property-postcode" value="PL5 6WD" />
-              <input type="hidden" name="property-city" id="property-city" value="Plymouth" />
-              <input type="hidden" name="property-sold-for" id="property-sold-for" value="£160,000" />
-              <a class="govuk-link govuk-!-font-size-16" href="#" onclick="document.getElementById('form-4-long-street').submit();">
-                4 Long Street, Plymouth, PL5 6WD</a></p>
-            </form>
-          {% endif %}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Last sold for</dt>
         <dd class="govuk-summary-list__value">
-          {{data['property-sold-for']}}
+          <p>£130,950 on 8 January 2000</p>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Long term flood risk</dt>
         <dd class="govuk-summary-list__value">
-          <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do">
-            Use the Find a Property service</a> to find out if this property is
-            at risk of flooding from rivers and seas
+          <a href="https://eservices.landregistry.gov.uk/eservices/FindAProperty/view/QuickEnquiryInit.do">Use the Find a Property service</a> to find out if this property is at risk of flooding from rivers and seas
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -237,7 +160,7 @@
               </ul>
             </div>
           </details>
-            <p><a href="related-docs">Buy documents</a></p>
+            <a href="#"> Buy documents</a> for £3 each
         </dd>
       </div>
     </dl>
@@ -267,10 +190,7 @@
       </div>
     </div>
 
-    <p> <a href="/beta-round-7/search-by-postcode-or-street-name"> Search again </a> </p>
-
-
-
+    <p> <a href="/beta-round-7/search-results-multiple"> Return to results </a> </p>
   </div>
 </div>
 
