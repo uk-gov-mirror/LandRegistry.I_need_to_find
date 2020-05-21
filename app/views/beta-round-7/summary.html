@@ -46,7 +46,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l"> Summary of closed freehold </h1>
+    <h1 class="govuk-heading-l"> Summary of {{data['property-type']}} </h1>
   </div>
   <div class ="govuk-grid-column-one-third">
     <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
@@ -61,7 +61,8 @@
           <p class="app-address--unbold">Address</p>
         </dt>
         <dd class="govuk-summary-list__value">
-          <p  class="app-address--bold">3 Long Street, <br>Plymouth, <br>PL5 6WD
+          <p  class="app-address--bold">{{data['property-address']}},
+            <br>{{data['property-city']}}, <br>{{data['property-postcode']}}
           <br>
           <p class="govuk-body-s"> This is the address held by Royal Mail </p>
         </dd>
@@ -69,7 +70,7 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Property description</dt>
         <dd class="govuk-summary-list__value">
-          <p>3 Long Street, Plymouth, PL5 6WD</p>
+          <p>{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</p>
           <p class="govuk-body-s"> This is how HM Land Registry have described the property in the register</p>
           <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
@@ -96,7 +97,59 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Type</dt>
         <dd class="govuk-summary-list__value">
-          Closed freehold<br>
+          {{data['property-type']}}<br>
+
+          <!-- Freehold  -->
+          {% if data['property-type'] == 'Freehold' %}
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">What's freehold?</span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>Freehold is one of two ways of owning land (the other is a leasehold).</p>
+              <p>Freehold continues for an indefinite time without payment of rent. It
+                can be sold or given away and is the type of ownership that is nearest
+                to owning land absolutely.</p>
+              <p>Most houses are freehold, and most flats are leasehold.</p>
+              <p> <b>If you want to know who owns a particular flat, you probably need
+                the leasehold instead.</b></p>
+            </div>
+          </details>
+          <!-- Leasehold  -->
+          {% elif data['property-type'] == 'Leasehold' %}
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">What's Leasehold?</span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>Leasehold is one of two ways of owning land (the other is a freehold).
+                 A leasehold is granted by a landlord to a tenant.</p>
+
+              <p>A leasehold lasts for a fixed time which will be set out in the lease.
+                 The tenant often has to pay rent to the landlord and this is also set
+                 out in the lease.</p>
+
+              <p>Most flats are leasehold.</p>
+            </div>
+          </details>
+          <!-- Closed leasehold  -->
+          {% elif data['property-type'] == 'Closed leasehold' %}
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">What is a closed Leasehold?</span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>Closed leaseholds are registers that are no longer in use.</p>
+              <p>A leasehold register could close because:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li> the lease has come to an end</li>
+                <li>the freehold and leaseholds in a property are owned by the same
+                  person and the owner has applied to merge the lease</li>
+              </ul>
+            </div>
+          </details>
+          <!-- Closed freehold  -->
+          {% else %}
           <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">What it a closed freehold?</span>
@@ -116,19 +169,28 @@
               </ul>
             </div>
           </details>
-          <!-- Set search location  -->
-          <form id="form-4ls" action="summary-of-freehold-4ls">
-            <input type="hidden" name="search-location" id="search-location" value="4 Long Street, Plymouth, PL5 6WD" />
-            <input type="hidden" name="property-type" id="property-typen" value="Freehold" />
-            <p>Property now known as <a class="govuk-link" href="#" onclick="document.getElementById('form-4ls').submit();">
-              4 Long Street, Plymouth, PL5 6WD (Freehold)</a></p>
-          </form>
+          {% endif %}
+
+          <!-- Closed and continued  -->
+          {% if data['property-address'] == '3 Long Street' %}
+            <!-- Set search location  -->
+            <form id="form-4-long-street" action="summary">
+              <p>Property now known as
+              <input type="hidden" name="property-type" id="property-type" value="Freehold" />
+              <input type="hidden" name="property-address" id="property-address" value="4 Long Street" />
+              <input type="hidden" name="property-postcode" id="property-postcode" value="PL5 6WD" />
+              <input type="hidden" name="property-city" id="property-city" value="Plymouth" />
+              <input type="hidden" name="property-sold-for" id="property-sold-for" value="£160,000" />
+              <a class="govuk-link govuk-!-font-size-16" href="#" onclick="document.getElementById('form-4-long-street').submit();">
+                4 Long Street, Plymouth, PL5 6WD</a></p>
+            </form>
+          {% endif %}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Last sold for</dt>
         <dd class="govuk-summary-list__value">
-          £210,000 on 8 January 2000
+          {{data['property-sold-for']}}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -175,7 +237,7 @@
               </ul>
             </div>
           </details>
-          <p><a href="#"> Buy documents</a> for £3 each </p>
+            <p><a href="related-docs">Buy documents</a></p>
         </dd>
       </div>
     </dl>

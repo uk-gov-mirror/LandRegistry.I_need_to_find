@@ -57,35 +57,14 @@
           Payment for:
         </dt>
         <dd class="govuk-summary-list__value">
-          <!-- Both checkboxes checked first time -->
-          {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
             Digital register<br>Digital title plan
-          <!-- Checked title number checkbox 1st time and register checkbox 2nd time -->
-          {% elif data['checkbox-title-A'] and data['checkbox-register-B'] %}
-            Digital register
-          <!-- Checked register checkbox 1st time and title checkbox 2nd time -->
-          {% elif data['checkbox-register-A'] and data['checkbox-title-B']%}
-            Digital title plan
-          <!-- Checked register checkbox -->
-          {% elif data['checkbox-register-A'] %}
-            Digital register
-          <!-- Checked title checkbox -->
-          {% elif data['checkbox-title-A']%}
-            Digital title plan
-          {% endif %}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Total amount:
         </dt>
-        <dd class="govuk-summary-list__value">
-        {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
-          £6
-        {% else %}
-          £3
-        {% endif %}
-        </dd>
+        <dd class="govuk-summary-list__value">£6</dd>
       </div>
     </dl>
 
@@ -102,7 +81,7 @@
           you have left the service.
         </div>
 
-    <form action="related-docs-B.html">
+    <form action="related-docs-paid.html">
       <button class="govuk-button" type="submit">
         Continue to documents
       </button>
