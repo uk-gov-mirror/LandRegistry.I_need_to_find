@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Payment successful - Search for land and property information
+  Related documents - Search for land and property information
 {% endblock %}
 
 {% block beforeContent %}
+
   <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
     Prototype
@@ -34,9 +35,12 @@
       </a>
     </div>
     <div class="govuk-header__content">
+
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
+
+
     </div>
   </div>
 </header>
@@ -45,47 +49,78 @@
 
 {% block content %}
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Your payment was successful</h1>
-    <h2 class="govuk-heading-m">Your reference number is: <br>1B7183</h2>
 
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Payment for:
-        </dt>
-        <dd class="govuk-summary-list__value">
-            Digital register<br>Digital title plan
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total amount:
-        </dt>
-        <dd class="govuk-summary-list__value">£6</dd>
-      </div>
-    </dl>
+    <h1 class="govuk-heading-l">Documents for:</h1>
 
-    <p class="govuk-body">We have sent you a receipt by email.
+    <!-- Change heading depending on what search was performed  -->
+    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}},
+      {{data['property-postcode']}} ({{data['property-type']}})</h1>
+    <br>
+    <h1 class="govuk-heading-m">Your documents</h1>
+    <div class="govuk-inset-text">
+      You cannot view documents again after you have left the service.
+      <br>Download them to keep a copy.
+    </div>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Document</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Register view
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What's a register view?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    The register view includes details about the property or land. For example:
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>the title number</li>
+                        <li>who owns it</li>
+                        <li>what they paid for it (properties only, if available)</li>
+                        <li>whether there's a mortgage</li>
+                        <li>things that might burden or benefit it</li>
+                      </ul>
+                  </div>
+                </details>
+            </th>
+              <td class="govuk-table__cell">
+                <a href="digital-register">View</a>
+                <br>
+                <br>
+                <a href="#">Download</a>
+            </td>
+          </tr>
 
-      <br>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Title plan
+              <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What's a title plan?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    The title plan is a map showing the property's:
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>location </li>
+                        <li>general boundaries - there’s usually no record of exact boundaries</li>
+                      </ul>
+                  </div>
+                </details>
+            <td class="govuk-table__cell"><a href="title_plan">View</a><br><br><a href="#">Download</a></td>
+          </tr>
+      </tbody>
+    </table>
 
-      <h3 class="govuk-heading-s">What happens next?</h3>
-
-        <p class="govuk-body">You can view and download your documents.</p>
-
-        <div class="govuk-inset-text">
-          You cannot view documents again after you have left the service.
-          <br>Download them to keep a copy.
-        </div>
-
-    <form action="related-docs-paid.html">
-      <button class="govuk-button" type="submit">
-        Continue to documents
-      </button>
-    </form>
+    <p> <a href="summary"> Return to summary of {{data['property-type']}} </a> </p>
 
   </div>
   <div class ="govuk-grid-column-one-third">

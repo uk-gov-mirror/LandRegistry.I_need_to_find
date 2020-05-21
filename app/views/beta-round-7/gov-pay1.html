@@ -158,36 +158,11 @@
     <div class="app-payment-summary-box">
       <h2 class="govuk-heading-m">Payment summary</h2>
 
-      <!-- Both checked first time -->
-     {% if data['checkbox-register-A'] and data['checkbox-title-A']%}
        <p class="govuk-!-font-weight-bold">Digital register</p>
        <p class="govuk-!-font-weight-bold">Digital title plan</p>
-    <!-- Checked title 1st time and register 2nd time -->
-    {% elif data['checkbox-title-A'] and data['checkbox-register-B'] %}
-        <p class="govuk-!-font-weight-bold">Digital register</p>
-    <!-- Checked register 1st time and title 2nd time -->
-    {% elif data['checkbox-register-A'] and data['checkbox-title-B']%}
-        <p class="govuk-!-font-weight-bold">Digital title plan</p>
-    <!-- Checked register -->
-    {% elif data['checkbox-register-A'] %}
-        <p class="govuk-!-font-weight-bold">Digital register</p>
-    <!-- Checked title -->
-    {% elif data['checkbox-title-A']%}
-        <p class="govuk-!-font-weight-bold">Digital title plan</p>
-    {% endif %}
-
-
-      <p style=>Total amount: <br>
-      <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">&pound;
-        <!-- Both checked first time -->
-        {% if data['checkbox-register-A'] and data['checkbox-title-A'] %}
-          6
-        <!-- Otherwise has to be just one checked -->
-        {% else %}
-          3
-       {% endif %}
-      </span>
-      </p>
+       <p style=>Total amount: <br>
+         <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">&pound;6</span>
+       </p>
     </div>
 
   </div>

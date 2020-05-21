@@ -69,7 +69,9 @@
     <h1 class="govuk-heading-l">Available documents for:</h1>
 
     <!-- Change heading depending on what search was performed  -->
-    <h1 class="govuk-heading-m">{{data['search-location']}} ({{data['property-type']}})</h1>
+    <h1 class="govuk-heading-m">
+      {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
+      ({{data['property-type']}})</h1>
 
     <form class="govuk-!-margin-top-6" action="gov-pay1" method="post">
       <table class="govuk-table">
@@ -159,12 +161,8 @@
       </button>
     </form>
 
-    <!-- Return to correct page depending on what search was performed  -->
-    {% if data['search-location'] == '5b Clinton Street, Exeter, EX4 1AX' %}
-      <p> <a href="summary-of-closed-leasehold-5bcs"> Return to summary of closed leasehold </a> </p>
-    {% else %}
-      <p> <a href="summary-of-closed-freehold-3ls"> Return to summary of closed freehold </a> </p>
-    {% endif %}
+    <p> <a href="summary"> Return to summary of {{data['property-type']}} </a> </p>
+
 
   </div>
   <div class ="govuk-grid-column-one-third">

@@ -1,0 +1,301 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Register view - Search for land and property information
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <svg role="presentation" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 132 97" height="30" width="36">
+            <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+            <image src="/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+
+      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
+        Search for land and property information
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+    Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      We're testing a new service - your feedback will help us improve it. </span>
+    </p>
+  </div>
+
+
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Register view for:</h1>
+    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
+    ({{data['property-type']}})</h1>
+    <h1 class="govuk-heading-m">Title number: {{data['property-title-number']}}</h1>
+    <br>
+  </div>
+
+  <div class ="govuk-grid-column-one-third">
+    <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+  </div>
+</div>
+
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+      This is not an official copy. It does not take into account if there’s a pending application with HM Land Registry.
+      You’ll need to <a href="">order an official copy of the register</a> if you need to prove property ownership, for example for a court case.
+  </strong>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="search-history-tabs" data-module="tabs">
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#summary">
+            Register summary
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#property">
+            A: Property register
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#proprietorship">
+            B: Proprietorship register
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#charges">
+            C: Charges register
+          </a>
+        </li>
+      </ul>
+
+      <section class="search-history-tabs__panel" id="summary">
+        <br>
+        <h2 class="govuk-heading-m">Register summary</h2>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Title number</dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{data['property-title-number']}}</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Registered owner</dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{data['property-owner']}} </p>
+              <p>{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Last sold for</dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{data['property-sold-for']}} on {{data['property-sold-date']}}</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Lender</dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{data['property-lender']}}</p>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="search-history-tabs__panel" id="property">
+        <br>
+        <h2 class="govuk-heading-m">A: Property register</h2>
+        <p>This register describes the land and estate comprised in the title.</p>
+        <p><b>Local council:</b> {{data['property-city']}}</p>
+        <hr>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Entry number</th>
+              <th scope="col" class="govuk-table__header">Entry date</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><div style='width: 140px;'>1</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1965</td>
+              <td class="govuk-table__cell">The land shown edged with red on the plan of the above
+                Title filed at the Registry and being {{data['property-address']}},
+                {{data['property-city']}}, {{data['property-postcode']}}.
+                {% if (data['property-type'] == 'Leasehold') or (data['property-type'] == 'Closed leasehold') %}
+                  <p>Note: Only the first floor flat is included in this title.</p></td>
+                {% endif %}
+            </tr>
+            {% if (data['property-type'] == 'Leasehold') or (data['property-type'] == 'Closed leasehold') %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><div style='width: 140px;'>2</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'></td>
+              <td class="govuk-table__cell">
+                <table class="govuk-table">
+                  <p>Short particulars of the lease(s) (or under-lease(s)) under which the land is held:</p>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Date</th>
+                      <td class="govuk-table__cell">{{data['property-lease-start']}}</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Term</th>
+                      <td class="govuk-table__cell">{{data['property-lease']}} years from {{data['property-lease-start']}}</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Rent</th>
+                      <td class="govuk-table__cell">As therein mentioned</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Parties</th>
+                      <td class="govuk-table__cell">John Doe</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </section>
+
+      <section class="search-history__panel" id="proprietorship">
+        <br>
+        <h1 class="govuk-heading-m">B: Proprietorship register</h1>
+        <p>This register specifies the class of title and identifies the owner.
+          It contains any entries that affect the right of disposal. </p>
+        <p><b>Class of title:</b> Title absolute </p>
+        <hr>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Entry number</th>
+              <th scope="col" class="govuk-table__header">Entry date</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><div style='width: 140px;'>1</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'>1 February 2000</td>
+              <td class="govuk-table__cell"><b>PROPRIETOR:</b> {{data['property-owner']}} of
+                {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">2</th>
+              <td class="govuk-table__cell"> <div style='width: 150px;'>1 February 2010</td>
+              <td class="govuk-table__cell">The price stated to have been paid
+                on {{data['property-sold-date']}} was {{data['property-sold-for']}}.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="search-history__panel" id="charges">
+        <br>
+        <h1 class="govuk-heading-m">C: Charges register</h1>
+        <p>This register contains any charges and other matters that affect the land. </p>
+        <hr>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Entry number</th>
+              <th scope="col" class="govuk-table__header">Entry date</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">1</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'>1 February 2000</td>
+              <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated 8 January
+                2000.</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">2</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'>1 February 2010</td>
+              <td class="govuk-table__cell"><b>Proprietor:</b> Natwest (Co. Regn. No. 1234567) of 1 High street, Plymouth </td>
+            </tr>
+
+            {% if (data['property-address'] == '5 Clinton street') or
+            ((data['property-address'] == '5a Clinton street') and (data['property-type'] == 'Freehold'))%}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">2</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'>1 July 2010</td>
+              <td class="govuk-table__cell">A lease of 5a Clinton Street, Exeter
+                dated 19 February 2020 for 125 years from 19 February 2020 made
+                between (1) Adam Robinson and (2) June Smith.</td>
+            </tr>
+            {% endif %}
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div>
+  <p> <a href="related-docs-B"> Return to documents </a> </p>
+  <br>
+  <br>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <script>
+         function ImagetoPrint(source)
+         {
+             return "<html><head><scri"+"pt>function step1(){\n" +
+                     "setTimeout('step2()', 10);}\n" +
+                     "function step2(){window.print();window.close()}\n" +
+                     "</scri" + "pt></head><body onload='step1()'>\n" +
+                     "<img src='" + source + "' /></body></html>";
+         }
+         function PrintImage(source)
+         {
+             var Pagelink = "about:blank";
+             var pwa = window.open(Pagelink, "_new");
+             pwa.document.open();
+             pwa.document.write(ImagetoPrint(source));
+             pwa.document.close();
+         }
+    </script>
+    <p><a href="../../public/images/summary-of-leasehold-35cs.png" onclick="PrintImage('../../public/images/summary-of-leasehold-35cs.png'); return false;"> <img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" onclick="PrintImage('../../public/images/summary-of-leasehold-35cs.png'); return false;">Print this page</a></p>
+    <p><a href="../../public/images/summary-of-leasehold-35cs.png"download><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
