@@ -42,46 +42,14 @@
 
 {% endblock %}
 {% block content %}
-<script>
-
-  function change_vector_page()
-    {var image =  document.getElementById("vector-title1");
-      if (image.getAttribute('src') == "/../../public/images/vectorTitle1.png")
-      {
-          image.src = "/../../public/images/vectorTitle2.png";
-      }
-      else if (image.getAttribute('src') == "/../../public/images/vectorTitle2.png")
-      {
-          image.src = "/../../public/images/vectorTitle1.png";
-      }
-    }
-
-    function change_raster_page()
-      {var image =  document.getElementById("raster-title1");
-        if (image.getAttribute('src') == "/../../public/images/rasterTitle1.png")
-        {
-            image.src = "/../../public/images/rasterTitle2.png";
-        }
-        else if (image.getAttribute('src') == "/../../public/images/rasterTitle2.png")
-        {
-            image.src = "/../../public/images/rasterTitle1.png";
-        }
-      }
-
-
-
-</script>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <!-- Change heading depending on what search was performed  -->
     <h1 class="govuk-heading-l">Title plan for:</h1>
-    <h1 class="govuk-heading-m">{{data['search-location']}} ({{data['property-type']}})</h1>
-    {% if data['search-location'] == '5b Clinton Street, Exeter, EX4 1AX' %}
-      <h1 class="govuk-heading-m">Title number: CL8854</h1>
-    {% else %}
-      <h1 class="govuk-heading-m">Title number: DN1234</h1>
-    {% endif %}
+    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
+    ({{data['property-type']}})</h1>
+    <h1 class="govuk-heading-m">Title number: {{data['property-title-number']}}</h1>
+
     <br>
   </div>
 
@@ -92,27 +60,24 @@
 
 <div id="titlePlan" style="border-width: 2px; border-color: #D8D8D8; border-style:solid;">
   <!-- Change title plan image depending on what search was performed  -->
-  {% if data['search-location'] == '5b Clinton Street, Exeter, EX4 1AX' %}
-    <img src="/../../public/images/vectorTitle1.png" style="padding: 10px;" id='vector-title1' usemap="#pagination-vector-map">
-
-    <map name="pagination-vector-map">
-      <area shape="rect" coords="217,0,720,33" alt="plus" onclick="change_vector_page()">
-      <area shape="rect" coords="217,1360,720,1393" alt="plus" onclick="change_vector_page()">
-    </map>
-
+  {% if data['property-title-number'] == 'DN220099' %}
+    <img src="/../../public/images/title_plan_5a_closed.png" style="padding: 10px;">
+  {% elif  data['property-title-number'] == 'DN5678' %}
+    <img src="/../../public/images/title_plan_5a_leasehold.png" style="padding: 10px;">
+  {% elif  data['property-title-number'] == 'DN3443' %}
+    <img src="/../../public/images/title_plan_5a_freehold.png" style="padding: 10px;">
+  {% elif  data['property-title-number'] == 'DN1234' %}
+    <img src="/../../public/images/title_plan_5.png" style="padding: 10px;">
+  {% elif  data['property-title-number'] == 'DN5888' %}
+    <img src="/../../public/images/title_plan_3.png" style="padding: 10px;">
   {% else %}
-    <img src="/../../public/images/rasterTitle1.png" style="padding: 10px;" id='raster-title1' usemap="#pagination-raster-map">
-
-    <map name="pagination-raster-map">
-      <area shape="rect" coords="217,0,720,33" alt="plus" onclick="change_raster_page()">
-      <area shape="rect" coords="217,1360,720,1393" alt="plus" onclick="change_raster_page()">
-    </map>
+    <img src="/../../public/images/title_plan_4.png" style="padding: 10px;">
   {% endif %}
 </div>
 
 <div>
   <br>
-  <p> <a href="related-docs-B"> Return to documents </a> </p>
+  <p> <a href="related-docs-paid"> Return to documents </a> </p>
   <br>
   <br>
   <br>

@@ -175,7 +175,7 @@
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Parties</th>
-                      <td class="govuk-table__cell">John Doe</td>
+                      <td class="govuk-table__cell">{{data['property-lease-parties']}}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -205,13 +205,13 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header"><div style='width: 140px;'>1</th>
-              <td class="govuk-table__cell"><div style='width: 150px;'>1 February 2000</td>
+              <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
               <td class="govuk-table__cell"><b>PROPRIETOR:</b> {{data['property-owner']}} of
                 {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">2</th>
-              <td class="govuk-table__cell"> <div style='width: 150px;'>1 February 2010</td>
+              <td class="govuk-table__cell"> <div style='width: 150px;'>{{data['property-entry-date']}}</td>
               <td class="govuk-table__cell">The price stated to have been paid
                 on {{data['property-sold-date']}} was {{data['property-sold-for']}}.</td>
             </tr>
@@ -236,18 +236,16 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">1</th>
-              <td class="govuk-table__cell"><div style='width: 150px;'>1 February 2000</td>
-              <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated 8 January
-                2000.</td>
+              <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
+              <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated {{data['property-sold-date']}}.</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">2</th>
-              <td class="govuk-table__cell"><div style='width: 150px;'>1 February 2010</td>
+              <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
               <td class="govuk-table__cell"><b>Proprietor:</b> Natwest (Co. Regn. No. 1234567) of 1 High street, Plymouth </td>
             </tr>
 
-            {% if (data['property-address'] == '5 Clinton street') or
-            ((data['property-address'] == '5a Clinton street') and (data['property-type'] == 'Freehold'))%}
+            {% if (data['property-address'] == '5a Clinton street') and (data['property-type'] == 'Freehold')%}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">2</th>
               <td class="govuk-table__cell"><div style='width: 150px;'>1 July 2010</td>
