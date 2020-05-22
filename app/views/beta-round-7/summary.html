@@ -180,7 +180,7 @@
               <input type="hidden" name="property-address" id="property-address" value="4 Long Street" />
               <input type="hidden" name="property-postcode" id="property-postcode" value="PL5 6WD" />
               <input type="hidden" name="property-city" id="property-city" value="Plymouth" />
-              <input type="hidden" name="property-sold-for" id="property-sold-for" value="£160,000" />
+              <input type="hidden" name="property-sold-for" id="property-sold-for" value="£320,000" />
               <a class="govuk-link govuk-!-font-size-16" href="#" onclick="document.getElementById('form-4-long-street').submit();">
                 4 Long Street, Plymouth, PL5 6WD</a></p>
             </form>
@@ -190,7 +190,7 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Last sold for</dt>
         <dd class="govuk-summary-list__value">
-          {{data['property-sold-for']}}
+        <p>{{data['property-sold-for']}} on {{data['property-sold-date']}}</p>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
