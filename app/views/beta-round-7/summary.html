@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Summary of freehold - Search for land and property information
+  Summary - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -106,7 +106,7 @@
               <span class="govuk-details__summary-text">What's freehold?</span>
             </summary>
             <div class="govuk-details__text">
-              <p>Freehold is one of two ways of owning land (the other is a leasehold).</p>
+              <p>Freehold is one of two ways of owning land (the other is leasehold).</p>
               <p>Freehold continues for an indefinite time without payment of rent. It
                 can be sold or given away and is the type of ownership that is nearest
                 to owning land absolutely.</p>
@@ -119,10 +119,10 @@
           {% elif data['property-type'] == 'Leasehold' %}
           <details class="govuk-details">
             <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What's Leasehold?</span>
+              <span class="govuk-details__summary-text">What's leasehold?</span>
             </summary>
             <div class="govuk-details__text">
-              <p>Leasehold is one of two ways of owning land (the other is a freehold).
+              <p>Leasehold is one of two ways of owning land (the other is freehold).
                  A leasehold is granted by a landlord to a tenant.</p>
 
               <p>A leasehold lasts for a fixed time which will be set out in the lease.
@@ -136,13 +136,13 @@
           {% elif data['property-type'] == 'Closed leasehold' %}
           <details class="govuk-details">
             <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What is a closed Leasehold?</span>
+              <span class="govuk-details__summary-text">What's a closed leasehold?</span>
             </summary>
             <div class="govuk-details__text">
               <p>Closed leaseholds are registers that are no longer in use.</p>
               <p>A leasehold register could close because:</p>
               <ul class="govuk-list govuk-list--bullet">
-                <li> the lease has come to an end</li>
+                <li>the lease has come to an end</li>
                 <li>the freehold and leaseholds in a property are owned by the same
                   person and the owner has applied to merge the lease</li>
               </ul>
@@ -152,7 +152,7 @@
           {% else %}
           <details class="govuk-details">
             <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What it a closed freehold?</span>
+              <span class="govuk-details__summary-text">What's a closed freehold?</span>
             </summary>
             <div class="govuk-details__text">
               <p>Closed freeholds are registers that are no longer in use.</p>
@@ -210,7 +210,7 @@
               <span class="govuk-details__summary-text">What's a Digital register?</span>
             </summary>
             <div class="govuk-details__text">
-              <p> A Digital register is an online view of the register that you can
+              <p>A Digital register is an online view of the register that you can
               download as a PDF. It includes details about
               the property or land. For example: </p>
               <ul class="govuk-list govuk-list--bullet">
