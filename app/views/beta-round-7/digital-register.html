@@ -182,6 +182,19 @@
               </td>
             </tr>
             {% endif %}
+            {% if data['property-type'] == 'Closed leasehold' %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'></td>
+              <td class="govuk-table__cell">Lease determined. Register closed</td>
+            </tr>
+            {% elif data['property-type'] == 'Closed freehold' %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'></td>
+              <td class="govuk-table__cell">Title closed - Registration continued under DN20033</td>
+            </tr>
+            {% endif %}
           </tbody>
         </table>
       </section>
@@ -215,6 +228,19 @@
               <td class="govuk-table__cell">The price stated to have been paid
                 on {{data['property-sold-date']}} was {{data['property-sold-for']}}.</td>
             </tr>
+            {% if data['property-type'] == 'Closed leasehold' %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'></td>
+              <td class="govuk-table__cell">Lease determined. Register closed</td>
+            </tr>
+            {% elif data['property-type'] == 'Closed freehold' %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'></td>
+              <td class="govuk-table__cell">Title closed - Registration continued under DN20033</td>
+            </tr>
+            {% endif %}
           </tbody>
         </table>
       </section>
@@ -244,14 +270,26 @@
               <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
               <td class="govuk-table__cell"><b>Proprietor:</b> Natwest (Co. Regn. No. 1234567) of 1 High street, Plymouth </td>
             </tr>
-
             {% if (data['property-address'] == '5a Clinton street') and (data['property-type'] == 'Freehold')%}
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">2</th>
+              <th scope="row" class="govuk-table__header">3</th>
               <td class="govuk-table__cell"><div style='width: 150px;'>1 July 2010</td>
               <td class="govuk-table__cell">A lease of 5a Clinton Street, Exeter
                 dated 19 February 2020 for 125 years from 19 February 2020 made
                 between (1) Adam Robinson and (2) June Smith.</td>
+            </tr>
+            {% endif %}
+            {% if data['property-type'] == 'Closed leasehold' %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'></td>
+              <td class="govuk-table__cell">Lease determined. Register closed</td>
+            </tr>
+            {% elif data['property-type'] == 'Closed freehold' %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3</th>
+              <td class="govuk-table__cell"><div style='width: 150px;'></td>
+              <td class="govuk-table__cell">Title closed - Registration continued under DN20033</td>
             </tr>
             {% endif %}
 
