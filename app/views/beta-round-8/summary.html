@@ -40,10 +40,9 @@
       We're testing a new service - your feedback will help us improve it. </span>
     </p>
   </div>
-
 {% endblock %}
-{% block content %}
 
+{% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l"> Summary of {{data['property-type']}} </h1>
@@ -55,6 +54,28 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <!--closed and continued--->
+    {% if data['property-address'] == '3 Long Street' %}
+      <div class ="govuk-inset-text">
+        <form id="form-4-long-street" action="summary">
+          <p>This register is closed. Information about this property is continued under
+            <input type="hidden" name="property-type" id="property-type" value="Freehold" />
+            <input type="hidden" name="property-address" id="property-address" value="4 Long Street" />
+            <input type="hidden" name="property-postcode" id="property-postcode" value="PL5 6WD" />
+            <input type="hidden" name="property-city" id="property-city" value="Plymouth" />
+            <input type="hidden" name="property-sold-for" id="property-sold-for" value="£320,000" />
+            <input type="hidden" name="property-title-number" id="property-title-number" value="DN20033" />
+            <input type="hidden" name="property-owner" id="property-owner" value="Susan Elliot" />
+            <input type="hidden" name="property-sold-date" id="property-sold-date" value="18 March 2020" />
+            <input type="hidden" name="property-lender" id="property-lender" value="Natwest PLC" />
+            <input type="hidden" name="property-entry-date" id="property-entry-date" value="1 April 2020" />
+          <a href="#" onclick="document.getElementById('form-4-long-street').submit();">
+          4 Long Street, Plymouth, PL5 6WD</a>.
+        </p>
+      </form>
+    </div>
+    {% endif %}
+
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -171,11 +192,11 @@
           </details>
           {% endif %}
 
-          <!-- Closed and continued  -->
+          <!-- Closed and continued
           {% if data['property-address'] == '3 Long Street' %}
-            <!-- Set search location  -->
+            <!-- Set search location
             <form id="form-4-long-street" action="summary">
-              <p>Property now known as
+              <p>
                 <input type="hidden" name="property-type" id="property-type" value="Freehold" />
                 <input type="hidden" name="property-address" id="property-address" value="4 Long Street" />
                 <input type="hidden" name="property-postcode" id="property-postcode" value="PL5 6WD" />
@@ -189,7 +210,7 @@
               <a href="#" onclick="document.getElementById('form-4-long-street').submit();">
                 4 Long Street, Plymouth, PL5 6WD</a></p>
             </form>
-          {% endif %}
+          {% endif %}--->
         </dd>
       </div>
       <div class="govuk-summary-list__row">
