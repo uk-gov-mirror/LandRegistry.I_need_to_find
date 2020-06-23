@@ -64,7 +64,7 @@
   <strong class="govuk-warning-text__text">
     <span class="govuk-warning-text__assistive">Warning</span>
       This is not an official copy. It does not take into account if there’s a pending application with HM Land Registry.
-      You’ll need to <a href="">order an official copy of the register</a> if you need to prove property ownership, for example for a court case.
+      If you need to prove property ownership, for example for a court case, you’ll need to <a href="">order an official copy of the register</a> (link opens in new tab).
   </strong>
 </div>
 
@@ -150,7 +150,7 @@
                 Title filed at the Registry and being {{data['property-address']}},
                 {{data['property-city']}}, {{data['property-postcode']}}.
                 {% if (data['property-type'] == 'Leasehold') or (data['property-type'] == 'Closed leasehold') %}
-                  <p>Note: Only the first floor flat is included in this title.</p></td>
+                  <p></p></td>
                 {% endif %}
             </tr>
             {% if (data['property-type'] == 'Leasehold') or (data['property-type'] == 'Closed leasehold') %}
@@ -270,13 +270,13 @@
               <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
               <td class="govuk-table__cell"><b>Proprietor:</b> Natwest (Co. Regn. No. 1234567) of 1 High street, Plymouth </td>
             </tr>
-            {% if (data['property-address'] == '5a Clinton street') and (data['property-type'] == 'Freehold')%}
+            {% if (data['property-address'] == '5 Clinton street') and (data['property-type'] == 'Freehold')%}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">3</th>
               <td class="govuk-table__cell"><div style='width: 150px;'>1 July 2010</td>
-              <td class="govuk-table__cell">A lease of 5a Clinton Street, Exeter
+              <td class="govuk-table__cell">A lease of 5 Clinton Street, Exeter
                 dated 19 February 2020 for 125 years from 19 February 2020 made
-                between (1) Adam Robinson and (2) June Smith.</td>
+                between (1) Housing Association and (2) June Smith.</td>
             </tr>
             {% endif %}
             {% if data['property-type'] == 'Closed leasehold' %}
