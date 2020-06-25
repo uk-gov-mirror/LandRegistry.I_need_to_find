@@ -64,7 +64,7 @@
   <strong class="govuk-warning-text__text">
     <span class="govuk-warning-text__assistive">Warning</span>
       This is not an official copy. It does not take into account if there’s a pending application with HM Land Registry.
-      If you need to prove property ownership, for example for a court case, you’ll need to <a href="">order an official copy of the register</a> (link opens in new tab).
+      If you need to prove property ownership, for example for a court case, you’ll need to <a href="#">order an official copy of the register</a> (link opens in new tab).
   </strong>
 </div>
 
@@ -270,7 +270,7 @@
               <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
               <td class="govuk-table__cell"><b>Proprietor:</b> Natwest (Co. Regn. No. 1234567) of 1 High street, Plymouth </td>
             </tr>
-            {% if (data['property-address'] == '5 Clinton street') and (data['property-type'] == 'Freehold')%}
+            <!---{% if (data['property-address'] == '5 Clinton street') and (data['property-type'] == 'Freehold')%}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">3</th>
               <td class="govuk-table__cell"><div style='width: 150px;'>1 July 2010</td>
@@ -278,7 +278,7 @@
                 dated 19 February 2020 for 125 years from 19 February 2020 made
                 between (1) Housing Association and (2) June Smith.</td>
             </tr>
-            {% endif %}
+            {% endif %}--->
             {% if data['property-type'] == 'Closed leasehold' %}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">3</th>
