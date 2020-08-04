@@ -45,7 +45,7 @@
     <p> Your property is 4 Long Street, Plymouth, PL5 6WD</p>
     <p><b>
       <!-- Set up data right away in case user immediately goes to 'my documents'  -->
-      <form id="task1-4-long-street" action="/beta-round-9/01-start">
+      <form id="task1-4-long-street" action="/beta-round-9/01-start" target="_blank">
         <input type="hidden" name="property-type" id="property-type" value="Freehold" />
         <input type="hidden" name="property-address" id="property-address" value="4 Long Street" />
         <input type="hidden" name="property-postcode" id="property-postcode" value="PL5 6WD" />
@@ -71,7 +71,7 @@
     <p> You’re pretty sure the property address is 5 Clinton Street, Exeter, EX4 1AX</p>
     <p><b>
       <!-- Set up data right away in case user immediately goes to 'my documents'  -->
-      <form id="form-5-freehold" action="summary">
+      <form id="task-5-clinton" action="beta-round-9/01-start" target="_blank">
         <input type="hidden" name="property-type" id="property-type" value="Freehold" />
         <input type="hidden" name="property-address" id="property-address" value="5 Clinton street" />
         <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
@@ -83,7 +83,7 @@
         <input type="hidden" name="property-lender" id="property-lender" value="Natwest PLC" />
         <input type="hidden" name="property-entry-date" id="property-entry-date" value="1 March 2020" />
         <input type="hidden" name="documents-bought" id="documents-bought" value="false" />
-        <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('form-5-freehold').submit();">
+        <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-5-clinton').submit();">
           Start task 2</a>
       </form>
     </b></p>

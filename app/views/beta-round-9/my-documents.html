@@ -44,7 +44,12 @@ Search by postcode or streetname - Search for land and property information
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">My Documents</h1>
+    {% if data['property-address'] == '4 Long Street' and data['documents-bought'] == 'false' %}
+      <h1 class="govuk-heading-l">You have 0 documents</h1>
+    {% else %}
+      <h1 class="govuk-heading-l">My Documents</h1>
+    {% endif %}
+
   </div>
   <div class ="govuk-grid-column-one-third">
     <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
@@ -54,14 +59,228 @@ Search by postcode or streetname - Search for land and property information
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <div class="govuk-inset-text">
-      You have access to purchased documents for 90 days from the date of purchase.
-      <br>You can have an additional 90 days at any time by purchasing the document again.
+      You only have 90 days to view or download documents from the date you bought them.
+      <br>If you didn't keep a copy you'll have to buy your document again.
     </div>
 
     <!-- 5 Clinton street  -->
     {% if data['property-address'] == '5 Clinton street' %}
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                3 Clinton Street, Exeter, EX4 1AX (Freehold)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Date purchased</th>
+                  <th scope="col" class="govuk-table__header">Available until</th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital register</th>
+                    <td class="govuk-table__cell">11 June 2020</td>
+                    <td class="govuk-table__cell">11 September 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="#">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
 
-      <h1 class="govuk-heading-m">5 Clinton street, Plymouth, EX4 1AX (Freehold)</h1>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital title plan</th>
+                    <td class="govuk-table__cell">11 June 2020</td>
+                    <td class="govuk-table__cell">11 September 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="#">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+            <p style="text-align: right;"> <a href="#">Buy documents for 3 Clinton Street again</a> </p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                5 Clinton Street, Exeter, EX4 1AX (Freehold)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Date purchased</th>
+                  <th scope="col" class="govuk-table__header">Available until</th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                {% if data['documents-bought'] == 'true' %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital register</th>
+                    <td class="govuk-table__cell">3 August 2020</td>
+                    <td class="govuk-table__cell">3 November 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="digital-register">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital title plan</th>
+                    <td class="govuk-table__cell">3 August 2020</td>
+                    <td class="govuk-table__cell">3 November 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="title-plan">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+                {% endif %}
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital register</th>
+                    <td class="govuk-table__cell">11 June 2020</td>
+                    <td class="govuk-table__cell">11 September 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="digital-register">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital title plan</th>
+                    <td class="govuk-table__cell">11 June 2020</td>
+                    <td class="govuk-table__cell">11 September 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="title-plan">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+            <p style="text-align: right;"> <a href="/beta-round-9/buy-documents">Buy documents for 5 Clinton Street again</a> </p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                7 Clinton Street, Exeter, EX4 1AX (Freehold)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Date purchased</th>
+                  <th scope="col" class="govuk-table__header">Available until</th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital register</th>
+                    <td class="govuk-table__cell">11 June 2020</td>
+                    <td class="govuk-table__cell">11 September 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="#">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital title plan</th>
+                    <td class="govuk-table__cell">11 June 2020</td>
+                    <td class="govuk-table__cell">11 September 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="#">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+            <p style="text-align: right;"> <a href="#">Buy documents for 7 Clinton Street again</a> </p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                25 High Street, Exeter, EX3 5AY (Freehold)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Date purchased</th>
+                  <th scope="col" class="govuk-table__header">Available until</th>
+                  <th scope="col" class="govuk-table__header"></th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital register</th>
+                    <td class="govuk-table__cell">25 July 2020</td>
+                    <td class="govuk-table__cell">25 October 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="#">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital title plan</th>
+                    <td class="govuk-table__cell">25 July 2020</td>
+                    <td class="govuk-table__cell">25 October 2020</td>
+                    <td class="govuk-table__cell">
+                      <a href="#">View</a>
+                      <br>
+                      <br>
+                      <a href="#">Download PDF</a>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+            <p style="text-align: right;"> <a href="#">Buy documents for 25 High Street again</a> </p>
+          </div>
+        </div>
+      </div>
+
 
     {% elif data['property-address'] == '4 Long Street' %}
       {% if data['documents-bought'] == 'true' %}
@@ -79,31 +298,31 @@ Search by postcode or streetname - Search for land and property information
           <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Digital register</th>
-                <td class="govuk-table__cell">28 July 2020</td>
-                <td class="govuk-table__cell">28 October 2020</td>
+                <td class="govuk-table__cell">3 August 2020</td>
+                <td class="govuk-table__cell">3 November 2020</td>
                 <td class="govuk-table__cell">
                   <a href="digital-register">View</a>
                   <br>
                   <br>
-                  <a href="#">Download</a>
+                  <a href="#">Download PDF</a>
                 </td>
               </tr>
 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Digital title plan</th>
-                <td class="govuk-table__cell">28 July 2020</td>
-                <td class="govuk-table__cell">28 October 2020</td>
+                <td class="govuk-table__cell">3 August 2020</td>
+                <td class="govuk-table__cell">3 November 2020</td>
                 <td class="govuk-table__cell">
                   <a href="title-plan">View</a>
                   <br>
                   <br>
-                  <a href="#">Download</a>
+                  <a href="#">Download PDF</a>
                 </td>
               </tr>
           </tbody>
         </table>
-      {% else %}
-        <h1 class="govuk-heading-m">You have no saved documents</h1>
+
+        <p> <a href="/beta-round-9/buy-documents">Buy documents for 4 Long Street again</a> </p>
       {% endif %}
     {% endif %}
 

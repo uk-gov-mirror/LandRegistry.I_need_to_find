@@ -42,7 +42,7 @@
 
       <a class="govuk-!-margin-right-3 govuk-header__link header_link_right
       govuk-!-padding-top-1" href="my-documents.html">
-        My Documents
+        My documents
       </a>
 
     </div>
@@ -56,7 +56,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Documents for:</h1>
+    <h1 class="govuk-heading-l">Documents you've bought today for:</h1>
 
     <!-- Change heading depending on what search was performed  -->
     <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}},
@@ -67,53 +67,45 @@
   </div>
   <div class="govuk-grid-column-full">
     <div class="govuk-inset-text">
-      You have access to purchased documents for 90 days from the date of purchase.
-      <br>You can have an additional 90 days at any time by purchasing the document again.
+      You have 90 days to view or download your documents.
     </div>
-    {% if data['property-address'] == '5 Clinton street' %}
 
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Document</th>
+                <th scope="col" class="govuk-table__header">Date purchased</th>
+                <th scope="col" class="govuk-table__header">Available until</th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Digital register</th>
+                  <td class="govuk-table__cell">3 August 2020</td>
+                  <td class="govuk-table__cell">3 November 2020</td>
+                  <td class="govuk-table__cell">
+                    <a href="digital-register">View</a>
+                    <br>
+                    <br>
+                    <a href="#">Download PDF</a>
+                  </td>
+                </tr>
 
-    {% elif data['property-address'] == '4 Long Street' %}
-      <h1 class="govuk-heading-m">Purchased today</h1>
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Document</th>
-            <th scope="col" class="govuk-table__header">Date purchased</th>
-            <th scope="col" class="govuk-table__header">Available until</th>
-            <th scope="col" class="govuk-table__header"></th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Digital register</th>
-              <td class="govuk-table__cell">28 July 2020</td>
-              <td class="govuk-table__cell">28 October 2020</td>
-              <td class="govuk-table__cell">
-                <a href="digital-register">View</a>
-                <br>
-                <br>
-                <a href="#">Download</a>
-              </td>
-            </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Digital title plan</th>
+                  <td class="govuk-table__cell">3 August 2020</td>
+                  <td class="govuk-table__cell">3 November 2020</td>
+                  <td class="govuk-table__cell">
+                    <a href="title-plan">View</a>
+                    <br>
+                    <br>
+                    <a href="#">Download PDF</a>
+                  </td>
+                </tr>
+            </tbody>
+          </table>
 
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Digital title plan</th>
-              <td class="govuk-table__cell">28 July 2020</td>
-              <td class="govuk-table__cell">28 October 2020</td>
-              <td class="govuk-table__cell">
-                <a href="title-plan">View</a>
-                <br>
-                <br>
-                <a href="#">Download</a>
-              </td>
-            </tr>
-        </tbody>
-      </table>
-      <div class="govuk-section-break--xl"></div>
-    {% endif %}
-
-    <p> <a href="buy-documents"> Buy additional documents </a> </p>
     <p> <a href="summary"> Return to summary of {{data['property-type']}} </a> </p>
 
   </div>
