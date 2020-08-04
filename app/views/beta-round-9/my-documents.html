@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Search by postcode or streetname - Search for land and property information
+My documents - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -47,7 +47,7 @@ Search by postcode or streetname - Search for land and property information
     {% if data['property-address'] == '4 Long Street' and data['documents-bought'] == 'false' %}
       <h1 class="govuk-heading-l">You have 0 documents</h1>
     {% else %}
-      <h1 class="govuk-heading-l">My Documents</h1>
+      <h1 class="govuk-heading-l">My documents</h1>
     {% endif %}
 
   </div>
@@ -60,7 +60,7 @@ Search by postcode or streetname - Search for land and property information
   <div class="govuk-grid-column-full">
     <div class="govuk-inset-text">
       You only have 90 days to view or download documents from the date you bought them.
-      <br>If you didn't keep a copy you'll have to buy your document again.
+      <br>If you didn't keep a copy you'll have to buy them again.
     </div>
 
     <!-- 5 Clinton street  -->
