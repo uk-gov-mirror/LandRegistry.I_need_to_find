@@ -42,34 +42,43 @@ My documents - Search for land and property information
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
     {% if data['property-address'] == '4 Long Street' and data['documents-bought'] == 'false' %}
-      <h1 class="govuk-heading-l">You have 0 documents</h1>
-    {% else %}
-      <h1 class="govuk-heading-l">My documents</h1>
-    {% endif %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">You have 0 documents</h1>
+      </div>
+      <div class ="govuk-grid-column-one-third">
+        <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+      </div>
     </div>
-
-    <div class ="govuk-grid-column-one-third">
-      <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
-    </div>
-
-    {% if data['property-address'] == '4 Long Street' and data['documents-bought'] == 'false' %}
-    <p> Any documents you buy will be kept here for 90 days. </p>
-    <h2 class="govuk-heading-m">Why are my documents not here?</h2>
-    <p> You only have 90 days to view or download documents from the date you bought them. If you did not
-    keep a copy, you'll have to buy them again. </p>
-    <br>
+      <p> Any documents you buy will be kept here for 90 days. </p>
+        <br>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Why are my documents not here?</h2>
+          <p> You only have 90 days to view or download documents from the date you bought them. If you did not
+          keep a copy, you'll have to buy them again.
+          </p>
+          <br>
+          <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Start new search </a> </p>
+      </div>
     {% else %}
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <div class="govuk-inset-text">
-          You only have 90 days to view or download documents from the date you bought them.
-          <br>To check for updates to your documents, you'll need to buy them again.
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">My documents</h1>
+      </div>
+      <div class ="govuk-grid-column-one-third">
+        <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+      </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-inset-text">
+            You only have 90 days to view or download documents from the date you bought them.
+            <br>To check for updates to your documents, you'll need to buy them again.
+          </div>
         </div>
     {% endif %}
-
     <!-- 5 Clinton street  -->
     {% if data['property-address'] == '5 Clinton street' %}
       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -296,6 +305,8 @@ My documents - Search for land and property information
               </tbody>
             </table>
             <p style="text-align: right;"> <a href="#">Buy documents for 25 High Street again</a> </p>
+
+            <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
           </div>
         </div>
       </div>
@@ -348,17 +359,10 @@ My documents - Search for land and property information
         </table>
 
         <p style="text-align: right;"> <a href="/beta-round-9/buy-documents">Buy documents for 4 Long Street again</a> </p>
+
+        <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
       {% endif %}
     {% endif %}
-
-    {% if data['property-address'] == '4 Long Street' and data['documents-bought'] == 'false' %}
-      <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Start new search </a> </p>
-    {% else %}
-      <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
-    {% endif %}
-
-
-
   </div>
 </div>
 
