@@ -77,7 +77,6 @@ My documents - Search for land and property information
             You only have 90 days to view or download documents from the date you bought them.
             <br>To check for updates to your documents, you'll need to buy them again.
           </div>
-        </div>
     {% endif %}
     <!-- 5 Clinton street  -->
     {% if data['property-address'] == '5 Clinton street' %}
@@ -305,11 +304,10 @@ My documents - Search for land and property information
               </tbody>
             </table>
             <p style="text-align: right;"> <a href="#">Buy documents for 25 High Street again</a> </p>
-
-            <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
           </div>
         </div>
       </div>
+      <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
 
 
     {% elif data['property-address'] == '4 Long Street' %}
@@ -359,11 +357,10 @@ My documents - Search for land and property information
         </table>
 
         <p style="text-align: right;"> <a href="/beta-round-9/buy-documents">Buy documents for 4 Long Street again</a> </p>
-
         <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
       {% endif %}
     {% endif %}
-  </div>
+</div>
 </div>
 
 {% endblock %}
