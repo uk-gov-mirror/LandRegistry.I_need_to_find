@@ -49,19 +49,26 @@ My documents - Search for land and property information
     {% else %}
       <h1 class="govuk-heading-l">My documents</h1>
     {% endif %}
-
-  </div>
-  <div class ="govuk-grid-column-one-third">
-    <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="govuk-inset-text">
-      You only have 90 days to view or download documents from the date you bought them.
-      <br>If you did not keep a copy you'll have to buy them again.
     </div>
+
+    <div class ="govuk-grid-column-one-third">
+      <p class="toggle_underline"> English | <a> Cymraeg </a> </p>
+    </div>
+
+    {% if data['property-address'] == '4 Long Street' and data['documents-bought'] == 'false' %}
+    <p> Any documents you buy will be kept here for 90 days. </p>
+    <h2 class="govuk-heading-m">Why are my documents not here?</h2>
+    <p> You only have 90 days to view or download documents from the date you bought them. If you did not
+    keep a copy, you'll have to buy them again. </p>
+    <br>
+    {% else %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-inset-text">
+          You only have 90 days to view or download documents from the date you bought them.
+          <br>To check for updates to your documents, you'll need to buy them again.
+        </div>
+    {% endif %}
 
     <!-- 5 Clinton street  -->
     {% if data['property-address'] == '5 Clinton street' %}
@@ -344,8 +351,13 @@ My documents - Search for land and property information
       {% endif %}
     {% endif %}
 
+    {% if data['property-address'] == '4 Long Street' and data['documents-bought'] == 'false' %}
+      <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Start new search </a> </p>
+    {% else %}
+      <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
+    {% endif %}
 
-    <p> <a href="/beta-round-9/search-by-postcode-or-street-name"> Search for another property</a> </p>
+
 
   </div>
 </div>
