@@ -54,22 +54,37 @@
     <h1 class="govuk-heading-l">Your payment was successful</h1>
       <h2 class="govuk-heading-m">Your reference number is: <br>1B7183</h2>
 
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Payment for:
-            </dt>
-            <dd class="govuk-summary-list__value">
-                Digital register<br>Digital title plan
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Total amount:
-            </dt>
-            <dd class="govuk-summary-list__value">£6</dd>
-          </div>
-        </dl>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Payment for:
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <!-- Both checkboxes checked -->
+            {% if data['checkbox-register'] and data['checkbox-title'] %}
+              Digital register<br>Digital title plan
+            <!-- Checked register checkbox -->
+            {% elif data['checkbox-register'] %}
+              Digital register
+            <!-- Checked title checkbox -->
+            {% elif data['checkbox-title']%}
+              Digital title plan
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total amount:
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {% if data['checkbox-register'] and data['checkbox-title'] %}
+            £6
+          {% else %}
+            £3
+          {% endif %}
+          </dd>
+        </div>
+      </dl>
 
         <p class="govuk-body">We have sent you a receipt by email.
 

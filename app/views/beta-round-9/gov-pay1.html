@@ -161,11 +161,30 @@
     <div class="app-payment-summary-box">
       <h2 class="govuk-heading-m">Payment summary</h2>
 
+      <!-- Both checked -->
+     {% if data['checkbox-register'] and data['checkbox-title']%}
        <p class="govuk-!-font-weight-bold">Digital register</p>
        <p class="govuk-!-font-weight-bold">Digital title plan</p>
-       <p style=>Total amount: <br>
-         <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">&pound;6</span>
-       </p>
+    <!-- Checked register -->
+    {% elif data['checkbox-register'] %}
+        <p class="govuk-!-font-weight-bold">Digital register</p>
+    <!-- Checked title -->
+    {% elif data['checkbox-title']%}
+        <p class="govuk-!-font-weight-bold">Digital title plan</p>
+    {% endif %}
+
+
+      <p style=>Total amount: <br>
+      <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">&pound;
+        <!-- Both checked first time -->
+        {% if data['checkbox-register'] and data['checkbox-title'] %}
+          6
+        <!-- Otherwise has to be just one checked -->
+        {% else %}
+          3
+       {% endif %}
+      </span>
+      </p>
     </div>
 
   </div>

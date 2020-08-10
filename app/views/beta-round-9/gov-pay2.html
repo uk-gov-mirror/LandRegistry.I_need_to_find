@@ -61,6 +61,8 @@
     <table class="govuk-table">
       <tbody class="govuk-table__body">
 
+        <!-- Both checkboxes checked -->
+        {% if data['checkbox-register'] and data['checkbox-title'] %}
           <tr class="govuk-table__row">
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
             govuk-!-padding-top-3 govuk-!-width-one-third">Digital register</th>
@@ -71,11 +73,33 @@
              govuk-!-padding-top-3 govuk-!-width-one-third">Digital title plan</th>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
           </tr>
+           <!-- Checked register checkbox -->
+           {% elif data['checkbox-register'] %}
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+             govuk-!-padding-top-3 govuk-!-width-one-third">Digital register</th>
+             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+           </tr>
+           <!-- Checked title checkbox -->
+           {% elif data['checkbox-title']%}
+           <tr class="govuk-table__row">
+             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+              govuk-!-padding-top-3 govuk-!-width-one-third">Digital title plan</th>
+             <td class="govuk-table__cell govuk-!-font-weight-bold">£3</td>
+           </tr>
+         {% endif %}
 
           <tr class="govuk-table__row">
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
              govuk-!-padding-top-3 govuk-!-width-one-third"><b>Total cost</b></th>
-            <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£6</b></td>
+
+        <!-- Both checkboxes checked -->
+        {% if data['checkbox-register'] and data['checkbox-title'] %}
+          <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£6</b></td>
+        <!-- Otherwise has to be just one checked -->
+        {% else %}
+          <td class="govuk-table__cell govuk-!-font-weight-bold"><b>£3</b></td>
+        {% endif %}
         </tr>
       </tbody>
     </table>

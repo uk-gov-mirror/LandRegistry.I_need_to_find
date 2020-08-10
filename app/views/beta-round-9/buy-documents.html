@@ -52,117 +52,125 @@
 {% endblock %}
 
 {% block content %}
+<script>
+
+  function myFunction() {
+    window.location.href = "http://www.w3schools.com";
+  }
+
+</script>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Buy documents for:</h1>
+    <div id="govuk-form-group" class="govuk-form-group">
+      <h1 class="govuk-heading-l">Buy documents for:</h1>
 
-    <!-- Change heading depending on what search was performed  -->
-    <h1 class="govuk-heading-m">
-      {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-      ({{data['property-type']}})</h1>
+      <!-- Change heading depending on what search was performed  -->
+      <h1 class="govuk-heading-m">
+        {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
+        ({{data['property-type']}})</h1>
 
-    <div class="govuk-inset-text">
-      You will have 90 days to view or download any documents you buy.
-      If you want to acess them after this, you'll need to buy them again.
-    </div>
+      <div class="govuk-inset-text">
+        You will have 90 days to view or download any documents you buy.
+        If you want to acess them after this, you'll need to buy them again.
+      </div>
 
     <form class="govuk-!-margin-top-6" action="gov-pay1" method="post">
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Document</th>
-            <th scope="col" class="govuk-table__header">Cost</th>
-            <th scope="col" class="govuk-table__header"></th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Digital register
-                <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                      <span class="govuk-details__summary-text">
-                        What's a Digital register?
-                      </span>
-                    </summary>
-                    <div class="govuk-details__text">
-                      You can view a Digital register online and download it as a PDF. It includes details about
-                      the land or property. For example:
-                      <ul class="govuk-list govuk-list--bullet">
-                        <li>the title number</li>
-                        <li>who owns it</li>
-                        <li>what they paid for it (properties only, if available)</li>
-                        <li>whether there's a mortgage</li>
-                        <li>things that might burden or benefit it</li>
-                      </ul>
-                    </div>
-                  </details>
-              </th>
-              <td class="govuk-table__cell">£3</td>
-              <td class="govuk-table__cell">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
-                    <div class="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="checkbox-1A" type="checkbox"
-                        name="checkbox-register-A" value="ticked" {{checked("checkbox-register-A", "ticked")}}>
-                        <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </td>
+              <th scope="col" class="govuk-table__header">Document</th>
+              <th scope="col" class="govuk-table__header">Cost</th>
+              <th scope="col" class="govuk-table__header"></th>
             </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Digital title plan
-                <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                      <span class="govuk-details__summary-text">
-                        What's a Digital title plan?
-                      </span>
-                    </summary>
-                    <div class="govuk-details__text">
-                      You can view a Digital title plan online and download it as a PDF. It's a map
-                      showing the property’s:
-                      <ul class="govuk-list govuk-list--bullet">
-                        <li>location
-                        </li>
-                        <li>general boundaries - there’s usually no record of exact boundaries
-                        </li>
-                      </ul>
-                    </div>
-                  </details>
-              <td class="govuk-table__cell">£3</td>
-              <td class="govuk-table__cell">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
-                    <div class="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="checkbox-2A" type="checkbox"
-                        name="checkbox-title-A" value="ticked" {{checked("checkbox-title-A", "ticked")}}>
-                        <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+          </thead>
+          <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Digital register
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          What's a Digital register?
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        You can view a Digital register online and download it as a PDF. It includes details about
+                        the land or property. For example:
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>the title number</li>
+                          <li>who owns it</li>
+                          <li>what they paid for it (properties only, if available)</li>
+                          <li>whether there's a mortgage</li>
+                          <li>things that might burden or benefit it</li>
+                        </ul>
                       </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </td>
-            </tr>
-        </tbody>
-      </table>
+                    </details>
+                </th>
+                <td class="govuk-table__cell">£3</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
+                      <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox"
+                          name="checkbox-register" value="ticked" {{checked("checkbox-register", "ticked")}}>
+                          <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Digital title plan
+                  <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          What's a Digital title plan?
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p>A Digital title plan is an online view of the title plan that
+                          you can download as a PDF. It's a map
+                          showing the property’s: </p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>location </li>
+                          <li>general boundaries - there’s usually no record of exact boundaries</li>
+                        </ul>
+                      </div>
+                    </details>
+                </th>
+                <td class="govuk-table__cell">£3</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
+                      <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="checkbox-2" type="checkbox"
+                          name="checkbox-title" value="ticked" {{checked("checkbox-title", "ticked")}}>
+                          <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </td>
+              </tr>
+          </tbody>
+        </table>
 
-      <button type="submit" class="govuk-button">
+        <button type="submit" class="govuk-button">
           Continue to payment
-      </button>
+        </button>
     </form>
 
     <p> <a href="summary"> Return to Summary of {{data['property-type-lower']}} </a> </p>
 
-
+    </div>
+    </div>
+    <div class ="govuk-grid-column-one-third">
+      <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
+    </div>
   </div>
-  <div class ="govuk-grid-column-one-third">
-    <p class="toggle_underline">  English | <a href="/Welsh/terms-of-use">Cymraeg </a>  </p>
-  </div>
-</div>
 
 
 {% endblock %}
