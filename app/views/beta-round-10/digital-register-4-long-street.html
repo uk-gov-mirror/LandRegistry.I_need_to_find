@@ -54,10 +54,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">Digital register for:</h1>
-    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-    (Freehold)</h1>
-    <h1 class="govuk-heading-m">Title number: {{data['property-title-number']}}</h1>
-    <h1 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h1>
+    <h1 class="govuk-heading-m">4 Long street, Plymouth, PL5 6WD (Freehold)</h1>
+    <h1 class="govuk-heading-m">Title number: DN5888</h1>
+    <h1 class="govuk-heading-m">Copy bought on: 6 October 2020</h1>
   </div>
   <div class="govuk-grid-column-one-thirds">
     <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
@@ -106,20 +105,20 @@
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Title number</dt>
             <dd class="govuk-summary-list__value">
-              <p>{{data['property-title-number']}}</p>
+              <p>DN5888</p>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Registered owner</dt>
             <dd class="govuk-summary-list__value">
-              <p>{{data['property-owner']}} </p>
-              <p>{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</p>
+              <p>Susan Elliot </p>
+              <p>4 Long street, Plymouth, PL5 6WD</p>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Last sold for</dt>
             <dd class="govuk-summary-list__value">
-              <p>{{data['property-sold-for']}} on {{data['property-sold-date']}}</p>
+              <p>£320,000 on 18 March 2019</p>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -135,7 +134,7 @@
         <br>
         <h2 class="govuk-heading-l">A: Property register</h2>
         <p>This register describes the land and estate comprised in the title.</p>
-        <p><b>Local council:</b> {{data['property-city']}}</p>
+        <p><b>Local council:</b> Plymouth</p>
         <hr>
         <table class="govuk-table">
           <thead class="govuk-table__head">
@@ -150,10 +149,9 @@
               <th scope="row" class="govuk-table__header"><div style='width: 140px;'>1</th>
               <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1965</td>
               <td class="govuk-table__cell">The land shown edged with red on the plan of the above
-                Title filed at the Registry and being {{data['property-address']}},
-                {{data['property-city']}}, {{data['property-postcode']}}.
+                Title filed at the Registry and being 4 Long street,
+                Plymouth, PL5 6WD.
             </tr>
-            {% if data['property-address'] == '4 Long street'%}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header"><div style='width: 140px;'>2</th>
               <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1965</td>
@@ -165,7 +163,6 @@
                     the public footpath leading to Garden Lane</li>
                 </ul></p>
             </tr>
-            {% endif %}
           </tbody>
         </table>
       </div>
@@ -189,15 +186,15 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><div style='width: 140px;'>1</th>
-                <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
-                <td class="govuk-table__cell"><b>PROPRIETOR:</b> {{data['property-owner']}} of
-                  {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</td>
+                <td class="govuk-table__cell"><div style='width: 150px;'>1 April 2019</td>
+                <td class="govuk-table__cell"><b>PROPRIETOR:</b> Susan Elliot of
+                  4 Long street, Plymouth, PL5 6WD</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">2</th>
-                <td class="govuk-table__cell"> <div style='width: 150px;'>{{data['property-entry-date']}}</td>
+                <td class="govuk-table__cell"> <div style='width: 150px;'>1 April 2019</td>
                 <td class="govuk-table__cell">The price stated to have been paid
-                  on {{data['property-sold-date']}} was {{data['property-sold-for']}}.</td>
+                  on 18 March 2019 was £320,000.</td>
               </tr>
             </tbody>
           </table>
@@ -220,15 +217,14 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">1</th>
-                <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
-                <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated {{data['property-sold-date']}}.</td>
+                <td class="govuk-table__cell"><div style='width: 150px;'>1 April 2019</td>
+                <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated 18 March 2019.</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">2</th>
-                <td class="govuk-table__cell"><div style='width: 150px;'>{{data['property-entry-date']}}</td>
+                <td class="govuk-table__cell"><div style='width: 150px;'>1 April 2019</td>
                 <td class="govuk-table__cell"><b>Proprietor:</b> Natwest (Co. Regn. No. 1234567) of 1 High street, Plymouth </td>
               </tr>
-            {% if data['property-address'] == '4 Long street'%}
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">3</th>
                 <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1965</td>
@@ -241,29 +237,6 @@
                   </ul></p>
                 </td>
               </tr>
-              {% elif  data['property-address'] == '5 Clinton street'%}
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">3</th>
-                  <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1965</td>
-                  <td class="govuk-table__cell">A Conveyance of the land in this title dated
-                    1 December 1964 made between Jo Honywell and Sam Briely
-                    contains the following covenants:
-                    <br>
-                    <p> Restrictive covenants</p>
-                    <p><ul class="govuk-list govuk-list--number">
-                      <li>No buildings or permanent structures are to be erected in
-                         the rear garden of the property.</li>
-                      <li>No front or rear building extensions are allowed to the property.</li>
-                      <li>No Gazebos or other similar semi permanent structures are to be placed on the property.</li>
-                      <li>No spotlights or permanent lighting is to be placed on the property.</li>
-                      <li>No farm animals are permitted to live or be stabled thereon.</li>
-                      <li>No obstructions are to be placed on the rear pathway.</li>
-                    </ul></p>
-                  </td>
-                </tr>
-              {% endif %}
-
-
             </tbody>
           </table>
         </div>
@@ -272,7 +245,7 @@
 </div>
 
 <div>
-  <p> <a href="summary"> Return to Summary of {{data['property-type-lower']}} </a> </p>
+  <p> <a href="summary"> Return to Summary of freehold </a> </p>
   <br>
   <br>
 </div>

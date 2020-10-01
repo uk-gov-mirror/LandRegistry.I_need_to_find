@@ -43,18 +43,15 @@
 
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
-  <div class="govuk-grid-column-one-third">
-    <p style="text-align: left;"> English | <a> Cymraeg </a> </p>
-  </div>
-  <div class="govuk-grid-column-two-thirds">
-    <p style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
+  <div class="govuk-grid-column-full">
+    <p style="text-align: right;"> English | <a> Cymraeg </a> </p>
   </div>
 </div>
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-4">Your payment was successful</h1>
+    <h1 class="govuk-heading-l">Your payment was successful</h1>
     <h2 class="govuk-heading-m">Your reference number is: <br>1B7183</h2>
 
     <dl class="govuk-summary-list">
@@ -98,11 +95,28 @@
     </div>
 
     <form action="documents-for.html">
-      <input type="hidden" name="documents-bought" id="documents-bought" value="true" />
+      {% if data['property-address'] == '5 Clinton street' %}
+        {% if data['task-status'] == 'task2-6-docs' %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-both-docs" />
+        {% else %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-5-docs" />
+        {% endif %}
+      {% elif data['property-address'] == '6 Clinton street' %}
+        {% if data['task-status'] == 'task2-5-docs' %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-both-docs" />
+        {% else %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-6-docs" />
+        {% endif %}
+      {% elif  data['property-address'] == '4 Long street' %}
+        <input type="hidden" name="task-status" id="task-status" value="task1-docs" />
+      {% endif %}
       <button class="govuk-button" type="submit">
         Continue to documents
       </button>
     </form>
+  </div>
+  <div class="govuk-grid-column-one-thirds">
+    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
   </div>
 </div>
 

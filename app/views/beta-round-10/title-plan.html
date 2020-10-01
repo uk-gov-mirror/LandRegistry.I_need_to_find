@@ -44,39 +44,32 @@
 {% endblock %}
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
-  <div class="govuk-grid-column-one-third">
-    <p style="text-align: left;"> English | <a> Cymraeg </a> </p>
-  </div>
-  <div class="govuk-grid-column-two-thirds">
-    <p style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
+  <div class="govuk-grid-column-full">
+    <p style="text-align: right;"> English | <a> Cymraeg </a> </p>
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <!-- Change heading depending on what search was performed  -->
-    <h1 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-4">Digital title plan for:</h1>
+    <h1 class="govuk-heading-l">Digital title plan for:</h1>
     <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
     ({{data['property-type']}})</h1>
-    <h1 class="govuk-heading-m">Title number: {{data['property-title-number']}}</h1>
+    <h1 class="govuk-heading-m">Title number: {{data['title-num']}}</h1>
     <h1 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h1>
-
     <br>
+  </div>
+  <div class="govuk-grid-column-one-thirds">
+    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
   </div>
 </div>
 
 <div id="titlePlan" style="border-width: 2px; border-color: #D8D8D8; border-style:solid;">
   <!-- Change title plan image depending on what search was performed  -->
-  {% if data['property-title-number'] == 'DN220099' %}
-    <img src="/../../public/images/title_plan_5a_closed.png" style="padding: 10px;">
-  {% elif  data['property-title-number'] == 'DN5678' %}
-    <img src="/../../public/images/title_plan_5a_leasehold.png" style="padding: 10px;">
-  {% elif  data['property-title-number'] == 'DN3443' %}
-    <img src="/../../public/images/title_plan_5a_freehold.png" style="padding: 10px;">
-  {% elif  data['property-title-number'] == 'DN1234' %}
+  {% if data['property-address'] == '5 Clinton street' %}
     <img src="/../../public/images/title_plan_5.png" style="padding: 10px;">
-  {% elif  data['property-title-number'] == 'DN5888' %}
-    <img src="/../../public/images/title_plan_3.png" style="padding: 10px;">
+  {% elif data['property-address'] == '6 Clinton street' %}
+    <img src="/../../public/images/title_plan_6.png" style="padding: 10px;">
   {% else %}
     <img src="/../../public/images/title_plan_4.png" style="padding: 10px;">
   {% endif %}
@@ -114,8 +107,5 @@
     <p><a href="../../public/images/summary-of-leasehold-35cs.png"download><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>
   </div>
 </div>
-
-
-
 
 {% endblock %}

@@ -48,23 +48,20 @@
 
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
-  <div class="govuk-grid-column-one-third">
-    <p style="text-align: left;"> English | <a> Cymraeg </a> </p>
-  </div>
-  <div class="govuk-grid-column-two-thirds">
-    <p style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
+  <div class="govuk-grid-column-full">
+    <p style="text-align: right;"> English | <a> Cymraeg </a> </p>
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div id="govuk-form-group" class="govuk-form-group">
-      <h1 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-4">Buy documents for:</h1>
+      <h1 class="govuk-heading-l">Buy documents for:</h1>
 
       <!-- Change heading depending on what search was performed  -->
       <h1 class="govuk-heading-m">
         {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-        ({{data['property-type']}})</h1>
+        (Freehold)</h1>
 
       <div class="govuk-inset-text">
         You will have 90 days to view or download any documents you buy.
@@ -162,6 +159,9 @@
       <p> <a href="summary"> Return to Summary of {{data['property-type-lower']}} </a> </p>
 
     </div>
+  </div>
+  <div class="govuk-grid-column-one-thirds">
+    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
   </div>
 </div>
 

@@ -43,23 +43,10 @@ Search by postcode or streetname - Search for land and property information
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
-    <div class="govuk-grid-column-one-third">
-        <p style="text-align: left;"> English | <a> Cymraeg </a> </p>
-    </div>
-    <div class="govuk-grid-column-two-thirds">
-    {% if data['signed-in'] == 'false' %}
-      <form id="form-search-signin" action="sign-in">
-        <input type="hidden" name="return-form" id="return-form" value="search-page" />
-        <p style="text-align: right;"><a class="govuk-link govuk-!-font-size-19"
-          href="#" onclick="document.getElementById('form-search-signin').submit();">
-          Sign in</a></p>
-      </form>
-    {% else %}
-      <p style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
-    {% endif %}
+    <div class="govuk-grid-column-full">
+        <p style="text-align: right;"> English | <a> Cymraeg </a> </p>
     </div>
   </div>
-
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -117,14 +104,27 @@ Search by postcode or streetname - Search for land and property information
       </div>
 
       <div class="app-element-to-toggle app-hidden app-postcode-list__5">
-        <p> 6 addresses found </p>
+        <p> 10 addresses found </p>
         <ul class="app-list__postcode-list">
           <li><a href="#">1 Long Street, Plymouth, PL5 6WD</a></li>
           <li><a href="#">2 Long Street, Plymouth, PL5 6WD</a></li>
           <li><a href="#">3 Long Street, Plymouth, PL5 6WD</a></li>
-          <li><a href="summary">4 Long Street, Plymouth, PL5 6WD</a></li>
+          <li><form id="4-long-street" action="summary">
+
+            <!-- Set up address variables **************************************** -->
+            <input type="hidden" name="property-address" id="property-address" value="4 Long street" />
+            <input type="hidden" name="property-postcode" id="property-postcode" value="PL5 6WD" />
+            <input type="hidden" name="property-city" id="property-city" value="Plymouth" />
+            <input type="hidden" name="title-num" id="title-num" value="DN5888" />
+            <a href="#" onclick="document.getElementById('4-long-street').submit();">
+              4 Long Street, Plymouth, PL5 6WD</a>
+          </form></li>
           <li><a href="#">5 Long Street, Plymouth, PL5 6WD</a></li>
           <li><a href="#">6 Long Street, Plymouth, PL5 6WD</a></li>
+          <li><a href="#">7 Long Street, Plymouth, PL5 6WD</a></li>
+          <li><a href="#">8 Long Street, Plymouth, PL5 6WD</a></li>
+          <li><a href="#">9 Long Street, Plymouth, PL5 6WD</a></li>
+          <li><a href="#">10 Long Street, Plymouth, PL5 6WD</a></li>
         </ul>
         <br>
         <br>
@@ -141,8 +141,26 @@ Search by postcode or streetname - Search for land and property information
           <li><a href="#">2 Clinton Street, Exeter, EX4 1AX</a></li>
           <li><a href="#">3 Clinton Street, Exeter, EX4 1AX</a></li>
           <li><a href="#">4 Clinton Street, Exeter, EX4 1AX</a></li>
-          <li><a href="summary">5 Clinton Street, Exeter, EX4 1AX</a></li>
-          <li><a href="#">6 Clinton Street, Exeter, EX4 1AX</a></li>
+          <li><form id="5-clinton-street" action="summary">
+
+            <!-- Set up address variables **************************************** -->
+            <input type="hidden" name="property-address" id="property-address" value="5 Clinton street" />
+            <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+            <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+            <input type="hidden" name="title-num" id="title-num" value="DN1234" />
+            <a href="#" onclick="document.getElementById('5-clinton-street').submit();">
+              5 Clinton Street, Exeter, EX4 1AX</a>
+          </form></li>
+          <li><form id="6-clinton-street" action="summary">
+
+            <!-- Set up address variables **************************************** -->
+            <input type="hidden" name="property-address" id="property-address" value="6 Clinton street" />
+            <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+            <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+            <input type="hidden" name="title-num" id="title-num" value="DN220099" /> 
+            <a href="#" onclick="document.getElementById('6-clinton-street').submit();">
+              6 Clinton Street, Exeter, EX4 1AX</a>
+          </form></li>
           <li><a href="#">7 Clinton Street, Exeter, EX4 1AX</a></li>
           <li><a href="#">8 Clinton Street, Exeter, EX4 1AX</a></li>
           <li><a href="#">9 Clinton Street, Exeter, EX4 1AX</a></li>
@@ -155,6 +173,18 @@ Search by postcode or streetname - Search for land and property information
           follow Ordnance survey terms and conditions</a> (link opens in new tab).</p>
       </div>
 
+    </div>
+    <div class="govuk-grid-column-one-thirds">
+    {% if data['signed-in'] == 'false' %}
+      <form id="form-search-signin" action="sign-in">
+        <input type="hidden" name="return-form" id="return-form" value="search-page" />
+        <p class="govuk-!-margin-top-4" style="text-align: right;"><a class="govuk-link govuk-!-font-size-19"
+          href="#" onclick="document.getElementById('form-search-signin').submit();">
+          Sign in</a></p>
+      </form>
+    {% else %}
+      <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
+    {% endif %}
     </div>
   </div>
 
