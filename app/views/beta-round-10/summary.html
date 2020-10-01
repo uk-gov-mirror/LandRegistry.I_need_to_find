@@ -44,26 +44,14 @@
 
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
-  <div class="govuk-grid-column-one-third">
-      <p style="text-align: left;"> English | <a> Cymraeg </a> </p>
-  </div>
-  <div class="govuk-grid-column-two-thirds">
-  {% if data['signed-in'] == 'false' %}
-    <form id="form-summary-signin" action="sign-in">
-      <input type="hidden" name="return-page" id="return-page" value="summary-page" />
-      <p style="text-align: right;"><a class="govuk-link govuk-!-font-size-19"
-        href="#" onclick="document.getElementById('form-summary-signin').submit();">
-        Sign in</a></p>
-    </form>
-  {% else %}
-    <p style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
-  {% endif %}
+  <div class="govuk-grid-column-full">
+      <p style="text-align: right;"> English | <a> Cymraeg </a> </p>
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l govuk-!-margin-top-4 govuk-!-margin-bottom-4">Summary of {{data['property-type-lower']}}</h1>
+    <h1 class="govuk-heading-l">Summary of freehold</h1>
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -106,10 +94,7 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">Type</dt>
         <dd class="govuk-summary-list__value">
-          {{data['property-type']}}<br>
-
-          <!-- Freehold  -->
-          {% if data['property-type'] == 'Freehold' %}
+          Freehold<br>
           <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">What's freehold?</span>
@@ -124,24 +109,6 @@
                 the leasehold instead.</b></p>
             </div>
           </details>
-          <!-- Leasehold  -->
-          {% else %}
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">What's leasehold?</span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>Leasehold is one of two ways of owning land (the other is freehold).
-                 A leasehold is granted by a landlord to a tenant.</p>
-
-              <p>A leasehold lasts for a fixed time which will be set out in the lease.
-                 The tenant often has to pay rent to the landlord and this is also set
-                 out in the lease.</p>
-
-              <p>Most flats are leasehold.</p>
-            </div>
-          </details>
-          {% endif %}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -201,12 +168,114 @@
       </div>
     </dl>
 
+    <h2 class="govuk-heading-m">Restrictive covenants and easements </h2>
+    <p>There may be other things that affect this property that are not listed here.
+        For more information about the records we hold, you should obtain a copy of the
+        register and any documents referred to in the register.</p>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        To understand more about how this information affects the property, you should consider taking legal advice.
+      </strong>
+    </div>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header">Recorded</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"<div style='width: 300px;'>Restrictive covenants
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What's a restrictive covenant?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                A restrictive covenant is a contract between 2 landowners: one landowner
+                promises the other landowner not to carry out particular acts on
+                their own land.
+                <br><br>
+
+                The types of act restricted can vary but common examples include
+                not building in certain areas and not storing caravans.
+                <br><br>
+                The burden of a restrictive covenant can bind future owners of the
+                affected land.
+              </div>
+            </details>
+          </th>
+          {% if data['property-address'] == "4 Long Street" %}
+            <td class="govuk-table__cell">No
+            </td>
+          {% else %}
+            <td class="govuk-table__cell">Yes
+              <br>
+              <br>
+              For the full details, you’ll need to buy a copy of the register and
+              any documents referred to in the register.
+              <br>
+            </td>
+          {% endif %}
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Easements
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What's an easement?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                An easement is a right that one piece of land has over another piece
+                 of land. Common examples are rights of drainage, rights of way
+                 and rights of support.
+                <br><br>
+                An easement might benefit the property or might be a burden on the
+                property and benefit other land.
+              </div>
+            </details>
+          </th>
+          {% if data['property-address'] == "4 Long Street" %}
+            <td class="govuk-table__cell">Yes
+              <br>
+              <br>
+              For the full details, you’ll need to buy a copy of the register and
+              any documents referred to in the register.
+              <br>
+            </td>
+          {% else %}
+            <td class="govuk-table__cell">No
+            </td>
+          {% endif %}
+        </tr>
+      </tbody>
+    </table>
+
     <p><a><img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" "><u>Print this page</u></a></p>
     <p><a><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image"><u>Download this page</u></a></p>
 
     <p> <a href="/beta-round-10/search">Search again</a> </p>
 
 
+  </div>
+  <div class="govuk-grid-column-one-thirds">
+  {% if data['signed-in'] == 'false' %}
+    <form id="form-summary-signin" action="sign-in">
+      <input type="hidden" name="return-page" id="return-page" value="summary-page" />
+      <p class="govuk-!-margin-top-4" style="text-align: right;"><a class="govuk-link govuk-!-font-size-19"
+        href="#" onclick="document.getElementById('form-summary-signin').submit();">
+        Sign in</a></p>
+    </form>
+  {% else %}
+    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
+  {% endif %}
   </div>
 </div>
 
