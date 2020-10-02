@@ -211,16 +211,16 @@
               </div>
             </details>
           </th>
-          {% if data['property-address'] == "4 Long street" %}
-            <td class="govuk-table__cell">No
-            </td>
+          {% if data['property-address'] == "5 Clinton street" %}
+          <td class="govuk-table__cell">Yes
+            <br>
+            <br>
+            For the full details, you’ll need to buy a copy of the register and
+            any documents referred to in the register.
+            <br>
+          </td>
           {% else %}
-            <td class="govuk-table__cell">Yes
-              <br>
-              <br>
-              For the full details, you’ll need to buy a copy of the register and
-              any documents referred to in the register.
-              <br>
+            <td class="govuk-table__cell">No
             </td>
           {% endif %}
         </tr>
