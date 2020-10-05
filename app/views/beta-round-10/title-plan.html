@@ -50,17 +50,22 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <!-- Change heading depending on what search was performed  -->
+  <div class="govuk-grid-column-one-half">
     <h1 class="govuk-heading-l">Digital title plan for:</h1>
+  </div>
+  <div>
+    <p class="govuk-!-margin-top-4" style="text-align: right;">
+      <a href="#" style="padding-right: 20px;">Sign out</a>
+      <a href="my-documents" style="padding-right: 20px;">My documents</a>
+      <a href="search">Start new search</a> </p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
     (Freehold)</h1>
     <h1 class="govuk-heading-m">Title number: {{data['title-num']}}</h1>
     <h1 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h1>
-    <br>
-  </div>
-  <div class="govuk-grid-column-one-thirds">
-    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
   </div>
 </div>
 
@@ -74,14 +79,18 @@
     <img src="/../../public/images/title_plan_4.png" style="padding: 10px;">
   {% endif %}
 </div>
+<br>
 
-<div>
-  <br>
-  <p> <a href="summary"> Return to Summary of freehold</a> </p>
-  <br>
-  <br>
-  <br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <p><a href="summary">Go to Summary of freehold</a></p>
+  </div>
+  <div>
+    <p style="text-align: right;"><a href="search">Start new search</a></p>
+  </div>
 </div>
+<br>
+<br>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
