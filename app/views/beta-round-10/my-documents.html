@@ -207,6 +207,12 @@ My documents - Search for land and property information
                     <td class="govuk-table__cell">
                       <form id="form-reg-5" action="digital-register-5-clinton-street">
                         <input type="hidden" name="date-purchased" id="date-purchased" value="6 October 2020" />
+                        <input type="hidden" name="property-address" id="property-address" value="5 Clinton street" />
+                        <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+                        <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+                        <input type="hidden" name="property-sold-for" id="property-sold-for" value="£250,000" />
+                        <input type="hidden" name="property-sold-date" id="property-sold-date" value="19 February 2005" />
+                        <input type="hidden" name="title-num" id="title-num" value="DN1234" />
                         <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('form-reg-5').submit();">
                           View</a>
                       </form>
@@ -223,6 +229,12 @@ My documents - Search for land and property information
                     <td class="govuk-table__cell">
                       <form id="form-plan-5" action="title-plan">
                         <input type="hidden" name="date-purchased" id="date-purchased" value="6 October 2020" />
+                        <input type="hidden" name="property-address" id="property-address" value="5 Clinton street" />
+                        <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+                        <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+                        <input type="hidden" name="property-sold-for" id="property-sold-for" value="£250,000" />
+                        <input type="hidden" name="property-sold-date" id="property-sold-date" value="19 February 2005" />
+                        <input type="hidden" name="title-num" id="title-num" value="DN1234" />
                         <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('form-plan-5').submit();">
                           View</a>
                       </form>
@@ -238,8 +250,13 @@ My documents - Search for land and property information
                     <td class="govuk-table__cell">11 October 2020</td>
                     <td class="govuk-table__cell">
                       <form id="form-reg-5-old" action="digital-register-5-clinton-street">
+                        <input type="hidden" name="property-address" id="property-address" value="5 Clinton street" />
+                        <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+                        <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+                        <input type="hidden" name="property-sold-for" id="property-sold-for" value="£250,000" />
+                        <input type="hidden" name="property-sold-date" id="property-sold-date" value="19 February 2005" />
+                        <input type="hidden" name="title-num" id="title-num" value="DN1234" />
                         <input type="hidden" name="date-purchased" id="date-purchased" value="11 June 2020" />
-                        <input type="hidden" name="property-lender" id="property-lender" value="Natwest PLC" />
                         <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('form-reg-5-old').submit();">
                           View</a>
                       </form>
@@ -255,6 +272,12 @@ My documents - Search for land and property information
                     <td class="govuk-table__cell">
                       <form id="form-plan-5-old" action="title-plan">
                         <input type="hidden" name="date-purchased" id="date-purchased" value="11 June 2020" />
+                        <input type="hidden" name="property-address" id="property-address" value="5 Clinton street" />
+                        <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+                        <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+                        <input type="hidden" name="property-sold-for" id="property-sold-for" value="£250,000" />
+                        <input type="hidden" name="property-sold-date" id="property-sold-date" value="19 February 2005" />
+                        <input type="hidden" name="title-num" id="title-num" value="DN1234" />
                         <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('form-plan-5-old').submit();">
                           View</a>
                       </form>
@@ -264,7 +287,18 @@ My documents - Search for land and property information
                   </tr>
               </tbody>
             </table>
-            <p style="text-align: right;"> <a href="/beta-round-10/buy-documents">Buy documents for 5 Clinton Street again</a> </p>
+
+            <form id="buy-again" action="/beta-round-10/buy-documents">
+              <input type="hidden" name="date-purchased" id="date-purchased" value="11 June 2020" />
+              <input type="hidden" name="property-address" id="property-address" value="5 Clinton street" />
+              <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+              <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+              <input type="hidden" name="property-sold-for" id="property-sold-for" value="£250,000" />
+              <input type="hidden" name="property-sold-date" id="property-sold-date" value="19 February 2005" />
+              <input type="hidden" name="title-num" id="title-num" value="DN1234" />
+              <p style="text-align: right;"><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('buy-again').submit();">
+                Buy documents for 5 Clinton Street again</a></p>
+            </form>
             {% if data['task-status'] == 'task2-6-docs' or data['task-status'] == 'task2-both-docs' %}
               <h1 class="govuk-heading-m">6 Clinton Street, Exeter, EX4 1AX (Freehold)</h1>
               <table class="govuk-table">
@@ -284,6 +318,12 @@ My documents - Search for land and property information
                       <td class="govuk-table__cell">6 January 2021</td>
                       <td class="govuk-table__cell">
                         <form id="form-reg-6" action="digital-register-6-clinton-street">
+                          <input type="hidden" name="property-address" id="property-address" value="6 Clinton street" />
+                          <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+                          <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+                          <input type="hidden" name="property-sold-for" id="property-sold-for" value="£240,000" />
+                          <input type="hidden" name="property-sold-date" id="property-sold-date" value="21 March 2010" />
+                          <input type="hidden" name="title-num" id="title-num" value="DN220099" />
                           <input type="hidden" name="date-purchased" id="date-purchased" value="6 October 2020" />
                           <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('form-reg-6').submit();">
                             View</a>
@@ -300,6 +340,12 @@ My documents - Search for land and property information
                       <td class="govuk-table__cell">6 January 2021</td>
                       <td class="govuk-table__cell">
                         <form id="form-plan-6" action="title-plan">
+                          <input type="hidden" name="property-address" id="property-address" value="6 Clinton street" />
+                          <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+                          <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+                          <input type="hidden" name="property-sold-for" id="property-sold-for" value="£240,000" />
+                          <input type="hidden" name="property-sold-date" id="property-sold-date" value="21 March 2010" />
+                          <input type="hidden" name="title-num" id="title-num" value="DN220099" />
                           <input type="hidden" name="date-purchased" id="date-purchased" value="6 October 2020" />
                           <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('form-plan-6').submit();">
                             View</a>
@@ -311,7 +357,17 @@ My documents - Search for land and property information
                     {% endif %}
                 </tbody>
               </table>
-              <p style="text-align: right;"> <a href="/beta-round-10/buy-documents">Buy documents for 6 Clinton Street again</a> </p>
+              <form id="buy-6-again" action="/beta-round-10/buy-documents">
+                <input type="hidden" name="property-address" id="property-address" value="6 Clinton street" />
+                <input type="hidden" name="property-postcode" id="property-postcode" value="EX4 1AX" />
+                <input type="hidden" name="property-city" id="property-city" value="Exeter" />
+                <input type="hidden" name="property-sold-for" id="property-sold-for" value="£240,000" />
+                <input type="hidden" name="property-sold-date" id="property-sold-date" value="21 March 2010" />
+                <input type="hidden" name="title-num" id="title-num" value="DN220099" />
+                <input type="hidden" name="date-purchased" id="date-purchased" value="6 October 2020" />
+                <p style="text-align: right;"><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('buy-6-again').submit();">
+                  Buy documents for 6 Clinton Street again</a></p>
+              </form>
             {% endif %}
             <h1 class="govuk-heading-m">10 Short lane, Exeter, EX4 8UG (Freehold)</h1>
             <table class="govuk-table">
