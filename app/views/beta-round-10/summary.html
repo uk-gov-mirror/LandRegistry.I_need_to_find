@@ -57,9 +57,10 @@
   {% if data['signed-in'] == 'false' %}
     <form id="form-summary-signin" action="sign-in">
       <input type="hidden" name="return-page" id="return-page" value="summary-page" />
-      <p class="govuk-!-margin-top-4" style="text-align: right;"><a class="govuk-link govuk-!-font-size-19"
-        href="#" onclick="document.getElementById('form-summary-signin').submit();">
-        Sign in</a></p>
+      <p class="govuk-!-margin-top-4" style="text-align: right;">
+        <a style="padding-right: 20px;" href="#" onclick="document.getElementById('form-summary-signin').submit();">
+        Sign in</a>
+      <a href="search">Start new search</a> </p>
     </form>
   {% else %}
     <p class="govuk-!-margin-top-4" style="text-align: right;">
