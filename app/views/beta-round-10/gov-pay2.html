@@ -126,12 +126,27 @@
     </table>
 
     <form action="gov-pay3.html">
+      {% if data['property-address'] == '5 Clinton street' %}
+        {% if data['task-status'] == 'task2-6-docs' %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-both-docs" />
+        {% else %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-5-docs" />
+        {% endif %}
+      {% elif data['property-address'] == '6 Clinton street' %}
+        {% if data['task-status'] == 'task2-5-docs' %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-both-docs" />
+        {% else %}
+          <input type="hidden" name="task-status" id="task-status" value="task2-6-docs" />
+        {% endif %}
+      {% elif  data['property-address'] == '4 Long street' %}
+        <input type="hidden" name="task-status" id="task-status" value="task1-docs" />
+      {% endif %}
       <button class="govuk-button" type="submit">
         Confirm payment
       </button>
-
-      <p class="govuk-body"><a href="#" class="govuk-link">Cancel payment</a></p>
     </form>
+
+    <p class="govuk-body"><a href="#" class="govuk-link">Cancel payment</a></p>
 
   </div>
 </div>
