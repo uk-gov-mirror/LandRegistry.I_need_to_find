@@ -50,8 +50,28 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-one-half">
     <h1 class="govuk-heading-l">Summary of freehold</h1>
+  </div>
+  <div>
+  {% if data['signed-in'] == 'false' %}
+    <form id="form-summary-signin" action="sign-in">
+      <input type="hidden" name="return-page" id="return-page" value="summary-page" />
+      <p class="govuk-!-margin-top-4" style="text-align: right;"><a class="govuk-link govuk-!-font-size-19"
+        href="#" onclick="document.getElementById('form-summary-signin').submit();">
+        Sign in</a></p>
+    </form>
+  {% else %}
+    <p class="govuk-!-margin-top-4" style="text-align: right;">
+      <a href="#" style="padding-right: 20px;">Sign out</a>
+      <a href="my-documents" style="padding-right: 20px;">My documents</a>
+      <a href="search">Start new search</a> </p>
+  {% endif %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -257,26 +277,24 @@
         </tr>
       </tbody>
     </table>
-
-    <p><a><img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" "><u>Print this page</u></a></p>
-    <p><a><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image"><u>Download this page</u></a></p>
-
-    <p> <a href="/beta-round-10/search">Search again</a> </p>
-
-
-  </div>
-  <div class="govuk-grid-column-one-thirds">
-  {% if data['signed-in'] == 'false' %}
-    <form id="form-summary-signin" action="sign-in">
-      <input type="hidden" name="return-page" id="return-page" value="summary-page" />
-      <p class="govuk-!-margin-top-4" style="text-align: right;"><a class="govuk-link govuk-!-font-size-19"
-        href="#" onclick="document.getElementById('form-summary-signin').submit();">
-        Sign in</a></p>
-    </form>
-  {% else %}
-    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
-  {% endif %}
   </div>
 </div>
+
+  <div class="govuk-grid-row">
+    <div>
+      <p><a href="search">Start new search</a></p>
+      <br>
+      <br>
+      <p><a><img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" "><u>Print this page</u></a></p>
+      <p><a><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image"><u>Download this page</u></a></p>
+
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+
+
 
 {% endblock %}
