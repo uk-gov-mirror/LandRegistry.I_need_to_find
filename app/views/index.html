@@ -30,7 +30,7 @@
 
 
 {% block content %}
-<!---Blocked out if we want to modfy for next round
+<!---Blocked out if we want to modfy for next round--->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -48,12 +48,10 @@
     <p>Your property is: 7 Long street,
     Plymouth, PL5 6WD.</p>
     <p><b>
-      <form id="task-1" action="/beta-round-10/01-start" target="_blank">--->
+      <form id="task-1" action="/beta-round-11/01-start" target="_blank">
         <!-- Set up prototype variables **************************************** -->
         <input type="hidden" name="task-status" id="task-status" value="task-initial" />
         <input type="hidden" name="task" id="task" value="task1" />
-        <input type="hidden" name="return-page" id="return-page" value="search-page" />
-
         <p> <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-1').submit();">
           Start scenario 1</a> (opens in new tab)
       </form>
@@ -90,7 +88,7 @@
     <p>You’ve decided that you’re going to go back onto the land registry service
        and check if they have any information that could help you find out. </p>
 
-    <p>The property you’re interested in is: 6 Clinton street, Plymouth. PL4 1AX</p>
+    <p>The property you’re interested in is: 4 Clinton street, Plymouth. PL4 1AX</p>
 
 
     <p><b>
@@ -103,14 +101,11 @@
       </form>
     </b></p>
 
-    --->
-
-
+<!---
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Search for land and property information
       <span class="govuk-caption-m">Providing the right land or property data, at the right time, in the right way</span></h1>
-
     <p>By improving or replacing our current land or property information services - we're testing the assumption that we'll help to:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>improve customer experience </li>
@@ -121,24 +116,14 @@
     <p> Repository - https://github.com/LandRegistry/I_need_to_find </p>
   </div>
 </div>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
     <div class="govuk-section-break--m">
     </div>
-
     <h2 class="govuk-heading-l">Version history</h2>
-
     <h3 class="govuk-heading-m">Beta</h3>
-
     <div class="govuk-tabs" data-module="govuk-tabs">
       <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#round-10">
-            Round 10
-          </a>
-        </li>
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
           <a class="govuk-tabs__tab" href="#round-9">
             Round 9
@@ -155,87 +140,11 @@
         </a>
       </li>
       </ul>
-
-      <section class="search-history-tabs__panel" id="round-10">
-        <br>
-        <br>
-        <p><b>Round 10 prototype - October 2020</b></p>
-
-        <p><b>
-
-          <p><b>
-            <form id="task-1" action="/beta-round-10/01-start" target="_blank">
-              <!-- Set up prototype variables **************************************** -->
-              <input type="hidden" name="task-status" id="task-status" value="task1-initial" />
-              <input type="hidden" name="task" id="task" value="task1" />
-              <input type="hidden" name="signed-in" id="signed-in" value="false" />
-              <input type="hidden" name="return-page" id="return-page" value="search-page" />
-
-              <p> <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-1').submit();">
-                Check if there's a right of way over the garden of a property you want to buy</a> (opens in new tab)
-            </form>
-          </b></p>
-              <p> Use PL5 6WD, then 4 Long Street, Plymouth.
-              </p>
-
-
-          <p><b>Things we wanted to find out included:</b></p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li><p>if and how does the content throughout the service help users find easement or restrictive covenant entries in the register?
-                </p>
-            </li>
-            <li><p>do users know what happens to their documents after they've been bought?
-                </p>
-            </li>
-            </ul>
-
-            <br>
-
-            <p><b>
-              <form id="task-2" action="beta-round-10/01-start" target="_blank">
-                <!-- Set up prototype variables **************************************** -->
-                <input type="hidden" name="task-status" id="task-status" value="task2-initial" />
-                <input type="hidden" name="task" id="task" value="task2" />
-                <input type="hidden" name="signed-in" id="signed-in" value="false" />
-                <input type="hidden" name="return-page" id="return-page" value="search-page" />
-
-                <p><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-2').submit();">
-                  Access documents you've bought in the service previously</a> (opens in new tab)
-              </form>
-            </b></p>
-            <p> Use EX4 1AX, then 5 Clinton Street, Exeter. You can also view 6 Clinton Street.
-            </p>
-
-
-            <p><b>Things we wanted to find out included:</b></p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>
-                <p>can users successfully access documents that they've bought previously in the service?
-                </p>
-              </li>
-              <li>
-                <p>what behaviour do users demonstrate when told there are no restrictive covenants or easements for a property?
-                </p>
-              </li>
-            </ul>
-
-          <!--<p><b><a href=""
-                target="_blank">View Round 10 design decisions</a>
-               </b> (opens in new tab)
-            </p>
-          <br>
-          <p><b> <a href="#"
-             target="_blank">View Round 10 user research insights</a></b> (opens in new tab)</p>
-             --->
-        </section>
-
       <section class="search-history-tabs__panel" id="round-9">
         <br>
         <br>
         <p><b>Round 9 prototype - June 2020</b></p>
-
         <p><b>
-
        <form id="task1-4-long-street" action="/beta-round-9/01-start" target="_blank">
             <input type="hidden" name="property-type" id="property-type" value="Freehold" />
             <input type="hidden" name="property-type-lower" id="property-type-lower" value="freehold" />
@@ -254,9 +163,7 @@
           </form>
         </b></p>
         <p> Use PL5 6WD, then 4 Long Street, Plymouth. </p>
-
         <p><b>
-
           <form id="task-5-clinton" action="beta-round-9/01-start" target="_blank">
             <input type="hidden" name="property-type" id="property-type" value="Freehold" />
             <input type="hidden" name="property-type-lower" id="property-type-lower" value="freehold" />
@@ -275,15 +182,12 @@
           </form>
         </b></p>
         <p> Use EX4 1AX, then 5 Clinton Street, Exeter. </p>
-
         <br>
-
         <p><b><a href="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_/files/MCHhtA-FUsESGqfZHeGILcWw"
               target="_blank">View Round 9 design decisions</a>
              </b> (opens in new tab)
           </p>
           <br>
-
           <p><b>Things we wanted to find out included:</b></p>
           <ul class="govuk-list govuk-list--bullet">
             <li><p>does the Start page give our users confidence that they can complete their tasks?
@@ -298,28 +202,23 @@
               </p>
             </li>
           </ul>
-
           <br>
           <p><b> <a href="https://landregistryuk.sharepoint.com/:p:/r/sites/Ineedtofindoutaboutlandorproperty/_layouts/15/Doc.aspx?sourcedoc=%7B9C3AEAA8-A4EE-4C10-919D-A4EEFBBE5748%7D&file=UR%20Download%20Round%209.pptx&action=edit&mobileredirect=true"
              target="_blank">View Round 9 user research insights</a></b> (opens in new tab)</p>
         </section>
-
     <section class="search-history-tabs__panel" id="round-8">
       <br>
       <br>
         <p><b><a href="beta-round-8/01-start">Start Round 8 prototype - June 2020</a></b></p>
-
         <p><b><a href="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_/files/MCHhtA-FUsESGqfZHeGILcWw"
               target="_blank">View Round 8 design decisions</a>
              </b> (opens in new tab)
           </p>
           <br>
-
           <p><b>Things we wanted to find out included:</b></p>
           <ul class="govuk-list govuk-list--bullet">
             <li><p>does the Start page give our users confidence that they're in the right place?</p>
             </li>
-
             <li>
               <p>what do our users understand about 'Closed' titles?
               </p>
@@ -334,23 +233,18 @@
             </li>
           </ul>
           <br>
-
         <p>
           <b>
           <a href="https://docs.google.com/presentation/d/10ziGIIWZeb-Ubg8FF2eQDJK3PfQo50B_5AyYhKWo7k0/edit?usp=sharing"
              target="_blank">View Round 8 user research insights</a></b> (opens in new tab </p>
-
         </section>
-
       <section class="search-history-tabs__panel" id="round-7">
         <br>
         <br>
         <p><b><a href="beta-round-7/01-start">Start Round 7 prototype - May 2020</a></b></p>
-
           <p><b><a href="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_/files/MCHhtA-FUsESGqfZHeGILcWw"
               target="_blank">View Round 7 design decisions</a></b> (opens in new tab)</p>
           <br>
-
           <p><b>Things we wanted to find out included:</b></p>
           <ul class="govuk-list govuk-list--bullet">
             <li><p>does the Start page give our users confidence that they're in the right place?</p>
@@ -369,15 +263,11 @@
             </li>
           </ul>
           <br>
-
           <p><b><a href="https://docs.google.com/presentation/d/1ugkuA6Ow4tBGacfoRNs18uzQOdBKG0kQMJHrO0QHhI4/edit"
              target="_blank">View Round 7 user research insights</a></b> (opens in new tab)</p>
-
         </section>
-
         <br>
         <br>
-
     <div class="govuk-tabs" data-module="govuk-tabs">
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
@@ -411,7 +301,6 @@
           </a>
         </li>
       </ul>
-
       <section class="search-history-tabs__panel" id="round-6">
         <br>
         <br>
@@ -419,7 +308,6 @@
         <p><b><a href="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_/files/MCHbtQVoQ2HCZSM7lp18dH5e"
             target="_blank">View Round 6 design decisions</a></b> (opens in new tab)</p>
         <br>
-
         <p><b>Things we wanted to find out included:</b></p>
         <ul class="govuk-list govuk-list--bullet">
           <p><li> could users use the prototype to buy relevant documents (Register view and Title plan) <br> now that the
@@ -437,19 +325,15 @@
           </li>
         </ul>
         <br>
-
         <p><b><a href="https://docs.google.com/presentation/d/18NNXhgd4N9Z_fjw1XgxPIBnCj74oWahU_bnzabiqPeA/edit#slide=id.g418f0e178c_0_0"
            target="_blank">View Round 6 user research insights</a></b> (opens in new tab)</p>
       </section>
-
-
       <section class="search-history-tabs__panel" id="round-5">
         <br>
         <br>
         <p><b><a href="beta-round-5/01-start">Start Round 5 prototype - March 2020<a></b></p>
         <p><b><a href="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_/files/MCHbtQVoQ2HCZau9gKTD2zMG"
             target="_blank">View Round 5 design decisions</a></b> (opens in new tab)</p>
-
         <br>
         <p><b>Things we wanted to find out included:</b></p>
         <ul class="govuk-list govuk-list--bullet">
@@ -470,7 +354,6 @@
         <p><b><a href="https://docs.google.com/presentation/d/1JiNyFNy2TvA5izG7ma3sJFpQl3Gz1roB4Ttokv3QC00/edit#slide=id.g418f0e178c_0_0"
            target="_blank">View Round 5 user research insights</a></b> (opens in new tab)</p>
       </section>
-
       <section class="search-histor-tabs__panel" id="round-4">
         <br>
         <br>
@@ -504,7 +387,6 @@
         <p><b><a href="https://docs.google.com/presentation/d/15ZEcyBN5jZDqOOYbN_n_iH7YvJLzWtWtzTAUW9l9bos/edit#slide=id.g418f0e178c_0_0"
            target="_blank">View Round 4 user research insights</a></b> (opens in new tab)</p>
       </section>
-
       <section class="search-histor-tabs__panel" id="round-3">
         <br>
         <br>
@@ -528,7 +410,6 @@
         <p><b><a href="https://docs.google.com/presentation/d/1y2O0oYtUV5Jh5FSccZSjyzq5NQ25I-ro8h0AJCfZ-pI/edit#slide=id.g418f0e178c_0_0"
            target="_blank">View Round 3 user research insights</a></b> (opens in new tab)</p>
       </section>
-
       <section class="search-histor-tabs__panel" id="round-2">
         <br>
         <br>
@@ -556,10 +437,8 @@
         <br>
         <p><b><a href="https://docs.google.com/presentation/d/1bnUinzYx8L-Oaxo6_LGznqybK0ehAUQpc884zqCqPvI/edit#slide=id.g418f0e178c_0_0"
            target="_blank">View Round 2 user research insights</a></b> (opens in new tab)</p>
-
         <p>A Welsh prototype can be accessed from the Start page. Example pages include: <a href ="/welsh/terms-of-use">Terms of use </a> and <a href="/welsh/summary-of-freehold-1ps">Summary of Freehold</a>. </p>
       </section>
-
       <section class="search-histor-tabs__panel" id="round-1">
         <br>
         <br>
@@ -569,7 +448,6 @@
         <p><b><a href="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_/files/MCHbtQVoQ2HCZZOqQ7jV5_Sl"
             target="_blank">View Round 1 design decisions</a></b> (opens in new tab)</p>
         <br>
-
         <p> <b>In this prototype the user can: </b></p>
         <ul class="govuk-list govuk-list--bullet">
           <p> <li>search for a property with a postcode or street name </li></p>
@@ -580,10 +458,8 @@
         <p> Use postcode: PL1 (Peel Street), EX4 (Clinton street) or BS6 (Elgin Park)</p>
       </section>
     </div>
-
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     <div class="govuk-section-break--xl"></div>
-
     <h3 class="govuk-heading-m">Alpha</h3>
     <div class="govuk-tabs" data-module="govuk-tabs">
       <ul class="govuk-tabs__list">
@@ -618,7 +494,6 @@
           </a>
         </li>
       </ul>
-
       <section class="search-history-tabs__panel" id="version-6">
         <br>
         <p class="govuk-caption-m">June 2019 - Not tested</p>
@@ -635,7 +510,6 @@
           <a href ="https://gallery.io/projects/MCHbtQVoQ2HCZe9_ozBDTdo_/files/MCFdvXoeP5zvDxwy2bXOIeCD" target="_blank">View how we've mapped our user insights to our previous prototype</a> (link opens in new tab). <br>You may have to request access.
         </ul>
       </section>
-
       <section class="search-history-tabs__panel" id="version-5">
         <br>
         <p class="govuk-caption-m"> 07 May 2019</p>
@@ -661,7 +535,6 @@
         </p>
         </ul>
       </section>
-
       <section class="search-histor-tabs__panel" id="version-4">
         <br>
         <p class="govuk-caption-m"> 26 April 2019</p>
@@ -678,7 +551,6 @@
           <a href="https://docs.google.com/presentation/d/173CPlclG54hitzTO-XYFRQGR7etPLjSazsuWcoIQ3ek/edit#slide=id.g50fa09b39e_0_63" target="_blank">View Alpha Round 4 research</a> (link opens in new tab)
         </ul>
       </section>
-
       <section class="search-histor-tabs__panel" id="version-3">
         <br>
         <p class="govuk-caption-m"> 12 April 2019</p>
@@ -708,7 +580,6 @@
           <p>Start page content shows summaries of the pay tiers instead of bulleted lists. <p>
         </ul>
       </section>
-
       <section class="search-histor-tabs__panel" id="version-2">
         <br>
         <p class="govuk-caption-m"> 08 April 2019</p>
@@ -721,7 +592,6 @@
             <p> <a href="https://drive.google.com/drive/folders/1gzt_b39GL-0iBETAw93cO-FSaIxQNIZf" target="_blank">Options for introducing easement and restrictive covenant indicators</a> (link opens in new tab) <p>
           </ul>
       </section>
-
       <section class="search-histor-tabs__panel" id="version-1">
         <br>
         <p class="govuk-caption-m"> 29 March 2019</p>
@@ -736,16 +606,11 @@
           </ul>
         </ul>
       </section>
-
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
       <div class="govuk-section-break--xl"></div>
-
     </div>
   </div>
 </div>
-
-
-
 <div class="govuk-grid-row">
   <div class="govuk-section-break--xl">
     <div class="govuk-grid-column-one-third govuk-section-break--xl" align="center">
@@ -758,7 +623,6 @@
            You may have to request access.
         </p>
     </div>
-
     <div class="govuk-grid-column-one-third govuk-section-break--xl" align="center">
         <img src="../../public/images/timeline.png" alt="Timeline icon" height="56">
         <div class="govuk-section-break--m"></div>
@@ -769,7 +633,6 @@
           <p> Discovery phase took place from November 2018 and lasted 6 weeks. </p>
           <p> <a href = "https://drive.google.com/drive/folders/1ifJGyuV6aAsISvmNrVbw4ofOGuJyJVap">View our End of Discovery showcase</a> (link opens in new tab). </p>
     </div>
-
     <div class="govuk-grid-column-one-third govuk-section-break--xl" align="center">
         <img src="../../public/images/assessments-2.png" alt="Assessments icon" height="56">
         <div class="govuk-section-break--m"></div>
