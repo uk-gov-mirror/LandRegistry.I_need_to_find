@@ -154,7 +154,11 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header"><div style='width: 140px;'>1</th>
+              {% if data['property-address'] == "7 Long street" %}
+              <td class="govuk-table__cell"><div style='width: 150px;'>11 October 1965</td>
+              {% else %}
               <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1997</td>
+              {% endif %}
               <td class="govuk-table__cell">The land shown edged with red on the plan of the above
                 Title filed at the Registry and being {{data['property-address']}},
                 {{data['property-city']}}, {{data['property-postcode']}}.
