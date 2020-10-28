@@ -142,9 +142,9 @@
 
             {% if data['property-address'] ==  '5 Clinton Street' %}
                <li> <b>{{data['property-price-2']}}</b> on {{data['property-history-2']}}</li>
-               <li> <b>{{data['property-price-3']}}</b> on {{data['property-history-3']}} as a <b>new build</b></li>
+               <li> <b>{{data['property-price-3']}}</b> on {{data['property-history-3']}} - New build</li>
             {% elif data['property-address'] ==  '4 Clinton Street' %}
-               <li> <b>{{data['property-price-2']}}</b> on {{data['property-history-2']}} as a <b>new build</b></li>
+               <li> <b>{{data['property-price-2']}}</b> on {{data['property-history-2']}} - New build</li>
             {% else %}
                <li> <b>{{data['property-price-2']}}</b> on {{data['property-history-2']}}</li>
             {% endif %}
@@ -208,7 +208,6 @@
               <li>display any details we hold about any restrictive covenants</li>
               <li>explain that the details are held in other documents</li>
             </ul>
-            <br>
           </td>
           {% else %}
           <td class="govuk-table__cell">No
