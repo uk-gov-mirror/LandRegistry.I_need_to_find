@@ -104,7 +104,7 @@ function postcodeSearch(){
 
     $('.app-postcode-list__1').removeClass('app-hidden');
 
-  }else if (postcode.indexOf('EX4 1AX') !== -1 || postcode.indexOf('EXETER') !== -1) {
+  }else if (postcode.indexOf('PL4 1AX') !== -1) {
 
     $('.app-postcode-list__3').removeClass('app-hidden');
 
