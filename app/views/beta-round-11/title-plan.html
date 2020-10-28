@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Digtial title plan - Search for land and property information
+  Digital title plan - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -94,26 +94,8 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <script>
-         function ImagetoPrint(source)
-         {
-             return "<html><head><scri"+"pt>function step1(){\n" +
-                     "setTimeout('step2()', 10);}\n" +
-                     "function step2(){window.print();window.close()}\n" +
-                     "</scri" + "pt></head><body onload='step1()'>\n" +
-                     "<img src='" + source + "' /></body></html>";
-         }
-         function PrintImage(source)
-         {
-             var Pagelink = "about:blank";
-             var pwa = window.open(Pagelink, "_new");
-             pwa.document.open();
-             pwa.document.write(ImagetoPrint(source));
-             pwa.document.close();
-         }
-    </script>
-    <p><a href="../../public/images/summary-of-leasehold-35cs.png" onclick="PrintImage('../../public/images/summary-of-leasehold-35cs.png'); return false;"> <img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" onclick="PrintImage('../../public/images/summary-of-leasehold-35cs.png'); return false;">Print this page</a></p>
-    <p><a href="../../public/images/summary-of-leasehold-35cs.png"download><img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>
+    <p><a href="#"> <img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image">Print this page</a></p>
+    <p><a href="#"> <img src="../../public/images/save-page.png"alt="download page icon" height="15" class="icon-image">Download this page</a></p>
   </div>
 </div>
 
