@@ -100,11 +100,11 @@ function postcodeSearch(){
 
     $('.app-postcode-list__6').removeClass('app-hidden');
 
-  }else if (postcode.indexOf('WA7') !== -1 || postcode.indexOf('PEEL') !== -1 || postcode.indexOf('PEAL') !== -1 || postcode.indexOf('PL1') !== -1) {
+  }else if (postcode.indexOf('PL4 1AX') !== -1) {
 
     $('.app-postcode-list__1').removeClass('app-hidden');
 
-  }else if (postcode.indexOf('PL4 1AX') !== -1) {
+  }else if (postcode.indexOf('EX4 1AX') !== -1) {
 
     $('.app-postcode-list__3').removeClass('app-hidden');
 
