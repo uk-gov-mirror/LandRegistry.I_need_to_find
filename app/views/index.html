@@ -30,7 +30,6 @@
 
 
 {% block content %}
-<!---Blocked out if we want to modfy for next round
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -40,17 +39,20 @@
 
     <h2 class="govuk-heading-m">Scenario 1</h2>
     <p>You’re in the process of putting your property up for sale.</p>
-    <p>Your estate agent believes that your house should be marketed as a ‘terraced house’.
-      You’re not very happy about this as you live in an end-of-terrace house, which you have always thought of as semi-detached.
-      You think your house could sell for more money if they market it as ‘semi-detached’.</p>
-    <p>You decide to use the new land registry service to find out if they hold
-      any information about your property that would help settle the debate.</p>
-    <p>Your property is: 7 Long Street, Plymouth, PL5 6WD.</p>
+    <p>Your estate agent has asked you to provide your property documents.
+      They’ve told you about a new service from HM Land Registry that they think
+      you can use to download these documents.</p>
+    <p>They’ve asked you for the:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Digital register</li>
+      <li>Digital title plan</li>
+    </ul>
+
+    <p>Your property is: 4 Clinton Street, Plymouth, PL4 1AX.</p>
     <p><b>
-      <form id="task-1" action="/beta-round-11/01-start" target="_blank">
-        <!-- Set up prototype variables ****************************************
+      <form id="task-1" action="/beta-round-12/01-start" target="_blank">
         <input type="hidden" name="task-status" id="task-status" value="task-initial" />
-        <input type="hidden" name="task" id="task" value="task1" />
+        <input type="hidden" name="scenario" id="scenario" value="scenario1" />
         <p> <a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-1').submit();">
           Start scenario 1</a> (opens in new tab)
       </form>
@@ -59,49 +61,24 @@
     <br>
     <h2 class="govuk-heading-m">Scenario 2</h2>
 
-    <p>You’ve now found a property that you’re interested in buying.</p>
-    <p>You’d like to know what the property has sold for over time so you know
-      you’re making a good investment. </p>
+    <p>You’ve now found a property that you’re thinking of putting an offer in for.</p>
+    <p>Before you do, you decide to use the new HM Land Registry service again
+      to find out if you can buy the property documents for it. </p>
 
-    <p>You think you’ll be able to use the new land registry service to do this.</p>
-
-    <p>The property is: 5 Clinton Street, Plymouth, PL4 1AX.</p>
+    <p>The property is: 7 Long Street, Plymouth, PL5 6WD.</p>
 
     <p><b>
-      <form id="task-2" action="beta-round-11/01-start" target="_blank">
-        <!-- Set up prototype variables ****************************************
+      <form id="task-2" action="beta-round-12/01-start" target="_blank">
         <input type="hidden" name="task-status" id="task-status" value="task-initial" />
-        <input type="hidden" name="task" id="task" value="task2" />
+        <input type="hidden" name="scenario" id="scenario" value="scenario2" />
         <p><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-2').submit();">
           Start scenario 2</a> (opens in new tab)
       </form>
     </b></p>
-    <h2 class="govuk-heading-m">Scenario 3</h2>
+  </div>
+<div>
 
-    <p>You’ve now moved into your new property and your neighbour has told you they’ll
-       be building an extension on the back of their house. </p>
-    <p>You’re not very happy about this and would like to find out if they’re allowed
-       to do this or not. </p>
-
-    <p>You’ve decided that you’re going to go back onto the land registry service
-       and check if they have any information that could help you find out. </p>
-
-    <p>Your neighbour's property is: 4 Clinton Street, Plymouth. PL4 1AX</p>
-
-
-    <p><b>
-      <form id="task-3" action="beta-round-11/01-start" target="_blank">
-        <!-- Set up prototype variables ****************************************
-        <input type="hidden" name="task-status" id="task-status" value="task-initial" />
-        <input type="hidden" name="task" id="task" value="task3" />
-        <p><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-3').submit();">
-          Start scenario 3</a> (opens in new tab)
-      </form>
-    </b></p>
-
-    --->
-
-
+<!---Blocked out if we want to modfy for next round
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Search for land and property information
@@ -251,7 +228,6 @@
           <p><b>
           <p><b>
             <form id="round11-task-1" action="/beta-round-10/01-start" target="_blank">
-              <!-- Set up prototype variables **************************************** -->
               <input type="hidden" name="task-status" id="task-status" value="task1-initial" />
               <input type="hidden" name="task" id="task" value="task1" />
               <input type="hidden" name="signed-in" id="signed-in" value="false" />
@@ -273,7 +249,6 @@
           <br>
           <p><b>
           <form id="round11-task-2" action="beta-round-10/01-start" target="_blank">
-            <!-- Set up prototype variables **************************************** -->
             <input type="hidden" name="task-status" id="task-status" value="task2-initial" />
             <input type="hidden" name="task" id="task" value="task2" />
             <input type="hidden" name="signed-in" id="signed-in" value="false" />

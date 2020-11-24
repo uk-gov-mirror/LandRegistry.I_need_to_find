@@ -197,22 +197,8 @@
               </div>
             </details>
           </th>
-          {% if data['property-address'] == "4 Clinton Street" %}
-          <td class="govuk-table__cell">Yes
-            <br>
-            <br>
-            For more information, you should buy a copy of the register.
-            <br>
-            The register will either:
-            <ul class="govuk-list govuk-list--bullet">
-              <li>display any details we hold about any restrictive covenants</li>
-              <li>explain that the details are held in other documents</li>
-            </ul>
-          </td>
-          {% else %}
           <td class="govuk-table__cell">No
           </td>
-          {% endif %}
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Easements
@@ -289,14 +275,32 @@
               </div>
             </details>
           </th>
-            <td class="govuk-table__cell">£3
+            <td class="govuk-table__cell">
+              {% if data['scenario'] == 'scenario1' %}
+                £3
+              {% elif data['scenario'] == 'scenario2' %}
+                No Digital title plan available.<br> <br>
+
+                You’ll need to apply for an <a href="OC1-page" target="_blank">official copy of the title plan instead</a> (link opens in new tab). <br> <br>
+
+                This is because the title plan is either:
+                <ul class="govuk-list govuk-list--bullet">
+                <li>larger than 20 MB</li>
+                <li> held in paper form only</li>
+                </ul>
+              {% endif %}
             </td>
         </tr>
       </tbody>
     </table>
     <form class="govuk-!-margin-top-6" style="text-align: right;" action="buy-documents">
       <button type="submit" class="govuk-button">
+        {% if data['scenario'] == 'scenario1' %}
           Buy documents
+        {% elif data['scenario'] == 'scenario2' %}
+          Buy Digital register
+        {% endif %}
+
       </button>
     </form>
     <hr style="border-color: #005DA6;">
@@ -316,9 +320,6 @@
   </div>
   <br>
   <br>
-
-
-
 
 
 {% endblock %}
