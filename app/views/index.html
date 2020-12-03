@@ -30,7 +30,7 @@
 
 
 {% block content %}
-
+<!---Blocked out for next round
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
@@ -77,8 +77,8 @@
     </b></p>
   </div>
 <div>
+--->
 
-<!---Blocked out if we want to modfy for next round
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Search for land and property information
@@ -137,20 +137,40 @@
         <br>
         <p><b>Round 12 prototype - December 2020</b></p>
             <p><b>
-              <form id="round12-task-1" action="/beta-round-12/01-start" target="_blank">
-                <input type="hidden" name="task-status" id="task-status" value="task-initial" />
-                <input type="hidden" name="task" id="task" value="task1" />
-                <p><b><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('round12-task-1').submit();">
-                  Round 12 task 1</a></b> (opens in new tab)
-              </form>
-            </b></p>
+            <form id="task-1" action="/beta-round-12/01-start" target="_blank">
+              <input type="hidden" name="task-status" id="task-status" value="task-initial" />
+              <input type="hidden" name="scenario" id="scenario" value="scenario1" />
+              <p><b><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-1').submit();">
+                Download documents for your property</a></b> (opens in new tab)
+            </form>
+          </p>
 
-            <p>Use ...</p>
+            <p>Use Pl5 6WD, then 7 Long Street.</p>
 
             <p><b>Things we wanted to find out included:</b></p>
             <ul class="govuk-list govuk-list--bullet">
-              <li><li>
-              <li></li>
+              <li>how do users interact with downloading property documents? </li>
+              <li>understanding users navigation between buying documents, downloading them and returning to other documents they've bought</li>
+            </ul>
+
+            <br>
+            <p><b>
+              <form id="task-2" action="beta-round-12/01-start" target="_blank">
+                <input type="hidden" name="task-status" id="task-status" value="task-initial" />
+                <input type="hidden" name="scenario" id="scenario" value="scenario2" />
+                <p><b><a class="govuk-link govuk-!-font-size-19" href="#" onclick="document.getElementById('task-2').submit();">
+                  Title plan is not available in service</a></b> (opens in new tab)
+              </form>
+            </p>
+
+            <p>Use Pl4 1AX, then 4 Clinton Street.</p>
+
+            <p><b>Things we wanted to find out included:</b></p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>understanding user behaviour when a document is not available in the service</li>
+              <li>do users continue to buy documents from both services?</li>
+              <li>is the content helpful in aiding users decisions?</li>
+              <li>if users do buy both documents, which order do users buy documents in? can they navigate between both services?</li>
             </ul>
       </section>
       <section class="search-history-tabs__panel" id="round-11">
