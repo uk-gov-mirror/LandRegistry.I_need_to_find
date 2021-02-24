@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Payment successful - Search for land and property information
+  Confirm payment - Search for land and property information
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,6 +13,8 @@
       We're testing a new service - your feedback will help us improve it. </span>
     </p>
   </div>
+
+
 {% endblock %}
 
 {% block header %}
@@ -32,9 +34,11 @@
       </a>
     </div>
     <div class="govuk-header__content">
+
       <a href="01-start-deeds" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
+
     </div>
   </div>
 </header>
@@ -42,72 +46,72 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
-  <div class="govuk-grid-column-full">
-    <p style="text-align: right;"> English | <a> Cymraeg </a> </p>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-full">
-    <p class="govuk-!-margin-top-4" style="text-align: right; padding-right:10px;">
-      <a href="#" style="padding-right: 20px;">Sign out</a>
-      <a href="my-documents" style="padding-right: 20px;">My documents</a>
-      <a href="search">Start new search</a> </p>
-  </div>
-  <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Your payment was successful</h1>
-  </div>
-</div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m">Your reference number is: <br>1B7183</h2>
+    <h1 class="govuk-heading-l">Confirm your payment</h1>
+    <!-- Change heading depending on what search was performed  -->
+    <h1 class="govuk-heading-m">Purchase details for {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
+    (Freehold)</h1>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
 
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Payment for:
-        </dt>
-        <dd class="govuk-summary-list__value">
-            Digital register<br>
-            Deeds (2)
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total amount:
-        </dt>
-        <dd class="govuk-summary-list__value">
-          £13.00
-        </dd>
-      </div>
-    </dl>
-    <p class="govuk-body">We have sent you a receipt by email.
-    <br>
-    <h3 class="govuk-heading-s">What happens next?</h3>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+            govuk-!-padding-top-3 govuk-!-width-one-third">Digital register</th>
+            <td class="govuk-table__cell govuk-!-font-weight-bold" style='width: 200px;'>£3.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+             govuk-!-padding-top-3 govuk-!-width-one-third">Deeds (2)</th>
+            <td class="govuk-table__cell govuk-!-font-weight-bold" style='width: 200px;'>£6.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3
+             govuk-!-padding-top-3 govuk-!-width-one-third"><b>Total cost</b></th>
+             <td class="govuk-table__cell govuk-!-font-weight-bold">£9.00</td>
 
-    <div class="govuk-inset-text">
-      You now have 90 days to view or download any documents available online.
-    </div>
+        </tr>
+      </tbody>
+    </table>
 
-    <p> We'll contact you to let you know:
-      <ul class="govuk-list govuk-list--bullet">
-        <li> when we've sent you any documents in the post</li>
-        <li> if we cannot find any documents you've requested </li>
-    </ul>
-    <p>
-      This can take up to 'x' days.
-    </p>
+    <h1 class="govuk-heading-m">Payment details</h1>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Card number:</th>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">1234 5678 9101</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Expiry date:</th>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">10/21</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Name on card:</th>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">A. Name</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Billing address:</th>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">1 High street, Plymouth, PL5 6BB</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-font-weight-regular govuk-!-padding-bottom-3 govuk-!-padding-top-3 govuk-!-width-one-third">Confirmation email:</th>
+          <td class="govuk-table__cell govuk-!-font-weight-bold">email@emailserver.com</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <br>
-
-    <form action="documents-for.html">
+    <form action="gov-pay-3-deeds.html">
+      <input type="hidden" name="task-status" id="task-status" value="task-docs" />
       <button class="govuk-button" type="submit">
-        Continue to documents
+        Confirm payment
       </button>
     </form>
+
+    <p class="govuk-body"><a href="#" class="govuk-link">Cancel payment</a></p>
+
   </div>
 </div>
+
 
 {% endblock %}

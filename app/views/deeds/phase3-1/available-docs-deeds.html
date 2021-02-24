@@ -69,30 +69,29 @@ Buy documents - Search for land and property information
         <fieldset class="govuk-fieldset" aria-describedby="vehicle-features-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-heading-l">Choose documents for:</h1>
-            <h1 class="govuk-heading-m">
-              7 Long Street
-              (Freehold)
-            </h1>
+      <h1 class="govuk-heading-m">
+        7 Long Street
+        (Freehold)
+      </h1>
       </div>
-      <p>If you're unsure which documents you need, you may need to<br>buy the Digital register first.
+      <p> If you do not know which documents you need, you may need to<br> buy the Digital register first.
       </p>
-
-      <br>
       <h2 class="govuk-heading-m">
         Available for download
       </h2>
+
       <div class="govuk-inset-text">
-        You'll have 90 days to view or download these documents if you buy them.
-        For access after that, you'll need to buy them again.
+        You will have 90 days to view or download these documents if you buy them.
+        If you want to acess them after that, you'll need to buy them again.
       </div>
 
-      <form class="govuk-!-margin-top-6" action="full-name" method="post">
+      <form class="govuk-!-margin-top-6" action="check-info" method="post">
         <div class="govuk-form-group">
           <table class="govuk-table">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header">Document</th>
-                <th scope="col" class="govuk-table__header" style="width:220px">Date of original document</th>
+                <th scope="col" class="govuk-table__header">Date of original document</th>
                 <th scope="col" class="govuk-table__header">Cost</th>
                 <th scope="col" class="govuk-table__header"></th>
               </tr>
@@ -126,12 +125,12 @@ Buy documents - Search for land and property information
                 <td class="govuk-table__cell">Today</td>
                 <td class="govuk-table__cell">£3.00</td>
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox" name="checkbox-register" value="Digital register" {{ checked("checkbox-register", "Digital register 02 February 2021") }}>
-                      <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
-                    </div>
-                  </div>
+                        <div class="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox" name="checkbox-register" value="Digital register" {{ checked("checkbox-register", "Digital register 02 February 2021") }}>
+                              <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                          </div>
+                        </div>
                 </td>
               </tr>
               <tr class="govuk-table__row">
@@ -139,33 +138,33 @@ Buy documents - Search for land and property information
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                       <span class="govuk-details__summary-text">
-                        What's a Title plan?
+                        What's a title plan?
                       </span>
                     </summary>
                     <div class="govuk-details__text">
-                      The title plan is a map that shows the:
+                      The title plan is a map showing the property’s:
                       <ul class="govuk-list govuk-list--bullet">
-                        <li>location of the property
+                        <li>location
                         </li>
-                        <li>general boundaries - most title plans do not show exact boundaries
+                        <li>general boundaries - there’s usually no record of exact boundaries
                         </li>
                       </ul>
-                      You can download the title plan as a PDF.
+                      You can download the full details of the title plan as a PDF.
                     </div>
                   </details>
                 </th>
-                <td class="govuk-table__cell">
-                  No title plan available from this service.
-                  <br>
-                  You'll need to <a href="#">apply for an official copy of the title plan</a> instead (link opens in new tab).<br>
-                  This could be because the title plan is:
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>too big </li>
-                    <li>held in paper form only </li>
-                  </ul>
-                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell">Today</td>
+                <td class="govuk-table__cell">£3.00</td>
                 <td class="govuk-table__cell">
                   <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
+                      <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="checkbox-2" type="checkbox" name="checkbox-title-plan">
+                          <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                        </div>
+                      </div>
+                    </fieldset>
                   </div>
                 </td>
               </tr>
@@ -224,8 +223,8 @@ Buy documents - Search for land and property information
             <table class="govuk-table">
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header" style="width:240px">Document</th>
-                  <th scope="col" class="govuk-table__header" style="width:220px">Date of orginal<br> document</th>
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Date of orginal document</th>
                   <th scope="col" class="govuk-table__header">Cost</th>
                   <th scope="col" class="govuk-table__header"></th>
                 </tr>
@@ -270,20 +269,61 @@ Buy documents - Search for land and property information
                 </tr>
               </tbody>
             </table>
-
+            <br>
             <br>
 
             <h2 class="govuk-heading-m">
-              Need a different document?
+              Request documents not referred to in the register
             </h2>
 
-            <p>
-              If the document you need is not on the list, you'll need to <a href="#">apply for it</a> instead (link opens in new tab).
-            </p>
+            <h3 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--s" for="document-details">
+              Document details
+              </label>
+            </h3>
+            <div id="more-detail-hint" class="govuk-hint">
+              Include the type of document if you know it, for example transfer deed or lease. Otherwise, enter as much information as you can.
+              Requests can be rejected if we do not have enough information to find the document.
+            </div>
+            <textarea class="govuk-textarea" id="document-details" rows="5" name="document-details" value="{{ data['document-details'] }}" type="text"></textarea>
+          </div>
 
-            <br>
-            <br>
-            <form class="govuk-!-margin-top-6" action="full-name">
+          <br>
+
+          <h3 class="govuk-heading-s">
+            Date of original document (if you know it)
+          </h3>
+          <div id="date-hint" class="govuk-hint">
+            For example, 27 March 1972
+          </div>
+          <div class="govuk-date-input" id="document-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="document-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="document-day" name="document-day" type="text" pattern="[0-9]*" value="{{ data['document-day'] }}" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="document-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-6" id="document-month" name="document-month" type="text" value="{{ data['document-month'] }}">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="document-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="document-year" name="document-year" type="text" pattern="[0-9]*" value="{{ data['document-year'] }}" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+            <form class="govuk-!-margin-top-6" action="check-info">
               <button type="submit" class="govuk-button">
                 Continue
               </button>

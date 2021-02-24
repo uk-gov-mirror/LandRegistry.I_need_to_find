@@ -66,7 +66,7 @@ Summary - Search for land and property information
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
 
-          <h1 class="govuk-heading-l">Check details are correct</h1>
+          <h1 class="govuk-heading-l">Check these details are correct</h1>
           <br>
 
           <h2 class="govuk-heading-m">Your details</h2>
@@ -86,7 +86,7 @@ Summary - Search for land and property information
                 Erin Tregunna
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="full-name2">
+                <a class="govuk-link" href="full-name">
                   Change <span class="govuk-visually-hidden">name</span>
                 </a>
               </dd>
@@ -96,14 +96,14 @@ Summary - Search for land and property information
                 Address
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['address-1'] }}<br>
-                {{ data['address-2'] }}<br>
-                {{ data['address-town'] }}<br>
-                {{ data['address-county'] }}<br>
-                {{ data['address-postcode'] }}
+                2<br>
+                Real Street<br>
+                Plymouth<br>
+                Devon<br>
+                PL1 123
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="address2">
+                <a class="govuk-link" href="address">
                   Change <span class="govuk-visually-hidden">address</span>
                 </a>
               </dd>
@@ -173,15 +173,35 @@ Summary - Search for land and property information
               </div>
             </div>
           </dl>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <h3 class="govuk-heading-s">Requested</h3>
+            <div id="doc3-remove">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  {{ data['document-details'] }}
+                </dt>
+                <dd class="govuk-summary-list__value">
+                {{ data['document-day'] }} {{ data['document-month'] }} {{ data['document-year'] }}
+                </dd>
+                <dd class="govuk-summary-list__value">
+                  £7.00
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#" onclick="myFourthFunction()">Remove <span class="govuk-visually-hidden"> document</span></a>
+                  <br><br>
+                </dd>
+              </div>
+            </div>
+          </dl>
 
-          <p>
-            <a href="available-docs-deeds">
+
+          <p> <a href="available-docs-deeds">
               Add another document
             </a>
           </p>
 
           <br>
-          <h2 class="govuk-heading-m">Total to pay: £13.00</h2>
+          <h2 class="govuk-heading-m">Total to pay: £20.00</h2>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -201,6 +221,8 @@ Summary - Search for land and property information
             </fieldset>
           </div>
 
+
+          <br>
           <br>
 
           <a href="gov-pay-1-deeds" button class="govuk-button" data-module="govuk-button">

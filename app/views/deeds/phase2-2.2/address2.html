@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Transfer lease - Search for land and property information
+Search by postcode or streetname - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -23,8 +23,7 @@ Transfer lease - Search for land and property information
       </a>
     </div>
     <div class="govuk-header__content">
-
-      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
+      <a href="01-start-deeds" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
 
@@ -52,61 +51,65 @@ Transfer lease - Search for land and property information
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-full">
-    <p class="govuk-!-margin-top-4" style="text-align: right; padding-right:10px;">
-      <a href="#" style="padding-right: 20px;">Sign out</a>
-      <a href="my-documents" style="padding-right: 20px;">My documents</a>
-      <a href="search">Start new search</a>
-    </p>
+  <div class="govuk-grid-column-one-thirds">
+    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
   </div>
-  <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Transfer lease details for:</h1>
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-      (Freehold)</h1>
-    <h2 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h2>
-    <h2 class="govuk-heading-m">Date of document: 7 January 1969</h2>
 
-  </div>
-</div>
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Where should we send your documents?</h1>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <br>
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Any details we'd need to include here?
-      </strong>
+        <p> Some of your documents need to be sent by post. We need your address to know where to send them. </p>
+
+        <form action="check-info4" method="post" class="form">
+          <div class="govuk-form-group">
+
+            <label class="govuk-label" for="address-1">
+              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-1" name="address-1" type="text" value="{{ data['address-1'] }}" autocomplete="address-1">
+
+            <br>
+            <br>
+            <label class="govuk-label" for="address-2">
+              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-2" name="address-2" type="text" value="{{ data['address-2'] }}" autocomplete="address-2">
+
+            <br>
+            <br>
+            <label class="govuk-label" for="address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" value="{{ data['address-town'] }}" autocomplete="address-town">
+
+            <br>
+            <br>
+            <label class="govuk-label" for="address-county">
+              County
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" value="{{ data['address-county'] }}" type="text">
+
+            <br>
+            <br>
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" value="{{ data['address-postcode'] }}" autocomplete="postal-code">
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+      </div>
     </div>
-    <form action="download-TP.html" target="_blank">
-      <button class="govuk-button" type="submit" style="float: right;">
-        Download Transfer lease PDF
-      </button>
-    </form>
-  </div>
+  </main>
 </div>
 
-<hr style="border-color: #005DA6;">
-<br>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <p><a href="summary">Go to Summary of freehold</a></p>
-    <p><a href="my-documents">Go to my documents</a></p>
-  </div>
-</div>
-<br>
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p><a><img src="../../public/images/print-page.png" alt="save page icon" height="15" class="icon-image" "><u>Print Transfer lease</u></a></p>
-  </div>
-</div>
 
 {% endblock %}

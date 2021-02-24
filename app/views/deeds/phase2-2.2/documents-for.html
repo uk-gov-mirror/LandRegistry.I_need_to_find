@@ -1,7 +1,21 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Transfer lease - Search for land and property information
+Documents bought today - Search for land and property information
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      We're testing a new service - your feedback will help us improve it. </span>
+  </p>
+</div>
+
+
 {% endblock %}
 
 {% block header %}
@@ -31,19 +45,9 @@ Transfer lease - Search for land and property information
     </div>
   </div>
 </header>
-{% endblock %}
-
-{% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
-      Prototype
-    </strong>
-    <span class="govuk-phase-banner__text">
-      We're testing a new service - your feedback will help us improve it. </span>
-  </p>
-</div>
 
 {% endblock %}
+
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
   <div class="govuk-grid-column-full">
@@ -60,53 +64,75 @@ Transfer lease - Search for land and property information
     </p>
   </div>
   <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Transfer lease details for:</h1>
+    <h1 class="govuk-heading-l">Documents you've bought today for:</h1>
   </div>
 </div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-      (Freehold)</h1>
-    <h2 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h2>
-    <h2 class="govuk-heading-m">Date of document: 7 January 1969</h2>
-
+    <!-- Change heading depending on what search was performed  -->
+    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}},
+      {{data['property-postcode']}} (Freehold)
+    </h1>
   </div>
 </div>
+
+<br>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <br>
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Any details we'd need to include here?
-      </strong>
+    <div class="govuk-inset-text">
+      You now have 90 days to view or download any documents available online.
     </div>
-    <form action="download-TP.html" target="_blank">
-      <button class="govuk-button" type="submit" style="float: right;">
-        Download Transfer lease PDF
-      </button>
-    </form>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Document</th>
+          <th scope="col" class="govuk-table__header">Original date</th>
+          <th scope="col" class="govuk-table__header">Purchased</th>
+          <th scope="col" class="govuk-table__header">Available until</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Digital register</th>
+          <td class="govuk-table__cell">2 February 2021</td>
+          <td class="govuk-table__cell">2 February 2021</td>
+          <td class="govuk-table__cell">2 April 2021</td>
+          <td class="govuk-table__cell">
+            <p><a href="digital-register">View</a></p>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header" style="width: 200px;">Transfer lease</th>
+          <td class="govuk-table__cell">7 January 1969</td>
+          <td class="govuk-table__cell">2 February 2021</td>
+          <td class="govuk-table__cell">2 April 2021</td>
+          <td class="govuk-table__cell">
+            <p><a href="#">View</a></p>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header" style="width: 200px;">Transfer lease</th>
+          <td class="govuk-table__cell">5 May 2001</td>
+          <td class="govuk-table__cell">2 February 2021</td>
+          <td class="govuk-table__cell">2 April 2021</td>
+          <td class="govuk-table__cell">
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+  <br>
+  <br>
+
+</div>
+  <p> <a href="summary"> Return to Summary of freehold </a> </p>
+
 </div>
 
-<hr style="border-color: #005DA6;">
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <p><a href="summary">Go to Summary of freehold</a></p>
-    <p><a href="my-documents">Go to my documents</a></p>
-  </div>
-</div>
-<br>
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p><a><img src="../../public/images/print-page.png" alt="save page icon" height="15" class="icon-image" "><u>Print Transfer lease</u></a></p>
-  </div>
-</div>
 
 {% endblock %}

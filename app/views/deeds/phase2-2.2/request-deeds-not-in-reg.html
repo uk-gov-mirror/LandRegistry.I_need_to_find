@@ -1,7 +1,21 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Transfer lease - Search for land and property information
+Buy documents - Search for land and property information
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      We're testing a new service - your feedback will help us improve it. </span>
+  </p>
+</div>
+
+
 {% endblock %}
 
 {% block header %}
@@ -24,26 +38,16 @@ Transfer lease - Search for land and property information
     </div>
     <div class="govuk-header__content">
 
-      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
+      <a href="01-start-deeds" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
 
     </div>
   </div>
 </header>
-{% endblock %}
-
-{% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
-      Prototype
-    </strong>
-    <span class="govuk-phase-banner__text">
-      We're testing a new service - your feedback will help us improve it. </span>
-  </p>
-</div>
 
 {% endblock %}
+
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
   <div class="govuk-grid-column-full">
@@ -59,54 +63,82 @@ Transfer lease - Search for land and property information
       <a href="search">Start new search</a>
     </p>
   </div>
-  <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Transfer lease details for:</h1>
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-      (Freehold)</h1>
-    <h2 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h2>
-    <h2 class="govuk-heading-m">Date of document: 7 January 1969</h2>
 
-  </div>
 </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <br>
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Any details we'd need to include here?
-      </strong>
-    </div>
-    <form action="download-TP.html" target="_blank">
-      <button class="govuk-button" type="submit" style="float: right;">
-        Download Transfer lease PDF
-      </button>
-    </form>
-  </div>
-</div>
-
-<hr style="border-color: #005DA6;">
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <p><a href="summary">Go to Summary of freehold</a></p>
-    <p><a href="my-documents">Go to my documents</a></p>
-  </div>
-</div>
-<br>
 <br>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p><a><img src="../../public/images/print-page.png" alt="save page icon" height="15" class="icon-image" "><u>Print Transfer lease</u></a></p>
+
+    <h1 class="govuk-heading-l"> Request documents not referred to in the register for:
+
+      <h1 class="govuk-heading-m">
+        1 Fake Street
+        (Freehold)
+      </h1>
+
+      <br>
+
+
+      <form action="check-doc-information" method="post" class="form">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="document-details">
+            Document details
+            </label>
+          </h2>
+          <div id="more-detail-hint" class="govuk-hint">
+            Include the type of document if you know it, for example transfer deed or lease. Otherwise, enter as much information as you can.
+            Requests can be rejected if we do not have enough information to find the document.
+          </div>
+          <textarea class="govuk-textarea" id="document-details" rows="5" name="document-details" value="{{ data['document-details'] }}" type="text"></textarea>
+        </div>
+
+        <br>
+
+        <h2 class="govuk-heading-m">
+          Date of original document (if you know it)
+        </h2>
+        <div id="date-hint" class="govuk-hint">
+          For example, 27 March 1972
+        </div>
+        <div class="govuk-date-input" id="document-date">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="document-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="document-day" name="document-day" type="text" pattern="[0-9]*" value="{{ data['document-day'] }}" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="document-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-6" id="document-month" name="document-month" type="text" value="{{ data['document-month'] }}">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="document-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="document-year" name="document-year" type="text" pattern="[0-9]*" value="{{ data['document-year'] }}" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+      <p> <a href="summary-deeds"> Return to Summary of freehold</a> </p>
   </div>
 </div>
+
 
 {% endblock %}

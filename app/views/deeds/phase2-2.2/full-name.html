@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Transfer lease - Search for land and property information
+Search by postcode or streetname - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -23,8 +23,7 @@ Transfer lease - Search for land and property information
       </a>
     </div>
     <div class="govuk-header__content">
-
-      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
+      <a href="01-start-deeds" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
 
@@ -52,60 +51,34 @@ Transfer lease - Search for land and property information
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-full">
-    <p class="govuk-!-margin-top-4" style="text-align: right; padding-right:10px;">
-      <a href="#" style="padding-right: 20px;">Sign out</a>
-      <a href="my-documents" style="padding-right: 20px;">My documents</a>
-      <a href="search">Start new search</a>
-    </p>
+  <div class="govuk-grid-column-one-thirds">
+    <p class="govuk-!-margin-top-4" style="text-align: right;"><a href="#" style="padding-right: 20px;">Sign out</a><a href="my-documents">My documents</a> </p>
   </div>
-  <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Transfer lease details for:</h1>
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-      (Freehold)</h1>
-    <h2 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h2>
-    <h2 class="govuk-heading-m">Date of document: 7 January 1969</h2>
 
-  </div>
-</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <br>
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Any details we'd need to include here?
-      </strong>
+      <form action="address" method="post" class="form">
+        <br>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="full-name">
+              What's your full name?
+            </label>
+          </h1>
+          <div id="changed-name-hint" class="govuk-hint">
+            We'll use this name if we need to contact you about your documents.
+          </div>
+          <input class="govuk-input" id="full-name" name="full-name" value="{{ data['full-name'] }}" type="text">
+        </div>
+        <br>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
     </div>
-    <form action="download-TP.html" target="_blank">
-      <button class="govuk-button" type="submit" style="float: right;">
-        Download Transfer lease PDF
-      </button>
-    </form>
-  </div>
-</div>
-
-<hr style="border-color: #005DA6;">
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <p><a href="summary">Go to Summary of freehold</a></p>
-    <p><a href="my-documents">Go to my documents</a></p>
-  </div>
-</div>
-<br>
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p><a><img src="../../public/images/print-page.png" alt="save page icon" height="15" class="icon-image" "><u>Print Transfer lease</u></a></p>
   </div>
 </div>
 
