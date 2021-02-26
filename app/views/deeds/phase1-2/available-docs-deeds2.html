@@ -73,13 +73,14 @@ Buy documents - Search for land and property information
               5 Clinton Street, Plymouth, PL4 1AX
               (Freehold)
             </h1>
+            <br>
+            <h2 class="govuk-heading-m">Available online</h2>
+            <div class="govuk-inset-text">
+              We do not provide a guarantee for these documents - they should be used for information purposes only.
+              If you're waiting for us to update the register, these documents will not include those updates.
+            </div>
             <p>If you're unsure which documents you need, you may need to<br>buy the Digital register first.
             </p>
-
-            <div class="govuk-inset-text">
-              You'll have 90 days to view or download these documents if you buy them.
-              For access after that, you'll need to buy them again.
-            </div>
 
             <form class="govuk-!-margin-top-6" action="check-info3" method="post">
               <div class="govuk-form-group">
@@ -152,7 +153,7 @@ Buy documents - Search for land and property information
                       <td class="govuk-table__cell">
                         No title plan available from this service.
                         <br>
-                        You'll need to <a href="#">apply for an official copy of the title plan</a> instead (link opens in new tab).<br>
+                        You'll need to <a href="OC1-page" target="_blank">apply for an official copy of the title plan</a> instead (link opens in new tab).<br>
                         This could be because the title plan is:
                         <ul class="govuk-list govuk-list--bullet">
                           <li>too big </li>
@@ -207,26 +208,50 @@ Buy documents - Search for land and property information
                 <br>
 
                 <h2 class="govuk-heading-m">
-                  Need a different document?
+                  Documents you can apply for
                 </h2>
 
                 <p>
-                  If the document you need is not on the list, you'll need to <a href="#">apply for it</a> instead (link opens in new tab).
+                  If the document you need is not available online or not shown in the list, you'll need to <a href="OC2-page" target="_blank">apply for it</a> instead (link opens in new tab).
                 </p>
 
-                <br>
+                <form class="govuk-!-margin-top-6" action="check-info3" method="post">
+                  <div class="govuk-form-group">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Document</th>
+                          <th scope="col" class="govuk-table__header" style="width:240px">Date of original document</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <th scope="row" class="govuk-table__header" style="width:300px">Deed of grant
+                        </th>
+                        <td class="govuk-table__cell" style="width:400px">23 November 1997
+                        </td>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">Charge
+                          </th>
+                          <td class="govuk-table__cell">27 July 1991
+                          </td>
+                        </tr>
 
-                <form class="govuk-!-margin-top-6" action="full-name">
-                  <button type="submit" class="govuk-button">
-                    Continue
-                  </button>
-                </form>
+                      </tbody>
+                    </table>
 
-                <p> <a href="summary"> Return to Summary of freehold</a> </p>
 
+                    <br>
+                    <form class="govuk-!-margin-top-6" action="full-name">
+                      <button type="submit" class="govuk-button">
+                        Continue
+                      </button>
+                    </form>
+
+                    <p> <a href="summary"> Return to Summary of freehold</a> </p>
+
+                  </div>
               </div>
       </div>
-    </div>
 
 
-    {% endblock %}
+      {% endblock %}

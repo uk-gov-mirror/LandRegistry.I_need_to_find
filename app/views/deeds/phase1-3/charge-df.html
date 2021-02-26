@@ -1,25 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Documents bought today - Search for land and property information
-{% endblock %}
-
-{% block beforeContent %}
-
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
-      Prototype
-    </strong>
-    <span class="govuk-phase-banner__text">
-      We're testing a new service - your feedback will help us improve it. </span>
-  </p>
-</div>
-
-
+Charge - Search for land and property information
 {% endblock %}
 
 {% block header %}
-<header class="govuk-header " role="banner" data-module="govuk-header">
+<<header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <a href="#" class="govuk-header__link govuk-header__link--homepage">
@@ -45,9 +31,19 @@ Documents bought today - Search for land and property information
     </div>
   </div>
 </header>
-
 {% endblock %}
 
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      We're testing a new service - your feedback will help us improve it. </span>
+  </p>
+</div>
+
+{% endblock %}
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
   <div class="govuk-grid-column-full">
@@ -64,67 +60,69 @@ Documents bought today - Search for land and property information
     </p>
   </div>
   <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Documents you've bought today for:</h1>
+        <p><a href="documents-for" class="govuk-back-link">Return to documents</a></p>
+    <h1 class="govuk-heading-l">Charge details for:</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
+      (Freehold)</h1>
+    <h2 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h2>
+
+
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <!-- Change heading depending on what search was performed  -->
-    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}},
-      {{data['property-postcode']}} (Freehold)
-    </h1>
-  </div>
-</div>
-
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="govuk-inset-text">
-      You now have 90 days to view or download any documents available online.
-    </div>
+    <br>
 
     <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Document</th>
-          <th scope="col" class="govuk-table__header">Original date</th>
-          <th scope="col" class="govuk-table__header">Purchased</th>
-          <th scope="col" class="govuk-table__header">Available until</th>
-          <th scope="col" class="govuk-table__header"></th>
-        </tr>
-      </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Digital register</th>
-          <td class="govuk-table__cell">2 February 2021</td>
-          <td class="govuk-table__cell">2 February 2021</td>
-          <td class="govuk-table__cell">2 May 2021</td>
-          <td class="govuk-table__cell">
-            <p><a href="digital-register-df">View</a></p>
-          </td>
+          <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Date of document</th>
+          <td class="govuk-table__cell">16 February 2016</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 200px;">Transfer</th>
-          <td class="govuk-table__cell">1 March 1984</td>
-          <td class="govuk-table__cell">2 February 2021</td>
-          <td class="govuk-table__cell">2 May 2021</td>
-          <td class="govuk-table__cell">
-            <p><a href="transfer-df">View</a></p>
-          </td>
+          <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Title number filed under</th>
+          <td class="govuk-table__cell">Title number that matches</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Lender</th>
+          <td class="govuk-table__cell">Make match</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Lendee</th>
+          <td class="govuk-table__cell">Make match</td>
         </tr>
       </tbody>
     </table>
+
+    <form action="#" target="_blank">
+      <button class="govuk-button" type="submit" style="float: right;">
+        Download Charge PDF
+      </button>
+    </form>
   </div>
-
-  <br>
-  <br>
-
-</div>
-  <p> <a href="summary"> Return to Summary of freehold </a> </p>
-
 </div>
 
+<hr style="border-color: #005DA6;">
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <p><a href="summary">Go to Summary of freehold</a></p>
+    <p><a href="my-documents">Go to my documents</a></p>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p><a><img src="../../public/images/print-page.png" alt="save page icon" height="15" class="icon-image" "><u>Print Charge</u></a></p>
+  </div>
+</div>
 
 {% endblock %}
