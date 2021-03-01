@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Charge - Search for land and property information
+My documents - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -23,7 +23,6 @@ Charge - Search for land and property information
       </a>
     </div>
     <div class="govuk-header__content">
-
       <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
@@ -42,8 +41,8 @@ Charge - Search for land and property information
       We're testing a new service - your feedback will help us improve it. </span>
   </p>
 </div>
-
 {% endblock %}
+
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
   <div class="govuk-grid-column-full">
@@ -55,81 +54,67 @@ Charge - Search for land and property information
   <div class="govuk-grid-full">
     <p class="govuk-!-margin-top-4" style="text-align: right; padding-right:10px;">
       <a href="#" style="padding-right: 20px;">Sign out</a>
-      <a href="my-documents" style="padding-right: 20px;">My documents</a>
-      <a href="search">Start new search</a>
+      <a href="search-deeds">Start new search</a>
     </p>
   </div>
-  <div class="govuk-grid-column-one-half">
-    <p><a href="documents-for" class="govuk-back-link">Return to documents</a></p>
-    <br>
-    <h1 class="govuk-heading-l">Charge details for:</h1>
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
-      (Freehold)</h1>
-    <h2 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h2>
 
 
-  </div>
-</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <br>
-
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Date of document</th>
-          <td class="govuk-table__cell">19 February 2005</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Title number filed under</th>
-          <td class="govuk-table__cell">DN5888</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Lender</th>
-          <td class="govuk-table__cell">Natwest PLC</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Borrower</th>
-          <td class="govuk-table__cell">Sam Smith</td>
-        </tr>
-      </tbody>
-    </table>
-
-    </div>
+    <h1 class="govuk-heading-l">My documents</h1>
+    <div class="govuk-inset-text">
+      You have 90 days to download documents from the date you bought them. <br>To check for any updates to your documents, you'll need to buy them again.
     </div>
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
+        <br>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">1 Fake Street, Exeter, EX1 123
+            (Freehold)</h2>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
 
-    <form action="#" target="_blank">
-      <button class="govuk-button" type="submit" style="float: right;">
-        Download Charge PDF
-      </button>
-    </form>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Document</th>
+                    <th scope="col" class="govuk-table__header">Original date</th>
+                    <th scope="col" class="govuk-table__header">Purchased</th>
+                    <th scope="col" class="govuk-table__header">Available until</th>
+                    <th scope="col" class="govuk-table__header"></th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Digital register</th>
+                    <td class="govuk-table__cell">1 January 2021</td>
+                    <td class="govuk-table__cell">1 January 2021</td>
+                    <td class="govuk-table__cell">1 April 2021</td>
+                    <td class="govuk-table__cell">
+                      <p><a href="#">View</a></p>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="width: 200px;">Lease</th>
+                    <td class="govuk-table__cell">1 March 1967</td>
+                    <td class="govuk-table__cell">1 January 2021</td>
+                    <td class="govuk-table__cell">1 April 2021</td>
+                    <td class="govuk-table__cell">
+                      <p><a href="#">View</a></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p style="text-align: right;"> <a href="#">Buy documents for 1 Fake Street (Freehold) again</a> </p>
+              <p style="text-align: right;"> <a href="#">
+                  Go to free summary for 1 Fake street (Freehold)</a> </p>
+
+
+      <p> <a href="search-deeds"> Start new search</a> </p>
+    </div>
   </div>
-</div>
 
-<hr style="border-color: #005DA6;">
-<br>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <p><a href="summary-deeds">Go to Summary of freehold</a></p>
-    <p><a href="my-documents">Go to my documents</a></p>
-  </div>
-</div>
-<br>
-<br>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p><a><img src="../../public/images/print-page.png" alt="save page icon" height="15" class="icon-image" "><u>Print Charge</u></a></p>
-  </div>
-</div>
-
-{% endblock %}
+  {% endblock %}
