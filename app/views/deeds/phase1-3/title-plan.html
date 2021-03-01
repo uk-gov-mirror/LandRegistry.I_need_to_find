@@ -1,18 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Payment successful - Search for land and property information
-{% endblock %}
-
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
-    Prototype
-    </strong>
-    <span class="govuk-phase-banner__text">
-      We're testing a new service - your feedback will help us improve it. </span>
-    </p>
-  </div>
+  Title plan - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -32,15 +21,27 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="01-start-deeds" class="govuk-header__link govuk-header__link--service-name">
+
+      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
+
     </div>
   </div>
 </header>
-
 {% endblock %}
 
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+    Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      We're testing a new service - your feedback will help us improve it. </span>
+    </p>
+  </div>
+
+{% endblock %}
 {% block content %}
 <div class="govuk-grid-row" style="border-style: none none solid none; border-color: #005DA6;">
   <div class="govuk-grid-column-full">
@@ -53,51 +54,74 @@
     <p class="govuk-!-margin-top-4" style="text-align: right; padding-right:10px;">
       <a href="#" style="padding-right: 20px;">Sign out</a>
       <a href="my-documents" style="padding-right: 20px;">My documents</a>
-      <a href="search-deeds">Start new search</a> </p>
+      <a href="search">Start new search</a> </p>
+      <p class="govuk-!-margin-top-4" style="text-align: left; padding-right:10px;">
   </div>
   <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Your payment was successful</h1>
+    <h1 class="govuk-heading-l">Title plan details for:</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
+    (Freehold)</h1>
+    <h1 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h1>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Title number</dt>
+        <dd class="govuk-summary-list__value">{{data['title-num']}}</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Administrative area</dt>
+        <dd class="govuk-summary-list__value">Plymouth</dd>
+      </div>
+    </dl>
   </div>
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m">Your reference number is: <br>1C265H</h2>
-
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Payment for:
-        </dt>
-        <dd class="govuk-summary-list__value">
-            Digital register<br>
-            Title plan
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total amount:
-        </dt>
-        <dd class="govuk-summary-list__value">
-          £6.00
-        </dd>
-      </div>
-    </dl>
-    <p class="govuk-body">We have sent you a receipt by email.
+  <div class="govuk-grid-column-full">
     <br>
-    <h3 class="govuk-heading-s">What happens next?</h3>
-
-    <div class="govuk-inset-text">
-      You now have 90 days to view or download your documents.
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Title plans only show the general position of the boundaries. There’s
+        usually no record of exact boundaries. <a href="#">Read more about boundaries</a> (link opens in new tab)<br><br>
+        The title plan available on screen and the version available to
+          download are not official copies.<br><br>
+        They do not take into account if there are any pending applications
+          with HM Land Registry. If you need a title plan for a court case,
+          you’ll need to <a href="#">order an official copy of the register</a> (link opens in new tab)<br><br>
+        Title plans produced by HM Land Registry are protected by Copyright.
+          You must have written permission from Ordnance Survey to reproduce
+          any part of a title plan.<br><br>
+      </strong>
     </div>
-
-    <br>
-
-    <form action="documents-for.html">
-      <button class="govuk-button" type="submit">
-        Continue to documents
+    <form action="#" target="_blank">
+      <button class="govuk-button" type="submit" style="float: right;">
+        Download Title plan PDF
       </button>
     </form>
+  </div>
+</div>
+
+
+<hr style="border-color: #005DA6;">
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <p><a href="summary-deeds">Go to Summary of freehold</a></p>
+    <p><a href="my-documents">Go to my documents</a></p>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p><a><img src="../../public/images/print-page.png"alt="save page icon" height="15" class="icon-image" "><u>Print Title plan</u></a></p>
   </div>
 </div>
 
