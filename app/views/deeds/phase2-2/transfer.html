@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Transfer lease - Search for land and property information
+Transfer - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -24,7 +24,7 @@ Transfer lease - Search for land and property information
     </div>
     <div class="govuk-header__content">
 
-      <a href="01-start" class="govuk-header__link govuk-header__link--service-name">
+      <a href="01-start-deeds" class="govuk-header__link govuk-header__link--service-name">
         Search for land and property information
       </a>
 
@@ -60,7 +60,7 @@ Transfer lease - Search for land and property information
     </p>
   </div>
   <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Transfer lease details for:</h1>
+    <h1 class="govuk-heading-l">Transfer details for:</h1>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -68,8 +68,37 @@ Transfer lease - Search for land and property information
     <h1 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}
       (Freehold)</h1>
     <h2 class="govuk-heading-m">Copy bought on: {{data['date-purchased']}}</h2>
-    <h2 class="govuk-heading-m">Date of document: 7 January 1969</h2>
 
+    <br>
+
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div style='width: 160px;'>Date of document
+          </th>
+          <td class="govuk-table__cell">16 February 2016</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <div style='width: 160px;'>Title number filed under
+          </th>
+          <td class="govuk-table__cell">Make match</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Transferor (Seller)</th>
+          <td class="govuk-table__cell">Make match</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Transferor (Seller)</th>
+          <td class="govuk-table__cell">Make match</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Transferee (Buyer)</th>
+          <td class="govuk-table__cell">Make match</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
@@ -85,7 +114,7 @@ Transfer lease - Search for land and property information
     </div>
     <form action="download-TP.html" target="_blank">
       <button class="govuk-button" type="submit" style="float: right;">
-        Download Transfer lease PDF
+        Download Transfer PDF
       </button>
     </form>
   </div>
