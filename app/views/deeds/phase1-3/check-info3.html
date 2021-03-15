@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Summary - Search for land and property information
+Check information - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -74,7 +74,6 @@ Summary - Search for land and property information
           <br>
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div id="register-remove">
               <div class="govuk-summary-list__row" style="width:200px">
                 <dt class="govuk-summary-list__key">
                   Digital register
@@ -85,13 +84,7 @@ Summary - Search for land and property information
                 <dd class="govuk-summary-list__value">
                   £3.00
                 </dd>
-                <dd class="govuk-summary-list__actions" style="width:200px">
-                  <a class="govuk-link" href="#" onclick="myFunction()">Remove <span class="govuk-visually-hidden"> document</span></a>
-                  <br><br>
-                </dd>
               </div>
-            </div>
-            <div id="doc2-remove">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                   Title plan
@@ -102,40 +95,11 @@ Summary - Search for land and property information
                 <dd class="govuk-summary-list__value">
                   £3.00
                 </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="#" onclick="myThirdFunction()">Remove <span class="govuk-visually-hidden"> document</span></a>
-                  <br><br>
-                </dd>
               </div>
-            </div>
           </dl>
-
-          <p>
-            <a href="available-docs-deeds2">
-              + Add another document
-            </a>
-          </p>
 
           <br>
           <h2 class="govuk-heading-m">Total to pay: £6.00</h2>
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                </h1>
-              </legend>
-              <div class="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                  <label class="govuk-label govuk-checkboxes__label" for="waste">
-                    I acknowledge that I will only get a refund on documents that cannot be delivered by HM Land Registry.
-                  </label>
-                </div>
-              </div>
-
-            </fieldset>
-          </div>
 
           <br>
 
