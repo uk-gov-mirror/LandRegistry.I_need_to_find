@@ -68,30 +68,25 @@ Buy documents - Search for land and property information
       <div id="govuk-form-group" class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="vehicle-features-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-heading-l">Available documents for:</h1>
-      <h1 class="govuk-heading-m">
-        7 Long Street, Plymouth, PL4 1AX
-        (Freehold)
-      </h1>
+            <h1 class="govuk-heading-l">Buy and request documents for:</h1>
+            <h1 class="govuk-heading-m">
+              7 Long Street, Plymouth, PL4 1AX
+              (Freehold)
+            </h1>
       </div>
-      <p> If you do not know which documents you need, you may need to<br> buy the Digital register first.
-      </p>
-      <h2 class="govuk-heading-m">
-        Available for download
-      </h2>
-
+      <h2 class="govuk-heading-m">Digital register and title plan</h2>
+      <h3 class="govuk-heading-s">Online</h3>
       <div class="govuk-inset-text">
-        You will have 90 days to view or download these documents if you buy them.
-        If you want to acess them after that, you'll need to buy them again.
+        We do not provide a guarantee for these documents - they should be used for information purposes only.
+        If someone has applied to update the register, and we have not completed that application yet, these documents will not include those updates.
+        You can <a href="#">order a guaranteed copy</a> instead (link opens in new tab).
       </div>
-
       <form class="govuk-!-margin-top-6" action="check-info" method="post">
         <div class="govuk-form-group">
           <table class="govuk-table">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header">Document</th>
-                <th scope="col" class="govuk-table__header">Date of original document</th>
                 <th scope="col" class="govuk-table__header">Cost</th>
                 <th scope="col" class="govuk-table__header"></th>
               </tr>
@@ -103,7 +98,7 @@ Buy documents - Search for land and property information
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                       <span class="govuk-details__summary-text">
-                        What's in a Digital register?
+                        What's a Digital register?
                       </span>
                     </summary>
                     <div class="govuk-details__text">
@@ -122,15 +117,14 @@ Buy documents - Search for land and property information
                     </div>
                   </details>
                 </th>
-                <td class="govuk-table__cell">Today</td>
                 <td class="govuk-table__cell">£3.00</td>
                 <td class="govuk-table__cell">
-                        <div class="govuk-checkboxes">
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox" name="checkbox-register" value="Digital register" {{ checked("checkbox-register", "Digital register 02 February 2021") }}>
-                              <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
-                          </div>
-                        </div>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox" name="checkbox-register" value="Digital register" {{ checked("checkbox-register", "Digital register 02 February 2021") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                    </div>
+                  </div>
                 </td>
               </tr>
               <tr class="govuk-table__row">
@@ -153,7 +147,6 @@ Buy documents - Search for land and property information
                     </div>
                   </details>
                 </th>
-                <td class="govuk-table__cell">Today</td>
                 <td class="govuk-table__cell">£3.00</td>
                 <td class="govuk-table__cell">
                   <div class="govuk-form-group">
@@ -168,27 +161,32 @@ Buy documents - Search for land and property information
                   </div>
                 </td>
               </tr>
-              <th scope="row" class="govuk-table__header">Transfer lease
-              </th>
-              <td class="govuk-table__cell">7 January 1969
-              </td>
-              <td class="govuk-table__cell">£3.00</td>
-              <td class="govuk-table__cell">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
-                    <div class="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="checkbox-3" type="checkbox" name="checkbox-tl-1">
-                        <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </td>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Transfer lease
+          </table>
+
+
+          <h2 class="govuk-heading-m">
+            Referred to in the register
+          </h2>
+          <h3 class="govuk-heading-s">
+            Online
+          </h3>
+
+          <form class="govuk-!-margin-top-6" action="check-info" method="post">
+            <div class="govuk-form-group">
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Document</th>
+                    <th scope="col" class="govuk-table__header">Register entry</th>
+                    <th scope="col" class="govuk-table__header">Document date</th>
+                    <th scope="col" class="govuk-table__header">Cost</th>
+                    <th scope="col" class="govuk-table__header"></th>
+                  </tr>
+                </thead>
+                <th scope="row" class="govuk-table__header">Transfer
                 </th>
-                <td class="govuk-table__cell">05 May 2001
+                <td class="govuk-table__cell">C1</td>
+                <td class="govuk-table__cell">7 January 1969
                 </td>
                 <td class="govuk-table__cell">£3.00</td>
                 <td class="govuk-table__cell">
@@ -196,51 +194,27 @@ Buy documents - Search for land and property information
                     <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
                       <div class="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="checkbox-4" type="checkbox" name="checkbox-tl-2">
+                          <input class="govuk-checkboxes__input" id="checkbox-3" type="checkbox" name="checkbox-tl-1">
                           <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
                         </div>
                       </div>
                     </fieldset>
                   </div>
                 </td>
-              </tr>
-
-            </tbody>
-          </table>
-
-          <br>
-          <br>
-
-          <h2 class="govuk-heading-m">
-            Available by post
-          </h2>
-
-          <div class="govuk-inset-text">
-            We'll need your address to know where to send these documents.
-          </div>
-
-          <form class="govuk-!-margin-top-6" action="check-doc-information" method="post">
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header">Document</th>
-                  <th scope="col" class="govuk-table__header">Date of orginal document</th>
-                  <th scope="col" class="govuk-table__header">Cost</th>
-                  <th scope="col" class="govuk-table__header"></th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Conveyance
+                  <th scope="row" class="govuk-table__header">Transfer
                   </th>
-                  <td class="govuk-table__cell">8 April 1990</td>
-                  <td class="govuk-table__cell">£7.00</td>
+                  <td class="govuk-table__cell">C2
+                  </td>
+                  <td class="govuk-table__cell">05 May 2001
+                  </td>
+                  <td class="govuk-table__cell">£3.00</td>
                   <td class="govuk-table__cell">
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
                         <div class="govuk-checkboxes">
                           <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="checkbox-5" type="checkbox" name="checkbox-conveyance-1">
+                            <input class="govuk-checkboxes__input" id="checkbox-4" type="checkbox" name="checkbox-tl-2">
                             <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
                           </div>
                         </div>
@@ -248,84 +222,130 @@ Buy documents - Search for land and property information
                     </div>
                   </td>
                 </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Conveyance
-                  </th>
-                  <td class="govuk-table__cell">22 June 1970
-                  </td>
-                  <td class="govuk-table__cell">£7.00</td>
-                  <td class="govuk-table__cell">
-                    <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
-                        <div class="govuk-checkboxes">
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="checkbox-6" type="checkbox" name="checkbox-conveyance-2">
-                            <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
-                          </div>
+              </table>
+
+              <br>
+              <br>
+
+              <h3 class="govuk-heading-s">
+                Post
+              </h3>
+
+              <div class="govuk-inset-text">
+                We'll need your address to know where to send these documents.
+              </div>
+
+              <form class="govuk-!-margin-top-6" action="check-doc-information" method="post">
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Document</th>
+                      <th scope="col" class="govuk-table__header">Register entry</th>
+                      <th scope="col" class="govuk-table__header">Document date</th>
+                      <th scope="col" class="govuk-table__header">Cost</th>
+                      <th scope="col" class="govuk-table__header"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Conveyance
+                      </th>
+                      <td class="govuk-table__cell">C5</td>
+                      <td class="govuk-table__cell">8 April 1990</td>
+                      <td class="govuk-table__cell">£7.00</td>
+                      <td class="govuk-table__cell">
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
+                            <div class="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="checkbox-5" type="checkbox" name="checkbox-conveyance-1">
+                                <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                              </div>
+                            </div>
+                          </fieldset>
                         </div>
-                      </fieldset>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <br>
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Conveyance
+                      </th>
+                      <td class="govuk-table__cell">C6</td>
+                      <td class="govuk-table__cell">22 June 1970
+                      </td>
+                      <td class="govuk-table__cell">£7.00</td>
+                      <td class="govuk-table__cell">
+                        <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="doc-hint">
+                            <div class="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="checkbox-6" type="checkbox" name="checkbox-conveyance-2">
+                                <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <br>
+
+                <h2 class="govuk-heading-m">
+                  Request other documents
+                </h2>
+<p> If the document you need is not referred to in the register, you'll need to request it.</p>
+                <h3 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--s" for="document-details">
+                    Document details
+                  </label>
+                </h3>
+                <div id="more-detail-hint" class="govuk-hint">
+                  Include the type of document if you know it, for example transfer deed or lease. Otherwise, enter as much information as you can.
+                  Requests can be rejected if we do not have enough information to find the document.
+                </div>
+                <textarea class="govuk-textarea" id="document-details" rows="5" name="document-details" value="{{ data['document-details'] }}" type="text"></textarea>
+            </div>
+
             <br>
 
-            <h2 class="govuk-heading-m">
-              Request documents not referred to in the register
-            </h2>
-
-            <h3 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--s" for="document-details">
-              Document details
-              </label>
+            <h3 class="govuk-heading-s">
+              Date of original document (if you know it)
             </h3>
-            <div id="more-detail-hint" class="govuk-hint">
-              Include the type of document if you know it, for example transfer deed or lease. Otherwise, enter as much information as you can.
-              Requests can be rejected if we do not have enough information to find the document.
+            <div id="date-hint" class="govuk-hint">
+              For example, 27 March 1972
             </div>
-            <textarea class="govuk-textarea" id="document-details" rows="5" name="document-details" value="{{ data['document-details'] }}" type="text"></textarea>
-          </div>
-
-          <br>
-
-          <h3 class="govuk-heading-s">
-            Date of original document (if you know it)
-          </h3>
-          <div id="date-hint" class="govuk-hint">
-            For example, 27 March 1972
-          </div>
-          <div class="govuk-date-input" id="document-date">
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="document-day">
-                  Day
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="document-day" name="document-day" type="text" pattern="[0-9]*" value="{{ data['document-day'] }}" inputmode="numeric">
+            <div class="govuk-date-input" id="document-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="document-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="document-day" name="document-day" type="text" pattern="[0-9]*" value="{{ data['document-day'] }}" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="document-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-6" id="document-month" name="document-month" type="text" value="{{ data['document-month'] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="document-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="document-year" name="document-year" type="text" pattern="[0-9]*" value="{{ data['document-year'] }}" inputmode="numeric">
+                </div>
               </div>
             </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="document-month">
-                  Month
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-6" id="document-month" name="document-month" type="text" value="{{ data['document-month'] }}">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="document-year">
-                  Year
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="document-year" name="document-year" type="text" pattern="[0-9]*" value="{{ data['document-year'] }}" inputmode="numeric">
-              </div>
-            </div>
-          </div>
 
-          <p> <a href="#"> + Request another</a></p>
+<br>
+            <p> <a href="#"> + Request another</a></p>
 
-          <br>
+            <br>
 
             <form class="govuk-!-margin-top-6" action="check-info">
               <button type="submit" class="govuk-button">
