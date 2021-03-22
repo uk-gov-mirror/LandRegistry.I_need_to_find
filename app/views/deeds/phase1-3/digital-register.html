@@ -128,7 +128,7 @@
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Registered owner</dt>
             <dd class="govuk-summary-list__value">
-              <p>{{data['owner']}} </p>
+              <p>Laurie Naraine</p>
               <p>{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}}</p>
             </dd>
           </div>
@@ -141,7 +141,7 @@
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">Lender</dt>
             <dd class="govuk-summary-list__value">
-              <p>Natwest PLC</p>
+              <p>Coventry Building Society</p>
             </dd>
           </div>
         </dl>
@@ -151,7 +151,6 @@
         <br>
         <h2 class="govuk-heading-l">A: Property register</h2>
         <p>This register describes the land and estate comprised in the title.</p>
-        <p><b>Local council:</b> {{data['property-city']}}</p>
         <hr>
         <table class="govuk-table">
           <thead class="govuk-table__head">
@@ -170,8 +169,7 @@
               <td class="govuk-table__cell"><div style='width: 150px;'>1 January 1997</td>
               {% endif %}
               <td class="govuk-table__cell">The land shown edged with red on the plan of the above
-                Title filed at the Registry and being {{data['property-address']}},
-                {{data['property-city']}}, {{data['property-postcode']}}.
+                Title filed at the Registry and being 5 Clinton Street, Plymouth, PL4 1AX.
             </tr>
           </tbody>
         </table>
@@ -195,15 +193,22 @@
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><div style='width: 140px;'>1</th>
-              <td class="govuk-table__cell"><div style='width: 150px;'>{{data['entry-date']}}</td>
-              <td class="govuk-table__cell"><b>PROPRIETOR:</b> {{data['owner']}} of
+              <th scope="row" class="govuk-table__header">
+                <div style='width: 140px;'>1
+              </th>
+              <td class="govuk-table__cell">
+                <div style='width: 150px;'>2 December 2016
+              </td>
+              <td class="govuk-table__cell"><b>PROPRIETOR:</b> Laurie Naraine of
                 {{data['property-address']}}, {{data['property-city']}},
-                {{data['property-postcode']}}</td>
+                {{data['property-postcode']}}
+              </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">2</th>
-              <td class="govuk-table__cell"> <div style='width: 150px;'>{{data['entry-date']}}</td>
+              <td class="govuk-table__cell">
+                <div style='width: 150px;'>2 December 2016
+              </td>
               <td class="govuk-table__cell">The price stated to have been paid
                 on {{data['property-sold-date']}} was {{data['property-sold-for']}}.</td>
             </tr>
@@ -228,13 +233,19 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">1</th>
-                <td class="govuk-table__cell"><div style='width: 150px;'>{{data['entry-date']}}</td>
-                <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated 19 February 2005.</td>
+                <td class="govuk-table__cell">
+                  <div style='width: 150px;'>2 December 2016
+                </td>
+                <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated 9 November 2016.
+                  <br>
+                - Copy filed.</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">2</th>
-                <td class="govuk-table__cell"><div style='width: 150px;'>{{data['entry-date']}}</td>
-                <td class="govuk-table__cell"><b>Proprietor:</b> Natwest (Co. Regn. No. 1234567) of 1 High street, Plymouth </td>
+                <td class="govuk-table__cell">
+                  <div style='width: 150px;'>2 December 2016
+                </td>
+                <td class="govuk-table__cell"><b>Proprietor:</b> Coventry Building Society (Co. Regn. No. 902345) of 17 Smith Road, Plymouth. </td>
               </tr>
             </tbody>
           </table>
