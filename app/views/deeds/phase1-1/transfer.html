@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Transfer- Search for land and property information
+Transfer - Search for land and property information
 {% endblock %}
 
 {% block header %}
@@ -60,7 +60,9 @@ Transfer- Search for land and property information
     </p>
   </div>
   <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Charge details for:</h1>
+    <p><a href="documents-for" class="govuk-back-link">Return to documents</a></p>
+    <br>
+    <h1 class="govuk-heading-l">Transfer details for:</h1>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -77,42 +79,40 @@ Transfer- Search for land and property information
   <div class="govuk-grid-column-two-thirds">
     <br>
 
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Register entry</th>
-          <td class="govuk-table__cell">C2</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Date of document</th>
-          <td class="govuk-table__cell">19 February 2005</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Title number filed under</th>
-          <td class="govuk-table__cell">DN5888</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Lender</th>
-          <td class="govuk-table__cell">Natwest PLC</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Borrower</th>
-          <td class="govuk-table__cell">Sam Smith</td>
-        </tr>
-      </tbody>
-    </table>
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Register entry</th>
+              <td class="govuk-table__cell">C1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Date of document</th>
+              <td class="govuk-table__cell">19 February 2005</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><div style='width: 160px;'>Title number filed under</th>
+              <td class="govuk-table__cell">DN5888</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Party</th>
+              <td class="govuk-table__cell">Mrs Louise Vitton</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Party</th>
+              <td class="govuk-table__cell">Mr Sam Smith</td>
+            </tr>
+          </table>
 
-    <form action="download-charge" target="_blank">
-      <button class="govuk-button" type="submit" style="float: right;">
-        Download Charge PDF
-      </button>
-    </form>
-  </div>
-</div>
 
 <hr style="border-color: #005DA6;">
 <br>
-
+<form action="download-transfer" target="_blank">
+  <button class="govuk-button" type="submit" style="float: right;">
+    Download Transfer PDF
+  </button>
+</form>
+</div>
+</div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
     <p><a href="summary-deeds">Go to Summary of freehold</a></p>
