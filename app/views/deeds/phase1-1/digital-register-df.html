@@ -55,7 +55,7 @@
     <p class="govuk-!-margin-top-4" style="text-align: right; padding-right:10px;">
       <a href="#" style="padding-right: 20px;">Sign out</a>
       <a href="my-documents" style="padding-right: 20px;">My documents</a>
-      <a href="search">Start new search</a> </p>
+      <a href="search-deeds">Start new search</a> </p>
   </div>
   <div class="govuk-grid-column-one-half">
     <p><a href="documents-for" class="govuk-back-link">Return to documents</a></p>
@@ -174,7 +174,7 @@
                 Title filed at the Registry and being {{data['property-address']}},
                 {{data['property-city']}}, {{data['property-postcode']}}.
             </tr>
-            <tr class="govuk-table__row">
+            <!---<tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header"><div style='width: 140px;'>2</th>
               <td class="govuk-table__cell"><div style='width: 150px;'>11 October 1965</td>
               <td class="govuk-table__cell">A Conveyance of the freehold estate in the land in this title and other land dated 26 October 1922 made between (1) Samuel Holdings (1922) Limited (Company) and (2) Jonathon Green (Purchaser) contains the following provision:-<br>
@@ -184,6 +184,7 @@
                 <br>
                 - Copy filed.
             </tr>
+            --->
           </tbody>
         </table>
       </div>
@@ -241,12 +242,13 @@
                 <th scope="row" class="govuk-table__header">1</th>
                 <td class="govuk-table__cell"><div style='width: 150px;'>{{data['entry-date']}}</td>
                 <td class="govuk-table__cell">A Transfer of the land in this title dated 18 March 2010 made between (1) Louise Vitton (Vendor) and (2) Sam Smith (Purchaser) contains covenants details.
-                  <br>- Copy filed.</td>
+                  <br><b>Note:</b> Copy filed.</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">2</th>
                 <td class="govuk-table__cell"><div style='width: 150px;'>{{data['entry-date']}}</td>
-                <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated 19 February 2010.<br>
+                <td class="govuk-table__cell"><b>REGISTERED CHARGE</b> dated 19 February 2010.
+                  <br><b>Note:</b> Copy filed.
                 </td>
               </tr>
               <tr class="govuk-table__row">
