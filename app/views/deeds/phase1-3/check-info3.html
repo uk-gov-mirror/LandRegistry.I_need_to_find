@@ -69,47 +69,46 @@ Check information - Search for land and property information
           <h1 class="govuk-heading-l">Check document details are correct</h1>
           <br>
 
-          <h2 class="govuk-heading-m">5 Clinton Street, Plymouth, PL4 1AX (Freehold)</h2>
+          <h2 class="govuk-heading-m">{{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}} (Freehold)</h2>
 
           <br>
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-              <div class="govuk-summary-list__row" style="width:400px">
-                <dt class="govuk-summary-list__key">
-                  Digital register
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" style="width:400px">
-                <dt class="govuk-summary-list__key">
-                  Title plan
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" style="width:400px">
-                <dt class="govuk-summary-list__key">
-                  Charge, C3, 16 November 2016
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  £3.00
-                </dd>
-              </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key" style="width:400px">
+                Digital register
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £3.00
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row" >
+              <dt class="govuk-summary-list__key" style="width:400px">
+                Title plan
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £3.00
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key" style="width:400px">Charge, C3, 19 November 2016
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £3.00
+              </dd>
+            </div>
+
           </dl>
 
+
           <br>
-          <h2 class="govuk-heading-m">Total to pay: £6.00</h2>
+          <h2 class="govuk-heading-m">Total to pay: £9.00</h2>
 
           <br>
 
           <a href="gov-pay-1-deeds" button class="govuk-button" data-module="govuk-button">
             Continue to payment
           </a>
-
-
 
 
           <script>

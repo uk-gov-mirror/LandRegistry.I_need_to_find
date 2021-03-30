@@ -70,12 +70,9 @@ Buy documents - Search for land and property information
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-heading-l">Available documents for:</h1>
             <h1 class="govuk-heading-m">
-              5 Clinton Street, Plymouth, PL4 1AX
-              (Freehold)
+              {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}} (Freehold)
             </h1>
             <br>
-            <p>If you're unsure which documents you need, you may need to<br>buy the Digital register first.
-            </p>
             <br>
             <h2 class="govuk-heading-m">Digital register and title plan</h2>
             <h3 class="govuk-heading-s">Online</h3>
@@ -172,6 +169,10 @@ Buy documents - Search for land and property information
                 <h2 class="govuk-heading-m">
                   Referred to in the register
                 </h2>
+                <div class="govuk-inset-text">
+                  <p>You should read these documents along with a copy of the register. If you're unsure which documents you need, you should buy the Digital register first.
+                  </p>
+                </div>
                 <h3 class="govuk-heading-s">
                   Online
                 </h3>
@@ -234,7 +235,7 @@ Buy documents - Search for land and property information
               <ul class="govuk-list govuk-list--bullet">
                 <li>any documents in the following table
                 </li>
-                <li>anything else that we do not show
+                <li>documents that are not referred to in the register
                 </li>
               </ul>
 
@@ -260,9 +261,9 @@ Buy documents - Search for land and property information
                               </span>
                             </summary>
                             <div class="govuk-details__text">
-                              A transfer or transfer deed is used to transfer registered land and property from its legal owner (proprietor) to another.
+                              A transfer is used to transfer registered land and property from its legal owner (also known as the registered proprietor) to another.
                               <br>It could be a transfer of the whole of the property or just a part of it.
-                              <br>When we register the transfer, we will add the names of the new owners to the register and delete the old ones.
+                              <br>When we register the transfer, we will add the names of the new owners to the register and remove the old ones.
                             </div>
                           </details>
                         </th>
@@ -280,7 +281,7 @@ Buy documents - Search for land and property information
                               </span>
                             </summary>
                             <div class="govuk-details__text">
-                              A conveyance or deed of conveyance is used to transfer unregistered land from one party to another.
+                              A conveyance is used to transfer unregistered land from one party to another.
                             </div>
                           </details>
                         </th>
