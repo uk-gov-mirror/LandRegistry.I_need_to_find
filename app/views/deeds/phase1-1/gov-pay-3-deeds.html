@@ -70,9 +70,11 @@
           Payment for:
         </dt>
         <dd class="govuk-summary-list__value">
-            Digital register<br>
-            Title plan<br>
-            Documents (2)
+          {% if data['checkbox-register'] %}  Digital register<br> {% endif %}
+          {% if data['checkbox-title'] %}  Title plan<br> {% endif %}
+          {% if data['checkbox-c1'] and data['checkbox-c2'] %}  Documents (2) {% endif %}
+          {% if data['checkbox-c1'] and not data['checkbox-c2'] %}  Document {% endif %}
+          {% if data['checkbox-c2'] and not data['checkbox-c1'] %}  Document {% endif %}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
