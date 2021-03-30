@@ -156,11 +156,15 @@
     <div class="app-payment-summary-box">
       <h2 class="govuk-heading-m">Payment summary</h2>
 
+      {% if data['checkbox-register'] %}<p class="govuk-!-font-weight-bold">Digital register</p> {% endif %}
 
-       <p class="govuk-!-font-weight-bold">Digital register</p>
-       <p class="govuk-!-font-weight-bold">Title plan</p>
-       <p class="govuk-!-font-weight-bold">Documents (2)</p>
+      {% if data['checkbox-title'] %}<p class="govuk-!-font-weight-bold">Title plan</p>{% endif %}
 
+      {% if data['checkbox-c1'] and data['checkbox-c2'] %}<p class="govuk-!-font-weight-bold">Documents (2)</p>{% endif %}
+
+      {% if data['checkbox-c1'] and not data['checkbox-c2'] %}<p class="govuk-!-font-weight-bold">Document</p>{% endif %}
+
+      {% if data['checkbox-c2'] and not data['checkbox-c1'] %}<p class="govuk-!-font-weight-bold">Document</p>{% endif %}
 
       <p style=>Total amount: <br>
       <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£12

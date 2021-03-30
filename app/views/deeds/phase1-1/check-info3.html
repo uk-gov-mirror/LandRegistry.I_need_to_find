@@ -75,6 +75,8 @@ Check information - Search for land and property information
           <br>
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+            {% if data['checkbox-register'] %}
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key" style="width:400px">
                 Digital register
@@ -83,6 +85,9 @@ Check information - Search for land and property information
                 £3.00
               </dd>
             </div>
+            {% endif %}
+
+            {% if data['checkbox-title'] %}
             <div class="govuk-summary-list__row" >
               <dt class="govuk-summary-list__key" style="width:400px">
                 Title plan
@@ -91,6 +96,9 @@ Check information - Search for land and property information
                 £3.00
               </dd>
             </div>
+            {% endif %}
+
+            {% if data['checkbox-c1'] %}
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key" style="width:400px">Transfer, C1, 19 February 2005
               </dt>
@@ -98,6 +106,9 @@ Check information - Search for land and property information
                 £3.00
               </dd>
             </div>
+            {% endif %}
+
+            {% if data['checkbox-c2'] %}
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key" style="width:400px">Charge, C2, 19 February 2005
               </dt>
@@ -105,11 +116,12 @@ Check information - Search for land and property information
                 £3.00
               </dd>
             </div>
+            {% endif %}
 
           </dl>
 
           <br>
-          <h2 class="govuk-heading-m">Total to pay: £12.00</h2>
+          <h2 class="govuk-heading-m">Total to pay: </h2>
 
 
 

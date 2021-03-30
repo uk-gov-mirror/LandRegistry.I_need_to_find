@@ -41,6 +41,32 @@ router.post('/deeds-OC2-3/test3', function (req, res) {
   }
 })
 
+router.post('/fee-calculate', function (req, res) {
+
+  let checkboxRegister = req.session.data['checkbox-register']
+  let checkboxTitle = req.session.data['checkbox-title']
+  let checkboxC1 = req.session.data['checkbox-c1']
+  let checkboxC2 = req.session.data['checkbox-c2']
+
+  let checkbox1fee = req.session.data['checkbox1fee']
+  let checkbox2fee = req.session.data['checkbox2fee']
+  let checkbox3fee = req.session.data['checkbox3fee']
+  let checkbox4fee = req.session.data['checkbox4fee']
+
+  if (checkboxRegister == 'Digital register') {
+      req.session.data['checkbox1fee'] = '3';
+  } if (checkboxTitle == 'Title plan') {
+      req.session.data['checkbox2fee'] = '3';
+  } if (checkboxC1 == 'C1') {
+      req.session.data['checkbox3fee'] = '3';
+  } if (checkboxC2 == 'C2') {
+      req.session.data['checkbox4fee'] = '3';
+  }
+
+  req.session.data['total'] = 'checkbox1fee'+'checkbox2fee'+'checkbox3fee'+'checkbox4fee';
+  res.redirect('/deeds/phase1-1/check-info3')
+
+})
 
 
 

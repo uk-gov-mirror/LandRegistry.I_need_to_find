@@ -96,6 +96,7 @@ Documents bought today - Search for land and property information
         </tr>
       </thead>
       <tbody class="govuk-table__body">
+        {% if data['checkbox-register'] %}
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Digital register</th>
           <td class="govuk-table__cell"></td>
@@ -105,6 +106,10 @@ Documents bought today - Search for land and property information
             <p><a href="digital-register-df">View</a></p>
           </td>
         </tr>
+        {% endif %}
+
+
+        {% if data['checkbox-title'] %}
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header" style="width: 200px;">Title plan</th>
           <td class="govuk-table__cell"></td>
@@ -114,6 +119,10 @@ Documents bought today - Search for land and property information
             <p><a href="title-plan-df">View</a></p>
           </td>
         </tr>
+        {% endif %}
+
+
+        {% if data['checkbox-c1'] %}
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header" style="width: 200px;">Transfer, C1</th>
           <td class="govuk-table__cell">19 February 2005</td>
@@ -123,6 +132,9 @@ Documents bought today - Search for land and property information
             <p><a href="transfer-df">View</a></p>
           </td>
         </tr>
+        {% endif %}
+
+        {% if data['checkbox-c2'] %}
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header" style="width: 200px;">Charge, C2</th>
           <td class="govuk-table__cell">19 February 2005</td>
@@ -132,6 +144,8 @@ Documents bought today - Search for land and property information
             <p><a href="charge-df">View</a></p>
           </td>
         </tr>
+          {% endif %}
+
       </tbody>
     </table>
   </div>
