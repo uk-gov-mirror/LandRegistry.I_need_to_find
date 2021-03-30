@@ -70,12 +70,9 @@ Buy documents - Search for land and property information
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-heading-l">Available documents for:</h1>
             <h1 class="govuk-heading-m">
-              5 Clinton Street, Plymouth, PL4 1AX
-              (Freehold)
+              {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}} (Freehold)
             </h1>
             <br>
-            <p>If you're unsure which documents you need, you may need to<br>buy the Digital register first.
-            </p>
             <br>
             <h2 class="govuk-heading-m">Digital register and title plan</h2>
             <h3 class="govuk-heading-s">Online</h3>
@@ -168,16 +165,17 @@ Buy documents - Search for land and property information
                 </table>
 
                 <br>
+
+                <h2 class="govuk-heading-m">
+                  Referred to in the register
+                </h2>
+                <div class="govuk-inset-text">
+                  <p>You should read these documents along with a copy of the register. If you're unsure which documents you need, you should buy the Digital register first.
+                  </p>
+                </div>
                 <h3 class="govuk-heading-s">
-                  Apply by post
+                  Online
                 </h3>
-                <p>You'll need to <a href="OC2-page" target="_blank">apply by post</a> (link opens in new tab) for:
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>any documents in the following table
-                  </li>
-                  <li>anything else that we do not show
-                  </li>
-                </ul>
 
                 <form class="govuk-!-margin-top-6" action="check-info3" method="post">
                   <div class="govuk-form-group">
@@ -185,31 +183,15 @@ Buy documents - Search for land and property information
                       <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
                           <th scope="col" class="govuk-table__header">Document</th>
-                          <th scope="col" class="govuk-table__header">Register entry</th>
-                          <th scope="col" class="govuk-table__header" style="width:240px">Document date</th>
+                          <th scope="col" class="govuk-table__header" style="width:180px">Register entry</th>
+                          <th scope="col" class="govuk-table__header" style="width:200px">Document date</th>
+                          <th scope="col" class="govuk-table__header">Cost</th>
+                          <th scope="col" class="govuk-table__header"></th>
                         </tr>
                       </thead>
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">Transfer
-                            <details class="govuk-details" data-module="govuk-details">
-                              <summary class="govuk-details__summary">
-                                <span class="govuk-details__summary-text">
-                                  What's a Transfer?
-                                </span>
-                              </summary>
-                              <div class="govuk-details__text">
-                                Details
-                              </div>
-                            </details>
-                          </th>
-                          <td class="govuk-table__cell">C1
-                          </td>
-                          <td class="govuk-table__cell">16 November 2016
-                          </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">Charge
+                          <th scope="row" class="govuk-table__header" style="width:180px">Charge
                             <details class="govuk-details" data-module="govuk-details">
                               <summary class="govuk-details__summary">
                                 <span class="govuk-details__summary-text">
@@ -217,31 +199,113 @@ Buy documents - Search for land and property information
                                 </span>
                               </summary>
                               <div class="govuk-details__text">
-                                Details
+                                A charge is a way of securing the payment of money. Most commonly, a mortgage. Legal mortgages of registered land must be registered with us to be fully effective.
+                                <br>The document used to register it with us identifies:
+                                <ul class="govuk-list govuk-list--bullet">
+                                  <li>the property</li>
+                                  <li>who the lender and borrowers are</li>
+                                  <li>any restrictions on what the borrower can and cannot do without consent of the lender</li>
                               </div>
                             </details>
                           </th>
-                          <td class="govuk-table__cell">C3
+                          <td class="govuk-table__cell" style="width: 300px;">C3
                           </td>
-                          <td class="govuk-table__cell">16 November 2016
+                          <td class="govuk-table__cell">29 November 2016
+                          </td>
+                          <td class="govuk-table__cell">£3.00
+                          </td>
+                          <td class="govuk-table__cell">
+                            <div class="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="checkbox-1" type="checkbox" name="checkbox-register" value="Digital register" {{ checked("checkbox-register", "Digital register 02 February 2021") }}>
+                                <label class="govuk-label govuk-checkboxes__label" for="document_list"></label>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-
-
-                    <br>
-                    <form class="govuk-!-margin-top-6" action="full-name">
-                      <button type="submit" class="govuk-button">
-                        Continue
-                      </button>
-                    </form>
-
-                    <p> <a href="summary"> Return to Summary of freehold</a> </p>
-
                   </div>
               </div>
+
+
+              <br>
+              <h3 class="govuk-heading-s">
+                Apply by post
+              </h3>
+              <p>You'll need to <a href="OC2-page" target="_blank">apply by post</a> (link opens in new tab) for:
+              <ul class="govuk-list govuk-list--bullet">
+                <li>any documents in the following table
+                </li>
+                <li>documents that are not referred to in the register
+                </li>
+              </ul>
+
+              <p>Copies sent in the post cost £7.00 each.</p>
+
+              <form class="govuk-!-margin-top-6" action="check-info3" method="post">
+                <div class="govuk-form-group">
+                  <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Document</th>
+                        <th scope="col" class="govuk-table__header">Register entry</th>
+                        <th scope="col" class="govuk-table__header" style="width:240px">Document date</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Transfer
+                          <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                What's a Transfer?
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                              A transfer is used to transfer registered land and property from its legal owner (also known as the registered proprietor) to another.
+                              <br>It could be a transfer of the whole of the property or just a part of it.
+                              <br>When we register the transfer, we will add the names of the new owners to the register and remove the old ones.
+                            </div>
+                          </details>
+                        </th>
+                        <td class="govuk-table__cell">C1
+                        </td>
+                        <td class="govuk-table__cell">20 November 2016
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Conveyance
+                          <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                What's a Conveyance?
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                              A conveyance is used to transfer unregistered land from one party to another.
+                            </div>
+                          </details>
+                        </th>
+                        <td class="govuk-table__cell">A2</td>
+                        <td class="govuk-table__cell">10 June 1952
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+
+                  <br>
+                  <form class="govuk-!-margin-top-6" action="full-name">
+                    <button type="submit" class="govuk-button">
+                      Continue
+                    </button>
+                  </form>
+
+                  <p> <a href="summary"> Return to Summary of freehold</a> </p>
+
+                </div>
       </div>
+    </div>
 
 
-      {% endblock %}
+    {% endblock %}

@@ -70,8 +70,7 @@ Buy documents - Search for land and property information
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-heading-l">Available documents for:</h1>
             <h1 class="govuk-heading-m">
-              7 Long Street, Plymouth, PL5 6WD
-              (Freehold)
+            {{data['property-address']}}, {{data['property-city']}}, {{data['property-postcode']}} (Freehold)
             </h1>
             <br>
 
@@ -174,7 +173,7 @@ Buy documents - Search for land and property information
                   Referred to in the register
                 </h2>
                 <div class="govuk-inset-text">
-                  <p>You should read these documents along with a copy of the Digital register. If you're unsure which documents you need, you should buy the Digital register first.
+                  <p>You should read these documents along with a copy of the register. If you're unsure which documents you need, you should buy the Digital register first.
                   </p>
                 </div>
 
@@ -201,9 +200,9 @@ Buy documents - Search for land and property information
                             </span>
                           </summary>
                           <div class="govuk-details__text">
-                            A transfer or transfer deed is used to transfer registered land and property from its legal owner (proprietor) to another.<br>
+                            A transfer is used to transfer registered land and property from its legal owner (proprietor) to another.<br>
                             It could be a transfer of the whole of the property or just a part of it.<br>
-                            When we register the transfer, we will add the names of the new owners to the register and delete the old ones.
+                            When we register the transfer, we will add the names of the new owners to the register and remove the old ones.
                           </div>
                         </details>
                       </th>
