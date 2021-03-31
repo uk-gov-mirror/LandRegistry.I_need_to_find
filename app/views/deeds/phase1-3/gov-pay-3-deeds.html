@@ -70,9 +70,9 @@
           Payment for:
         </dt>
         <dd class="govuk-summary-list__value">
-            Digital register<br>
-            Title plan<br>
-            Document (1)
+        {% if data['checkbox-register3'] %}Digital register<br>{% endif %}
+        {% if data['checkbox-title3'] %}Title plan<br>{% endif %}
+        {% if data['checkbox-c3'] %}Document (1){% endif %}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -80,7 +80,7 @@
           Total amount:
         </dt>
         <dd class="govuk-summary-list__value">
-          £9.00
+          £{{ data['total3'] }}.00
         </dd>
       </div>
     </dl>

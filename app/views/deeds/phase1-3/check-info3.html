@@ -74,37 +74,46 @@ Check information - Search for land and property information
           <br>
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key" style="width:400px">
-                Digital register
-              </dt>
-              <dd class="govuk-summary-list__value">
-                £3.00
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row" >
-              <dt class="govuk-summary-list__key" style="width:400px">
-                Title plan
-              </dt>
-              <dd class="govuk-summary-list__value">
-                £3.00
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key" style="width:400px">Charge, C3, 19 November 2016
-              </dt>
-              <dd class="govuk-summary-list__value">
-                £3.00
-              </dd>
-            </div>
-
-          </dl>
 
 
-          <br>
-          <h2 class="govuk-heading-m">Total to pay: £9.00</h2>
+                      {% if data['checkbox-register3'] %}
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key" style="width:400px">
+                          Digital register
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          £3.00
+                        </dd>
+                      </div>
+                      {% endif %}
 
-          <br>
+                      {% if data['checkbox-title3'] %}
+                      <div class="govuk-summary-list__row" >
+                        <dt class="govuk-summary-list__key" style="width:400px">
+                          Title plan
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          £3.00
+                        </dd>
+                      </div>
+                      {% endif %}
+
+                      {% if data['checkbox-c3'] %}
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key" style="width:400px">Charge, C3, 29 November 2016
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          £3.00
+                        </dd>
+                      </div>
+                      {% endif %}
+
+                    </dl>
+
+                    <br>
+                    <h2 class="govuk-heading-m">Total to pay: £{{ data['subtotal'] }}.00</h2>
+
+
 
           <a href="gov-pay-1-deeds" button class="govuk-button" data-module="govuk-button">
             Continue to payment
