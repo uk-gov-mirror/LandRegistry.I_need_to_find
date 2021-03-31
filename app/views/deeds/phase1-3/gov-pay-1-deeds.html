@@ -158,13 +158,13 @@ Payment details - Search for land and property information
     <div class="app-payment-summary-box">
       <h2 class="govuk-heading-m">Payment summary</h2>
 
-      <p class="govuk-!-font-weight-bold">Digital register</p>
-      <p class="govuk-!-font-weight-bold">Title plan</p>
-      <p class="govuk-!-font-weight-bold">Document (1)</p>
+      {% if data['checkbox-register3'] %}<p class="govuk-!-font-weight-bold">Digital register</p>{% endif %}
+      {% if data['checkbox-title3'] %}<p class="govuk-!-font-weight-bold">Title plan</p>{% endif %}
+      {% if data['checkbox-c3'] %}<p class="govuk-!-font-weight-bold">Document (1)</p>{% endif %}
 
 
       <p style=>Total amount: <br>
-        <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£9
+        <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£{{ data['total2'] }}
         </span>
       </p>
     </div>

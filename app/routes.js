@@ -64,6 +64,28 @@ router.post('/fee-calculate', function (req, res) {
 
 })
 
+router.post('/fee-calculate2', function (req, res) {
+
+  let total = 0
+
+  if (req.session.data['checkbox-register3']) {
+    total = total + parseInt(req.session.data['checkbox-register3'][0], 10)
+  }
+  if (req.session.data['checkbox-title3']) {
+    total = total + parseInt(req.session.data['checkbox-title3'][0], 10)
+  }
+  if (req.session.data['checkbox-c3']) {
+    total = total + parseInt(req.session.data['checkbox-c3'][0], 10)
+  }
+
+  req.session.data['total2'] = total;
+
+  res.redirect('/deeds/phase1-3/check-info3')
+
+})
+
+
+
 
 
 module.exports = router
