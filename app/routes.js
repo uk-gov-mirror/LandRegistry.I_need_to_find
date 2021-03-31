@@ -85,6 +85,28 @@ router.post('/fee-calculate2', function (req, res) {
 })
 
 
+router.post('/signedin', function (req, res) {
+	req.session.data = 	      		{
+  "signedinstatus": "true",
+}
+  res.redirect('/deeds/phase1-1/search-deeds')
+})
+
+router.post('/signedin2', function (req, res) {
+	req.session.data = 	      		{
+  "signedinstatus": "true",
+}
+  res.redirect('/deeds/phase1-1/summary-deeds')
+})
+
+router.post('/checkstatus', function (req, res) {
+  if (req.session.data['signedinstatus'] === 'true') {
+    res.redirect('/deeds/phase1-1/available-docs-deeds2')
+  } else {
+    res.redirect('/deeds/phase1-1/sign-in')
+  }
+
+})
 
 
 
