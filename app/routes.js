@@ -85,18 +85,18 @@ router.post('/fee-calculate2', function (req, res) {
 })
 
 
+
+// phase 1-1 sign in
 router.post('/signedin', function (req, res) {
-	req.session.data = 	      		{
-  "signedinstatus": "true",
-}
+	req.session.data['signedinstatus'] = 'true';
   res.redirect('/deeds/phase1-1/search-deeds')
+
 })
 
 router.post('/signedin2', function (req, res) {
-	req.session.data = 	      		{
-  "signedinstatus": "true",
-}
+  req.session.data['signedinstatus'] = 'true';
   res.redirect('/deeds/phase1-1/summary-deeds')
+
 })
 
 router.post('/checkstatus', function (req, res) {
@@ -108,6 +108,49 @@ router.post('/checkstatus', function (req, res) {
 
 })
 
+// phase 1-2 sign in
+router.post('/signedin1-2', function (req, res) {
+	req.session.data['signedinstatus2'] = 'true';
+  res.redirect('/deeds/phase1-2/search-deeds')
+
+})
+
+router.post('/signedinsummary2', function (req, res) {
+  req.session.data['signedinstatus2'] = 'true';
+  res.redirect('/deeds/phase1-2/summary-deeds')
+
+})
+
+router.post('/checkstatus', function (req, res) {
+  if (req.session.data['signedinstatus2'] === 'true') {
+    res.redirect('/deeds/phase1-2/available-docs-deeds2')
+  } else {
+    res.redirect('/deeds/phase1-2/sign-in')
+  }
+
+})
+
+// phase 1-3 sign in
+router.post('/signedin1-3', function (req, res) {
+	req.session.data['signedinstatus3'] = 'true';
+  res.redirect('/deeds/phase1-3/search-deeds')
+
+})
+
+router.post('/signedinsummary3', function (req, res) {
+  req.session.data['signedinstatus3'] = 'true';
+  res.redirect('/deeds/phase1-3/summary-deeds')
+
+})
+
+router.post('/checkstatus', function (req, res) {
+  if (req.session.data['signedinstatus3'] === 'true') {
+    res.redirect('/deeds/phase1-3/available-docs-deeds2')
+  } else {
+    res.redirect('/deeds/phase1-3/sign-in')
+  }
+
+})
 
 
 module.exports = router
