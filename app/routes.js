@@ -121,7 +121,7 @@ router.post('/signedinsummary2', function (req, res) {
 
 })
 
-router.post('/checkstatus', function (req, res) {
+router.post('/checkstatus2', function (req, res) {
   if (req.session.data['signedinstatus2'] === 'true') {
     res.redirect('/deeds/phase1-2/available-docs-deeds2')
   } else {
@@ -143,7 +143,7 @@ router.post('/signedinsummary3', function (req, res) {
 
 })
 
-router.post('/checkstatus', function (req, res) {
+router.post('/checkstatus3', function (req, res) {
   if (req.session.data['signedinstatus3'] === 'true') {
     res.redirect('/deeds/phase1-3/available-docs-deeds2')
   } else {
